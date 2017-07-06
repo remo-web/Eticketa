@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>ETICKETA - Rótulos e Soluções</title>
+        
+        <!--FavIcon-->
+        <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+        <link rel="manifest" href="./favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+		
+		<!-- Google Material -->
+		<link rel="stylesheet" href="./mdl/material.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.teal-deep_purple.min.css" />
+            <!-- Polyfill -->
+            <link rel="stylesheet" href="./plugins/Polyfill/dialog-polyfill.css">
+		
+		<!-- CUSTOM CSS -->
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+        
+		<!-- fullPage -->
+		<link rel="stylesheet" type="text/css" href="./plugins/fullPage/jquery.fullPage.css">
+		
+		<!-- CUSTOM Google Font -->
+		<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700&amp;subset=latin-ext" rel="stylesheet">
+        
+        <!--FontAwesome-->
+        <script src="https://use.fontawesome.com/c3b46e0992.js"></script>
+        
+        <!-- ScrollReveal
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+        
+		<div class="font etka-layout-transparent mdl-layout mdl-js-layout">
+            <header class="mdl-layout__header" id="top">
+				<div class="mdl-layout__header-row">
+					<!-- Title -->
+					<a class="mdl-layout-title font w200 etka_title" id="etka_title" data-menuanchor="home" href="#home"><big><b>ETICKETA</b></big> <small>Rótulos e Soluções</small></a>
+					<!-- Add spacer, to align navigation to the right -->
+					<div class="mdl-layout-spacer"></div>
+					<!-- Navigation
+					<nav class="mdl-navigation">
+						<a class="mdl-navigation__link" href="">Link</a>
+						<a class="mdl-navigation__link" href="">Link</a>
+						<a class="mdl-navigation__link" href="">Link</a>
+						<a class="mdl-navigation__link" href="">Link</a>
+					</nav> -->
+				</div>
+			</header>
+			<div class="mdl-layout__drawer">
+				<!--<span class="mdl-layout-title">Title</span>-->
+				<nav class="mdl-navigation" id="menu">
+					<a class="mdl-navigation__link" data-menuanchor="home" href="#home">Página inicial</a>
+                    <a class="mdl-navigation__link" data-menuanchor="rotulos" href="#produtos/rotulos">Rótulos</a>
+					<a class="mdl-navigation__link" data-menuanchor="lacres" href="#produtos/lacres">Lacres</a>
+					<a class="mdl-navigation__link" data-menuanchor="ingressos" href="#produtos/ingressos">Ingressos</a>
+					<a class="mdl-navigation__link" data-menuanchor="validade" href="#produtos/validade">Etiquetas de validade</a>
+					<a class="mdl-navigation__link" data-menuanchor="fazemos" href="#fazemos">Como Fazemos</a>
+					<a class="mdl-navigation__link" data-menuanchor="preco" href="#preco">Preços</a>
+<!--					<a class="mdl-navigation__link" data-menuanchor="portefolio" href="#portefolio">Portefólio</a>-->
+					<a class="mdl-navigation__link" data-menuanchor="contato" href="#contato">Contato</a>
+				</nav>
+            </div>
+			
+			<main class="mdl-layout__content" id="fullpage">
+                <!--HOME-->
+				<section data-anchor="home" class="section etka_home" id="etka_home">
+                    <button type="button" id="mute-video" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored etka_som">
+                        <i class="material-icons etka_som-btn">volume_up</i>
+                        <i class="material-icons etka_som-btn etka_unmute">volume_off</i>
+                    </button>
+                    <video id="myVideo" loop data-autoplay>
+                        <source data-src="./mov/etka_site17-video_amarelo(2).webm" type="video/webm" />
+                        <source data-src="./mov/etka_site17-video_amarelo(2).mp4" type="video/mp4" />
+                    </video>
+                    <div class="mdl-grid layer">
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--2-offset-desktop mdl-cell--3-col etka_home-logo">
+                            <img src="img/home/eticketa-logo_cor.svg">
+                        </div>
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--2-offset-desktop mdl-cell--5-col etka_home-txt mdl-shadow--2dp">
+                            <p>Com sócios vindos de um pequeno grupo de profissionais do ramo gráfico, cuja a experiência somada ultrapassa 100 anos, e histórias que se confundem com as das mais renomadas empresas fabricantes de rótulos e etiquetas.</p><p>Materializamos nossos conhecimentos na busca por um sonho de excelência em produtos e serviços, sempre superando expectativas, valorizando sobretudo a qualidade de vida aos funcionários, a proximidade de fornecedores parceiros e responsabilidade social e ambiental.</p>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-cell--middle etka_home-menu" id="menu">
+                            <div class="mdl-grid">
+                                <div data-menuanchor="rotulos" class="mdl-cell mdl-cell--bottom mdl-cell--3-offset-desktop mdl-cell--1-col">
+                                    <a href="#produtos/rotulos"><img src="img/home/etka_home_rotulo.svg" height="50" alt="rotulo" style="margin: 20px"></a><br>
+                                    <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#produtos/rotulos">
+                                        Rótulos
+                                    </a>
+                                </div>
+                                <div data-menuanchor="lacres" class="mdl-cell mdl-cell--bottom mdl-cell--1-col">
+                                    <a href="#produtos/lacres"><img src="img/home/etka_home_lacre.svg" height="50" alt="lacre" style="margin: 20px"></a><br>
+                                    <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#produtos/lacres">
+                                        Lacres
+                                    </a>
+                                </div>
+                                <div data-menuanchor="ingressos" class="mdl-cell mdl-cell--bottom mdl-cell--1-col">
+                                    <a href="#produtos/ingressos"><img src="img/home/etka_home_ingresso.svg" height="50" alt="ingressos" style="margin: 20px"></a><br>
+                                    <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#produtos/ingressos">
+                                        Ingressos
+                                    </a>
+                                </div>
+                                <div data-menuanchor="validade" class="mdl-cell mdl-cell--bottom mdl-cell--1-col">
+                                    <a href="#produtos/validade"><img src="img/home/etka_home_validade.svg" height="50" alt="validade" style="margin: 20px"></a><br>
+                                    <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#produtos/validade">
+                                        Validade
+                                    </a>
+                                </div>
+                                <div data-menuanchor="fazemos" class="mdl-cell mdl-cell--bottom mdl-cell--1-col">
+                                    <a href="#fazemos"><img src="img/home/etka_home_como.svg" height="50" alt="como" style="margin: 20px"></a><br>
+                                    <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#fazemos">
+                                        Como fazemos
+                                    </a>
+                                </div>
+                                <div data-menuanchor="contato" class="mdl-cell mdl-cell--bottom mdl-cell--1-col">
+                                    <a href="#contato"><img src="img/home/etka_home_contato.svg" height="50" alt="contato" style="margin: 20px"></a><br>
+                                    <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#contato">
+                                        Contato
+                                    </a>
+                                </div>
+                                <div data-menuanchor="rotulos" class="mdl-cell mdl-cell--bottom mdl-cell--12-col" style="margin-bottom: 1%; text-align:center">
+                                    <a role="button" class="mdl-button mdl-js-button mdl-button--icon etka_bounce" data-menuanchor="rotulos" href="#produtos/rotulos">
+                                        <i class="material-icons" id="arrow_down">keyboard_arrow_down</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</section>
+                <!--PRODUTOS-->
+				<section data-anchor="produtos" class="section etka_prod" id="etka_prod">
+					<div class="slide" data-anchor="rotulos" id="etka_rotulos">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col">
+                                <h1>Rótulos</h1>
+                                <p>Suas embalagens precisam refletir a imagem da sua marca de maneira firme, nítida e fiel a sua identidade. Seu produto precisa ser apresentado da melhor forma. Sempre.</p><p>Não importa se é congelado, resfriado ou fica na prateleira, não importa o material da embalagem, oferecemos soluções de rotulagem para todos os casos.</p>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="show-dialog-orcamento-rotulos" type="button"
+ data-toggle="modal" data-target="#dialog-orcamento-rotulos">PEÇA SEU ORÇAMENTO</button>
+                            </div>
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--8-col etka_prod-video">
+                                <video data-autoplay loop muted>
+                                    <source data-src="./mov/etka_site17-video_esqueleto.webm" type="video/webm" />
+                                    <source data-autoplay data-src="./mov/etka_site17-video_esqueleto.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+					</div>
+					<div class="slide" data-anchor="lacres" id="etka_lacres">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col">
+                                <h1>Lacres</h1>
+                                <p>Seja para <i>delivery</i> de alimentos, segurança de carros rebocados ou em sinistro, caixas de medicamentos, ou simplesmente para oferecer a seus clientes uma garantia extra da qualidade contra violação e alteração.</p><p>Oferecemos soluções de lacres adesivos para diversas finalidades, com várias opcões formato e corte, fabricados no material mais adequado para cada caso e opções de arte personalizada ou econômica.</p>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="show-dialog-orcamento-lacres" type="button"
+ data-toggle="modal" data-target="#dialog-orcamento-lacres">PEÇA SEU ORÇAMENTO</button>
+                            </div>
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--8-col etka_prod-video">
+                                <video data-autoplay loop muted>
+                                    <source data-src="./mov/etka_site17-video_SM.webm" type="video/webm" />
+                                    <source data-src="./mov/etka_site17-video_SM.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+					</div>
+					<div class="slide" data-anchor="ingressos" id="etka_ingressos">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col">
+                                <h1>Controle de Acesso</h1>
+                                <p>Quem visita seu estabeleciomento, empresa, parque industrial, hospital, festas, shows, precisa ter seu acesso, lugar na fila de espera e/ou identificação garantidos.</p><p>Converse com nossos consultores, encontraremos a solução gráfica ideal para atender as demandas de identificação e acesso do seu negócio e quem sabe solucionar outras que ainda nem foram mapeadas.</p>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="show-dialog-orcamento-ingressos" type="button"
+ data-toggle="modal" data-target="#dialog-orcamento-ingressos">PEÇA SEU ORÇAMENTO</button>
+                            </div>
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--8-col etka_prod-video">
+                                <video data-autoplay loop muted>
+                                    <source data-src="./mov/etka_site17-video_verniz.webm" type="video/webm" />
+                                    <source data-autoplay data-src="./mov/etka_site17-video_verniz.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+					</div>
+					<div class="slide" data-anchor="validade" id="etka_validade">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col">
+                                <h1>Etiquetas de Validade</h1>
+                                <p>Este produto é dedicado a quem lida com alimentos e busca cumprir a risca os itens <a href="http://www.rio.rj.gov.br/dlstatic/10112/5125403/4132348/RESOLUcaORDCN216ANVISA.pdf" target="_blank" title="Regulamento Técnico de Boas Práticas para Serviços de Alimentação.">4.8.6 e 4.9.1 da Resolução - CDN nº 216 (ANVISA)</a>, afim de evitar multas ou eventuais punições mais severas.</p><p>Conte com a Eticketa para que a identificação dos seus alimentos manipulados armazenados facilite tanto o trabalho da sua equipe de cozinha quanto dos fiscais.</p><p>Aderentes em embalagens umidas ou congeladas, nossas etiquetas de validade aceitam escritas de qualquer tipo de caneta e podem ser personalizadas.</p>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="show-dialog-orcamento-validade" type="button"
+ data-toggle="modal" data-target="#dialog-orcamento-validade">PEÇA SEU ORÇAMENTO</button>
+                            </div>
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--8-col etka_prod-video">
+                                <video data-autoplay loop muted>
+                                    <source data-src="./mov/etka_site17-video_vermelho(1).webm" type="video/webm" />
+                                    <source data-autoplay data-src="./mov/etka_site17-video_vermelho(1).mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+					</div>
+				</section>
+                <!--FAZEMOS-->
+				<section data-anchor="fazemos" class="section etka_fazemos" id="etka_fazemos">
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--2-offset-desktop mdl-cell--8-col">
+                            <h1>Como Fazemos</h1>
+                        </div>
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--3-offset-desktop mdl-cell--3-col">
+                            <!-- flexo -->
+                            <div class="etka-card-wide mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title etka-fazemos-flexo">
+                                    <h2 class="mdl-card__title-text">Flexografia</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    Rótulos, ingressos, adesivos, lacres, selos e para uma infinidade serviços que demandam, alta definição e grande escala, este é o sistemas indicado.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <button id="show-dialog-flexo" type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="dialog" data-target="#dialog-flexo">
+                                        Saiba Mais
+                                    </button>
+                                </div>
+                            </div>
+                            <br/>
+                            <!-- offset -->
+                            <div class="etka-card-wide mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title etka-fazemos-offset">
+                                    <h2 class="mdl-card__title-text">Offset</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    Bolachas de chope, cartões de visita, <i>flyers</i>, <i>folders</i>, blocos... Folhas soltas e tiragens elevadas, sugerimos <i>offset</i>.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <button id="show-dialog-offset" type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="dialog" data-target="#dialog-digital">
+                                        Saiba Mais
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--3-col">
+                            <!-- digital -->
+                            <div class="etka-card-wide mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title etka-fazemos-digital">
+                                    <h2 class="mdl-card__title-text">Digital</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    <i>Banners</i>, faixas, totens, envelopamentos, decoração de piso, <i>backlight</i>, médios e grandes formatos, pequenas e médias tiragens, a opção é digital.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <button id="show-dialog-digital" type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="dialog" data-target="#dialog-digital">
+                                        Saiba Mais
+                                    </button>
+                                </div>
+                            </div>
+                            <br/>
+                            <!-- consultoria -->
+                            <div class="etka-card-wide mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title etka-fazemos-consultoria">
+                                    <h2 class="mdl-card__title-text">Consultoria</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    A síntese de como fazemos aqui na Eticketa. Não é um serviço a parte, está no dia-a-dia da nossa equipe e do nosso padrão de atendimento.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <button id="show-dialog-consultoria" type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="dialog" data-target="#dialog-consultoria">
+                                        Saiba Mais
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+				</section>
+                <!--PREÇO-->
+				<section data-anchor="preco" class="section mdl-grid etka_preco" id="etka_preco">
+					<div class="mdl-cell mdl-cell--middle mdl-cell--2-offset-desktop mdl-cell--8-col" style="text-align: center">
+                        <h1>Preços</h1>
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col" id="etka_preco-delivery">
+                                <div class="mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">LACRES PARA DELIVERY</h2>
+                                    </div>
+                                    <hr class="etka_spacer__clear">
+                                    <div class="etka-card__preco">
+                                        <h2 style="display: inline-block"><small><sup>R$</sup></small>&nbsp;75&nbsp;</h2><sub><p style="display: inline"><small>/ rolo</small></p></sub>
+                                    </div>
+                                    <hr class="etka_spacer__clear">
+                                    <div class="mdl-card__supporting-text">
+                                        Lacres com arte padronizada indicado para fechamento de embalagens em serviços de entrega.
+                                        <br/><br/>
+                                        <hr class="etka_spacer__clear">
+                                        <ul class="mdl-list">
+                                            <li class="mdl-list__item">
+                                                <span class="mdl-list__item-primary-content font">
+                                                    <i class="material-icons mdl-list__item-icon">&#xE3B6;</i>
+                                                    a partir de 1.000 unidades
+                                                </span>
+                                            </li>
+                                            <li class="mdl-list__item">
+                                                <span class="mdl-list__item-primary-content font">
+                                                    <i class="material-icons mdl-list__item-icon">&#xE243;</i>
+                                                    3 cores
+                                                </span>
+                                            </li>
+                                            <li class="mdl-list__item">
+                                                <span class="mdl-list__item-primary-content font">
+                                                    <i class="material-icons mdl-list__item-icon">&#xE254;</i>
+                                                    arte padrão
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="show-dialog-preco-lacre" type="button" data-toggle="dialog" data-target="#dialog-preco-lacre">
+                                            + INFORMAÇÕES
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col" id="etka_preco-garantia">
+                                <div class="mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">LACRES DE GARANTIA</h2>
+                                    </div>
+                                    <hr class="etka_spacer__clear">
+                                    <div class="etka-card__preco">
+                                        <h2 style="display: inline-block"><small><sup>R$</sup></small>&nbsp;75&nbsp;</h2><sub><p style="display: inline"><small>/ rolo</small></p></sub>
+                                    </div>
+                                    <hr class="etka_spacer__clear">
+                                    <div class="mdl-card__supporting-text">
+                                        Lacres com arte padronizada indicado para fechamento de embalagens em serviços de entrega.
+                                        <br/><br/>
+                                        <hr class="etka_spacer__clear">
+                                        <ul class="mdl-list">
+                                            <li class="mdl-list__item">
+                                                <span class="mdl-list__item-primary-content font">
+                                                    <i class="material-icons mdl-list__item-icon">&#xE3B6;</i>
+                                                    a partir de 1.000 unidades
+                                                </span>
+                                            </li>
+                                            <li class="mdl-list__item">
+                                                <span class="mdl-list__item-primary-content font">
+                                                    <i class="material-icons mdl-list__item-icon">&#xE243;</i>
+                                                    1 cor
+                                                </span>
+                                            </li>
+                                            <li class="mdl-list__item">
+                                                <span class="mdl-list__item-primary-content font">
+                                                    <i class="material-icons mdl-list__item-icon">&#xE254;</i>
+                                                    texto padrão
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="show-dialog-preco-garantia" type="button" data-toggle="dialog" data-target="#dialog-preco-garantia">
+                                            + INFORMAÇÕES
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col" id="etka_preco-ingresso">
+                                <div class="mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">TICKETS E INGRESSOS</h2>
+                                    </div>
+                                    <hr class="etka_spacer__clear">
+                                    <div class="etka-card__preco">
+                                        <h2 style="display: inline-block"><small><sup>R$</sup></small>&nbsp;75&nbsp;</h2><sub><p style="display: inline"><small>/ rolo</small></p></sub>
+                                    </div>
+                                    <hr class="etka_spacer__clear">
+                                    <div class="mdl-card__supporting-text">
+                                        Lacres com arte padronizada indicado para fechamento de embalagens em serviços de entrega.
+                                        <br/><br/>
+                                        <hr class="etka_spacer__clear">
+                                        <ul class="mdl-list">
+                                            <li class="mdl-list__item">
+                                                <span class="mdl-list__item-primary-content font">
+                                                    <i class="material-icons mdl-list__item-icon">&#xE3B6;</i>
+                                                    a partir de 1.000 unidades
+                                                </span>
+                                            </li>
+                                            <li class="mdl-list__item">
+                                                <span class="mdl-list__item-primary-content font">
+                                                    <i class="material-icons mdl-list__item-icon">&#xE243;</i>
+                                                    4 cores
+                                                </span>
+                                            </li>
+                                            <li class="mdl-list__item">
+                                                <span class="mdl-list__item-primary-content font">
+                                                    <i class="material-icons mdl-list__item-icon">&#xE254;</i>
+                                                    arte padrão
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="show-dialog-preco-ingresso" type="button" data-toggle="dialog" data-target="#dialog-preco-ingresso">
+                                            + INFORMAÇÕES
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col" id="etka_preco-validade">
+                                <div class="mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">ETIQUETAS DE VALIDADE</h2>
+                                    </div>
+                                    <hr class="etka_spacer__clear">
+                                    <div class="etka-card__preco">
+                                        <h2 style="display: inline-block"><small><sup>R$</sup></small>&nbsp;75&nbsp;</h2><sub><p style="display: inline"><small>/ rolo</small></p></sub>
+                                    </div>
+                                    <hr class="etka_spacer__clear">
+                                    <div class="mdl-card__supporting-text">
+                                        Lacres com arte padronizada indicado para fechamento de embalagens em serviços de entrega.
+                                        <br/><br/>
+                                        <hr class="etka_spacer__clear">
+                                        <ul class="mdl-list">
+                                            <li class="mdl-list__item">
+                                                <span class="mdl-list__item-primary-content font">
+                                                    <i class="material-icons mdl-list__item-icon">&#xE3B6;</i>
+                                                    a partir de 1.000 unidades
+                                                </span>
+                                            </li>
+                                            <li class="mdl-list__item">
+                                                <span class="mdl-list__item-primary-content font">
+                                                    <i class="material-icons mdl-list__item-icon">&#xE243;</i>
+                                                    uma cor
+                                                </span>
+                                            </li>
+                                            <li class="mdl-list__item">
+                                                <span class="mdl-list__item-primary-content font">
+                                                    <i class="material-icons mdl-list__item-icon">&#xE254;</i>
+                                                    arte padrão
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="show-dialog-preco-validade" type="button" data-toggle="dialog" data-target="#dialog-preco-validade">
+                                            + INFORMAÇÕES
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+				</section>
+                <!--PORTFOLIO
+                <section data-anchor="portefolio" class="section etka_port" id="etka_port">
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--12-col" style="text-align: center">
+                            <h1>Portefólio</h1>
+                        </div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--1-offset-desktop mdl-cell--2-col">
+                            <div class="etka-card-image mdl-card mdl-shadow--2dp" id="show-dialog-port_modelo" type="button" data-toggle="modal" data-target="#dialog-port_modelo">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="etka-card-image__filename">Etiquetas</span>
+                                </div>
+                            </div>
+                            <div class="etka-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="etka-card-image__filename">Etiquetas</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--2-col">
+                            <div class="etka-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="etka-card-image__filename">Etiquetas</span>
+                                </div>
+                            </div>
+                            <div class="etka-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="etka-card-image__filename">Etiquetas</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--2-col">
+                            <div class="etka-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="etka-card-image__filename">Etiquetas</span>
+                                </div>
+                            </div>
+                            <div class="etka-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="etka-card-image__filename">Etiquetas</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--2-col">
+                            <div class="etka-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="etka-card-image__filename">Etiquetas</span>
+                                </div>
+                            </div>
+                            <div class="etka-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="etka-card-image__filename">Etiquetas</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--2-col">
+                            <div class="etka-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="etka-card-image__filename">Etiquetas</span>
+                                </div>
+                            </div>
+                            <div class="etka-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="etka-card-image__filename">Etiquetas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>-->
+                <!--CONTATO-->
+				<section data-anchor="contato" class="section etka_contato" id="etka_contato">
+                    <div class="mdl-grid etka_copy">
+                        <div class="mdl-cell mdl-cell--3-offset-desktop mdl-cell--3-col etka_copy-l-txt">
+                            <span style="margin-right: 16px">Todos os direitos reservados. ETICKETA - Rótulos e Soluções <span class="etka_copy-s">&#169;</span> 2017</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col etka_copy-r-txt">
+                            Uma obra-prima artesanal deste cara <a href="http://raphaelrpais.com" target="_blank">aqui</a>.
+                        </div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--6-col etka_contato-l">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--middle mdl-cell--3-offset-desktop mdl-cell--6-col etka_contato-subscribe">
+                                    <p>Estamos no <strong>Rio de Janeiro</strong>, mas alcançamos as suas demandas em qualquer lugar. Oferecemos diversos tipos de frete e pode até sair <strong>grátis</strong>!<br/><br/>Entre em contato pelo formulário ao lado para mais informações.<br/><br/>E caso não necessite dos nossos serviços imediatamente, <strong>inscreva-se</strong> e fique sempre por dentro das novidades do mercado gráfico e da Eticketa.</p>
+                                    <form class="mdl-grid" action="#">
+                                        <div class="mdl-cell mdl-cell--12-col">
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                                <input class="mdl-textfield__input font" type="text" id="subscribe">
+                                                <label class="mdl-textfield__label" for="subscribe">voce@suaempresa.com</label>
+                                            </div>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--7-offset-desktop mdl-cell--5-col" style="text-align: right">
+                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">INSCREVER</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--1-offset-desktop mdl-cell--4-col">
+                            <h1>Contato</h1>
+                            <p>Para esclarecimentos mais profundos, conhecer mais do nosso trabalho, tirar dúvidas, pedidos de orçamento... Fique a vontade, entre em contato.</p>
+                            <button role="link" href="tel:+5521998688448" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--mini-fab mdl-button--colored">
+                                <i class="material-icons">phone</i>
+                            </button>
+                            <a href="tel:+552134909292"><h4 class="etka_contato-tel"><small>+55&nbsp;&nbsp;21</small> 3490 9292</h4></a>
+                            <button role="button" href="whatsapp://send?text=Hello World!&phone=+5521984016556" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--mini-fab mdl-button--colored" style="margin-right: 0px">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            </button>&nbsp;&nbsp;
+                            <button role="link" href="tel:+5521998688448" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--mini-fab mdl-button--colored">
+                                <i class="fa fa-telegram" aria-hidden="true"></i>
+                            </button>
+                            <a href="tel:+5521998688448"><h4 class="etka_contato-tel">&nbsp;&nbsp;<small>+55&nbsp;&nbsp;21</small> 9 9868 8448</h4></a>
+                            <h4>Mensagem</h4>
+                            <form name="etka_contato" id="etka_contato" class="mdl-grid" action="./contato/contato.php" onsubmit="return validateForm()" method="post" novalidate>
+<!--
+                                <div id="etka_contato-enviado" class="mdl-grid" style="display: none">
+                                    <div class="mdl-cell mdl-cell--middle mdl-cell--12-col">
+                                        <span class="mdl-chip mdl-chip--deletable">
+                                            <span class="mdl-chip__text">Mensagem enviada!</span>
+                                            <button type="button" class="mdl-chip__action">
+                                                <i class="material-icons">cancel</i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+-->
+                                <div class="mdl-cell mdl-cell--6-col">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="name" name="name">
+                                        <label class="mdl-textfield__label" for="name">Nome</label>
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="email" name="email">
+                                        <label class="mdl-textfield__label" for="email">E-mail</label>
+                                        <span class="mdl-textfield__error">Insira um endereço de e-mail válido.</span>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="company" name="company">
+                                        <label class="mdl-textfield__label" for="company">Cargo / Empresa</label>
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="[(]?\d{2}[- )]?[\d{1}]?[- ]?\d{4}[- ]?\d{4}" id="phone" name="phone">
+                                        <label class="mdl-textfield__label" for="phone">Telefone</label>
+                                        <span class="mdl-textfield__error">Insira um número de telefone válido.</span>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--12-col">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="subject" name="subject" >
+                                        <label class="mdl-textfield__label" for="subject">Assunto</label>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--12-col">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="message" name="message"></textarea>
+                                        <label class="mdl-textfield__label" for="message">Mensagem</label>
+                                    </div>
+                                </div>
+                                <div id="etka_contato-sucesso"></div>
+                                <div class="mdl-cell mdl-cell--12-col" style="text-align: right">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">ENVIAR</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+			</main>
+		</div>
+        
+<!-- DIALOGS -->
+        
+        <!-- Orçamento -->
+        
+        <dialog class="mdl-dialog font" id="dialog-orcamento-rotulos">
+            <h4 class="mdl-dialog__title">Pedido de Orçamento <small><br/>Rótulos</small></h4>
+            <div class="mdl-dialog__content">
+                <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
+                <form class="mdl-grid" action="#">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Sobre você</h4>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="name">
+                            <label class="mdl-textfield__label" for="name">Nome</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="empresa">
+                            <label class="mdl-textfield__label" for="empresa">Empresa</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="email">
+                            <label class="mdl-textfield__label" for="email">E-mail</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phone">
+                            <label class="mdl-textfield__label" for="phone">Telefone</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Sobre o serviço</h4>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <p class="etka_form-label">Dimensões (mm):</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="number" id="largura">
+                            <label class="mdl-textfield__label" for="largura">largura</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+<!--                    <p style="margin-top: 8px">x</p>-->
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="number" id="altura">
+                            <label class="mdl-textfield__label" for="altura">altura</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                        <p class="etka_form-label">Formato:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col etka_form-radio etka_form-label">
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="retangular-tt" for="retangular">
+                            <input type="checkbox" id="retangular" name="options" class="mdl-icon-toggle__input" value="1" checked>
+                            <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="retangular-tt">Retangular / Quadrado</div>
+                        </label>
+                        &nbsp;
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="circular-tt" for="circular">
+                            <input type="checkbox" id="circular" name="options" class="mdl-icon-toggle__input" value="2">
+                            <i class="mdl-icon-toggle__label material-icons">panorama_fish_eye</i>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="circular-tt">Circular / Oval</div>
+                        </label>
+                        &nbsp;
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="especial-tt" for="especial">
+                            <input type="checkbox" id="especial" name="options" class="mdl-icon-toggle__input" value="3">
+                            <i class="icon mdl-icon-toggle__label material-icons">star_border</i>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="especial-tt">CORTE ESPECIAL<br/>Facas personalizadas podem encarecer seu projeto.</div> 
+                        </label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                        <p class="etka_form-label">Volume:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="quantidade">
+                            <label class="mdl-textfield__label" for="quantidade">>1.000 un.</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <p class="etka_form-label">Cores:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="frente">
+                            <label class="mdl-textfield__label" for="frente">frente</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+<!--                    <p style="margin-top: 8px">x</p>-->
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="verso">
+                            <label class="mdl-textfield__label" for="verso">verso</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col cores-help">
+                        <i class="material-icons etka_form-label" id="cores-help">help</i>
+                        <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores combinadas, reproduzem <strong>todas</strong>.</div> 
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                        <p class="etka_form-label">Finalidade:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="finalidade">
+                            <label class="mdl-textfield__label" for="finalidade">como o material será utilizado?</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="anexo">
+                                <i class="material-icons" id="anexo-help">attach_file</i>
+                            </label>
+                            <div class="mdl-textfield__expandable-holder">
+                                <input class="mdl-textfield__input" type="text" id="anexo">
+                                <label class="mdl-textfield__label" for="sample-expandable">Anexo</label>
+                                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até três anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <textarea class="mdl-textfield__input" type="text" id="mensagem" ></textarea>
+                            <label class="mdl-textfield__label" for="mensagem">Observações:</label>
+                        </div>
+                    </div>
+                </form>
+                <div class="mdl-dialog__actions">
+                    <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised">ENVIAR</button>
+                    <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
+                </div>
+            </div>
+        </dialog>
+        
+        <dialog class="mdl-dialog font" id="dialog-orcamento-lacres">
+            <h4 class="mdl-dialog__title">Pedido de Orçamento <small><br/>Lacres</small></h4>
+            <div class="mdl-dialog__content">
+                <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
+                <form class="mdl-grid" action="#">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Sobre você</h4>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="name">
+                            <label class="mdl-textfield__label" for="name">Nome</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="empresa">
+                            <label class="mdl-textfield__label" for="empresa">Empresa</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="email">
+                            <label class="mdl-textfield__label" for="email">E-mail</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phone">
+                            <label class="mdl-textfield__label" for="phone">Telefone</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Sobre o serviço</h4>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <p>Dimensões (mm):</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="number" id="largura">
+                            <label class="mdl-textfield__label" for="largura">largura</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+<!--                    <p style="margin-top: 8px">x</p>-->
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="number" id="altura">
+                            <label class="mdl-textfield__label" for="altura">altura</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                        <p>Formato:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col etka_form-radio">
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="retangular-tt" for="retangular">
+                            <input type="checkbox" id="retangular" name="options" class="mdl-icon-toggle__input" value="1" checked>
+                            <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="retangular-tt">Retangular / Quadrado</div>
+                        </label>
+                        &nbsp;
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="circular-tt" for="circular">
+                            <input type="checkbox" id="circular" name="options" class="mdl-icon-toggle__input" value="2">
+                            <i class="mdl-icon-toggle__label material-icons">panorama_fish_eye</i>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="circular-tt">Circular / Oval</div>
+                        </label>
+                        &nbsp;
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="especial-tt" for="especial">
+                            <input type="checkbox" id="especial" name="options" class="mdl-icon-toggle__input" value="3">
+                            <i class="icon mdl-icon-toggle__label material-icons">star_border</i>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="especial-tt">CORTE ESPECIAL<br/>Facas personalizadas podem encarecer seu projeto.</div> 
+                        </label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                        <p>Volume:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="quantidade">
+                            <label class="mdl-textfield__label" for="quantidade">>1.000 un.</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <p>Cores:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="frente">
+                            <label class="mdl-textfield__label" for="frente">frente</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+<!--                    <p style="margin-top: 8px">x</p>-->
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="verso">
+                            <label class="mdl-textfield__label" for="verso">verso</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col cores-help">
+                        <i class="material-icons" id="cores-help">help</i>
+                        <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores combinadas, reproduzem <strong>todas</strong>.</div> 
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                        <p>Finalidade:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="finalidade">
+                            <label class="mdl-textfield__label" for="finalidade">como o material será utilizado?</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="anexo">
+                                <i class="material-icons" id="anexo-help">attach_file</i>
+                            </label>
+                            <div class="mdl-textfield__expandable-holder">
+                                <input class="mdl-textfield__input" type="text" id="anexo">
+                                <label class="mdl-textfield__label" for="sample-expandable">Anexo</label>
+                                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até três anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <textarea class="mdl-textfield__input" type="text" id="mensagem" ></textarea>
+                            <label class="mdl-textfield__label" for="mensagem">Observações:</label>
+                        </div>
+                    </div>
+                </form>
+                <div class="mdl-dialog__actions">
+                    <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised">ENVIAR</button>
+                    <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
+                </div>
+            </div>
+        </dialog>
+        
+        <dialog class="mdl-dialog font" id="dialog-orcamento-ingressos">
+            <h4 class="mdl-dialog__title">Pedido de Orçamento <small><br/>Controle de Acesso</small></h4>
+            <div class="mdl-dialog__content">
+                <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
+                <form class="mdl-grid" action="#">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Sobre você</h4>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="name">
+                            <label class="mdl-textfield__label" for="name">Nome</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="empresa">
+                            <label class="mdl-textfield__label" for="empresa">Empresa</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="email">
+                            <label class="mdl-textfield__label" for="email">E-mail</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phone">
+                            <label class="mdl-textfield__label" for="phone">Telefone</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Sobre o serviço</h4>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <p>Dimensões (mm):</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="number" id="largura">
+                            <label class="mdl-textfield__label" for="largura">largura</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+<!--                    <p style="margin-top: 8px">x</p>-->
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="number" id="altura">
+                            <label class="mdl-textfield__label" for="altura">altura</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                        <p>Formato:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col etka_form-radio">
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="retangular-tt" for="retangular">
+                            <input type="checkbox" id="retangular" name="options" class="mdl-icon-toggle__input" value="1" checked>
+                            <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="retangular-tt">Retangular / Quadrado</div>
+                        </label>
+                        &nbsp;
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="circular-tt" for="circular">
+                            <input type="checkbox" id="circular" name="options" class="mdl-icon-toggle__input" value="2">
+                            <i class="mdl-icon-toggle__label material-icons">panorama_fish_eye</i>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="circular-tt">Circular / Oval</div>
+                        </label>
+                        &nbsp;
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="especial-tt" for="especial">
+                            <input type="checkbox" id="especial" name="options" class="mdl-icon-toggle__input" value="3">
+                            <i class="icon mdl-icon-toggle__label material-icons">star_border</i>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="especial-tt">CORTE ESPECIAL<br/>Facas personalizadas podem encarecer seu projeto.</div> 
+                        </label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                        <p>Volume:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="quantidade">
+                            <label class="mdl-textfield__label" for="quantidade">>1.000 un.</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <p>Cores:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="frente">
+                            <label class="mdl-textfield__label" for="frente">frente</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+<!--                    <p style="margin-top: 8px">x</p>-->
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="verso">
+                            <label class="mdl-textfield__label" for="verso">verso</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col cores-help">
+                        <i class="material-icons" id="cores-help">help</i>
+                        <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores combinadas, reproduzem <strong>todas</strong>.</div> 
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                        <p>Finalidade:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="finalidade">
+                            <label class="mdl-textfield__label" for="finalidade">como o material será utilizado?</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="anexo">
+                                <i class="material-icons" id="anexo-help">attach_file</i>
+                            </label>
+                            <div class="mdl-textfield__expandable-holder">
+                                <input class="mdl-textfield__input" type="text" id="anexo">
+                                <label class="mdl-textfield__label" for="sample-expandable">Anexo</label>
+                                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até três anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <textarea class="mdl-textfield__input" type="text" id="mensagem" ></textarea>
+                            <label class="mdl-textfield__label" for="mensagem">Observações:</label>
+                        </div>
+                    </div>
+                </form>
+                <div class="mdl-dialog__actions">
+                    <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised">ENVIAR</button>
+                    <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
+                </div>
+            </div>
+        </dialog>
+        
+        <dialog class="mdl-dialog font" id="dialog-orcamento-validade">
+            <h4 class="mdl-dialog__title">Pedido de Orçamento <small><br/>Etiquetas de Validade</small></h4>
+            <div class="mdl-dialog__content">
+                <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
+                <form class="mdl-grid" action="#">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Sobre você</h4>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="name">
+                            <label class="mdl-textfield__label" for="name">Nome</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="empresa">
+                            <label class="mdl-textfield__label" for="empresa">Empresa</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="email">
+                            <label class="mdl-textfield__label" for="email">E-mail</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phone">
+                            <label class="mdl-textfield__label" for="phone">Telefone</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Sobre o serviço</h4>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <p>Dimensões (mm):</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="number" id="largura">
+                            <label class="mdl-textfield__label" for="largura">largura</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+<!--                    <p style="margin-top: 8px">x</p>-->
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="number" id="altura">
+                            <label class="mdl-textfield__label" for="altura">altura</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                        <p>Formato:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col etka_form-radio">
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="retangular-tt" for="retangular">
+                            <input type="checkbox" id="retangular" name="options" class="mdl-icon-toggle__input" value="1" checked>
+                            <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="retangular-tt">Retangular / Quadrado</div>
+                        </label>
+                        &nbsp;
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="circular-tt" for="circular">
+                            <input type="checkbox" id="circular" name="options" class="mdl-icon-toggle__input" value="2">
+                            <i class="mdl-icon-toggle__label material-icons">panorama_fish_eye</i>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="circular-tt">Circular / Oval</div>
+                        </label>
+                        &nbsp;
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="especial-tt" for="especial">
+                            <input type="checkbox" id="especial" name="options" class="mdl-icon-toggle__input" value="3">
+                            <i class="icon mdl-icon-toggle__label material-icons">star_border</i>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="especial-tt">CORTE ESPECIAL<br/>Facas personalizadas podem encarecer seu projeto.</div> 
+                        </label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                        <p>Volume:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="quantidade">
+                            <label class="mdl-textfield__label" for="quantidade">>1.000 un.</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <p>Cores:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="frente">
+                            <label class="mdl-textfield__label" for="frente">frente</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+<!--                    <p style="margin-top: 8px">x</p>-->
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="verso">
+                            <label class="mdl-textfield__label" for="verso">verso</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col cores-help">
+                        <i class="material-icons" id="cores-help">help</i>
+                        <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores combinadas, reproduzem <strong>todas</strong>.</div> 
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                        <p>Finalidade:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="finalidade">
+                            <label class="mdl-textfield__label" for="finalidade">como o material será utilizado?</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="anexo">
+                                <i class="material-icons" id="anexo-help">attach_file</i>
+                            </label>
+                            <div class="mdl-textfield__expandable-holder">
+                                <input class="mdl-textfield__input" type="text" id="anexo">
+                                <label class="mdl-textfield__label" for="sample-expandable">Anexo</label>
+                                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até três anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <textarea class="mdl-textfield__input" type="text" id="mensagem" ></textarea>
+                            <label class="mdl-textfield__label" for="mensagem">Observações:</label>
+                        </div>
+                    </div>
+                </form>
+                <div class="mdl-dialog__actions">
+                    <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised">ENVIAR</button>
+                    <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
+                </div>
+            </div>
+        </dialog>
+        
+        <!-- Como fazemos -->
+        
+        <dialog class="mdl-dialog etka_fazemos-dialog font" id="dialog-flexo">
+            <h4 class="mdl-dialog__title">Flexografia</h4>
+            <div class="mdl-dialog__content">
+                <p>Nossa <b>especialidade</b>. Com maquinário moderno, operado por profissionais capacitados e experientes, obter <b>altíssima definição</b> em <span id="cromias-tt" class="etka_hypertext">cromias</span> e <b>fidelidade</b> nas cores <span id="pantones-tt" class="etka_hypertext">Pantone</span>, tornam-se pré-requisitos.</p>
+                <p>A <b>flexografia</b> é um processo de impressão gráfica em que a fôrma, um <span id="cliche-tt" class="etka_hypertext">clichê</span> de borracha ou fotopolímero, é relevográfica. Em analogia, o sistema pode ser compreendido pelo mesmo princípio básico dos carimbos. Usa-se tintas líquidas altamente secativas, a base de água, solvente ou curadas por luz UV ou feixe de elétrons. Uma de suas virtudes é a <b>flexibilidade</b> para imprimir os mais variados suportes, de durezas e superfícies diferentes.</p>
+                <p><b>Saiba mais</b> sobre as possibilidades da flexografia disponíveis com a Eticketa:</p>
+                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cromias-tt">Imagens impressas com a combinação das quatro cores: <span style="color: cyan">ciano</span>, <span style="color: magenta">magenta</span>, <span style="color: yellow">amarelo</span> e <span style="color: black">preto</span>; o CMYK. Que combinadas reproduzem a maioria das cores do espectro visível.</div>
+                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="pantones-tt">Catálogo mundialmente utilizado para a padronização de cores em diferentes acabamentos.</div>
+                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cliche-tt">Do francês <i>cliché</i>, em tipografia, diz respeito a uma matriz gravada em placa de metal, borracha ou fotopolímero, destinada à impressão de imagens e textos.</div>
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                            <thead>
+                                <tr><th class="mdl-data-table__cell--non-numeric">Materiais</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="mdl-data-table__cell--non-numeric"><span id="bopp-tt" class="etka_hypertext">BOPP</span> adesivo: <span class="w300">transparente, branco, perolizado e metalizado</span></td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Papel couchê L2: <span class="w300">brilho ou fosco, em diversas <span id="gramatura-tt" class="etka_hypertext">gramaturas</span></span></td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Couchê adesivo: <span class="w300">brilho ou fosco</span></td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Papel térmico adesivo</td></tr>
+                            </tbody>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="gramatura-tt">Espessura do papel cartão medida em g/m², que em geral também serve de referência para o grau de rigidez do material.</div>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="bopp-tt">Do inglês <i>Biaxially oriented polypropylene</i>, o polipropileno orientado biaxialmente, é um filme plástico derivado do polipropileno por extrusão e esgarçamento. Resulta em um material recomendado a diversas aplicações gráficas, por suas características de boa aderência a impressão.</div>
+                        </table>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                            <thead>
+                                <tr><th class="mdl-data-table__cell--non-numeric">Acabamentos</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="mdl-data-table__cell--non-numeric">8 cores totais de impressão frente e verso</td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Verniz UV total: <span class="w300">brilho ou fosco</span></td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Verniz UV localizado: <span class="w300">brilho ou fosco</span></td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric"><span id="delam-relam-tt" class="etka_hypertext">Relam-relam</span></td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Laminação</td></tr>
+                            </tbody>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="delam-relam-tt">Impressão feita na cola do adesivo, com a <strong>delam</strong>inação e posterior <strong></strong>inação do <i>liner</i>.</div>
+                        </table>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                            <thead>
+                                <tr><th class="mdl-data-table__cell--non-numeric">Exemplos</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Rólutos, ingressos, lacres, etiquetas de validade, <i>tags</i> de vestuário, etiquetas de balança, cartão de preço para gôndolas, selos promocionais, <i>tags</i> de identificação para visitantes e inúmeras outras soluções que sempre acrescentamos ao nosso portfólio.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <h5>Dúvidas?</h5>
+                <p>Converse com um de nossos consultores.</p>
+                <a role="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent close" data-menuanchor="contato" href="#contato">Saiba como</a>
+            </div>
+            <div class="mdl-dialog__actions">
+                <button type="button" class="mdl-button mdl-button--colored close">Fechar</button>
+            </div>
+        </dialog>
+        
+        <dialog class="mdl-dialog etka_fazemos-dialog font" id="dialog-digital">
+            <h4 class="mdl-dialog__title">Impressão Gráfica Digital</h4>
+            <div class="mdl-dialog__content">
+                <p>Rápida e (praticamente) sem limites. A esolha mais veloz para transformar projetos gráficos em realidade, nas dimensões necessárias, exatamente na quantidade esperada, feito sob <b>qualquer superficíe plana</b> e dependendo do tipo de serviço, também cuidamos da aplicação.</p>
+                <p>A <b>impressão digital</b> é um método de impressão no qual a imagem é gerada partir da entrada de dados digitais direto do computador para a impressora, além de possuir a flexibilidade de atender baixas tiragens, também dispensa o uso de <span id="fotolito-tt" class="etka_hypertext">fotolitos</span> e demanda diferentes máquinas para cada tipo, medida e tiragem de serviço. Tecnicamente e de um modo generalista, podem ser comparadas às impressoras tipo jato de tinta caseiras, nas quais cabeças de impressão independentes para cada uma das <span id="cmyk-tt" class="etka_hypertext">quatro cores</span> deslizam sobre o material escolhido, aplicando a tinta nas devidas coordenadas.</p>
+                <p><b>Saiba mais</b> sobre as possibilidades da <b>impressão gráfica digital</b> disponíveis com a Eticketa:</p>
+                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="fotolito-tt">Filme plástico transparente feito de acetato, onde são gravadas quimicamente as cores de um serviço gráfico, um fotolito para cada cor. Em geral utilizados para posterior gravação de clichês e placas de offset.</div>
+                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cmyk-tt"><span style="color: cyan">Ciano</span>, <span style="color: magenta">magenta</span>, <span style="color: yellow">amarelo</span> e <span style="color: black">preto</span>; o CMYK. Que combinadas reproduzem a maioria das cores do espectro visível.</div>
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                            <thead>
+                                <tr><th class="mdl-data-table__cell--non-numeric">Materiais</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Vinil adesivo: <span class="w300">brilho, fosco, <i>blackout</i>, <span id="perfurado-tt" class="etka_hypertext">perfurado</span> ou refletivo</span></td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Qualquer superfície plana com até 16mm de espessura: <span class="w300"><span id="ps-tt" class="etka_hypertext">poliestireno</span>, acrílico, madeira, azulejo, alumínio...</span></td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Lona: <span class="w300"><i>backlight</i>, <span id="sunet-tt" class="etka_hypertext">sunet</span>, brilho ou fosca</span></td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Papel: <span class="w300">brilho ou fosco</span></td></tr>
+                            </tbody>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="ps-tt">Pronta entrega para placas de poliestireno (PS) com 1mm ou 2mm de espessura, com ou sem dobras.</div>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="perfurado-tt">O adesivo perfurado é impresso em uma das faces com a outra preta. Ideal para publicidade em janelas, permite a visão de dentro para fora e externamente expõe a arte impressa.</div>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="sunet-tt">Lona sunet é um material perfurado, voltado para cobertura de caixas de som sem perjuízo ao desempenho</div>                             
+                        </table>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                            <thead>
+                                <tr><th class="mdl-data-table__cell--non-numeric">Acabamentos</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Laminação: <span class="w300">brilho, fosca/jateada e para uso em piso</span></td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Montagem para faixas ou <i>banner</i> suspenso</td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Furação e colocação ilhoses</td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Corte computadorizado</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                            <thead>
+                                <tr><th class="mdl-data-table__cell--non-numeric">Exemplos</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="mdl-data-table__cell--non-numeric"><i>Banners</i>, envelopamentos diversos (eletrodomésticos, decoração, tapumes etc.), adesivação de piso, totem, adesivos e placas de sinalização, cardápios, letras adesivas recortadas, <i>displays</i> de mesa, lonas de patrocinadores para eventos, azulejos decorativos customizados...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <h5>Dúvidas?</h5>
+                <p>Converse com um de nossos consultores.</p>
+                <a role="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent close" data-menuanchor="contato" href="#contato">Saiba como</a>
+            </div>
+            <div class="mdl-dialog__actions">
+                <button type="button" class="mdl-button mdl-button--colored close">Fechar</button>
+            </div>
+        </dialog>
+        
+        <dialog class="mdl-dialog etka_fazemos-dialog font" id="dialog-offset">
+            <h4 class="mdl-dialog__title">Offset</h4>
+            <div class="mdl-dialog__content">
+                <p>Sistema a ser escolhido com a Eticketa quando, médias e grandes tiragens, também encontram a necessidade de altíssima definição, porém em materiais não adesivos e com folhas soltas.</p>
+                <p>A <b>impressão <i>offset</i></b> é um processo planográfico, ou seja, a partir de uma superfície de impressão plana, cuja essência consiste na repulsão entre água e óleo, com a utilização de tintas de base oleosa. O nome <i>offset</i>, do inglês fora do lugar, vem do fato da impressão ser indireta, método em que a tinta passa antes por um cilindro, de onde é transferida para a chapa metálica de impressão, onde estão gravadas de forma semi-absorvente as <span id="reticula-tt" class="etka_hypertext">retículas</span> referentes a cor que se deseja imprimir, que por sua vez é transferida para outro cilindro e só então aplicada ao material.</p>
+                <p><b>Saiba mais</b> sobre as possibilidades da <b>impressão <i>offset</i></b> disponíveis com a Eticketa:</p>                
+                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="reticula-tt"><img src="img/fazemos/etka-fazemos_dialog-offset_reticula.jpg" height="120rem"></div>
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                            <thead>
+                                <tr><th class="mdl-data-table__cell--non-numeric">Materiais</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Couchê em diversas gramaturas</td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Papel <i>offset</i> em diversas gramaturas</td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Cartão</td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Papelão</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                            <thead>
+                                <tr><th class="mdl-data-table__cell--non-numeric">Acabamentos</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Laminação: <span class="w300">brilho ou fosca</span></td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Verniz UV: <span class="w300">total ou localizado</span></td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Encadernação: <span class="w300">cola, bloco, espiral ou grampo</span></td></tr>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Dobra</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                            <thead>
+                                <tr><th class="mdl-data-table__cell--non-numeric">Exemplos</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="mdl-data-table__cell--non-numeric">Cartões de visita, folders, flyers, bolachas de chope, bloco personalizado...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <h5>Dúvidas?</h5>
+                <p>Converse com um de nossos consultores.</p>
+                <a role="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent close" data-menuanchor="contato" href="#contato">Saiba como</a>
+            </div>
+            <div class="mdl-dialog__actions">
+                <button type="button" class="mdl-button mdl-button--colored close">Fechar</button>
+            </div>
+        </dialog>
+        
+        <dialog class="mdl-dialog etka_fazemos-dialog font" id="dialog-consultoria">
+            <h4 class="mdl-dialog__title">Consultoria</h4>
+            <div class="mdl-dialog__content">
+                <p>Se um negócio precisa contratar uma gráfica, não há razão para ter na equipe <b>arte-finalistas</b> e <b><i>designers</i></b> gabaritados.</p>
+                <p>Sabemos disso e nossa equipe oferece, ao longo de <b>todo processo</b>, para qualquer tipo de serviço, o apoio necessário para que os pedidos sejam produzidos de acordo com as necessidades do cliente, sempre pensando em conjunto para <i>otimizar custos</i> e prazos, sem abrir mão da qualidade, <i>definição</i> e <i>adequação</i>.</p>
+                <p>Nosso perfil consultivo permeia todas as áreas, não é um serviço a parte, isso faz parte do dia-a-dia no atendimento da <b>Eticketa</b>. Porém, se o caso for mais complexo e existir a necessidade de profissionais criativos, <i>designers</i>, fotógrafos ou diretores de arte, não deixaremos de oferecer soluções certeiras para cada caso.</p>
+                <h5>Dúvidas?</h5>
+                <p>Converse com um de nossos <b>consultores</b>. Saiba mais sobre como trabalhamos juntos na resolução de suas questões gráficas.</p>
+                <a role="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent close" data-menuanchor="contato" href="#contato">Clique aqui</a>
+            </div>
+            <div class="mdl-dialog__actions">
+                <button type="button" class="mdl-button mdl-button--colored close">Fechar</button>
+            </div>
+        </dialog>
+        
+        <!-- Preços -->
+        
+        <dialog class="mdl-dialog font" id="dialog-preco-lacre">
+            <h4 class="mdl-dialog__title">Lacres para Delivery</h4>
+            <div class="mdl-dialog__content">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--7-col">
+                        <p>Lacre com arte padronizada indicado para fechamento de embalagens em serviços de entrega.</p><p>Integros, resistentes e muito aderentes, ao sofrerem tentativas de violação, danificam as embalagens de papelão e por conta das peculiaridades da sua produção e matéria-prima, se rompem de forma clara, sem que possam ser repostos.</p>
+<!--                        <h4>Detalhes:</h4>                -->
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Material</span>
+                                    <span class="mdl-list__item-sub-title">Couché adesivo brilho</span>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Arte</span>
+                                    <span class="mdl-list__item-sub-title">Padronizada em 4 cores com propaganda discreta da Eticketa</span>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Entrega</span>
+                                    <span class="mdl-list__item-sub-title">Rolos com 1.000 unidades</span>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Prazo</span>
+                                    <span class="mdl-list__item-sub-title">Uma semana da confirmação + frete</span>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Preço</span>
+                                    <span class="mdl-list__item-sub-title">A partir de R$ 75 por rolo</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mdl-cell mdl-cell--middle mdl-cell--stretch mdl-cell--5-col etka_preco-faca" style="background-image: url('./img/precos/etka_preco-delivery.svg');"></div>
+                </div>
+                <form class="mdl-grid" action="#">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Encomende agora:</h4>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="name">
+                            <label class="mdl-textfield__label" for="name">Nome</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phone">
+                            <label class="mdl-textfield__label" for="phone">Telefone</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="endereco">
+                            <label class="mdl-textfield__label" for="endereco">E-mail</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="endereco">
+                            <label class="mdl-textfield__label" for="endereco">Endereço completo</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <p class="etka_slider-label">Quantidade:&nbsp;<label for="slider-lacre" id="slider-quantidade">1000</label></p>
+                        <p><input class="mdl-slider mdl-js-slider" type="range" id="slider-lacre" min="0" max="10000" value="1000" step="1000" oninput="showMessage(this.value)" onchange="showMessage(this.value)"></p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="lacre-anexo">
+                                <i class="material-icons" id="lacre-anexo-help">attach_file</i>
+                            </label>
+                            <div class="mdl-textfield__expandable-holder">
+                                <input class="mdl-textfield__input" type="file" id="lacre-anexo">
+                                <label class="mdl-textfield__label" for="sample-expandable">Anexo</label>
+                                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="lacre-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até três anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                    <div class="mdl-dialog__actions">
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised">ENVIAR</button>
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
+                    </div>
+            </div>
+        </dialog>
+        
+        <dialog class="mdl-dialog font" id="dialog-preco-garantia">
+            <h4 class="mdl-dialog__title">Lacres de Garantia</h4>
+            <div class="mdl-dialog__content">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--7-col">
+                        <p>Lacre com texto padronizado indicado para fechamento de embalagens de tamanho pequeno ou eletroeletrônicos que passaram por manutenção.</p><p>Integros, resistentes e muito aderentes, ao sofrerem tentativas de violação, por conta das peculiaridades da sua produção e matéria-prima, se rompem de forma clara, sem que possam ser repostos.</p>
+<!--                        <h4>Detalhes:</h4>                -->
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Material</span>
+                                    <span class="mdl-list__item-sub-title etka_hypertext" id="bopp-preco-tt">BOPP</span>
+                                    <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="bopp-preco-tt">Do inglês <i>biaxially oriented polypropylene</i> (BOPP), o polipropileno orientado biaxialmente, é um filme plástico derivado do polipropileno por extrusão e esgarçamento. Resulta em um material recomendado a diversas aplicações gráficas, por suas características de boa aderência a impressão.</div>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Arte</span>
+                                    <span class="mdl-list__item-sub-title">Texto padronizado em uma cor: lacre de segurança</span>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Entrega</span>
+                                    <span class="mdl-list__item-sub-title">Rolos com 1.000 unidades</span>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Prazo</span>
+                                    <span class="mdl-list__item-sub-title">Uma semana da confirmação + frete</span>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Preço</span>
+                                    <span class="mdl-list__item-sub-title">A partir de R$ 75 por rolo</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mdl-cell mdl-cell--middle mdl-cell--stretch mdl-cell--5-col etka_preco-faca" style="background-image: url('./img/precos/etka_preco-garantia.svg')"></div>
+                </div>
+                <form class="mdl-grid" action="#">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Encomende agora:</h4>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="name">
+                            <label class="mdl-textfield__label" for="name">Nome</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phone">
+                            <label class="mdl-textfield__label" for="phone">Telefone</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="endereco">
+                            <label class="mdl-textfield__label" for="endereco">E-mail</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="endereco">
+                            <label class="mdl-textfield__label" for="endereco">Endereço completo</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <p class="etka_slider-label">Quantidade:&nbsp;<label for="slider-lacre" id="slider-quantidade">1000</label></p>
+                        <p><input class="mdl-slider mdl-js-slider" type="range" id="slider-lacre" min="0" max="10000" value="1000" step="1000" oninput="showMessage(this.value)" onchange="showMessage(this.value)"></p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="lacre-anexo">
+                                <i class="material-icons" id="lacre-anexo-help">attach_file</i>
+                            </label>
+                            <div class="mdl-textfield__expandable-holder">
+                                <input class="mdl-textfield__input" type="file" id="lacre-anexo">
+                                <label class="mdl-textfield__label" for="sample-expandable">Anexo</label>
+                                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="lacre-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até três anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                    <div class="mdl-dialog__actions">
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised">ENVIAR</button>
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
+                    </div>
+            </div>
+        </dialog>
+        
+        <dialog class="mdl-dialog font" id="dialog-preco-ingresso">
+            <h4 class="mdl-dialog__title">Tickets e Ingressos</h4>
+            <div class="mdl-dialog__content">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--7-col">
+                        <p>Cartão em papel couchê sem adesivo, destinado a impressão posterior de informações variáveis.</p>
+                        <p>Ideal para controle de acesso em cinemas, shows, museus e eventos, o material é entregue em rolos contínuos de mil unidades com serrilha para destaque individual. Suas medidas e recorte são ideias para os padrões das impressoras de <span class="etka_hypertext" id="termo-tt">termotransferência</span>.</p><p>Opção de destaque lateral para um ou ambos os lados.</p>
+                        <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="termo-tt">Sistema geralmente portátil que contempla a transferência dos pigmentos de uma película plástica colorida, chamada <i>ribbon</i>, para outra superfície por meio do aquecimento seletivo de uma cabeça de impressão responsável pelo contato dos materiais.</div>
+<!--                        <h4>Detalhes:</h4>                -->
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Material</span>
+                                    <span class="mdl-list__item-sub-title">Papel couchê <span class="etka_hypertext" id="220-preco-tt">220g/m²</span></span>
+                                    <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="220-preco-tt">Gramatura papel, o pesodele medido em gramas por metro quadrado, que neste caso garante ao produto final a firmeza de cartão porém com baixa espessura.</div>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Arte</span>
+                                    <span class="mdl-list__item-sub-title">Entregue em branco em ambas as faces</span>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Entrega</span>
+                                    <span class="mdl-list__item-sub-title">Rolos com 1.000 unidades</span>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Prazo</span>
+                                    <span class="mdl-list__item-sub-title">Uma semana da confirmação + frete</span>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Preço</span>
+                                    <span class="mdl-list__item-sub-title">A partir de R$ 75 por rolo</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mdl-cell mdl-cell--middle mdl-cell--stretch mdl-cell--5-col etka_preco-faca" style="background-image: url('./img/precos/etka_preco-ingresso.svg')"></div>
+                </div>
+                <form class="mdl-grid" action="#">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Encomende agora:</h4>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="name">
+                            <label class="mdl-textfield__label" for="name">Nome</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phone">
+                            <label class="mdl-textfield__label" for="phone">Telefone</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="endereco">
+                            <label class="mdl-textfield__label" for="endereco">E-mail</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="endereco">
+                            <label class="mdl-textfield__label" for="endereco">Endereço completo</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <p class="etka_slider-label">Quantidade:&nbsp;<label for="slider-lacre" id="slider-quantidade">1000</label></p>
+                        <p><input class="mdl-slider mdl-js-slider" type="range" id="slider-lacre" min="0" max="10000" value="1000" step="1000" oninput="showMessage(this.value)" onchange="showMessage(this.value)"></p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="lacre-anexo">
+                                <i class="material-icons" id="lacre-anexo-help">attach_file</i>
+                            </label>
+                            <div class="mdl-textfield__expandable-holder">
+                                <input class="mdl-textfield__input" type="file" id="lacre-anexo">
+                                <label class="mdl-textfield__label" for="sample-expandable">Anexo</label>
+                                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="lacre-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até três anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                    <div class="mdl-dialog__actions">
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised">ENVIAR</button>
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
+                    </div>
+            </div>
+        </dialog>
+        
+        <dialog class="mdl-dialog font" id="dialog-preco-validade">
+            <h4 class="mdl-dialog__title">Etiquetas de Validade</h4>
+            <div class="mdl-dialog__content">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--7-col">
+                        <p>Dedicadas a quem lida com alimentos e busca cumprir a risca os itens <a href="http://www.rio.rj.gov.br/dlstatic/10112/5125403/4132348/RESOLUcaORDCN216ANVISA.pdf" target="_blank" title="Regulamento Técnico de Boas Práticas para Serviços de Alimentação.">4.8.6 e 4.9.1 da Resolução - CDN nº 216 (ANVISA)</a>.</p>
+                        <p>Criada pensando nas condições de congelamento e umidade do armazenamento de alimentos, as etiquetas de validade são fabricadas em materias resistente e muito aderente. Além de fáceis de destacar dos rolos, também contam com acabamento que facilita a escrita das informações necessárias com qualquer tipo de caneta.</p>
+<!--                        <h4>Detalhes:</h4>                -->
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Material</span>
+                                    <span class="mdl-list__item-sub-title">BOPP com verniz UV <span class="etka_hypertext" id="UV-preco-tt">fosco</span></span>
+                                    <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="UV-preco-tt">Acabamento especial que garante a fixação da impressão mesmo em condições adversas e facilita a escrita com qualquer tipo de caneta.</div>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Arte</span>
+                                    <span class="mdl-list__item-sub-title">Padronizada em uma cor com propaganda discreta da Eticketa</span>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Entrega</span>
+                                    <span class="mdl-list__item-sub-title">Rolos com 1.000 unidades</span>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Prazo</span>
+                                    <span class="mdl-list__item-sub-title">Uma semana da confirmação + frete</span>
+                                </span>
+                            </li>
+                            <li class="mdl-list__item mdl-list__item--two-line font">
+                                <span class="mdl-list__item-primary-content">
+                                    <span>Preço</span>
+                                    <span class="mdl-list__item-sub-title">A partir de R$ 75 por rolo</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mdl-cell mdl-cell--middle mdl-cell--stretch mdl-cell--5-col etka_preco-faca" style="background-image: url('./img/precos/etka_preco-validade.svg')"></div>
+                </div>
+                <form class="mdl-grid" action="#">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Encomende agora:</h4>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="name">
+                            <label class="mdl-textfield__label" for="name">Nome</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phone">
+                            <label class="mdl-textfield__label" for="phone">Telefone</label>
+                            <span class="mdl-textfield__error">Somente números</span>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="endereco">
+                            <label class="mdl-textfield__label" for="endereco">E-mail</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="endereco">
+                            <label class="mdl-textfield__label" for="endereco">Endereço completo</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <p class="etka_slider-label">Quantidade:&nbsp;<label for="slider-lacre" id="slider-quantidade">1000</label></p>
+                        <p><input class="mdl-slider mdl-js-slider" type="range" id="slider-lacre" min="0" max="10000" value="1000" step="1000" oninput="showMessage(this.value)" onchange="showMessage(this.value)"></p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="lacre-anexo">
+                                <i class="material-icons" id="lacre-anexo-help">attach_file</i>
+                            </label>
+                            <div class="mdl-textfield__expandable-holder">
+                                <input class="mdl-textfield__input" type="file" id="lacre-anexo">
+                                <label class="mdl-textfield__label" for="sample-expandable">Anexo</label>
+                                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="lacre-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até três anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                    <div class="mdl-dialog__actions">
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised">ENVIAR</button>
+                        <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
+                    </div>
+            </div>
+        </dialog>
+        
+        <!-- Portfólio
+        
+        <dialog class="mdl-dialog etka_port-dialog font" id="dialog-port_modelo">
+            
+        </dialog> -->
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<!-- CUSTOM -->
+		<script src="./js/scripts.js"></script>
+		<!-- Google Material -->
+        <script src="./mdl/material.min.js"></script>
+            <!-- Polyfill -->
+            <script src="plugins/Polyfill/dialog-polyfill.js"></script>
+		<!-- fullPage -->
+        <script src="./plugins/fullPage/jquery.fullPage.min.js"></script>
+	</body>
+</html>

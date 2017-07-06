@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ETICKETA - Rótulos e Soluções</title>
+	<link rel="stylesheet" media="screen" href="styles.css" >
+    <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+</head>
+
+</style>
+
+<!-- SCRIPT -->
+
+<script src="jquery.js" type="text/javascript" charset="utf-8"> </script>
+<script type= "text/javascript" charset="utf-8">
+
+$(function () {
+  $('.bubbleInfo').each(function () {
+    // options
+    var distance = 10;
+    var time = 250;
+    var hideDelay = 500;
+	
+    var hideDelayTimer = 100;
+
+    // tracker
+	var beignShown = false;
+	var shown = false;
+	
+    var trigger = $('.box_pag', this);
+    var popup = $('.popup', this).css('opacity', 0);
+
+    // set the mouseover and mouseout on both element
+    $([trigger.get(0), popup.get(0)]).mouseover(function () {
+		// stops the hide event if we move from the trigger to the popup element
+		if (hideDelayTimer) clearTimeout(hideDelayTimer);
+
+		// don't trigger the animation again if we're being shown, or already visible
+		if (shown) {
+			return;
+		} else {
+			//reset position of popup
+			beignShown = true;
+			
+			// reset position of popup box
+			popup.css({
+				top: 205, 
+				left: 110,
+				display: 'block' // brings the popup back in to view			
+			})
+			
+			// (we're using chaining on the popup) now animate it's opacity and position
+			.animate({
+				top: '-=' + distance + 'px',
+				opacity:1
+			}, time, 'swing', function (){
+				// once the animation is complete, set the tracker variables
+				beingShown = false;
+				shown = true;
+			});
+		}
+			}).mouseout(function () {
+				// reset the timer if we get fired again - avoids double animations
+				if (hideDelayTimer) clearTimeout(hideDelayTimer);
+				// store the timer so that it can be cleared in the mouseover if required
+				hideDelayTimer = setTimeout(function (){
+					hideDelayTimer = null;
+					popup.animate({
+						top: '-='+ distance + 'px',
+						opacity: 0
+					}, time, 'swing', function (){
+						// once the animate is complete, set the tracker variables
+						shown = false;
+						// hide the popup entirely after the effect (opacity alone doesn't do the job)
+						popup.css('display','none');
+					});
+				}, hideDelay);
+		});
+	});
+});
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<!-- SCRIPT -->
+
+<body onload="MM_preloadImages('home_roll1.png','imagens/home_roll5.png','imagens/home_roll6.png','imagens/home_roll7.png')">
+
+<div class="page">
+
+<!-- QUEM SOMOS !-->
+
+<div class="bubbleInfo">
+
+  <div class="box_pag box_txt">
+  	<a href="http://eticketa.com.br/quemsomos.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('h_quem','','imagens/home_roll1.png',1)">
+  		<span style="padding:110px 0px 0px 90px; position:absolute;">
+  		quem	<br />. somos
+  		</span><img src="imagens/home_transp.png" id="h_quem"/></a>
+  </div>
+  
+  <div class="popup">
+  <img src="imagens/bubbleInfo_1.png" width="175" height="107" />
+  </div>
+  
+</div>
+
+<!-- QUEM SOMOS !-->
+<!-- O QUE FAZEMOS !-->
+
+  <div class="box_pag box_txt">
+  	<a href="http://eticketa.com.br/oquefazemos.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('h_fazemos','','imagens/home_roll2.png',1)">
+  		<span style="padding:110px 0px 0px 65px; position:absolute;">
+  		o que	<br />. fazemos
+  		</span><img src="imagens/home_transp.png" id="h_fazemos"/></a>
+  </div>
+  
+<!-- O QUE FAZEMOS !-->
+<!-- COMO FAZEMOS !-->
+
+  <div class="box_pag box_txt">
+  	<a href="http://eticketa.com.br/comofazemos.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('h_como','','imagens/home_roll3.png',1)">
+  		<span style="padding:110px 0px 0px 65px; position:absolute;">
+  		como	<br />. fazemos
+  		</span><img src="imagens/home_transp.png" id="h_como"/></a>
+  </div>
+  
+<!-- COMO FAZEMOS !-->
+<!-- LOGO !-->
+
+  <div class="box_logo">
+  <img src="imagens/home_txt4.png" width="200" height="200" alt="home_logo" />
+  </div>
+  
+<!-- LOGO !-->
+<!-- FORMATOS !-->
+
+  <div class="box_pag box_txt">
+  	<a href="http://eticketa.com.br/formatos.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('h_form','','imagens/home_roll5.png',1)">
+  		<span style="padding:150px 0px 0px 55px; position:absolute;">
+  		. formatos
+  		</span><img src="imagens/home_transp.png" id="h_form"/></a>
+  </div>
+  
+<!-- FORMATOS !-->
+<!-- PARCEIROS !-->
+
+  <div class="box_pag box_txt">
+  	<a href="http://eticketa.com.br/parceiros.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('h_par','','imagens/home_roll6.png',1)">
+  		<span style="padding:150px 0px 0px 50px; position:absolute;">
+  		. parceiros
+  		</span><img src="imagens/home_transp.png" id="h_par"/></a>
+  </div>
+  
+<!-- PARCEIROS !-->
+<!-- CONTATO !-->
+
+  <div class="box_pag box_txt">
+  	<a href="http://eticketa.com.br/contato.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('h_contato','','imagens/home_roll7.png',1)">
+  		<span style="padding:150px 0px 0px 70px; position:absolute;">
+  		. contato
+  		</span><img src="imagens/home_transp.png" id="h_contato"/></a>
+  </div>
+
+<!-- CONTATO !-->
+<!-- MINI !-->
+  
+  <div class="box_minis">
+    <div class="minibox_facebook"><img src="imagens/home_face.png" width="90" height="90" alt="h_face" /></a>
+    </div>
+    <div class="minibox_linkedin"><img src="imagens/home_linkedin.png" width="90" height="90" alt="h_face" /></a>
+    </div>
+    <div class="minibox_blogger"><img src="imagens/home_blogger.png" width="90" height="90" alt="h_blog" />
+    </div>
+    <div class="minibox_nada">
+    </div>
+  </div>
+  
+<!-- MINI !-->
+
+ETICKETA - Rótulos e Soluções © 2014 
+</div>
+
+</body>
+</html>

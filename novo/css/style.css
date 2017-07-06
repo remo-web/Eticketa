@@ -1,0 +1,397 @@
+/* NATIVE CSS MODS */
+
+html, body{min-height:100%; height:auto;}
+h1, h2, h3, h4, h5, h6{color: #7a2879}
+h1{font-size: 3.2rem; line-height: 3.5rem}
+h2{font-size: 2.5rem; line-height: 2.8rem}
+h3{font-size: 2.3rem; line-height: 2.6rem}
+p {font-size: 1.25rem; line-height: 1.8rem; letter-spacing: 0.03rem; font-weight: 300}
+b {font-weight: 700}
+a {text-decoration: none; color: #7a2879}
+
+::-webkit-scrollbar {width: 0px;} 
+/*
+::-webkit-scrollbar-track {background: rgba(255,255,255,0.0);}
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+    background: rgba(100,100,100,0.8);
+}
+::-webkit-scrollbar-thumb:window-inactive {background: rgba(122,40,121,0.4);}
+*/
+
+/* GOOGLE MDL MODS */
+
+.mdl-grid{padding: 0px}
+
+.mdl-layout__drawer-button, .mdl-layout__drawer{
+    left: initial;
+    right: 0;
+}
+
+.mdl-layout__drawer{transform:translateX(250px)}
+.mdl-layout__header-row{padding: 0 40px}
+.mdl-layout__content {height: 100%}
+.mdl-layout__header, .mdl-layout__drawer-button {color: white; position: absolute}
+
+.mdl-button{
+    font-family: 'Yanone Kaffeesatz', sans-serif !important; 
+    font-size: 1.25rem; 
+    letter-spacing: 0.05rem; 
+    line-height: 2.5rem;
+}
+
+.mdl-button--accent.mdl-button--accent.mdl-button--raised,
+.mdl-button--accent.mdl-button--accent.mdl-button--fab,
+.mdl-button--fab.mdl-button--colored,
+.mdl-button--fab.mdl-button--colored:hover{
+    background-color: #7a2879
+}
+
+.mdl-dialog {width: 60%}
+.mdl-list__item .mdl-list__item-primary-content .mdl-list__item-icon{margin-right: 16px}
+
+.mdl-list__item{
+    font-size: 1.2rem;
+    padding: 0px
+}
+
+.mdl-list__item--two-line{height: auto}
+.mdl-layout__header-row{background-color: #7a2879}
+
+a.mdl-navigation__link.active{
+    background-color: #e0e0e0; 
+    color: #57bf96 !important
+}
+
+.dialog{max-height: 100%}
+.mdl-card{width: auto}
+.mdl-card__supporting-text{width: auto}
+.mdl-textfield {width: 100%}
+
+.mdl-data-table, .mdl-data-table th{font-size: 1.16rem; line-height: 1.5rem; letter-spacing: 0.03rem}
+.mdl-data-table tbody tr{height: auto}
+
+/* FULLPAGE.JS MODS */
+
+    /* produtos */
+
+    .fp-controlArrow.fp-prev{ 
+        left: 25px !important;
+        border-color: #7a2879 !important;
+        border-width: 0 1px 1px 0 !important;   
+        border-style: solid;
+        display: inline-block;
+        padding: 10px;
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        margin-top: 0.5%;
+    }
+
+    .fp-controlArrow.fp-next{ 
+        right: 25px !important;
+        border-color: #7a2879 !important;
+        border-width: 0 1px 1px 0 !important;   
+        border-style: solid;
+        display: inline-block;
+        padding: 10px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        margin-top: 0.5%;
+    }
+
+/* ETICKETA */
+
+.font, h1, h2, h3, h4, h5, small{font-family: 'Yanone Kaffeesatz', sans-serif !important}
+.w200{font-weight: 200 !important} .w300{font-weight: 300 !important} .w400{font-weight: 400 !important} .w700{font-weight: 700 !important}
+.etka_home, .etka_prod, .etka_fazemos, .etka_preco, .etka_contato {height: 100%}
+
+hr.etka_spacer__clear {
+    border-top: 1pt solid rgba(0,0,0,.12);
+    margin: 0% 25%
+}
+
+.etka-layout-transparent {height: auto}
+#top, #drawer{display: none;}
+
+.etka_title{
+    color: white;
+    text-decoration: none
+}
+
+.etka_hypertext{
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: rgba(87, 191, 150, 0.8);
+    cursor: pointer
+}
+
+.etka_form-label{margin-top: 20px}
+
+    /* home */
+
+    #myVideo{
+        position: absolute;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: black; /* in case the video doesn't fit the whole page*/
+  		background-image: /* our video */;
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover; /*cover video background */
+   		z-index:3;
+        overflow: hidden;
+        opacity: 0.6;
+    }
+
+    .layer{
+        position: absolute;
+		z-index: 4;
+		width: 100%;
+		left: 0;top: 0;
+		  -webkit-transform: translate3d(0,0,0);
+		  -ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+        height: 100%;
+    }
+
+    .etka_home {
+/*        background: url('../img/bg-header.jpg') center / cover;*/
+        background-color: black;
+    }
+    .etka_home a{color: white !important}
+    .etka_home p{color: white}
+    .etka_home-logo{margin-right: 16px; padding-right: 8px;}
+
+    .etka_home-txt{
+        padding: 16px 16.66666% 0 16px;
+        background-color: rgba(255,255,255,0.2);
+        margin-right: 0
+    }
+
+    .etka_home-menu {
+	   position: absolute;
+	   bottom: 0;
+	   text-align: center;
+    }
+
+    .etka_home-menu a{font-size: 1.25rem}
+
+    .etka_home .etka_som{
+        color: white;
+        position: absolute;
+        top: 10px; left: 10px;
+        z-index: 999
+    }
+    .etka_home .etka_som i{opacity: 0.7}
+    .etka_home .etka_som i:hover{opacity: 1}
+    .etka_home .etka_som-btn{}
+    .etka_mute{display: none} .etka_unmute{display: none}
+
+    @keyframes etka_bounce {
+	   0%, 20%, 50%, 80%, 100% {bottom:0;}
+	   40% {bottom:30px;}
+	   60% {bottom:15px;}
+    }
+    .etka_bounce {animation: etka_bounce 2s infinite}
+
+    /* prod | rotulos - lacres - ingressos - validade */
+
+    .etka_prod {background-color: white}
+    .etka_prod p{color: black; opacity: .87}
+    .etka_prod .mdl-grid{margin-top: 64px}
+    .etka_prod .mdl-cell--3-col{margin: 0 2% 0 4.5%}
+    .etka_prod-video{overflow: hidden}
+
+    .etka_prod-video video{
+        min-width: auto;
+        width: auto;
+        max-width: 100%;
+        min-height: auto;
+        height: 81vh;
+        object-fit: cover !important;
+    }
+
+    #dialog-orcamento h4{margin: 0px}
+    #dialog-orcamento form p{margin: 0px; padding-top: 24px}
+    #dialog-orcamento form .mdl-icon-toggle, #dialog-orcamento form .cores-help{padding-top: 20px}
+    #dialog-orcamento .mdl-tooltip--large{font-size: 1rem; letter-spacing: 0.05rem}
+
+    /* como fazemos */
+
+    .etka_fazemos {
+        background-color: #FAFAFA;
+        background-image: url(../img/fazemos/etka-fazemos_bg.jpg);
+        background-repeat: repeat;
+    }
+    .etka_fazemos h1{text-align: center}
+    .etka_fazemos p{color: black; opacity: .87}
+    .etka-card-wide.mdl-card {width: auto}
+
+    .etka-card-wide > .mdl-card__title {color: #fff; height: 176px}
+        .etka-fazemos-flexo {
+            background: url('../img/fazemos/etka_fazemos-flexo.jpg') center / cover;
+        }
+        .etka-fazemos-digital {
+            background: url('../img/fazemos/etka_fazemos-digital.jpg') center / cover;
+        }
+        .etka-fazemos-offset {
+            background: url('../img/fazemos/etka_fazemos-offset.jpg') center / cover;
+        }
+        .etka-fazemos-consultoria {
+            background: url('../img/fazemos/etka_fazemos-consultoria.jpg') center / cover;
+        }
+
+    .etka-card-wide > .mdl-card__menu {color: #fff}
+
+    .etka_fazemos-dialog table{
+        width: 100%;
+        table-layout: fixed;
+        white-space: normal
+    }
+
+    .etka_fazemos-dialog th{text-transform: uppercase}
+
+    /* preco */
+
+    .etka_preco {
+        background-image: url('../img/precos/etka_preco-bg_3840.jpg');
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: overlay;
+        background-color: #424242;
+        font-family: 'Yanone Kaffeesatz', sans-serif !important
+    }
+    .etka_preco h1 {text-align: center; color: white}
+    .etka_preco p {color: black; opacity: .87}
+    .etka_preco ul {margin: 0;}
+
+    .etka_preco .mdl-card__title, .etka_preco .mdl-card__title-text {
+        color: #7a2879;
+        display: block;
+        padding: 14px;
+        font-size: 2rem;
+        font-weight: 400
+    }
+
+    .etka_preco .mdl-list{text-align: left}
+    .etka-card__preco h2 {margin: 14px 0}
+
+    .etka_slider-label{
+        margin: 0 23px 12px 23px;
+    }
+
+    dialog .etka_preco-faca{
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+
+    /* portefólio */
+    
+    .etka_port h1{text-align: center}
+    .etka_port .etka-card-image{cursor: pointer}
+    
+    .etka_port-dialog{
+        height: 94vh;
+        width: 97vw
+    }
+
+    .etka-card-image.mdl-card {
+        margin: 16px 0;
+        width: auto;
+        background: url('../img/heinz-ex.jpg') center / cover;
+    }
+
+    .etka-card-image > .mdl-card__actions {
+        height: 3.6rem;
+        padding: 1.2rem;
+        background: rgba(0, 0, 0, 0.2); 
+        background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)); /* Standard syntax */
+    }  
+
+    .etka-card-image__filename {
+        color: #fff;
+        font-size: 1.2rem;
+        letter-spacing: 0.03rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    /* contato */
+
+    .etka_contato {background-color: white}
+    .etka_contato .mdl-grid {height: 100%;}
+    .etka_contato p{color: black; opacity: .87}
+    .etka_contato-tel{
+        color: rgba(0,0,0,0.54);
+        display: inline;
+        font-weight: 300;
+        margin-left: 5px; margin-right: 35px;
+        vertical-align: sub
+    }
+    .etka_contato-tel small{color: #7a2879}
+
+    .etka_contato-l{
+        background: url('../img/ETKA-contato_bg-roxo.jpg') right / cover;
+        height: 100%;
+        margin: 0 16px 0 0;
+        text-align: left;
+        padding-top: 64px
+    }
+
+    .etka_contato-l p{color: white;}
+
+    .etka_contato-l .mdl-textfield__input{
+        border-bottom: 1px solid rgba(255,255,255,0.7);
+        color: rgba(255,255,255,0.7)
+    }
+    .etka_contato-l .mdl-textfield__label{color: rgba(255,255,255,0.7);}
+
+    .etka_contato-subscribe{
+        background: rgba(0,0,0,0.12);
+        padding: 20px;
+        margin-right: -8px;
+    }
+
+    .etka_copy{
+        width: 100%;
+        height: auto !important;
+        position: absolute;
+        bottom: 0px;
+        text-align: center
+    }
+
+    .etka_copy-l-txt{
+        text-align: right;
+        font-size: .9rem;
+        letter-spacing: .08rem;
+        color: rgba(255,255,255,0.38);
+    }
+
+    .etka_copy-s{
+        font-family: sans-serif
+    }
+
+    .etka_copy-r-txt{
+        text-align: left;
+        font-size: .9rem;
+        letter-spacing: .08rem;
+        color: black;
+        opacity: .5;
+        margin-left: -8px;
+    }
+
+    
+
+
+
+
+
+

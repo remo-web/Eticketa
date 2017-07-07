@@ -14,7 +14,15 @@ if(empty($_POST['name'])  		||
 
 if ($_SERVER['REQUEST_METHOD'] == "POST"){
     // The form has been submitted
-    echo "<script type='text/javascript'>alert('message successfully sent');</script>";
+    echo "
+                                <div class="mdl-cell mdl-cell--middle mdl-cell--12-col">
+                                    <span class="mdl-chip mdl-chip--deletable">
+                                        <span class="mdl-chip__text">Mensagem enviada!</span>
+                                        <button type="button" class="mdl-chip__action">
+                                            <i class="material-icons">cancel</i>
+                                        </button>
+                                    </span>
+                                </div>";
   } else {
     echo "Have a good night!";
 }
@@ -30,9 +38,9 @@ $message = $_POST['message'];
 $to = 'raphael.pais@eticketa.com.br'; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE FORM TO SEND MAIL TO*
 $email_subject = "[SITE | Contato] $subject";
 $email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nCargo / Empresa: $company\n\nE-mail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-$headers = "From: contato@eticketa.com.br\n"; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE MESSAGE TO BE FROM*
+$headers = "MIME-Version: 1.0";
+$headers .= "Content-type:text/html;charset=UTF-8";
+$headers = "From: raphael.pais@eticketa.com.br\n"; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE MESSAGE TO BE FROM*
 $headers .= "Reply-To: $email_address";	
 mail($to,$email_subject,$email_body,$headers);
 return true;			

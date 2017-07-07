@@ -591,18 +591,6 @@
                             <a href="tel:+5521998688448"><h4 class="etka_contato-tel">&nbsp;&nbsp;<small>+55&nbsp;&nbsp;21</small> 9 9868 8448</h4></a>
                             <h4>Mensagem</h4>
                             <form name="etka_contato" id="etka_contato" class="mdl-grid" action="./contato/contato.php" onsubmit="return validateForm()" method="post" novalidate>
-<!--
-                                <div id="etka_contato-enviado" class="mdl-grid" style="display: none">
-                                    <div class="mdl-cell mdl-cell--middle mdl-cell--12-col">
-                                        <span class="mdl-chip mdl-chip--deletable">
-                                            <span class="mdl-chip__text">Mensagem enviada!</span>
-                                            <button type="button" class="mdl-chip__action">
-                                                <i class="material-icons">cancel</i>
-                                            </button>
-                                        </span>
-                                    </div>
-                                </div>
--->
                                 <div class="mdl-cell mdl-cell--6-col">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                         <input class="mdl-textfield__input" type="text" id="name" name="name">
@@ -642,6 +630,8 @@
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">ENVIAR</button>
                                 </div>
                             </form>
+                            <div id="etka_contato-enviado" class="mdl-grid" style="display: none">
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -1791,6 +1781,7 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 		<!-- CUSTOM -->
 		<script src="./js/scripts.js"></script>
+		<script src="./contato/contato.js"></script>
 		<!-- Google Material -->
         <script src="./mdl/material.min.js"></script>
             <!-- Polyfill -->

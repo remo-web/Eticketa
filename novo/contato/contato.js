@@ -19,7 +19,7 @@ function validateForm() {
 
 //CONFIRMACAO
 $("#etka_contato").submit(function() {
-    $.post('././contato/contato.php', {
+    $.post('./contato/contato.php', {
         name: $('#name').val(),
         email: $('#email').val(),
         company: $('#company').val(),

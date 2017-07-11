@@ -14,16 +14,7 @@ if(empty($_POST['name'])  		||
 
 if ($_SERVER['REQUEST_METHOD'] == "POST"){
     // The form has been submitted
-    echo "
-        <div class="mdl-cell mdl-cell--middle mdl-cell--12-col">
-            <span class="mdl-chip mdl-chip--deletable">
-                <span class="mdl-chip__text">Mensagem enviada!</span>
-                <button type="button" class="mdl-chip__action">
-                    <i class="material-icons">cancel</i>
-                </button>
-            </span>
-        </div>
-        ";
+    echo "ty";
   } else {
     echo "Have a good night!";
 }

@@ -495,8 +495,8 @@ void function() {
       assert.isNotNull(overlay);
       assert.equal(overlay.parentNode, other.parentNode);
 
-      assert.isAbove(other.style.zIndex, overlay.style.zIndex, 'top-most dialog above overlay');
-      assert.isAbove(overlay.style.zIndex, dialog.style.zIndex, 'overlay above other dialogs');
+      assert.isAbove(+other.style.zIndex, +overlay.style.zIndex, 'top-most dialog above overlay');
+      assert.isAbove(+overlay.style.zIndex, +dialog.style.zIndex, 'overlay above other dialogs');
     });
   });
 
@@ -559,6 +559,15 @@ void function() {
   });
 
   suite('form', function() {
+    test('method attribute is translated to property', function() {
+      var form = document.createElement('form');
+      form.method = 'dialog';
+      assert.equal(form.method, 'dialog');
+
+      form.method = 'PoSt';
+      assert.equal(form.method, 'post');
+      assert.equal(form.getAttribute('method'), 'PoSt');
+    });
     test('dialog method input', function() {
       var value = 'ExpectedValue' + Math.random();
 
@@ -583,6 +592,37 @@ void function() {
       assert.isFalse(dialog.open);
       assert.equal(dialog.returnValue, value);
     });
+    test('dialog with button preventDefault does not trigger submit', function() {
+      var form = document.createElement('form');
+      form.setAttribute('method', 'dialog');
+      dialog.appendChild(form);
+
+      var button = document.createElement('button');
+      button.value = 'does not matter';
+      form.appendChild(button);
+      button.addEventListener('click', function(ev) {
+        ev.preventDefault();
+      });
+
+      dialog.showModal();
+      button.click();
+
+      assert.isTrue(dialog.open, 'dialog should remain open');
+      assert.equal(dialog.returnValue, '');
+    });
+    test('dialog programmatic submit does not change returnValue', function() {
+      var form = document.createElement('form');
+      form.setAttribute('method', 'dialog');
+
+      dialog.returnValue = 'manually set';  // set before appending
+      dialog.appendChild(form);
+
+      dialog.showModal();
+      form.submit();
+      assert.isFalse(dialog.open);
+
+      assert.equal(dialog.returnValue, 'manually set', 'returnValue should not change');
+    });
     test('dialog method button', function() {
       var value = 'ExpectedValue' + Math.random();
 
@@ -602,7 +642,7 @@ void function() {
       assert.equal(dialog.returnValue, value);
 
       // Clear button value, confirm textContent is not used as value.
-      button.value = '';
+      button.value = 'blah blah';
       button.removeAttribute('value');
       button.textContent = value;
       dialog.show();
@@ -629,6 +669,50 @@ void function() {
 
       assert.isTrue(dialog.open, 'non-dialog form should not close dialog')
       assert(!dialog.returnValue);
+    });
+    test('type="image" submitter', function() {
+      var form = document.createElement('form');
+      form.setAttribute('method', 'dialog');
+      dialog.appendChild(form);
+      dialog.show();
+
+      var image = document.createElement('input');
+      image.type = 'image';
+      image.src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+      image.setAttribute('value', 'image should not accept value');
+      form.appendChild(image);
+      image.click();
+
+      assert.notEqual(image.getAttribute('value'), dialog.returnValue);
+      assert.equal(dialog.returnValue, '0,0');
+    });
+    test('form submitter across dialogs', function() {
+      var form1 = document.createElement('form');
+      form1.setAttribute('method', 'dialog');
+      dialog.appendChild(form1);
+
+      var button1 = document.createElement('button');
+      button1.value = 'from form1: first value';
+      form1.appendChild(button1);
+      dialog.showModal();
+
+      var dialog2 = createDialog();
+      dialog2.returnValue = 'dialog2 default close value';
+      var form2 = document.createElement('form');
+      form2.setAttribute('method', 'dialog');
+      dialog2.appendChild(form2);
+      dialog2.showModal();
+
+      button1.click();
+      assert.isFalse(dialog.open);
+
+      // nb. this never fires 'submit' so the .returnValue can't be wrong: is there another way
+      // to submit a form that doesn't involve a click (enter implicitly 'clicks') or submit?
+      form2.submit();
+      assert.isFalse(dialog2.open);
+
+      assert.equal(dialog2.returnValue, 'dialog2 default close value',
+          'second dialog shouldn\'t reuse formSubmitter');
     });
   });
 
@@ -662,17 +746,17 @@ void function() {
       back.showModal();
       front.showModal();
 
-      var zf = window.getComputedStyle(front).zIndex;
-      var zb = window.getComputedStyle(back).zIndex;
+      var zf = +window.getComputedStyle(front).zIndex;
+      var zb = +window.getComputedStyle(back).zIndex;
       assert.isAbove(zf, zb, 'showModal order dictates z-index');
 
       var backBackdrop = back.nextElementSibling;
-      var zbb = window.getComputedStyle(backBackdrop).zIndex;
+      var zbb = +window.getComputedStyle(backBackdrop).zIndex;
       assert.equal(backBackdrop.className, 'backdrop');
       assert.isBelow(zbb, zb, 'backdrop below dialog');
 
       var frontBackdrop = front.nextElementSibling;
-      var zfb = window.getComputedStyle(frontBackdrop).zIndex
+      var zfb = +window.getComputedStyle(frontBackdrop).zIndex
       assert.equal(frontBackdrop.className, 'backdrop');
       assert.isBelow(zfb, zf,' backdrop below dialog');
 

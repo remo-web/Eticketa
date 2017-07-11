@@ -244,16 +244,16 @@ $(document).ready(function() {
 
 //PORTFOLIO
 //modelo
-$(document).ready(function() {
-    'use strict';
-    var button = document.querySelector('#show-dialog-port_modelo');
-    var dialog = document.querySelector('#dialog-port_modelo');
-    dialogPolyfill.registerDialog(dialog);
-    // Now dialog acts like a native <dialog>.
-    button.addEventListener('click', function() {
-    dialog.showModal();
-    });
+//$(document).ready(function() {
+//    'use strict';
+//    var button = document.querySelector('#show-dialog-port_modelo');
+//    var dialog = document.querySelector('#dialog-port_modelo');
+//    dialogPolyfill.registerDialog(dialog);
+//    // Now dialog acts like a native <dialog>.
+//    button.addEventListener('click', function() {
+//    dialog.showModal();
+//    });
 //    dialog.querySelector('.close').addEventListener('click', function () {
 //        dialog.close();
 //    });
-});
+//});

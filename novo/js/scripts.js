@@ -187,6 +187,10 @@ function showMessage(value){
     document.getElementById("slidervalue-etka_preco").innerHTML = value;
 }
 
+// referencias: 
+//https://stackoverflow.com/questions/34029483/creating-a-slider-with-editable-number-field-in-material-design-lite
+//https://www.tutorialspoint.com/materialdesignlite/materialdesignlite_sliders.htm
+
 //lacre
 $(document).ready(function() {
     'use strict';

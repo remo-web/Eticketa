@@ -15,17 +15,22 @@ if(empty($_POST['name'])  		||
 if ($_SERVER['REQUEST_METHOD'] == "POST"){
     // The form has been submitted
     echo '
-        <div class="mdl-cell mdl-cell--middle mdl-cell--12-col">
-            <span class="mdl-chip mdl-chip--deletable">
-                <span class="mdl-chip__text">Mensagem enviada!</span>
-                <button type="button" class="mdl-chip__action">
-                    <i class="material-icons">cancel</i>
-                </button>
+        <span class="mdl-chip mdl-chip--contact">
+            <span class="mdl-chip__contact mdl-color--green mdl-color-text--white">
+                <i class="material-icons" style="vertical-align: middle">done</i>
             </span>
-        </div>
+            <span class="mdl-chip__text">Mensagem enviada!</span>
+        </span>
     ';
   } else {
-    echo "Have a good night!";
+    echo '
+        <span class="mdl-chip mdl-chip--contact">
+            <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">
+                <i class="material-icons" style="vertical-align: middle">close</i>
+            </span>
+            <span class="mdl-chip__text">Ops! Mensagem não enviada, por favor tente novamente.</span>
+        </span>
+    ';
 }
 	
 $name = $_POST['name'];

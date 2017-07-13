@@ -45,7 +45,7 @@ $(document).ready(function() {
     });
 });
 
-// >> DIALOGS <<
+// >> DIALOGS <<	 
 
 //ORÇAMENTO
 //orçamento-rótulos
@@ -182,6 +182,11 @@ $(document).ready(function() {
 });
 
 //PREÇO
+
+function showMessage(value){
+    document.getElementById("slidervalue-etka_preco").innerHTML = value;
+}
+
 //lacre
 $(document).ready(function() {
     'use strict';

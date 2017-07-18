@@ -183,9 +183,17 @@ $(document).ready(function() {
 
 //PREÇO
 
-function showMessage(value){
-    document.getElementById("slidervalue-etka_preco").innerHTML = value;
-}
+$('#slide_01').on('input',function(){
+   $("#text_01").get(0).MaterialTextfield.change(this.value);
+});
+$('#inp_text_01').keyup(function() {
+   $("#slide_01").get(0).MaterialSlider.change($('#inp_text_01').val());
+  console.dir($('#slide_01'));
+});
+
+//function showMessage(value){
+//    document.getElementById("slidervalue-etka_preco").innerHTML = value;
+//}
 // referencias: 
 //https://stackoverflow.com/questions/34029483/creating-a-slider-with-editable-number-field-in-material-design-lite
 //https://www.tutorialspoint.com/materialdesignlite/materialdesignlite_sliders.htm

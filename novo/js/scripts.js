@@ -183,14 +183,6 @@ $(document).ready(function() {
 
 //PREÇO
 
-$('#slide_01').on('input',function(){
-   $("#text_01").get(0).MaterialTextfield.change(this.value);
-});
-$('#inp_text_01').keyup(function() {
-   $("#slide_01").get(0).MaterialSlider.change($('#inp_text_01').val());
-  console.dir($('#slide_01'));
-});
-
 //function showMessage(value){
 //    document.getElementById("slidervalue-etka_preco").innerHTML = value;
 //}
@@ -198,11 +190,12 @@ $('#inp_text_01').keyup(function() {
 //https://stackoverflow.com/questions/34029483/creating-a-slider-with-editable-number-field-in-material-design-lite
 //https://www.tutorialspoint.com/materialdesignlite/materialdesignlite_sliders.htm
 
-//lacre
+//delivery
+    //dialog
 $(document).ready(function() {
     'use strict';
-    var button = document.querySelector('#show-dialog-preco-lacre');
-    var dialog = document.querySelector('#dialog-preco-lacre');
+    var button = document.querySelector('#show-dialog-preco-delivery');
+    var dialog = document.querySelector('#dialog-preco-delivery');
     dialogPolyfill.registerDialog(dialog);
     // Now dialog acts like a native <dialog>.
     button.addEventListener('click', function() {
@@ -212,8 +205,19 @@ $(document).ready(function() {
         dialog.close();
     });
 });
+    //slider
+$(document).ready(function() {
+    $('#etka_preco-delivery_slider').on('input',function(){
+        $("#etka_preco-delivery_slider-label").get(0).MaterialTextfield.change(this.value);
+    });
+    $('#etka_preco-delivery_slider-label_input').keyup(function() {
+        $("#etka_preco-delivery_slider").get(0).MaterialSlider.change($('#etka_preco-delivery_slider-label_input').val());
+        console.dir($('#etka_preco-delivery_slider'));
+    });
+});
 
 //garantia
+    //dialog
 $(document).ready(function() {
     'use strict';
     var button = document.querySelector('#show-dialog-preco-garantia');
@@ -225,6 +229,16 @@ $(document).ready(function() {
     });
     dialog.querySelector('.close').addEventListener('click', function () {
         dialog.close();
+    });
+});
+    //slider
+$(document).ready(function() {
+    $('#etka_preco-garantia_slider').on('input',function(){
+        $("#etka_preco-garantia_slider-label").get(0).MaterialTextfield.change(this.value);
+    });
+    $('#etka_preco-garantia_slider-label_input').keyup(function() {
+        $("#etka_preco-garantia_slider").get(0).MaterialSlider.change($('#etka_preco-garantia_slider-label_input').val());
+        console.dir($('#etka_preco-garantia_slider'));
     });
 });
 
@@ -242,8 +256,19 @@ $(document).ready(function() {
         dialog.close();
     });
 });
+    //slider
+$(document).ready(function() {
+    $('#etka_preco-ingresso_slider').on('input',function(){
+        $("#etka_preco-ingresso_slider-label").get(0).MaterialTextfield.change(this.value);
+    });
+    $('#etka_preco-ingresso_slider-label_input').keyup(function() {
+        $("#etka_preco-ingresso_slider").get(0).MaterialSlider.change($('#etka_preco-ingresso_slider-label_input').val());
+        console.dir($('#etka_preco-ingresso_slider'));
+    });
+});
 
 //validade
+    //dialog
 $(document).ready(function() {
     'use strict';
     var button = document.querySelector('#show-dialog-preco-validade');
@@ -255,6 +280,16 @@ $(document).ready(function() {
     });
     dialog.querySelector('.close').addEventListener('click', function () {
         dialog.close();
+    });
+});
+    //slider
+$(document).ready(function() {
+    $('#etka_preco-validade_slider').on('input',function(){
+        $("#etka_preco-validade_slider-label").get(0).MaterialTextfield.change(this.value);
+    });
+    $('#etka_preco-validade_slider-label_input').keyup(function() {
+        $("#etka_preco-validade_slider").get(0).MaterialSlider.change($('#etka_preco-validade_slider-label_input').val());
+        console.dir($('#etka_preco-validade_slider'));
     });
 });
 

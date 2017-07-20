@@ -283,6 +283,13 @@ hr.etka_spacer__clear {
 
     .etka_slider-label{
         margin: 0 23px 12px 23px;
+        padding-bottom: 0px; padding-top: 0px;
+    }
+    .etka_slider-label_input{
+        display: inline-block;
+        width: auto;
+        border-bottom: none;
+        font-family: 'Yanone Kaffeesatz', sans-serif !important
     }
 
     dialog .etka_preco-faca{

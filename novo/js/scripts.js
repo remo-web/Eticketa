@@ -14,6 +14,7 @@ $(document).ready(function() {
                 $('#top').fadeIn('slow');
             }
         },
+        scrollOverflow: true,
 //        parallax: true,
 //        parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 	});

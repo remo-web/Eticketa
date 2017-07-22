@@ -48,7 +48,29 @@ a {text-decoration: none; color: #7a2879}
     background-color: #7a2879
 }
 
-.mdl-dialog {width: 60%}
+.mdl-dialog {width: 70%; height: auto; max-height: 90%}
+.mdl-dialog__content--scrollable{
+    max-height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden
+}
+
+    .mdl-dialog__content--scrollable::-webkit-scrollbar-track{
+	   border-radius: 4px;
+	   background-color: #FFFFFF;
+    }
+
+    .mdl-dialog__content--scrollable::-webkit-scrollbar{
+	   width: 4px;
+	   border-radius: 4px;
+	   background-color: #FFFFFF;
+    }
+
+    .mdl-dialog__content--scrollable::-webkit-scrollbar-thumb{
+	   border-radius: 4px;
+	   background-color: #636363;
+    }
+
 .mdl-list__item .mdl-list__item-primary-content .mdl-list__item-icon{margin-right: 16px}
 
 .mdl-list__item{
@@ -127,6 +149,8 @@ hr.etka_spacer__clear {
 }
 
 .etka_form-label{margin-top: 20px}
+
+dialog .etka_btn-enviar{width: 100%}
 
     /* home */
 

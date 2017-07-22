@@ -15,6 +15,7 @@ $(document).ready(function() {
             }
         },
         scrollOverflow: true,
+        normalScrollElements: 'dialog'
 //        parallax: true,
 //        parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 	});
@@ -183,13 +184,6 @@ $(document).ready(function() {
 });
 
 //PREÇO
-
-//function showMessage(value){
-//    document.getElementById("slidervalue-etka_preco").innerHTML = value;
-//}
-// referencias: 
-//https://stackoverflow.com/questions/34029483/creating-a-slider-with-editable-number-field-in-material-design-lite
-//https://www.tutorialspoint.com/materialdesignlite/materialdesignlite_sliders.htm
 
 //delivery
     //dialog

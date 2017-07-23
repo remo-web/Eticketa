@@ -48,6 +48,8 @@ a {text-decoration: none; color: #7a2879}
     background-color: #7a2879
 }
 
+.mdl-button--primary.mdl-button--primary{color: #7a2879}
+
 .mdl-dialog {width: 70%; height: auto; max-height: 90%}
 .mdl-dialog__content--scrollable{
     max-height: 500px;
@@ -93,6 +95,8 @@ a.mdl-navigation__link.active{
 
 .mdl-data-table, .mdl-data-table th{font-size: 1.16rem; line-height: 1.5rem; letter-spacing: 0.03rem}
 .mdl-data-table tbody tr{height: auto}
+
+form > .mdl-cell{margin-bottom: 0px; margin-top: 0px}
 
 /* FULLPAGE.JS MODS */
 
@@ -148,7 +152,8 @@ hr.etka_spacer__clear {
     cursor: pointer
 }
 
-.etka_form-label{margin-top: 20px}
+.etka_form-label{margin-top: 22px}
+.etka_form-label_formato{margin-top: 19px !important}
 
 dialog .etka_btn-enviar{width: 100%}
 
@@ -364,7 +369,7 @@ dialog .etka_btn-enviar{width: 100%}
         color: rgba(0,0,0,0.54);
         display: inline;
         font-weight: 300;
-        margin-left: 5px; margin-right: 35px;
+        margin-left: 5px; margin-right: 25px;
         vertical-align: sub
     }
     .etka_contato-tel small{color: #7a2879}

@@ -27,7 +27,7 @@
         <meta name="theme-color" content="#ffffff">
 		
 		<!-- Google Material -->
-		<link rel="stylesheet" href="./mdl/material.min.css">
+<!--		<link rel="stylesheet" href="./mdl/material.min.css">-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.teal-deep_purple.min.css" />
             <!-- Polyfill -->
@@ -549,10 +549,10 @@
                 <!--CONTATO-->
 				<section data-anchor="contato" class="section etka_contato" id="etka_contato">
                     <div class="mdl-grid etka_copy">
-                        <div class="mdl-cell mdl-cell--3-offset-desktop mdl-cell--3-col etka_copy-l-txt">
+                        <div class="mdl-cell mdl-cell--6-col etka_copy-l-txt">
                             <span style="margin-right: 16px">Todos os direitos reservados. ETICKETA - Rótulos e Soluções <span class="etka_copy-s">&#169;</span> 2017</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col etka_copy-r-txt">
+                        <div class="mdl-cell mdl-cell--6-col etka_copy-r-txt">
                             Uma obra-prima artesanal deste cara <a href="http://raphaelrpais.com" target="_blank">aqui</a>.
                         </div>
                     </div>
@@ -578,17 +578,17 @@
                         <div class="mdl-cell mdl-cell--middle mdl-cell--1-offset-desktop mdl-cell--4-col">
                             <h1>Contato</h1>
                             <p>Para esclarecimentos mais profundos, conhecer mais do nosso trabalho, tirar dúvidas, pedidos de orçamento... Fique a vontade, entre em contato.</p>
-                            <button role="link" href="tel:+5521998688448" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--mini-fab mdl-button--colored">
+                            <button role="link" href="tel:+5521998688448" class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary">
                                 <i class="material-icons">phone</i>
                             </button>
-                            <a href="tel:+552134909292"><h4 class="etka_contato-tel"><small>+55&nbsp;&nbsp;21</small> 3490 9292</h4></a>
-                            <button role="button" href="whatsapp://send?text=Hello World!&phone=+5521984016556" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--mini-fab mdl-button--colored" style="margin-right: 0px">
+                            <a href="tel:+552134909292"><h5 class="etka_contato-tel"><small>+55&nbsp;&nbsp;21</small> 3490 9292</h5></a>
+                            <button role="button" href="whatsapp://send?text=Hello World!&phone=+5521984016556" class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary" style="margin-right: 0px">
                                 <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                            </button>&nbsp;&nbsp;
-                            <button role="link" href="tel:+5521998688448" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--mini-fab mdl-button--colored">
+                            </button>
+                            <button role="link" href="tel:+5521998688448" class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary">
                                 <i class="fa fa-telegram" aria-hidden="true"></i>
                             </button>
-                            <a href="tel:+5521998688448"><h4 class="etka_contato-tel">&nbsp;&nbsp;<small>+55&nbsp;&nbsp;21</small> 9 9868 8448</h4></a>
+                            <a href="tel:+5521998688448"><h5 class="etka_contato-tel"><small>+55&nbsp;&nbsp;21</small> 9 9868 8448</h5></a>
                             <h4>Mensagem</h4>
                             <form name="etka_contato" id="etka_contato" class="mdl-grid" action="././contato/contato.php" onsubmit="return validateForm()" method="post" novalidate>
                                 <div class="mdl-cell mdl-cell--6-col">
@@ -703,7 +703,7 @@
                     <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
                         <p class="etka_form-label">Formato:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--2-col etka_form-radio etka_form-label">
+                    <div class="mdl-cell mdl-cell--2-col etka_form-radio etka_form-label etka_form-label_formato">
                         <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="retangular-tt" for="retangular">
                             <input type="checkbox" id="retangular" name="options" class="mdl-icon-toggle__input" value="1" checked>
                             <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
@@ -823,7 +823,7 @@
                         <h4>Sobre o serviço</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
-                        <p>Dimensões (mm):</p>
+                        <p class="etka_form-label">Dimensões (mm):</p>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -841,9 +841,9 @@
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
-                        <p>Formato:</p>
+                        <p class="etka_form-label">Formato:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--2-col etka_form-radio">
+                    <div class="mdl-cell mdl-cell--2-col etka_form-radio etka_form-label etka_form-label_formato">
                         <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="retangular-tt" for="retangular">
                             <input type="checkbox" id="retangular" name="options" class="mdl-icon-toggle__input" value="1" checked>
                             <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
@@ -863,7 +863,7 @@
                         </label>
                     </div>
                     <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
-                        <p>Volume:</p>
+                        <p class="etka_form-label">Volume:</p>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -872,7 +872,7 @@
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
-                        <p>Cores:</p>
+                        <p class="etka_form-label">Cores:</p>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -890,11 +890,11 @@
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col cores-help">
-                        <i class="material-icons" id="cores-help">help</i>
+                        <i class="material-icons etka_form-label" id="cores-help">help</i>
                         <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores combinadas, reproduzem <strong>todas</strong>.</div> 
                     </div>
                     <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
-                        <p>Finalidade:</p>
+                        <p class="etka_form-label">Finalidade:</p>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -963,7 +963,7 @@
                         <h4>Sobre o serviço</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
-                        <p>Dimensões (mm):</p>
+                        <p class="etka_form-label">Dimensões (mm):</p>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -981,9 +981,9 @@
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
-                        <p>Formato:</p>
+                        <p class="etka_form-label">Formato:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--2-col etka_form-radio">
+                    <div class="mdl-cell mdl-cell--2-col etka_form-radio etka_form-label etka_form-label_formato">
                         <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="retangular-tt" for="retangular">
                             <input type="checkbox" id="retangular" name="options" class="mdl-icon-toggle__input" value="1" checked>
                             <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
@@ -1003,7 +1003,7 @@
                         </label>
                     </div>
                     <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
-                        <p>Volume:</p>
+                        <p class="etka_form-label">Volume:</p>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -1012,7 +1012,7 @@
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
-                        <p>Cores:</p>
+                        <p class="etka_form-label">Cores:</p>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -1030,11 +1030,11 @@
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col cores-help">
-                        <i class="material-icons" id="cores-help">help</i>
+                        <i class="material-icons etka_form-label" id="cores-help">help</i>
                         <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores combinadas, reproduzem <strong>todas</strong>.</div> 
                     </div>
                     <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
-                        <p>Finalidade:</p>
+                        <p class="etka_form-label">Finalidade:</p>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -1103,7 +1103,7 @@
                         <h4>Sobre o serviço</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
-                        <p>Dimensões (mm):</p>
+                        <p class="etka_form-label">Dimensões (mm):</p>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -1121,9 +1121,9 @@
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
-                        <p>Formato:</p>
+                        <p class="etka_form-label">Formato:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--2-col etka_form-radio">
+                    <div class="mdl-cell mdl-cell--2-col etka_form-radio etka_form-label etka_form-label_formato">
                         <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="retangular-tt" for="retangular">
                             <input type="checkbox" id="retangular" name="options" class="mdl-icon-toggle__input" value="1" checked>
                             <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
@@ -1143,7 +1143,7 @@
                         </label>
                     </div>
                     <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
-                        <p>Volume:</p>
+                        <p class="etka_form-label">Volume:</p>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -1152,7 +1152,7 @@
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
-                        <p>Cores:</p>
+                        <p class="etka_form-label">Cores:</p>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -1170,11 +1170,11 @@
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col cores-help">
-                        <i class="material-icons" id="cores-help">help</i>
+                        <i class="material-icons etka_form-label" id="cores-help">help</i>
                         <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores combinadas, reproduzem <strong>todas</strong>.</div> 
                     </div>
                     <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
-                        <p>Finalidade:</p>
+                        <p class="etka_form-label">Finalidade:</p>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -1810,7 +1810,7 @@
         
         <dialog class="mdl-dialog etka_port-dialog font" id="dialog-port_modelo">
             
-        </dialog> -->
+        </dialog>-->
 
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

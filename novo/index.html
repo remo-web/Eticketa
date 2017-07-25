@@ -1479,16 +1479,17 @@
                         <p><input class="mdl-slider mdl-js-slider" type="range" min="0" max="100000"  step="1000" value="1000" tabindex="0" id="etka_preco-delivery_slider"></p>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-                            <label class="mdl-button mdl-js-button mdl-button--icon" for="lacre-anexo">
-                                <i class="material-icons" id="lacre-anexo-help">attach_file</i>
-                            </label>
-                            <div class="mdl-textfield__expandable-holder">
-                                <input class="mdl-textfield__input" type="file" id="lacre-anexo">
-                                <label class="mdl-textfield__label" for="sample-expandable">Anexo</label>
-                                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="lacre-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até três anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
+                            
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--file">
+                            <input class="mdl-textfield__input" placeholder="File" type="text" id="uploadFile" readonly/>
+                            <div class="mdl-button mdl-button--primary mdl-button--icon mdl-button--file">
+                              <i class="material-icons">attach_file</i>
+                                <input type="file" id="uploadBtn" name="uploadBtn[]" multiple="true" onchange="document.getElementById('uploadFile').value=this.files[0].name;">
                             </div>
-                        </div>
+                          </div>
+                                <!--<div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="lacre-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até três anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>-->
+                            
+                        
                     </div>
                     <div class="mdl-cell mdl-cell--12-col">
                         <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised etka_btn-enviar">ENCOMENDAR</button>

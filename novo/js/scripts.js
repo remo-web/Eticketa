@@ -211,6 +211,11 @@ $(document).ready(function() {
     });
 });
 
+//anexo-botao
+$("input[type='uploadBtn']").on("change", function(){  
+    var numFiles = $(this).get(0).files.length
+});
+
 //garantia
     //dialog
 $(document).ready(function() {

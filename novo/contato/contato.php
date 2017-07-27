@@ -32,8 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
         </span>
     ';
 }
-
-$encoding = "utf-8";	
+	
 $name = $_POST['name'];
 $email_address = $_POST['email'];
 $company = $_POST['company'];
@@ -43,8 +42,7 @@ $message = $_POST['message'];
 	
 // create email body and send it
 $headers = "MIME-Version: 1.0";
-$headers = "Content-type: text/html; charset=".$encoding."\r\n";
-$header .= "Content-Transfer-Encoding: 8bit \r\n";
+$headers = "Content-type: text/html; charset=UTF-8";
 $headers = "From: raphael.pais@eticketa.com.br\n"; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE MESSAGE TO BE FROM*
 $headers = "Reply-To: $email_address";		
 $to = "raphael.pais@eticketa.com.br"; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE FORM TO SEND MAIL TO*

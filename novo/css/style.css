@@ -424,7 +424,8 @@ dialog .etka_btn-enviar{width: 100%}
         margin-left: -8px;
     }
 
-    #etka_contato-enviado{animation-name: fadeIn;}
+    #etka_contato-enviado, #etka_subscribe-enviado{
+        animation-name: fadeIn;}
         @keyframes fadeIn { 
             0% {
                 opacity: 0;
@@ -434,7 +435,7 @@ dialog .etka_btn-enviar{width: 100%}
                 opacity: 1;
                 transform: translateY(100%);
             }
-    }
+        }
     
 
 

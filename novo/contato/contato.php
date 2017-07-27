@@ -48,6 +48,6 @@ $headers[] = "Reply-To: $email_address";
 $to = 'raphael.pais@eticketa.com.br'; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE FORM TO SEND MAIL TO*
 $email_subject = "[SITE | Contato] $subject";
 $email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nCargo / Empresa: $company\n\nE-mail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-mail($to,$email_subject,$email_body,$headers);
+mail($to,$email_subject,$email_body,implode("\r\n", $headers));
 return true;			
 ?>

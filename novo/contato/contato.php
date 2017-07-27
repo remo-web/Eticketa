@@ -41,13 +41,16 @@ $subject = $_POST['subject'];
 $message = $_POST['message'];
 	
 // create email body and send it
-$headers[] = "MIME-Version: 1.0";
-$headers[] = "Content-type: text/html;   charset=UTF-8";
-$headers[] = "From: raphael.pais@eticketa.com.br\n"; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE MESSAGE TO BE FROM*
-$headers[] = "Reply-To: $email_address";		
-$to = 'raphael.pais@eticketa.com.br'; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE FORM TO SEND MAIL TO*
+$headers = "MIME-Version: 1.0";
+$headers = "Content-type: text/html; charset=UTF-8";
+$headers = "From: raphael.pais@eticketa.com.br\n"; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE MESSAGE TO BE FROM*
+$headers = "Reply-To: $email_address";		
+$to = "raphael.pais@eticketa.com.br"; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE FORM TO SEND MAIL TO*
 $email_subject = "[SITE | Contato] $subject";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nCargo / Empresa: $company\n\nE-mail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-mail($to,$email_subject,$email_body,implode("\r\n", $headers));
+$email_body = "<html>
+<head>
+  <title>Birthday Reminders for August</title>
+</head></html>You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nCargo / Empresa: $company\n\nE-mail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
+mail($to,$email_subject,$email_body,$headers);
 return true;			
 ?>

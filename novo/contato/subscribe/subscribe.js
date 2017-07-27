@@ -14,7 +14,7 @@ function validateForm() {
 
 //CONFIRMACAO
 $("#etka_subscribe").submit(function() {
-    $.post('./contato/subscribe.php', {
+    $.post('./contato/subscribe/subscribe.php', {
         name: $('#subscribe-name').val(),
         email: $('#subscribe-email').val(),
         myFormSubmitted: 'yes'

@@ -51,6 +51,5 @@ $email_body = "<html>
 <head>
   <title>Birthday Reminders for August</title>
 </head></html>You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nCargo / Empresa: $company\n\nE-mail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-mail($to,$email_subject,$email_body,$headers);
-return true;			
+mail($to, $email_subject, $email_body, $headers);		
 ?>

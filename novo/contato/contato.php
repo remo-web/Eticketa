@@ -1,5 +1,4 @@
 <?php
-$encoding = "utf-8"
 // check if fields passed are empty
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
@@ -33,7 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
         </span>
     ';
 }
-	
+
+$encoding = "utf-8";	
 $name = $_POST['name'];
 $email_address = $_POST['email'];
 $company = $_POST['company'];

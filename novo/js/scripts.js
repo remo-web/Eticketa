@@ -211,9 +211,16 @@ $(document).ready(function() {
     });
 });
 
-//anexo-botao
-$("input[type='uploadBtn']").on("change", function(){  
-    var numFiles = $(this).get(0).files.length
+//anexo-botao by gabi
+$(function(){
+    $('#lacre-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#lacre-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#lacre-texto').val( $(this).val() );
+        }
+    });
 });
 
 //garantia

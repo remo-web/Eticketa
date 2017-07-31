@@ -1,6 +1,6 @@
 <?php
 // check if fields passed are empty
-if(empty($_POST['name'])  		||
+if(empty($_POST['contato-name'])  		||
    empty($_POST['email']) 		||
    empty($_POST['company'])     ||
    empty($_POST['phone']) 		||
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
     ';
 }
 	
-$name = $_POST['name'];
+$name = $_POST['contato-name'];
 $email_address = $_POST['email'];
 $company = $_POST['company'];
 $phone = $_POST['phone'];

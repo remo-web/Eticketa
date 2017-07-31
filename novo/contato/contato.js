@@ -1,6 +1,6 @@
 //VALIDACAO
 function validateForm() {
-    var name = document.forms["etka_contato"]["contato_name"].value;
+    var name = document.forms["etka_contato"]["name"].value;
     if (name == "") {
         alert("Por favor, preencha o seu nome.");
         return false;
@@ -20,7 +20,7 @@ function validateForm() {
 //CONFIRMACAO
 $("#etka_contato").submit(function() {
     $.post('./contato/contato.php', {
-        name: $('#contato_name').val(),
+        name: $('#name').val(),
         email: $('#email').val(),
         company: $('#company').val(),
         phone: $('#phone').val(),
@@ -29,7 +29,7 @@ $("#etka_contato").submit(function() {
         myFormSubmitted: 'yes'
     },function(data) {
         $("#etka_contato-enviado").html(data).fadeIn('100');
-        $('#contato_name, #email, #company, #phone, #subject, #message').val(''); /* Clear the inputs */
+        $('#name, #email, #company, #phone, #subject, #message').val(''); /* Clear the inputs */
     }, 'text');
     return false;
 });

@@ -1478,19 +1478,18 @@
                         </p>
                         <p><input class="mdl-slider mdl-js-slider" type="range" min="0" max="100000"  step="1000" value="1000" tabindex="0" id="etka_preco-delivery_slider"></p>
                     </div>
-
                     <div class="mdl-cell mdl-cell--2-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-                            <label class="mdl-button mdl-js-button mdl-button--icon" for="lacre-anexo">
-                                <i class="material-icons" id="lacre-anexo-help">attach_file</i>
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="etka_delivery-anexo">
+                                <i class="material-icons" id="etka_delivery-anexo-help">attach_file</i>
                             </label>
+                            <div class="mdl-textfield__expandable-holder" style="max-width: 100%">
+                                <input class="mdl-textfield__input" type="text" id="etka_delivery-texto" readonly>
+                            </div>
                             <div class="mdl-textfield__expandable-holder">
-                                <input class="mdl-textfield__input" type="file" id="lacre-anexo" multiple>
-                                <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="lacre-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até três anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
+                                <input class="mdl-textfield__input" type="file" id="etka_delivery-anexo" accept=".pdf,.cdr,.eps,.ai,.jpg,.png" multiple>
                             </div>
-                            <div class="mdl-textfield__input">
-                                <input type="text" id="lacre-texto" readonly>
-                            </div>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="etka_delivery-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até 5MB de anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--12-col">

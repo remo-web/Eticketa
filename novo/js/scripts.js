@@ -210,15 +210,14 @@ $(document).ready(function() {
         console.dir($('#etka_preco-delivery_slider'));
     });
 });
-
-//anexo-botao by gabi
-$(function(){
-    $('#lacre-anexo').on('change',function(){
+    //anexo | Gabi
+$(document).ready(function() {
+    $('#etka_delivery-anexo').on('change',function(){
         var numArquivos = $(this).get(0).files.length;
         if ( numArquivos > 1 ) {
-	        $('#lacre-texto').val( numArquivos+' arquivos' );
+	        $('#etka_delivery-texto').val( numArquivos+' arquivos' );
         } else {
-	        $('#lacre-texto').val( $(this).val() );
+	        $('#etka_delivery-texto').val( $(this).val() );
         }
     });
 });

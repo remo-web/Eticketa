@@ -41,16 +41,13 @@ $subject = $_POST['subject'];
 $message = $_POST['message'];
 	
 // create email body and send it
-$to = "raphael.pais@eticketa.com.br"; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE FORM TO SEND MAIL TO* TO BE FROM*
+$to = 'raphael.pais@eticketa.com.br'; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE FORM TO SEND MAIL TO* TO BE FROM*
 $headers = "From: raphael.pais@eticketa.com.br\n"; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE MESSAGE
 $headers = "MIME-Version: 1.0";
 $headers = "Content-type: text/html; charset=UTF-8";
-$headers = "Reply-To: $email_address";		
+$headers .= "Reply-To: $email_address";		
 $email_subject = "[SITE | Contato] $subject";
-$email_body = "<html>
-<head>
-  <title>Birthday Reminders for August</title>
-</head></html>You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nCargo / Empresa: $company\n\nE-mail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-mail($to, $email_subject, $email_body, $headers);
+$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nCargo / Empresa: $company\n\nE-mail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
+mail($to,$email_subject,$email_body,$headers);
 return true;			
 ?>

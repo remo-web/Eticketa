@@ -41,11 +41,11 @@ $subject = $_POST['subject'];
 $message = $_POST['message'];
 	
 // create email body and send it
-$headers = "From: raphael.pais@eticketa.com.br\n"; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE MESSAGE TO BE FROM*
+$headers = "From: raphael.pais@eticketa.com.br\n"; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE MESSAGE
+$to = "raphael.pais@eticketa.com.br"; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE FORM TO SEND MAIL TO* TO BE FROM*
 $headers = "MIME-Version: 1.0";
 $headers = "Content-type: text/html; charset=UTF-8";
 $headers = "Reply-To: $email_address";		
-$to = "raphael.pais@eticketa.com.br"; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE FORM TO SEND MAIL TO*
 $email_subject = "[SITE | Contato] $subject";
 $email_body = "<html>
 <head>

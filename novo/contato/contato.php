@@ -45,7 +45,7 @@ $to = "raphael.pais@eticketa.com.br"; // *REPLACE WITH THE EMAIL ADDRESS YOU WAN
 $headers = "From: raphael.pais@eticketa.com.br\n"; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE MESSAGE
 $headers = "MIME-Version: 1.0";
 $headers = "Content-type: text/html; charset=UTF-8";
-$headers .= "Reply-To: $email_address";		
+$headers = "Reply-To: $email_address";		
 $email_subject = "[SITE | Contato] $subject";
 $email_body = "You have received a new message from your website contact form.\n\nHere are the details:\n\nName: $name\n\nCargo / Empresa: $company\n\nE-mail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
 mail($to,$email_subject,$email_body,$headers);

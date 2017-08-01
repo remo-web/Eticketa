@@ -210,6 +210,94 @@ $(document).ready(function() {
         console.dir($('#etka_preco-delivery_slider'));
     });
 });
+    //anexo | Gabi
+$(document).ready(function() {
+    $('#etka_rotulos-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#etka_rotulos-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#etka_rotulos-texto').val( $(this).val() );
+        }
+    });
+});
+
+$(document).ready(function() {
+    $('#etka_lacres-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#etka_lacres-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#etka_lacres-texto').val( $(this).val() );
+        }
+    });
+});
+
+$(document).ready(function() {
+    $('#etka_acesso-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#etka_acesso-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#etka_acesso-texto').val( $(this).val() );
+        }
+    });
+});
+
+$(document).ready(function() {
+    $('#etka_etiqueta-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#etka_etiqueta-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#etka_etiqueta-texto').val( $(this).val() );
+        }
+    });
+});
+
+$(document).ready(function() {
+    $('#etka_delivery-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#etka_delivery-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#etka_delivery-texto').val( $(this).val() );
+        }
+    });
+});
+
+$(document).ready(function() {
+    $('#etka_garantia-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#etka_garantia-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#etka_garantia-texto').val( $(this).val() );
+        }
+    });
+});
+
+$(document).ready(function() {
+    $('#etka_ingressos-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#etka_ingressos-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#etka_ingressos-texto').val( $(this).val() );
+        }
+    });
+});
+
+$(document).ready(function() {
+    $('#etka_validade-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#etka_validade-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#etka_validade-texto').val( $(this).val() );
+        }
+    });
+});
 
 //garantia
     //dialog

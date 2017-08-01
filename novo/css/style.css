@@ -20,6 +20,8 @@ a {text-decoration: none; color: #7a2879}
 ::-webkit-scrollbar-thumb:window-inactive {background: rgba(122,40,121,0.4);}
 */
 
+input[type='file'] {display: none}
+
 /* GOOGLE MDL MODS */
 
 .mdl-grid{padding: 0px}
@@ -92,6 +94,7 @@ a.mdl-navigation__link.active{
 .mdl-card{width: auto}
 .mdl-card__supporting-text{width: auto}
 .mdl-textfield {width: 100%}
+.mdl-textfield__input{font-family: 'Yanone Kaffeesatz', sans-serif !important; }
 
 .mdl-data-table, .mdl-data-table th{font-size: 1.16rem; line-height: 1.5rem; letter-spacing: 0.03rem}
 .mdl-data-table tbody tr{height: auto}

@@ -1,10 +1,10 @@
 <?php
-$nome = $_POST["nome"];
-$email = $_POST["email"];
-$empresa = $_POST["empresa"];
-$tel = $_POST["tel"];
-$assunto = $_POST["assunto"];
-$mensagem = $_POST["mensagem"];
+$nome = $_POST["contato-nome"];
+$email = $_POST["contato-email"];
+$empresa = $_POST["contato-empresa"];
+$tel = $_POST["contato-tel"];
+$assunto = $_POST["contato-assunto"];
+$mensagem = $_POST["contato-mensagem"];
  
 $To = "raphael.pais@eticketa.com.br";
 $Subject = "New Message Received $assunto";

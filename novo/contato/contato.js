@@ -15,7 +15,7 @@ function submitForm(){
     $.ajax({
         type: "POST",
         url: "./contato/contato.php",
-        data: "contato-nome=" + name + "&contato-email=" + email + "&contato-empresa=" + empresa + "&contato-tel=" + tel + "&contato-assunto=" + assunto + "&contato-mensagem=" + mensagem +,
+        data: "contato-nome=" + nome + "&contato-email=" + email + "&contato-empresa=" + empresa + "&contato-tel=" + tel + "&contato-assunto=" + assunto + "&contato-mensagem=" + mensagem +,
         success : function(text){
             if (text == "success"){
                 formSuccess();

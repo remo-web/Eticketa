@@ -1,55 +1,47 @@
 <?php
-// define variables and set to empty values
-$nomeErr = $emailErr = $assuntoErr = $mensagemErr = "";
-$nome = $email = $empresa = $tel = $assunto = $mensagem = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-    if (empty($_POST["contato-nome"])) {
-        $nomeErr = "Name is required";
-    } else {
-        $nome = test_input($_POST["contato-nome"]);
-    }
-    
-    if (empty($_POST["contato-email"])) {
-        $emailErr = "Email is required";
-    } else {
-        $email = test_input($_POST["contato-email"]);
-        // check if e-mail address is well-formed
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $emailErr = "Invalid email format"; 
-        }
-    }
-    
-    if (empty($_POST["contato-empresa"])) {
-        $empresa = "";
-    } else {
-        $empresa = test_input($_POST["contato-empresa"]);
-    }
-    
-    if (empty($_POST["contato-tel"])) {
-        $tel = "";
-    } else {
-        $tel = test_input($_POST["contato-tel"]);
-    }
-    
-    if (empty($_POST["contato-assunto"])) {
-        $assuntoErr = "Assunto is required";
-    } else {
-        $assunto = test_input($_POST["contato-assunto"]);
-    }
-    
-    if (empty($_POST["contato-mensagem"])) {
-        $mensagemErr = "Mensagem is required";
-    } else {
-        $mensagem = test_input($_POST["contato-mensagem"]);
-    }
+$nome = $_POST["nome"];
+$email = $_POST["email"];
+$empresa = $_POST["empresa"];
+$tel = $_POST["tel"];
+$assunto = $_POST["assunto"];
+$mensagem = $_POST["mensagem"];
+ 
+$To = "raphael.pais@eticketa.com.br";
+$Subject = "New Message Received $assunto";
+ 
+// prepare email body text
+$Body .= "Name: ";
+$Body .= $nome;
+$Body .= "\n";
+ 
+$Body .= "Email: ";
+$Body .= $email;
+$Body .= "\n";
+ 
+$Body .= "empresa: ";
+$Body .= $empresa;
+$Body .= "\n";
+ 
+$Body .= "tel: ";
+$Body .= $tel;
+$Body .= "\n";
+ 
+$Body .= "assunto: ";
+$Body .= $assunto;
+$Body .= "\n";
+ 
+$Body .= "mensagem: ";
+$Body .= $mensagem;
+$Body .= "\n";
+ 
+// send email
+$success = mail($To, $Subject, $Body, "From:".$email);
+ 
+// redirect to success page
+if ($success){
+   echo "success";
+}else{
+    echo "invalid";
 }
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
+ 
 ?>

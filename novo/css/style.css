@@ -160,6 +160,8 @@ hr.etka_spacer__clear {
 
 dialog .etka_btn-enviar{width: 100%}
 
+.etka_escondido{display: none}
+
     /* home */
 
     #myVideo{

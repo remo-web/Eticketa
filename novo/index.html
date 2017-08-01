@@ -599,7 +599,7 @@
                             </button>
                             <a href="tel:+5521998688448"><h5 class="etka_contato-tel"><small>+55&nbsp;&nbsp;21</small> 9 9868 8448</h5></a>
                             <h4>Mensagem</h4>
-                            <form name="etka_contato" id="etka_contato" class="mdl-grid" action="././contato/contato.php" onsubmit="return validateForm()" method="post" novalidate>
+                            <form name="etka_contato" id="etka_contato" class="mdl-grid" action="./contato/contato.php" onsubmit="return validateForm()" method="post" novalidate>
                                 <div class="mdl-cell mdl-cell--6-col">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                         <input class="mdl-textfield__input" type="text" id="contato-nome" name="contato-nome">
@@ -634,8 +634,13 @@
                                         <label class="mdl-textfield__label" for="contato-mensagem">Mensagem</label>
                                     </div>
                                 </div>
-                                <div class="mdl-cell mdl-cell--4-col">
-                                    <div id="etka_contato-enviado" style="display: none"></div>
+                                <div class="mdl-cell mdl-cell--4-col etka_escondido" id="etka_contato-enviado">
+                                    <span class="mdl-chip mdl-chip--contact">
+                                        <span class="mdl-chip__contact mdl-color--green mdl-color-text--white">
+                                            <i class="material-icons" style="vertical-align: middle">done</i>
+                                        </span>
+                                        <span class="mdl-chip__text">Mensagem enviada!</span>
+                                    </span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="text-align: right">
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">ENVIAR</button>

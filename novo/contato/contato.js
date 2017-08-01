@@ -1,6 +1,11 @@
 $("#etka_contato").submit(function(event){
-    event.preventDefault();
-    submitForm();
+    if (event.isDefaultPrevented()) {
+        // handle the invalid form...
+    } else {
+        // everything looks good!
+        event.preventDefault();
+        submitForm();
+    }
 });
 
 function submitForm(){

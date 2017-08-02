@@ -26,39 +26,40 @@ $To = "raphael.pais@eticketa.com.br";
 $Subject = "[Site | Contato] $assunto";
  
 // prepare email body text
-//$Body .= "Nome: ";
-//$Body .= $nome;
-//$Body .= "\n";
-// 
-//$Body .= "E-mail: ";
-//$Body .= $email;
-//$Body .= "\n";
-// 
-//$Body .= "Cargo / Empresa: ";
-//$Body .= $empresa;
-//$Body .= "\n";
-// 
-//$Body .= "Telefone: ";
-//$Body .= $tel;
-//$Body .= "\n";
-// 
-//$Body .= "Assunto: ";
-//$Body .= $assunto;
-//$Body .= "\n";
-// 
-//$Body .= "Mensagem: ";
-//$Body .= $mensagem;
-//$Body .= "\n";
+$Body .= "Nome: ";
+$Body .= $nome;
+$Body .= "\n";
+ 
+$Body .= "E-mail: ";
+$Body .= $email;
+$Body .= "\n";
+ 
+$Body .= "Cargo / Empresa: ";
+$Body .= $empresa;
+$Body .= "\n";
+ 
+$Body .= "Telefone: ";
+$Body .= $tel;
+$Body .= "\n";
+ 
+$Body .= "Assunto: ";
+$Body .= $assunto;
+$Body .= "\n";
+ 
+$Body .= "Mensagem: ";
+$Body .= $mensagem;
+$Body .= "\n";
 
-$Body = "
-<html>
-    $nome ($empresa), entrou em contato atráves do site sobre $assunto e dizendo:
-    <br/>$mensagem
-    <br/>
-    Para retornar este contato utilize as seguintes opções:
-    <br/>$tel
-    <br/>$email
-</html>"
+//$Body .= "
+//<html>
+//    $nome ($empresa), entrou em contato atráves do site sobre $assunto e dizendo:
+//    <br/>$mensagem
+//    <br/>
+//    Para retornar este contato utilize as seguintes opções:
+//    <br/>$tel
+//    <br/>$email
+//</html>"
+
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n";

@@ -1,13 +1,3 @@
-$("#etka_contato").submit(function(event){
-    if (event.isDefaultPrevented()) {
-        // handle the invalid form...
-    } else {
-        // everything looks good!
-        event.preventDefault();
-        submitForm();
-    }
-});
-
 //VALIDACAO
 function contatoValidar() {
     var email = document.forms["etka_contato"]["contato-email"].value;
@@ -21,6 +11,16 @@ function contatoValidar() {
         return false;
     }
 }
+
+$("#etka_contato").submit(function(event){
+    if (event.isDefaultPrevented()) {
+        // handle the invalid form...
+    } else {
+        // everything looks good!
+        event.preventDefault();
+        submitForm();
+    }
+});
 
 function submitForm(){
     // Initiate Variables With Form Content

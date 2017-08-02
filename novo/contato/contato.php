@@ -49,9 +49,13 @@ $Body .= "\n";
 $Body .= "Mensagem: ";
 $Body .= $mensagem;
 $Body .= "\n";
+
+$headers = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-Transfer-Encoding: 8bit' . "\r\n";
+$headers .= 'Content-Type: text/html; charset=UTF-8' . "\r\n";
  
 // send email
-$success = mail($To, $Subject, $Body, "From:".$email);
+$success = mail($To, $Subject, $Body, $headers, "From:".$email);
  
 // redirect to success page
 if ($success && $error == ""){

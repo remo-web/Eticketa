@@ -12,7 +12,7 @@ $("#etka_contato").submit(function(event){
 
 //VALIDACAO
 function contatoValidar() {
-    var email = document.forms["#setka_contato"]["#contato-email"].value;
+    var email = document.forms["#etka_contato"]["#contato-email"].value;
     if (email == "") {
         alert("Preencha o seu e-mail, assim lhe antenderemos mais rapidamente.");
         return false;

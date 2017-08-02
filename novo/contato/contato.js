@@ -35,7 +35,7 @@ function formSuccess(){
     $( "#etka_contato-enviado" ).removeClass( "etka_form-enviado" );
 }
 
-function formSuccess(){
+function formError(){
     $( "#etka_contato-erro" ).removeClass( "etka_form-erro" );
 }
 

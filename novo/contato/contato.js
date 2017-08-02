@@ -24,12 +24,18 @@ function submitForm(){
         success : function(text){
             if (text == "success"){
                 formSuccess();
+            } else {
+                formError();
             }
         }
     });
 }
 
 function formSuccess(){
-    $( "#etka_contato-enviado" ).removeClass( "etka_escondido" );
+    $( "#etka_contato-enviado" ).removeClass( "etka_form-enviado" );
+}
+
+function formSuccess(){
+    $( "#etka_contato-erro" ).removeClass( "etka_form-erro" );
 }
 

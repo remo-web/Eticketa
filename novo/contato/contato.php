@@ -1,10 +1,26 @@
 <?php
+
+$error = "";
+
 $nome = $_POST["contato-nome"];
-$email = $_POST["contato-email"];
+
+//email
+if (empty($_POST["contato-email"])) {
+    $error .= "Email is required ";
+} else {
+    $email = $_POST["contato-email"];
+}
+
 $empresa = $_POST["contato-empresa"];
 $tel = $_POST["contato-tel"];
 $assunto = $_POST["contato-assunto"];
-$mensagem = $_POST["contato-mensagem"];
+
+//email
+if (empty($_POST["contato-mensagem"])) {
+    $error .= "Mensagem is required ";
+} else {
+    $email = $_POST["contato-mensagem"];
+}
  
 $To = "raphael.pais@eticketa.com.br";
 $Subject = "New Message Received $assunto";
@@ -38,10 +54,14 @@ $Body .= "\n";
 $success = mail($To, $Subject, $Body, "From:".$email);
  
 // redirect to success page
-if ($success){
+if ($success && $error == ""){
    echo "success";
 }else{
-    echo "invalid";
+    if($error == ""){
+        echo "Something went wrong :(";
+    } else {
+        echo $error;
+    }
 }
  
 ?>

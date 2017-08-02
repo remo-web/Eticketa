@@ -50,7 +50,7 @@ $Subject = "[Site | Contato] $assunto";
 //$Body .= $mensagem;
 //$Body .= "\n";
 
-$Body .= "
+$Body = "
 <html>
     $nome ($empresa), entrou em contato atráves do site sobre $assunto e dizendo:
     <br/>$mensagem

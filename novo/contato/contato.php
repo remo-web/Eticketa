@@ -15,11 +15,11 @@ $empresa = $_POST["contato-empresa"];
 $tel = $_POST["contato-tel"];
 $assunto = $_POST["contato-assunto"];
 
-//email
+//mensagem
 if (empty($_POST["contato-mensagem"])) {
     $error .= "Mensagem is required ";
 } else {
-    $email = $_POST["contato-mensagem"];
+    $mensagem = $_POST["contato-mensagem"];
 }
  
 $To = "raphael.pais@eticketa.com.br";

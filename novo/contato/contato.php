@@ -23,35 +23,39 @@ if (empty($_POST["contato-mensagem"])) {
 }
  
 $To = "raphael.pais@eticketa.com.br";
-$Subject = "New Message Received $assunto";
+$Subject = "[Site | Contato] $assunto";
  
 // prepare email body text
-$Body .= "Name: ";
+$Body .= "Nome: ";
 $Body .= $nome;
 $Body .= "\n";
  
-$Body .= "Email: ";
+$Body .= "E-mail: ";
 $Body .= $email;
 $Body .= "\n";
  
-$Body .= "empresa: ";
+$Body .= "Cargo / Empresa: ";
 $Body .= $empresa;
 $Body .= "\n";
  
-$Body .= "tel: ";
+$Body .= "Telefone: ";
 $Body .= $tel;
 $Body .= "\n";
  
-$Body .= "assunto: ";
+$Body .= "Assunto: ";
 $Body .= $assunto;
 $Body .= "\n";
  
-$Body .= "mensagem: ";
+$Body .= "Mensagem: ";
 $Body .= $mensagem;
 $Body .= "\n";
+
+$headers = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-Transfer-Encoding: 8bit' . "\r\n";
+$headers .= 'Content-Type: text/plain; charset=UTF-8' . "\r\n";
  
 // send email
-$success = mail($To, $Subject, $Body, "From:".$email);
+$success = mail($To, $Subject, $Body, "From:".$email, $headers);
  
 // redirect to success page
 if ($success && $error == ""){

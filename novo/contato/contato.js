@@ -8,6 +8,20 @@ $("#etka_contato").submit(function(event){
     }
 });
 
+//VALIDACAO
+function contatoValidar() {
+    var email = document.forms["etka_contato"]["contato-email"].value;
+    if (email == "") {
+        alert("Preencha o seu e-mail, assim lhe antenderemos mais rapidamente.");
+        return false;
+    }
+    var mensagem = document.forms["etka_contato"]["contato-mensagem"].value;
+    if (mensagem == "") {
+        alert("Escreva uma mensagem para nós, ela é fundamental.");
+        return false;
+    }
+}
+
 function submitForm(){
     // Initiate Variables With Form Content
     var nome = $("#contato-nome").val();

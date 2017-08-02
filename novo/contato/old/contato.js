@@ -11,7 +11,7 @@ function validateForm() {
         return false;
     }
     var message = document.forms["etka_contato"]["message"].value;
-    if (message =ts= "") {
+    if (message == "") {
         alert("Escreva uma mensagem para nós, ela é fundamental.");
         return false;
     }

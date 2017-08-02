@@ -51,14 +51,14 @@ $Body .= $mensagem;
 $Body .= "\n";
 
 $Body .= "
-<html>
+
     $nome ($empresa), entrou em contato atráves do site sobre $assunto e dizendo:
     <br/>$mensagem
     <br/>
     Para retornar este contato utilize as seguintes opções:
     <br/>$tel
     <br/>$email
-</html>
+
 "
 
 $headers = "MIME-Version: 1.0" . "\r\n";

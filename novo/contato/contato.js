@@ -49,7 +49,7 @@ function submitForm(){
 
 function formSuccess(){
     $( "#etka_contato-enviado" ).removeClass( "etka_form-enviado" );
-    $( '#nome, #email, #empresa, #tel, #assunto, #mensagem' ).val('');
+    $( '#contato-nome, #contato-email, #contato-empresa, #contato-tel, #contato-assunto, #contato-mensagem' ).val('');
 }
 
 function formError(){

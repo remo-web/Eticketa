@@ -65,6 +65,18 @@ $(document).ready(function() {
     });
 });
 
+    //botao anexo rotulos - Gabi
+    $(document).ready(function() {
+    $('#etka_rotulos-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#etka_rotulos-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#etka_rotulos-texto').val( $(this).val() );
+        }
+    });
+});
+
 //orçamento-lacres
 $(document).ready(function() {
     'use strict';
@@ -77,6 +89,18 @@ $(document).ready(function() {
     });
     dialog.querySelector('.close').addEventListener('click', function () {
         dialog.close();
+    });
+});
+
+    //botao anexo lacres - Gabi
+    $(document).ready(function() {
+    $('#etka_lacres-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#etka_lacres-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#etka_lacres-texto').val( $(this).val() );
+        }
     });
 });
 
@@ -95,6 +119,18 @@ $(document).ready(function() {
     });
 });
 
+    //botao anexo controle de acesso - Gabi
+    $(document).ready(function() {
+    $('#etka_acesso-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#etka_acesso-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#etka_acesso-texto').val( $(this).val() );
+        }
+    });
+});
+
 //orçamento-validade
 $(document).ready(function() {
     'use strict';
@@ -107,6 +143,18 @@ $(document).ready(function() {
     });
     dialog.querySelector('.close').addEventListener('click', function () {
         dialog.close();
+    });
+});
+
+    //botao anexo etiquetas de validade - Gabi
+    $(document).ready(function() {
+    $('#etka_etiqueta-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#etka_etiqueta-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#etka_etiqueta-texto').val( $(this).val() );
+        }
     });
 });
 
@@ -210,50 +258,7 @@ $(document).ready(function() {
         console.dir($('#etka_preco-delivery_slider'));
     });
 });
-    //anexo | Gabi
-$(document).ready(function() {
-    $('#etka_rotulos-anexo').on('change',function(){
-        var numArquivos = $(this).get(0).files.length;
-        if ( numArquivos > 1 ) {
-	        $('#etka_rotulos-texto').val( numArquivos+' arquivos' );
-        } else {
-	        $('#etka_rotulos-texto').val( $(this).val() );
-        }
-    });
-});
-
-$(document).ready(function() {
-    $('#etka_lacres-anexo').on('change',function(){
-        var numArquivos = $(this).get(0).files.length;
-        if ( numArquivos > 1 ) {
-	        $('#etka_lacres-texto').val( numArquivos+' arquivos' );
-        } else {
-	        $('#etka_lacres-texto').val( $(this).val() );
-        }
-    });
-});
-
-$(document).ready(function() {
-    $('#etka_acesso-anexo').on('change',function(){
-        var numArquivos = $(this).get(0).files.length;
-        if ( numArquivos > 1 ) {
-	        $('#etka_acesso-texto').val( numArquivos+' arquivos' );
-        } else {
-	        $('#etka_acesso-texto').val( $(this).val() );
-        }
-    });
-});
-
-$(document).ready(function() {
-    $('#etka_etiqueta-anexo').on('change',function(){
-        var numArquivos = $(this).get(0).files.length;
-        if ( numArquivos > 1 ) {
-	        $('#etka_etiqueta-texto').val( numArquivos+' arquivos' );
-        } else {
-	        $('#etka_etiqueta-texto').val( $(this).val() );
-        }
-    });
-});
+    //anexo lacres para delivery - Preco | Gabi
 
 $(document).ready(function() {
     $('#etka_delivery-anexo').on('change',function(){
@@ -266,38 +271,6 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function() {
-    $('#etka_garantia-anexo').on('change',function(){
-        var numArquivos = $(this).get(0).files.length;
-        if ( numArquivos > 1 ) {
-	        $('#etka_garantia-texto').val( numArquivos+' arquivos' );
-        } else {
-	        $('#etka_garantia-texto').val( $(this).val() );
-        }
-    });
-});
-
-$(document).ready(function() {
-    $('#etka_ingressos-anexo').on('change',function(){
-        var numArquivos = $(this).get(0).files.length;
-        if ( numArquivos > 1 ) {
-	        $('#etka_ingressos-texto').val( numArquivos+' arquivos' );
-        } else {
-	        $('#etka_ingressos-texto').val( $(this).val() );
-        }
-    });
-});
-
-$(document).ready(function() {
-    $('#etka_validade-anexo').on('change',function(){
-        var numArquivos = $(this).get(0).files.length;
-        if ( numArquivos > 1 ) {
-	        $('#etka_validade-texto').val( numArquivos+' arquivos' );
-        } else {
-	        $('#etka_validade-texto').val( $(this).val() );
-        }
-    });
-});
 
 //garantia
     //dialog
@@ -322,6 +295,18 @@ $(document).ready(function() {
     $('#etka_preco-garantia_slider-label_input').keyup(function() {
         $("#etka_preco-garantia_slider").get(0).MaterialSlider.change($('#etka_preco-garantia_slider-label_input').val());
         console.dir($('#etka_preco-garantia_slider'));
+    });
+});
+
+    // botao anexo lacres de garantia - Preco | Gabi
+    $(document).ready(function() {
+    $('#etka_garantia-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#etka_garantia-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#etka_garantia-texto').val( $(this).val() );
+        }
     });
 });
 
@@ -350,6 +335,18 @@ $(document).ready(function() {
     });
 });
 
+    // botao anexo tickets e ingressos - Preco | Gabi
+    $(document).ready(function() {
+    $('#etka_ingressos-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#etka_ingressos-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#etka_ingressos-texto').val( $(this).val() );
+        }
+    });
+});
+
 //validade
     //dialog
 $(document).ready(function() {
@@ -375,6 +372,19 @@ $(document).ready(function() {
         console.dir($('#etka_preco-validade_slider'));
     });
 });
+
+    // botao anexo etiquetas de validade - Preco | Gabi
+    $(document).ready(function() {
+    $('#etka_validade-anexo').on('change',function(){
+        var numArquivos = $(this).get(0).files.length;
+        if ( numArquivos > 1 ) {
+	        $('#etka_validade-texto').val( numArquivos+' arquivos' );
+        } else {
+	        $('#etka_validade-texto').val( $(this).val() );
+        }
+    });
+});
+
 
 //PORTFOLIO
 //modelo

@@ -4,7 +4,7 @@ $("#etka_contato").submit(function(event){
     var mensagem = document.forms["etka_contato"]["contato-mensagem"].value;
     var att = document.createAttribute("required");
     if (email == "") {
-        contatot_email.setAttributeNode(att);
+        contato_email.setAttributeNode(att);
         return false;
         // handle the invalid form...
         formError();

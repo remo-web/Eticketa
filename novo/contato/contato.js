@@ -1,8 +1,8 @@
 $("#etka_contato").submit(function(event){
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
-        formError();
         contatoValidar();
+        formError();
     } else {
         // everything looks good!
         event.preventDefault();

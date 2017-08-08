@@ -6,6 +6,7 @@ $("#etka_contato").submit(function(event){
         // handle the invalid form...
         formError();
     }
+    var mensagem = document.forms["etka_contato"]["contato-mensagem"].value;
     if (mensagem == "") {
         alert("Escreva uma mensagem para nós, ela é fundamental.");
         return false;

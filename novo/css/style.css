@@ -160,7 +160,7 @@ hr.etka_spacer__clear {
 
 dialog .etka_btn-enviar{width: 100%}
 
-.etka_form-enviado, .etka_form-erro{display: none}
+.etka_sub-enviado, .etka_form-erro{display: none}
 
     /* home */
 
@@ -429,7 +429,8 @@ dialog .etka_btn-enviar{width: 100%}
         margin-left: -8px;
     }
 
-    #etka_contato-enviado, #etka_subscribe-enviado{
+    #etka_contato-enviado,
+    #etka_subscribe-enviado{
         animation-name: fadeIn;}
         @keyframes fadeIn { 
             0% {

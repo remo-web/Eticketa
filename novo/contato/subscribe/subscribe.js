@@ -1,6 +1,4 @@
 $("#etka_subscribe").submit(function(event){
-    var nome = document.forms["etka_subscribe"]["subscribe-nome"].value;
-    var subscribe_nome = document.getElementById("subscribe-nome");
     var email = document.forms["etka_subscribe"]["subscribe-email"].value;
     var subscribe_email = document.getElementById("subscribe-email");
     var att = document.createAttribute("required");
@@ -10,12 +8,6 @@ $("#etka_subscribe").submit(function(event){
         // handle the invalid form...
         formError();
     }
-    if (nome == "") {
-        subscribe_msg.setAttributeNode(att);
-        return false;
-        // handle the invalid form...
-        formError();
-    } 
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
         formError();

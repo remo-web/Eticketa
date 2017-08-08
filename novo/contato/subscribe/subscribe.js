@@ -38,7 +38,7 @@ function submitForm(){
 }
 
 function formSuccess(){
-    $( "#etka_subscribe-enviado" ).removeClass( "etka_sub-enviado" );
+    $( "#etka_subscribe-enviado" ).removeClass( "etka_form-enviado" );
     $( '#subscribe-nome, #subscribe-email' ).val('');
 }
 

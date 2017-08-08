@@ -160,7 +160,7 @@ hr.etka_spacer__clear {
 
 dialog .etka_btn-enviar{width: 100%}
 
-.etka_sub-enviado, .etka_form-erro{display: none}
+.etka_form-enviado, .etka_form-erro{display: none}
 
     /* home */
 

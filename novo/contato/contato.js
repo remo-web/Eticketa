@@ -5,6 +5,12 @@ $("#etka_contato").submit(function(event){
         return false;
         // handle the invalid form...
         formError();
+    }
+    if (mensagem == "") {
+        alert("Escreva uma mensagem para nós, ela é fundamental.");
+        return false;
+        // handle the invalid form...
+        formError();
     } else {
         // everything looks good!
         event.preventDefault();

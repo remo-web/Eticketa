@@ -1,12 +1,13 @@
 $("#etka_contato").submit(function(event){
     var email = document.forms["etka_contato"]["contato-email"].value;
+    var mensagem = document.forms["etka_contato"]["contato-mensagem"].value;
+    var att = document.createAttribute("required");
     if (email == "") {
-        setAttributeNode(document.createAttribute("required"));
+        email.setAttributeNode(att);
         return false;
         // handle the invalid form...
         formError();
     }
-    var mensagem = document.forms["etka_contato"]["contato-mensagem"].value;
     if (mensagem == "") {
         alert("Escreva uma mensagem para nós, ela é fundamental.");
         return false;

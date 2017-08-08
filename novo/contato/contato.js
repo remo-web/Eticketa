@@ -15,39 +15,16 @@ $("#etka_contato").submit(function(event){
         return false;
         // handle the invalid form...
         formError();
+    } 
+    if (event.isDefaultPrevented()) {
+        // handle the invalid form...
+        formError();
     } else {
         // everything looks good!
         event.preventDefault();
         submitForm();
     }
 });
-
-
-//$("#etka_contato").submit(function(event){
-//    if (event.isDefaultPrevented()) {
-//        // handle the invalid form...
-//        contatoValidar();
-//        formError();
-//    } else {
-//        // everything looks good!
-//        event.preventDefault();
-//        submitForm();
-//    }
-//});
-//
-////VALIDACAO
-//function contatoValidar() {
-//    var email = document.forms["etka_contato"]["contato-email"].value;
-//    if (email == "") {
-//        alert("Preencha o seu e-mail, assim lhe antenderemos mais rapidamente.");
-//        return false;
-//    }
-//    var mensagem = document.forms["etka_contato"]["contato-mensagem"].value;
-//    if (mensagem == "") {
-//        alert("Escreva uma mensagem para nós, ela é fundamental.");
-//        return false;
-//    }
-//}
 
 function submitForm(){
     // Initiate Variables With Form Content

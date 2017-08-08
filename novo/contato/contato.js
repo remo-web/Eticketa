@@ -1,7 +1,7 @@
 $("#etka_contato").submit(function(event){
     var email = document.forms["etka_contato"]["contato-email"].value;
     if (email == "") {
-        alert("Preencha o seu e-mail, assim lhe antenderemos mais rapidamente.");
+        setAttributeNode(document.createAttribute("required"));
         return false;
         // handle the invalid form...
         formError();

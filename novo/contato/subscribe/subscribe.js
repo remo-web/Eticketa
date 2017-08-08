@@ -33,7 +33,7 @@ function submitForm(){
  
     $.ajax({
         type: "POST",
-        url: "./subscribe/subscribe.php",
+        url: "./contato/subscribe/subscribe.php",
         data: "subscribe-nome=" + nome + "&subscribe-email=" + email,
         success : function(text){
             if (text == "success"){

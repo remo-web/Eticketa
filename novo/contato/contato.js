@@ -50,11 +50,11 @@ function submitForm(){
 }
 
 function formSuccess(){
-    $( "#etka_contato-enviado" ).removeClass( "etka_form-enviado" );
+    $( "#etka_contato-enviado" ).removeClass( "etka_contato-enviado" );
     $( '#contato-nome, #contato-email, #contato-empresa, #contato-tel, #contato-assunto, #contato-mensagem' ).val('');
 }
 
 function formError(){
-    $( "#etka_contato-erro" ).removeClass( "etka_form-erro" );
+    $( "#etka_contato-erro" ).removeClass( "etka_contato-erro" );
 }
 

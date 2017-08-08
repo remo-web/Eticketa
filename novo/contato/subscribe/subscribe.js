@@ -38,11 +38,11 @@ function submitForm(){
 }
 
 function formSuccess(){
-    $( "#etka_subscribe-enviado" ).removeClass( "etka_form-enviado" );
+    $( "#etka_subscribe-enviado" ).removeClass( "etka_subscribe-enviado" );
     $( '#subscribe-nome, #subscribe-email' ).val('');
 }
 
 function formError(){
-    $( "#etka_subscribe-erro" ).removeClass( "etka_form-erro" );
+    $( "#etka_subscribe-erro" ).removeClass( "etka_subscribe-erro" );
 }
 

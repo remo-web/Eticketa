@@ -561,7 +561,7 @@
                             <div class="mdl-grid">
                                 <div class="mdl-cell mdl-cell--middle mdl-cell--3-offset-desktop mdl-cell--6-col etka_contato-subscribe">
                                     <p>Estamos no <strong>Rio de Janeiro</strong>, mas alcançamos as suas demandas em qualquer lugar. Oferecemos diversos tipos de frete e pode até sair <strong>grátis</strong>!<br/><br/>Entre em contato pelo formulário ao lado para mais informações.<br/><br/>E caso não necessite dos nossos serviços imediatamente, <strong>inscreva-se</strong> e fique sempre por dentro das novidades do mercado gráfico e da Eticketa.</p>
-                                    <form class="mdl-grid" action="../contato/subscribe/subscribe.php" name="etka_subscribe" id="etka_subscribe" method="post">
+                                    <form class="mdl-grid" id="etka_subscribe" name="etka_subscribe" action="../contato/subscribe/subscribe.php" method="post">
                                         <div class="mdl-cell mdl-cell--12-col">
                                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                                 <input class="mdl-textfield__input font" type="text" name="subscribe-nome" id="subscribe-nome">
@@ -597,7 +597,7 @@
                                             </div>
                                         </div>
                                         <div class="mdl-cell mdl-cell--7-offset-desktop mdl-cell--5-col" style="text-align: right">
-                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="subscribe-enviar">INSCREVER</button>
+                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="subscribe-enviar" name="subscribe-enviar" type="submit">INSCREVER</button>
                                         </div>
                                     </form>
                                 </div>
@@ -618,7 +618,7 @@
                             </button>
                             <a href="tel:+5521998688448"><h5 class="etka_contato-tel"><small>+55&nbsp;&nbsp;21</small> 9 9868 8448</h5></a>
                             <h4>Mensagem</h4>
-                            <form name="etka_contato" id="etka_contato" class="mdl-grid" action="./contato/contato.php" method="post">
+                            <form class="mdl-grid" id="etka_contato" name="etka_contato" action="./contato/contato.php" method="post">
                                 <div class="mdl-cell mdl-cell--6-col">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                         <input class="mdl-textfield__input" type="text" id="contato-nome" name="contato-nome">
@@ -672,7 +672,7 @@
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="text-align: right">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="contato-enviar">ENVIAR</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="contato-enviar" name="contato-enviar" type="submit">ENVIAR</button>
                                 </div>
                             </form>
                         </div>

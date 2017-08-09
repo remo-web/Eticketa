@@ -1,3 +1,4 @@
+function submitSubscribe(){
 $("#etka_subscribe").submit(function(event){
     var email = document.forms["etka_subscribe"]["subscribe-email"].value;
     var subscribe_email = document.getElementById("subscribe-email");
@@ -17,6 +18,7 @@ $("#etka_subscribe").submit(function(event){
         submitForm();
     }
 });
+}
 
 function submitForm(){
     // Initiate Variables With Form Content

@@ -73,7 +73,7 @@ if ($success && $error == ""){
    echo "success";
 }else{
     if($error == ""){
-        echo "Algo deu errado... Mas deu errado num nível, que é melhor você nos igar no telefone (21) 3490-9292, porque pelo site vai ser difícil.";
+        echo "Algo deu errado... Mas deu errado num nível, que é melhor você nos ligar no telefone (21) 3490-9292, porque pelo site vai ser difícil.";
     } else {
         echo $error;
     }

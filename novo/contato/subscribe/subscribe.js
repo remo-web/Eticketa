@@ -1,5 +1,5 @@
-$(document).ready(function() {
-$("#etka_subscribe").submit(function(event){
+$( "#subscribe-enviar" ).click(function() {
+$("#etka_subscribe").submit();
     var email = document.forms["etka_subscribe"]["subscribe-email"].value;
     var subscribe_email = document.getElementById("subscribe-email");
     var att = document.createAttribute("required");
@@ -18,8 +18,7 @@ $("#etka_subscribe").submit(function(event){
         submitForm();
     }
 });
-});
-
+    
 function submitForm(){
     // Initiate Variables With Form Content
     var nome = $("#subscribe-nome").val();

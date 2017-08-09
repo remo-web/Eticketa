@@ -1,5 +1,5 @@
-$(document).ready(function() {
-$("#etka_contato").submit(function(event){
+$( "#contato-enviar" ).click(function() {
+$("#etka_contato").submit();
     var email = document.forms["etka_contato"]["contato-email"].value;
     var contato_email = document.getElementById("contato-email");
     var mensagem = document.forms["etka_contato"]["contato-mensagem"].value;
@@ -25,7 +25,6 @@ $("#etka_contato").submit(function(event){
         event.preventDefault();
         submitForm();
     }
-});
 });
 
 function submitForm(){

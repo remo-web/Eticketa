@@ -1,4 +1,3 @@
-$(document).ready(function(submitContato) {
 $("#etka_contato").submit(function(event){
     var email = document.forms["etka_contato"]["contato-email"].value;
     var contato_email = document.getElementById("contato-email");
@@ -25,7 +24,6 @@ $("#etka_contato").submit(function(event){
         event.preventDefault();
         submitForm();
     }
-});
 });
 
 function submitForm(){

@@ -22,11 +22,11 @@ $("#etka_contato").submit(function(event){
     } else {
         // everything looks good!
         event.preventDefault();
-        submitForm();
+        submitContato();
     }
 });
 
-function submitForm(){
+function submitContato(){
     // Initiate Variables With Form Content
     var nome = $("#contato-nome").val();
     var email = $("#contato-email").val();

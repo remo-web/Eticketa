@@ -14,11 +14,11 @@ $("#etka_subscribe").submit(function(event){
     } else {
         // everything looks good!
         event.preventDefault();
-        submitForm();
+        submitSubscribe();
     }
 });
 
-function submitForm(){
+function submitSubscribe(){
     // Initiate Variables With Form Content
     var nome = $("#subscribe-nome").val();
     var email = $("#subscribe-email").val();

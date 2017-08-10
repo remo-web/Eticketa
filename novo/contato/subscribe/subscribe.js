@@ -1,5 +1,4 @@
-$( "#subscribe-enviar" ).click(function() {
-$("#etka_subscribe").submit();
+$("#etka_subscribe").submit(function(event){
     var email = document.forms["etka_subscribe"]["subscribe-email"].value;
     var subscribe_email = document.getElementById("subscribe-email");
     var att = document.createAttribute("required");

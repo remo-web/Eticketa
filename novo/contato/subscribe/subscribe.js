@@ -37,12 +37,12 @@ function submitSubscribe(){
     });
 }
 
-function formSuccess(){
+function subscribeSuccess(){
     $( "#etka_subscribe-enviado" ).removeClass( "etka_subscribe-enviado" );
     $( '#subscribe-nome, #subscribe-email' ).val('');
 }
 
-function formError(){
+function subscribeError(){
     $( "#etka_subscribe-erro" ).removeClass( "etka_subscribe-erro" );
 }
 

@@ -49,12 +49,12 @@ function submitContato(){
     });
 }
 
-function formSuccess(){
+function contatoSuccess(){
     $( "#etka_contato-enviado" ).removeClass( "etka_contato-enviado" );
     $( '#contato-nome, #contato-email, #contato-empresa, #contato-tel, #contato-assunto, #contato-mensagem' ).val('');
 }
 
-function formError(){
+function contatoError(){
     $( "#etka_contato-erro" ).removeClass( "etka_contato-erro" );
 }
 

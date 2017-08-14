@@ -6,11 +6,11 @@ $("#etka_subscribe").submit(function(event){
         subscribe_email.setAttributeNode(att);
         return false;
         // handle the invalid form...
-        formError();
+        subscribeError();
     }
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
-        formError();
+        subscribeError();
     } else {
         // everything looks good!
         event.preventDefault();
@@ -29,9 +29,9 @@ function submitSubscribe(){
         data: "subscribe-nome=" + nome + "&subscribe-email=" + email,
         success : function(text){
             if (text == "success"){
-                formSuccess();
+                subscribeSuccess();
             } else {
-                formError();
+                subscribeError();
             }
         }
     });

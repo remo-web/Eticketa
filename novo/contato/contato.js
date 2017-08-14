@@ -8,17 +8,17 @@ $("#etka_contato").submit(function(event){
         contato_email.setAttributeNode(att);
         return false;
         // handle the invalid form...
-        formError();
+        contatoError();
     }
     if (mensagem == "") {
         contato_msg.setAttributeNode(att);
         return false;
         // handle the invalid form...
-        formError();
+        contatoError();
     } 
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
-        formError();
+        contatoError();
     } else {
         // everything looks good!
         event.preventDefault();
@@ -41,9 +41,9 @@ function submitContato(){
         data: "contato-nome=" + nome + "&contato-email=" + email + "&contato-empresa=" + empresa + "&contato-tel=" + tel + "&contato-assunto=" + assunto + "&contato-mensagem=" + mensagem,
         success : function(text){
             if (text == "success"){
-                formSuccess();
+                contatoSuccess();
             } else {
-                formError();
+                contatoError();
             }
         }
     });

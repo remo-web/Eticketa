@@ -1,21 +1,21 @@
 $("#etka_o-rotulos").submit(function(event){
     var email = document.forms["etka_o-rotulos"]["o_rotulos-email"].value;
-    var rotulos_email = document.getElementById("o_rotulos-email");
-    var anexo = document.forms["etka_o-rotulos"]["o_rotulos-anexo"].value;
-    var rotulos_anexo = document.getElementById("o_rotulos-anexo");
+//    var rotulos_email = document.getElementById("o_rotulos-email");
+//    var anexo = document.forms["etka_o-rotulos"]["o_rotulos-anexo"].value;
+//    var rotulos_anexo = document.getElementById("o_rotulos-anexo");
     var att = document.createAttribute("required");
     if (email == "") {
         rotulos_email.setAttributeNode(att);
         return false;
         // handle the invalid form...
         rotulosError();
-    }
-    if (anexo == "") {
-        rotulos_msg.setAttributeNode(att);
-        return false;
-        // handle the invalid form...
-        rotulosError();
-    } 
+//    }
+//    if (anexo == "") {
+//        rotulos_anexo.setAttributeNode(att);
+//        return false;
+//        // handle the invalid form...
+//        rotulosError();
+//    } 
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
         rotulosError();

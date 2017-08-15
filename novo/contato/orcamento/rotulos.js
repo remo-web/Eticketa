@@ -5,13 +5,13 @@ $("#etka_o-rotulos").submit(function(event){
     var rotulos_anexo = document.getElementById("o_rotulos-anexo");
     var att = document.createAttribute("required");
     if (email == "") {
-        contato_email.setAttributeNode(att);
+        rotulos_email.setAttributeNode(att);
         return false;
         // handle the invalid form...
         rotulosError();
     }
     if (anexo == "") {
-        contato_msg.setAttributeNode(att);
+        rotulos_msg.setAttributeNode(att);
         return false;
         // handle the invalid form...
         rotulosError();

@@ -2,28 +2,34 @@
 
 $error = "";
 
-$nome = $_POST["contato-nome"];
+$nome = $_POST["o_rotulos-nome"];
 
 //email
-if (empty($_POST["contato-email"])) {
+if (empty($_POST["o_rotulos-email"])) {
     $error .= "Email is required ";
 } else {
-    $email = $_POST["contato-email"];
+    $email = $_POST["o_rotulos-email"];
 }
 
-$empresa = $_POST["contato-empresa"];
-$tel = $_POST["contato-tel"];
-$assunto = $_POST["contato-assunto"];
+$empresa = $_POST["o_rotulos-empresa"];
+$telefone = $_POST["o_rotulos-telefone"];
+$largura = $_POST["o_rotulos-largura"];
+$altura = $_POST["o_rotulos-altura"];
+$formato = $_POST["o_rotulos-formato"];
+$quantidade = $_POST["o_rotulos-quantidade"];
+$frente = $_POST["o_rotulos-frente"];
+$verso = $_POST["o_rotulos-verso"];
+$finalidade = $_POST["o_rotulos-finalidade"];
 
 //mensagem
-if (empty($_POST["contato-mensagem"])) {
+if (empty($_POST["o_rotulos-mensagem"])) {
     $error .= "Mensagem is required ";
 } else {
-    $mensagem = $_POST["contato-mensagem"];
+    $mensagem = $_POST["o_rotulos-mensagem"];
 }
  
 $To = "raphael.pais@eticketa.com.br";
-$Subject = "[Site | Contato] $assunto";
+$Subject = "[Site | Orçamento] Rótulos";
  
 // prepare email body text
 $Body .= "Nome: ";
@@ -39,26 +45,40 @@ $Body .= $empresa;
 $Body .= "\n";
  
 $Body .= "Telefone: ";
-$Body .= $tel;
+$Body .= $telefone;
 $Body .= "\n";
  
-$Body .= "Assunto: ";
-$Body .= $assunto;
+$Body .= "Largura: ";
+$Body .= $largura;
 $Body .= "\n";
  
-$Body .= "Mensagem: ";
+$Body .= "Altura: ";
+$Body .= $altura;
+$Body .= "\n";
+ 
+$Body .= "Formato: ";
+$Body .= $formato;
+$Body .= "\n";
+ 
+$Body .= "Quantidade: ";
+$Body .= $quantidade;
+$Body .= "\n";
+ 
+$Body .= "Frente: ";
+$Body .= $frente;
+$Body .= "\n";
+ 
+$Body .= "Verso: ";
+$Body .= $verso;
+$Body .= "\n";
+ 
+$Body .= "Finalidade: ";
+$Body .= $finalidade;
+$Body .= "\n";
+ 
+$Body .= "Observações: ";
 $Body .= $mensagem;
 $Body .= "\n";
-
-//$Body .= "
-//<html>
-//    $nome ($empresa), entrou em contato atráves do site sobre $assunto e dizendo:
-//    <br/>$mensagem
-//    <br/>
-//    Para retornar este contato utilize as seguintes opções:
-//    <br/>$tel
-//    <br/>$email
-//</html>"
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";

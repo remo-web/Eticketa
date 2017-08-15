@@ -706,8 +706,8 @@
                             <label class="mdl-textfield__label" for="email">E-mail</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="o_rotulos-phone">
-                            <label class="mdl-textfield__label" for="phone">Telefone</label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="o_rotulos-telefone">
+                            <label class="mdl-textfield__label" for="telefone">Telefone</label>
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
                     </div>
@@ -736,7 +736,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--2-col etka_form-radio etka_form-label etka_form-label_formato">
                         <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="retangular-tt" for="o_rotulos-retangular">
-                            <input type="checkbox" id="o_rotulos-retangular" name="o_rotulos-formato" class="mdl-icon-toggle__input" value="retangular" checked>
+                            <input type="checkbox" id="o_rotulos-retangular" name="o_rotulos-formato" class="mdl-icon-toggle__input" value="retangular">
                             <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="retangular-tt">Retangular / Quadrado</div>
                         </label>
@@ -809,7 +809,7 @@
                     <div class="mdl-cell mdl-cell--12-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <textarea class="mdl-textfield__input" rows="1" type="text" id="o_rotulos-mensagem" ></textarea>
-                            <label class="mdl-textfield__label" for="mensagem">Observações:</label>
+                            <label class="mdl-textfield__label" for="o_rotulos-mensagem">Observações:</label>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--12-col">
@@ -1862,8 +1862,10 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<!-- CUSTOM -->
 		<script src="./js/scripts.js"></script>
-		<script src="./contato/contato.js"></script>
-		<script src="./contato/subscribe/subscribe.js"></script>
+            <!-- Forms -->
+            <script src="./contato/contato.js"></script>
+            <script src="./contato/subscribe/subscribe.js"></script>
+            <script src="./contato/orcamento/rotulos.js"></script>
 		<!-- Google Material -->
         <script src="./mdl/material.min.js"></script>
             <!-- Polyfill -->

@@ -31,16 +31,20 @@ function submitRotulos(){
     var nome = $("#o_rotulos-nome").val();
     var email = $("#o_rotulos-email").val();
     var empresa = $("#o_rotulos-empresa").val();
-    var tel = $("#o_rotulos-tel").val();
+    var telefone = $("#o_rotulos-telefone").val();
     var largura = $("#o_rotulos-largura").val();
     var altura = $("#o_rotulos-altura").val();
+    var formato = $("input[name=o_rotulos-formato]:checked").val();
+    var quantidade = $("#o_rotulos-quantidade").val();
+    var frente = $("#o_rotulos-frente").val();
+    var verso = $("#o_rotulos-verso").val();
     var finalidade = $("#o_rotulos-finalidade").val();
     var mensagem = $("#o_rotulos-mensagem").val();
  
     $.ajax({
         type: "POST",
         url: "./contato/orcamento/rotulos.php",
-        data: "o_rotulos-nome=" + nome + "&o_rotulos-email=" + email + "&o_rotulos-empresa=" + empresa + "&o_rotulos-tel=" + tel + "&o_rotulos-largura=" + largura + "&o_rotulos-altura=" + altura + "&o_rotulos-finalidade=" + finalidade + "&o_rotulos-mensagem=" + mensagem,
+        data: "o_rotulos-nome=" + nome + "&o_rotulos-email=" + email + "&o_rotulos-empresa=" + empresa + "&o_rotulos-telefone=" + telefone + "&o_rotulos-largura=" + largura + "&o_rotulos-altura=" + altura + "&o_rotulos-formato=" + formato + "&o_rotulos-quantidade=" + quantidade + "&o_rotulos-frente=" + frente + "&o_rotulos-verso=" + verso + "&o_rotulos-finalidade=" + finalidade + "&o_rotulos-mensagem=" + mensagem,
         success : function(text){
             if (text == "success"){
                 rotulosSuccess();
@@ -53,23 +57,9 @@ function submitRotulos(){
 
 function rotulosSuccess(){
     $( "#etka_o-rotulos-enviado" ).removeClass( "etka_o-rotulos-enviado" );
-    $( '#o_rotulos-nome, #o_rotulos-email, #o_rotulos-empresa, #o_rotulos-tel, #o_rotulos-largura, #o_rotulos-altura, #o_rotulos-finalidade, #o_rotulos-mensagem' ).val('');
+    $( '#o_rotulos-nome, #o_rotulos-email, #o_rotulos-empresa, #o_rotulos-telefone, #o_rotulos-largura, #o_rotulos-altura, #o_rotulos-formato, #o_rotulos-quantidade, #o_rotulos-frente, #o_rotulos-verso, #o_rotulos-finalidade, #o_rotulos-mensagem' ).val('');
 }
 
 function rotulosError(){
     $( "#etka_o-rotulos-erro" ).removeClass( "etka_o-rotulos-erro" );
 }
-nome
-empresa
-email
-telefone
-largura
-altura
-retangulo
-circulo
-especial
-quantidade
-frente
-verso
-finalidade
-mensagem

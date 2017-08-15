@@ -9,7 +9,7 @@ $("#etka_o-rotulos").submit(function(event){
         return false;
         // handle the invalid form...
         rotulosError();
-//    }
+    }
 //    if (anexo == "") {
 //        rotulos_anexo.setAttributeNode(att);
 //        return false;

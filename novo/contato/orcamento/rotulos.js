@@ -1,6 +1,6 @@
 $("#etka_o-rotulos").submit(function(event){
     var email = document.forms["etka_o-rotulos"]["o_rotulos-email"].value;
-//    var rotulos_email = document.getElementById("o_rotulos-email");
+    var rotulos_email = document.getElementById("o_rotulos-email");
 //    var anexo = document.forms["etka_o-rotulos"]["o_rotulos-anexo"].value;
 //    var rotulos_anexo = document.getElementById("o_rotulos-anexo");
     var att = document.createAttribute("required");

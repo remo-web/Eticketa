@@ -686,7 +686,7 @@
             <h4 class="mdl-dialog__title">Pedido de Orçamento <small><br/>Rótulos</small></h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
-                <form class="mdl-grid" action="#">
+                <form class="mdl-grid" id="etka_o-rotulos" name="etka_o-rotulos" action="./contato/orcamento/rotulos.php" method="post">
                     <div class="mdl-cell mdl-cell--12-col">
                         <h4>Sobre você</h4>
                     </div>
@@ -724,7 +724,6 @@
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
                     </div>
-<!--                    <p style="margin-top: 8px">x</p>-->
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" pattern="number" id="o_rotulos-altura">
@@ -736,20 +735,20 @@
                         <p class="etka_form-label">Formato:</p>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col etka_form-radio etka_form-label etka_form-label_formato">
-                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="retangular-tt" for="retangular">
-                            <input type="checkbox" id="o_rotulos-retangular" name="options" class="mdl-icon-toggle__input" value="1" checked>
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="retangular-tt" for="o_rotulos-retangular">
+                            <input type="checkbox" id="o_rotulos-retangular" name="o_rotulos-formato" class="mdl-icon-toggle__input" value="retangular" checked>
                             <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="retangular-tt">Retangular / Quadrado</div>
                         </label>
                         &nbsp;
-                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="circular-tt" for="circular">
-                            <input type="checkbox" id="o_rotulos-circular" name="options" class="mdl-icon-toggle__input" value="2">
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="circular-tt" for="o_rotulos-circular">
+                            <input type="checkbox" id="o_rotulos-circular" name="o_rotulos-formato" class="mdl-icon-toggle__input" value="circular">
                             <i class="mdl-icon-toggle__label material-icons">panorama_fish_eye</i>
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="circular-tt">Circular / Oval</div>
                         </label>
                         &nbsp;
-                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="especial-tt" for="especial">
-                            <input type="checkbox" id="o_rotulos-especial" name="options" class="mdl-icon-toggle__input" value="3">
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="especial-tt" for="o_rotulos-especial">
+                            <input type="checkbox" id="o_rotulos-especial" name="o_rotulos-formato" class="mdl-icon-toggle__input" value="especial">
                             <i class="icon mdl-icon-toggle__label material-icons">star_border</i>
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="especial-tt">CORTE ESPECIAL<br/>Facas personalizadas podem encarecer seu projeto.</div> 
                         </label>
@@ -773,7 +772,6 @@
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
                     </div>
-<!--                    <p style="margin-top: 8px">x</p>-->
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" id="o_rotulos-verso">
@@ -790,27 +788,27 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <textarea class="mdl-textfield__input" type="text" id="o_rotulos-finalidade"></textarea>
+                            <textarea class="mdl-textfield__input" rows="1" type="text" id="o_rotulos-finalidade"></textarea>
                             <label class="mdl-textfield__label" for="finalidade">como o material será utilizado?</label>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-                            <label class="mdl-button mdl-js-button mdl-button--icon" for="etka_rotulos-anexo">
-                                <i class="material-icons" id="etka_rotulos-anexo-help">attach_file</i>
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="o_rotulos-anexo">
+                                <i class="material-icons" id="o_rotulos-anexo-help">attach_file</i>
                             </label>
                             <div class="mdl-textfield__expandable-holder" style="max-width: 100%">
                                 <input class="mdl-textfield__input" type="text" id="etka_rotulos-texto" readonly>
                             </div>
                             <div class="mdl-textfield__expandable-holder">
-                                <input class="mdl-textfield__input" type="file" id="etka_rotulos-anexo" accept=".pdf,.cdr,.eps,.ai,.jpg,.png" multiple>
+                                <input class="mdl-textfield__input" type="file" id="o_rotulos-anexo" accept=".pdf,.cdr,.eps,.ai,.jpg,.png" multiple>
                             </div>
-                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="etka_rotulos-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até 5MB de anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="o_rotulos-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até 5MB de anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--12-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <textarea class="mdl-textfield__input" type="text" id="o_rotulos-mensagem" ></textarea>
+                            <textarea class="mdl-textfield__input" rows="1" type="text" id="o_rotulos-mensagem" ></textarea>
                             <label class="mdl-textfield__label" for="mensagem">Observações:</label>
                         </div>
                     </div>
@@ -878,20 +876,20 @@
                         <p class="etka_form-label">Formato:</p>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col etka_form-radio etka_form-label etka_form-label_formato">
-                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="retangular-tt" for="retangular">
-                            <input type="checkbox" id="retangular" name="options" class="mdl-icon-toggle__input" value="1" checked>
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="retangular-tt" for="o_lacres-retangular">
+                            <input type="checkbox" id="o_lacres-retangular" name="options" class="mdl-icon-toggle__input" value="1" checked>
                             <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="retangular-tt">Retangular / Quadrado</div>
                         </label>
                         &nbsp;
-                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="circular-tt" for="circular">
-                            <input type="checkbox" id="circular" name="options" class="mdl-icon-toggle__input" value="2">
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="circular-tt" for="o_lacres-circular">
+                            <input type="checkbox" id="o_lacres-circular" name="options" class="mdl-icon-toggle__input" value="2">
                             <i class="mdl-icon-toggle__label material-icons">panorama_fish_eye</i>
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="circular-tt">Circular / Oval</div>
                         </label>
                         &nbsp;
-                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="especial-tt" for="especial">
-                            <input type="checkbox" id="especial" name="options" class="mdl-icon-toggle__input" value="3">
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="especial-tt" for="o_lacres-especial">
+                            <input type="checkbox" id="o_lacres-especial" name="options" class="mdl-icon-toggle__input" value="3">
                             <i class="icon mdl-icon-toggle__label material-icons">star_border</i>
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="especial-tt">CORTE ESPECIAL<br/>Facas personalizadas podem encarecer seu projeto.</div> 
                         </label>

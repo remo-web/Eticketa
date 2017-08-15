@@ -304,7 +304,7 @@ $(document).ready(function() {
 //Orçamento
 //rótulos
 $(document).ready(function() {
-    $('#etka_rotulos-anexo').on('change',function(){
+    $('#o_rotulos-anexo').on('change',function(){
         var numArquivos = $(this).get(0).files.length;
         if ( numArquivos > 1 ) {
 	        $('#etka_rotulos-texto').val( numArquivos+' arquivos' );

@@ -77,7 +77,7 @@ $Body .= "\n";
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8" . "\r\n";
-$headers .= "From: $email" . "\r\n";
+$headers .= "From: p.pais@eticketa.com.br" . "\r\n";
  
 // send email
 $success = mail($To, $Subject, $Body, $headers);

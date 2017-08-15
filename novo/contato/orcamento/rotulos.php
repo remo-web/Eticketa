@@ -20,13 +20,7 @@ $quantidade = $_POST["o_rotulos-quantidade"];
 $frente = $_POST["o_rotulos-frente"];
 $verso = $_POST["o_rotulos-verso"];
 $finalidade = $_POST["o_rotulos-finalidade"];
-
-//mensagem
-if (empty($_POST["o_rotulos-mensagem"])) {
-    $error .= "Mensagem is required ";
-} else {
-    $mensagem = $_POST["o_rotulos-mensagem"];
-}
+$mensagem = $_POST["o_rotulos-mensagem"];
  
 $To = "raphael.pais@eticketa.com.br";
 $Subject = "[Site | Orçamento] Rótulos";

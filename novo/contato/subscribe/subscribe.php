@@ -11,7 +11,7 @@ if (empty($_POST["subscribe-email"])) {
     $email = $_POST["subscribe-email"];
 }
  
-$To = "raphael.pais@eticketa.com.br";
+$To = "raphaelrpais@gmail.com";
 $Subject = "[Site | Subscribe]";
  
 // prepare email body text

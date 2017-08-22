@@ -44,10 +44,12 @@ $Body .= "\n";
  
 $Body .= "Largura: ";
 $Body .= $largura;
+$Body .= " cm";
 $Body .= "\n";
  
 $Body .= "Altura: ";
 $Body .= $altura;
+$Body .= " cm";
 $Body .= "\n";
  
 $Body .= "Formato: ";
@@ -60,10 +62,12 @@ $Body .= "\n";
  
 $Body .= "Frente: ";
 $Body .= $frente;
+$Body .= " cores";
 $Body .= "\n";
  
 $Body .= "Verso: ";
 $Body .= $verso;
+$Body .= " cores";
 $Body .= "\n";
  
 $Body .= "Finalidade: ";

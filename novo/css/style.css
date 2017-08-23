@@ -54,7 +54,7 @@ input[type='file'] {display: none}
 
 .mdl-dialog {width: 70%; height: auto; max-height: 90%}
 .mdl-dialog__content--scrollable{
-    max-height: 500px;
+    max-height: 65vh;
     overflow-y: scroll;
     overflow-x: hidden
 }

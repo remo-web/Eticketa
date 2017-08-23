@@ -273,7 +273,7 @@ dialog .etka_btn-enviar{width: 100%}
     .etka_fazemos p{color: black; opacity: .87}
     .etka-card-wide.mdl-card {width: auto}
 
-    .etka-card-wide > .mdl-card__title {color: #fff; height: 0; padding-top: 30%}
+    .etka-card-wide > .mdl-card__title {color: #fff; height: 0; padding-top: 14vh}
         .etka-fazemos-flexo {
             background: url('../img/fazemos/etka_fazemos-flexo.jpg') center / cover;
         }

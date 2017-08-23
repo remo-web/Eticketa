@@ -133,7 +133,13 @@ form > .mdl-cell{margin-bottom: 0px; margin-top: 0px}
 
 .font, h1, h2, h3, h4, h5, small{font-family: 'Yanone Kaffeesatz', sans-serif !important}
 .w200{font-weight: 200 !important} .w300{font-weight: 300 !important} .w400{font-weight: 400 !important} .w700{font-weight: 700 !important}
-.etka_home, .etka_prod, .etka_fazemos, .etka_preco, .etka_contato {height: 100%}
+.etka_home,
+.etka_prod,
+.etka_fazemos,
+.etka_preco,
+.etka_contato {
+    height: 100%
+}
 
 hr.etka_spacer__clear {
     border-top: 1pt solid rgba(0,0,0,.12);
@@ -160,7 +166,11 @@ hr.etka_spacer__clear {
 
 dialog .etka_btn-enviar{width: 100%}
 
-.etka_contato-enviado, .etka_contato-erro, .etka_subscribe-enviado, .etka_subscribe-erro, .etka_o-rotulos-enviado, .etka_o-rotulos-erro{display: none}
+.etka_contato-enviado, .etka_contato-erro,
+.etka_subscribe-enviado, .etka_subscribe-erro,
+.etka_o-rotulos-enviado, .etka_o-rotulos-erro{
+    display: none
+}
 
     /* home */
 
@@ -242,10 +252,7 @@ dialog .etka_btn-enviar{width: 100%}
     .etka_prod-video{overflow: hidden; height: 81vh}
 
     .etka_prod-video video{
-        min-width: auto;
         width: auto;
-        max-width: 100%;
-        min-height: auto;
         height: 100%;
         object-fit: cover !important;
     }

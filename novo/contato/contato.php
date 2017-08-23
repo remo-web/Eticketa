@@ -23,7 +23,8 @@ if (empty($_POST["contato-mensagem"])) {
 }
  
 $To = "raphael.pais@eticketa.com.br";
-$Subject = "[Site | Contato] $assunto";
+$uglySubject = "[Site | Contato] $assunto";
+$Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
  
 // prepare email body text
 $Body .= "Nome: ";
@@ -49,16 +50,6 @@ $Body .= "\n";
 $Body .= "Mensagem: ";
 $Body .= $mensagem;
 $Body .= "\n";
-
-//$Body .= "
-//<html>
-//    $nome ($empresa), entrou em contato atráves do site sobre $assunto e dizendo:
-//    <br/>$mensagem
-//    <br/>
-//    Para retornar este contato utilize as seguintes opções:
-//    <br/>$tel
-//    <br/>$email
-//</html>"
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";

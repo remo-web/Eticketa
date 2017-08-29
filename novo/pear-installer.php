@@ -116,7 +116,7 @@ $bootstrap_files = array(
     'PEAR5.php'            => 'https://raw.github.com/pear/pear-core/master/PEAR5.php',
     'PEAR.php'             => 'https://raw.github.com/pear/pear-core/master/PEAR.php',
     'Archive/Tar.php'      => 'https://raw.github.com/pear/Archive_Tar/master/Archive/Tar.php',
-    'Console/Getopt.php'   => 'https://raw.githubusercontent.com/pear/Console_Getopt/trunk/Console/Getopt.php',
+    'Console/Getopt.php'   => 'https://raw.github.com/pear/Console_Getopt/trunk/Console/Getopt.php',
 );
 
 $bootstrap_pkgs = array( // uses URL like http://pear.php.net/get/%s

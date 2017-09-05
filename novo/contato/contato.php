@@ -27,29 +27,36 @@ $uglySubject = "[Site | Contato] $assunto";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
  
 // prepare email body text
-$Body .= "Nome: ";
-$Body .= $nome;
-$Body .= "\n";
- 
-$Body .= "E-mail: ";
-$Body .= $email;
-$Body .= "\n";
- 
-$Body .= "Cargo / Empresa: ";
-$Body .= $empresa;
-$Body .= "\n";
- 
-$Body .= "Telefone: ";
-$Body .= $tel;
-$Body .= "\n";
- 
-$Body .= "Assunto: ";
-$Body .= $assunto;
-$Body .= "\n";
- 
-$Body .= "Mensagem: ";
-$Body .= $mensagem;
-$Body .= "\n";
+//$Body .= "Nome: ";
+//$Body .= $nome;
+//$Body .= "\n";
+// 
+//$Body .= "E-mail: ";
+//$Body .= $email;
+//$Body .= "\n";
+// 
+//$Body .= "Cargo / Empresa: ";
+//$Body .= $empresa;
+//$Body .= "\n";
+// 
+//$Body .= "Telefone: ";
+//$Body .= $tel;
+//$Body .= "\n";
+// 
+//$Body .= "Assunto: ";
+//$Body .= $assunto;
+//$Body .= "\n";
+// 
+//$Body .= "Mensagem: ";
+//$Body .= $mensagem;
+//$Body .= "\n";
+
+$boundary = md5("eticketa.com.br"); 
+
+$Body = "--$boundary\r\n";
+$Body .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+$Body .= "Content-Transfer-Encoding: base64\r\n\r\n";
+$Body .= "$nome, enviou um <b>contato</b> pelo site com o seguinte recado: $mensagem"
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";

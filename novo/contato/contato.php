@@ -51,13 +51,11 @@ $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 //$Body .= $mensagem;
 //$Body .= "\n";
 
-$Body .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-$Body .= "Content-Transfer-Encoding: base64\r\n\r\n";
 $Body .= "$nome, enviou um <b>contato</b> pelo site com o seguinte recado: $mensagem";
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8" . "\r\n";
+$headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n";
 $headers .= "From: $email" . "\r\n";
  
 // send email

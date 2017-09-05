@@ -25,7 +25,8 @@ $mensagem = $_POST["o_rotulos-mensagem"];
 $attachments = $_FILES['file_attach'];
  
 $To = "raphael.pais@eticketa.com.br";
-$Subject = "[Site | Orçamento] Rótulos";
+$uglySubject = "[Site | Contato] $assunto";
+$Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
  
 // prepare email body text
 $Body .= "Nome: ";
@@ -79,6 +80,7 @@ $Body .= "\n";
 $Body .= "Observações: ";
 $Body .= $mensagem;
 $Body .= "\n";
+
 $file_count = count($attachments['name']); //count total files attached
 $boundary = md5("eticketa.com.br"); 
 

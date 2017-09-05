@@ -51,7 +51,7 @@ $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 //$Body .= $mensagem;
 //$Body .= "\n";
 
-$Body .= "<html><body>$nome, enviou um <b>contato</b> pelo site com o seguinte recado: $mensagem</body></html>";
+$Body .= "<html><body><b>$nome</b>, como <b>$empresa</b>, utilizou a área de contato do site querendo saber sobre <b>$assunto</b> e escreveu:<br/><br/>$mensagem<br/><br/>Para retornar este contato temos estas opções: <b>$email</b> <b>$telefone</b></body></html>";
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";

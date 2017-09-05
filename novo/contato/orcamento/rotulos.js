@@ -4,6 +4,8 @@ $("#etka_o-rotulos").submit(function(event){
 //    var anexo = document.forms["etka_o-rotulos"]["o_rotulos-anexo"].value;
 //    var rotulos_anexo = document.getElementById("o_rotulos-anexo");
     var att = document.createAttribute("required");
+    var allowed_file_size = "5000000";
+    var allowed_files = ['image/png', 'image/gif', 'image/jpeg', 'image/pjpeg', 'application/pdf', 'application/ai', 'application/eps', 'application/cdr', 'application/svg'];
     if (email == "") {
         rotulos_email.setAttributeNode(att);
         return false;
@@ -23,6 +25,22 @@ $("#etka_o-rotulos").submit(function(event){
         // everything looks good!
         event.preventDefault();
         submitRotulos();
+    }
+    if(window.File && window.FileReader && window.FileList && window.Blob){
+        var total_files_size = 0;
+        $(this.elements['file_attach[]'].files).each(function(i, ifile){
+            if(ifile.value !== ""){ //continue only if file(s) are selected
+                if(allowed_files.indexOf(ifile.type) === -1){ //check unsupported file
+                    alert( ifile.name + " is unsupported file type!");
+                    proceed = false;
+                }
+                total_files_size = total_files_size + ifile.size; //add file size to total size
+            }
+        });
+        if(total_files_size > allowed_file_size){ 
+            alert( "Make sure total file size is less than 5 MB!");
+            proceed = false;
+        }
     }
 });
 

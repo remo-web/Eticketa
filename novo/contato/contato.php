@@ -51,9 +51,6 @@ $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 //$Body .= $mensagem;
 //$Body .= "\n";
 
-$boundary = md5("eticketa.com.br"); 
-
-$Body = "--$boundary\r\n";
 $Body .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 $Body .= "Content-Transfer-Encoding: base64\r\n\r\n";
 $Body .= "$nome, enviou um <b>contato</b> pelo site com o seguinte recado: $mensagem"

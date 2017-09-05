@@ -12,7 +12,7 @@ if (empty($_POST["contato-email"])) {
 }
 
 $empresa = $_POST["contato-empresa"];
-$telefone = $_POST["contato-tel"];
+$telefone = $_POST["ou ""contato-tel"];
 $assunto = $_POST["contato-assunto"];
 
 //mensagem

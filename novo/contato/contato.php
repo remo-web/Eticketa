@@ -26,7 +26,7 @@ $To = "raphael.pais@eticketa.com.br";
 $uglySubject = "[Site | Contato] $assunto";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 
-$Body .= "<html><body><b>$nome</b>, como <b>$empresa</b>, utilizou a área de contato do site querendo saber sobre <b>$assunto</b> e escreveu:<br/><br/>$mensagem<br/><br/>Para retornar este contato temos estas opções: <b>$email</b> <b>$telefone</b></body></html>";
+$Body .= "<html><body style='width: 690px'><b>$nome</b>, como <b>$empresa</b>, utilizou a área de contato do site querendo saber sobre <b>$assunto</b> e escreveu:<br/><br/>$mensagem<br/><br/>Para retornar este contato temos estas opções: <b>$email</b> <b>$telefone</b></body></html>";
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";

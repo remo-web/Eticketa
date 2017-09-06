@@ -43,11 +43,10 @@ $("#etka_o-rotulos").submit(function(event){
     } else {
         // everything looks good!
         event.preventDefault();
-        submitRotulos();
+        proceed = true;
     }
-});
 
-function submitRotulos(){
+if(proceed){
     // Initiate Variables With Form Content
     var nome = $("#o_rotulos-nome").val();
     var email = $("#o_rotulos-email").val();
@@ -62,7 +61,7 @@ function submitRotulos(){
     var finalidade = $("#o_rotulos-finalidade").val();
     var mensagem = $("#o_rotulos-mensagem").val();
     
-    var form_data = new FormData(form); //Creates new FormData object
+    var form_data = new FormData(this); //Creates new FormData object
  
     $.ajax({
         type: "POST",
@@ -82,6 +81,7 @@ function submitRotulos(){
         }
     });
 }
+});
 
 function rotulosSuccess(){
     $( "#etka_o-rotulos-enviado" ).removeClass( "etka_o-rotulos-enviado" );

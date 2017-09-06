@@ -62,14 +62,14 @@ function submitRotulos(){
     var finalidade = $("#o_rotulos-finalidade").val();
     var mensagem = $("#o_rotulos-mensagem").val(); 
     
-		var form_data = new FormData(nome); //Creates new FormData object
+		var form_data = new FormData('nome', 'email', 'empresa'); //Creates new FormData object
  
     $.ajax({
         type: "POST",
         url: "./contato/orcamento/rotulos.php",
-        data : form_data,
+        data: form_data,
         contentType: false,
-        dataType : "json",
+        dataType: "json",
         cache: false,
         processData:false,
         //data: "o_rotulos-nome=" + nome + "&o_rotulos-email=" + email + "&o_rotulos-empresa=" + empresa + "&o_rotulos-telefone=" + telefone + "&o_rotulos-largura=" + largura + "&o_rotulos-altura=" + altura + "&o_rotulos-formato=" + formato + "&o_rotulos-quantidade=" + quantidade + "&o_rotulos-frente=" + frente + "&o_rotulos-verso=" + verso + "&o_rotulos-finalidade=" + finalidade + "&o_rotulos-mensagem=" + mensagem,

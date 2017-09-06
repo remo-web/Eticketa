@@ -32,8 +32,8 @@ $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
     if($file_count > 0){ //if attachment exists
         //header
         $headers = "MIME-Version: 1.0\r\n"; 
-        $headers .= "From:".$from_email."\r\n"; 
-        $headers .= "Reply-To: ".$sender_email."" . "\r\n";
+        $headers .= "From:".$email."\r\n"; 
+        $headers .= "Reply-To: ".$to."" . "\r\n";
         $headers .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n"; 
         
         //message text

@@ -47,6 +47,8 @@ $("#etka_o-rotulos").submit(function(event){
     }
 });
 
+		var form_data = new FormData(this); //Creates new FormData object
+
 function submitRotulos(){
     // Initiate Variables With Form Content
     var nome = $("#o_rotulos-nome").val();
@@ -62,7 +64,7 @@ function submitRotulos(){
     var finalidade = $("#o_rotulos-finalidade").val();
     var mensagem = $("#o_rotulos-mensagem").val(); 
     
-		var form_data = new FormData('nome', 'email', 'empresa'); //Creates new FormData object
+
  
     $.ajax({
         type: "POST",

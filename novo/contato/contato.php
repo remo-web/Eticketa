@@ -25,31 +25,6 @@ if (empty($_POST["contato-mensagem"])) {
 $To = "raphael.pais@eticketa.com.br";
 $uglySubject = "[Site | Contato] $assunto";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
- 
-// prepare email body text
-//$Body .= "Nome: ";
-//$Body .= $nome;
-//$Body .= "\n";
-// 
-//$Body .= "E-mail: ";
-//$Body .= $email;
-//$Body .= "\n";
-// 
-//$Body .= "Cargo / Empresa: ";
-//$Body .= $empresa;
-//$Body .= "\n";
-// 
-//$Body .= "Telefone: ";
-//$Body .= $tel;
-//$Body .= "\n";
-// 
-//$Body .= "Assunto: ";
-//$Body .= $assunto;
-//$Body .= "\n";
-// 
-//$Body .= "Mensagem: ";
-//$Body .= $mensagem;
-//$Body .= "\n";
 
 $Body .= "<html><body><b>$nome</b>, como <b>$empresa</b>, utilizou a área de contato do site querendo saber sobre <b>$assunto</b> e escreveu:<br/><br/>$mensagem<br/><br/>Para retornar este contato temos estas opções: <b>$email</b> <b>$telefone</b></body></html>";
 

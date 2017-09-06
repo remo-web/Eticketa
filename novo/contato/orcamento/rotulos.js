@@ -45,6 +45,7 @@ $("#etka_o-rotulos").submit(function(event){
         event.preventDefault();
         submitRotulos();
     }
+});
 
 function submitRotulos(){
     // Initiate Variables With Form Content
@@ -81,8 +82,6 @@ function submitRotulos(){
         }
     });
 }
-    
-});
 
 function rotulosSuccess(){
     $( "#etka_o-rotulos-enviado" ).removeClass( "etka_o-rotulos-enviado" );

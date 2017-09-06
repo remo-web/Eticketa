@@ -45,9 +45,6 @@ $("#etka_o-rotulos").submit(function(event){
         event.preventDefault();
         submitRotulos();
     }
-});
-
-		
 
 function submitRotulos(){
     // Initiate Variables With Form Content
@@ -69,12 +66,12 @@ function submitRotulos(){
     $.ajax({
         type: "POST",
         url: "./contato/orcamento/rotulos.php",
-//        data: form_data,
+        data: form_data,
         contentType: false,
         dataType: "json",
         cache: false,
         processData:false,
-        data: "o_rotulos-nome=" + nome + "&o_rotulos-email=" + email + "&o_rotulos-empresa=" + empresa + "&o_rotulos-telefone=" + telefone + "&o_rotulos-largura=" + largura + "&o_rotulos-altura=" + altura + "&o_rotulos-formato=" + formato + "&o_rotulos-quantidade=" + quantidade + "&o_rotulos-frente=" + frente + "&o_rotulos-verso=" + verso + "&o_rotulos-finalidade=" + finalidade + "&o_rotulos-mensagem=" + mensagem,
+        //data: "o_rotulos-nome=" + nome + "&o_rotulos-email=" + email + "&o_rotulos-empresa=" + empresa + "&o_rotulos-telefone=" + telefone + "&o_rotulos-largura=" + largura + "&o_rotulos-altura=" + altura + "&o_rotulos-formato=" + formato + "&o_rotulos-quantidade=" + quantidade + "&o_rotulos-frente=" + frente + "&o_rotulos-verso=" + verso + "&o_rotulos-finalidade=" + finalidade + "&o_rotulos-mensagem=" + mensagem,
         success : function(data){
             if (data == "success"){
                 rotulosSuccess();
@@ -84,6 +81,8 @@ function submitRotulos(){
         }
     });
 }
+    
+});
 
 function rotulosSuccess(){
     $( "#etka_o-rotulos-enviado" ).removeClass( "etka_o-rotulos-enviado" );

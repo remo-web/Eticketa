@@ -20,11 +20,7 @@ $("#etka_o-rotulos").submit(function(event){
 //        return false;
 //        // handle the invalid form...
 //        rotulosError();
-//    } 
-    if (event.isDefaultPrevented()) {
-        // handle the invalid form...
-        rotulosError();
-    }	
+//    }	
     if(window.File && window.FileReader && window.FileList && window.Blob){
         var total_files_size = 0;
         $(this.elements['file_attach[]'].files).each(function(i, ifile){
@@ -40,7 +36,11 @@ $("#etka_o-rotulos").submit(function(event){
             alert( "Make sure total file size is less than 1 MB!");
             proceed = false;
         }
-	} else {
+	} 
+    if (event.isDefaultPrevented()) {
+        // handle the invalid form...
+        rotulosError();
+    } else {
         // everything looks good!
         event.preventDefault();
         submitRotulos();
@@ -69,6 +69,7 @@ function submitRotulos(){
         url: "./contato/orcamento",
         data : form_data,
         contentType: false,
+        dataType : "json",
         cache: false,
         processData:false,
         //data: "o_rotulos-nome=" + nome + "&o_rotulos-email=" + email + "&o_rotulos-empresa=" + empresa + "&o_rotulos-telefone=" + telefone + "&o_rotulos-largura=" + largura + "&o_rotulos-altura=" + altura + "&o_rotulos-formato=" + formato + "&o_rotulos-quantidade=" + quantidade + "&o_rotulos-frente=" + frente + "&o_rotulos-verso=" + verso + "&o_rotulos-finalidade=" + finalidade + "&o_rotulos-mensagem=" + mensagem,

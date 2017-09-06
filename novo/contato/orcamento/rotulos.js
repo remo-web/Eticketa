@@ -45,9 +45,11 @@ $("#etka_o-rotulos").submit(function(event){
         event.preventDefault();
         submitRotulos();
     }
+    
+    var form_data = new FormData(this); //Creates new FormData object
 });
 
-		var form_data = new FormData(this); //Creates new FormData object
+		
 
 function submitRotulos(){
     // Initiate Variables With Form Content

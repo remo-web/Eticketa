@@ -66,7 +66,7 @@ function submitRotulos(){
  
     $.ajax({
         type: "POST",
-        url: "./contato/orcamento",
+        url: "./contato/orcamento/rotulos.php",
         data : form_data,
         contentType: false,
         dataType : "json",

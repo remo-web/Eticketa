@@ -97,10 +97,10 @@ $mens .= "--$boundary--\r\n";
 
 
 
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
-$headers .= "Content-Type: multipart/mixed; charset=UTF-8" . "\r\n";
-$headers .= "From: $email" . "\r\n";
+$headers = "MIME-Version: 1.0" "\r\n";
+$headers .= "Content-Transfer-Encoding: 8bit" "\r\n";
+$headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\ "\r\n";
+$headers .= "From: $email" "\r\n";
  
 // send email
 $success = mail($To, $Subject, $mens, $headers);

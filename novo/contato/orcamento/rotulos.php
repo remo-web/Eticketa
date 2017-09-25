@@ -23,9 +23,13 @@ $uglySubject = "[Site | Orçamento] Rótulos";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
  
 // prepare email body text
-$Body .= "Nome: $nome \n ";
+$Body .= "Nome: ";
+$Body .= $nome;
+$Body .= "\n";
  
-$Body .= "E-mail: $email \n";
+$Body .= "E-mail: ";
+$Body .= $email;
+$Body .= "\n";
  
 $Body .= "Cargo / Empresa: ";
 $Body .= $empresa;
@@ -69,14 +73,11 @@ $Body .= "\n";
  
 $Body .= "Observações: ";
 $Body .= $mensagem;
-$Body .= "\n";
-
-
+$Body .= "\n";zzz
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
-$headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8" . "\r\n";
 $headers .= "From: $email" . "\r\n";
-
  
 // send email
 $success = mail($To, $Subject, $Body, $headers);

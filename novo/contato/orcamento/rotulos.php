@@ -24,10 +24,7 @@ $fp = fopen($_FILES["arquivo"]["tmp_name"],"rb");
 $anexo = fread($fp,filesize($_FILES["o-rotulos-anexo"]["tmp_name"])); 
 $anexo = base64_encode($anexo); 
 fclose($fp); 
-$anexo = chunk_split($anexo); 
- 
-$boundary = "XYZ-" . date("dmYis") . "-ZYX"; 
-    
+$anexo = chunk_split($anexo);     
  
 $To = "raphael.pais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Rótulos";
@@ -86,14 +83,10 @@ $Body .= "Observações: ";
 $Body .= $mensagem;
 $Body .= "\n";
     
-$Body .= "Content-Type: ".$arquivo["type"]."" . $quebra_linha . ""; 
-$Body .= "Content-Disposition: attachment; filename=\"".$arquivo["name"]."\"" . $quebra_linha . ""; 
-$Body .= "Content-Transfer-Encoding: base64" . $quebra_linha . "" . 
-$Body .= "$anexo" . $quebra_linha . ""; 
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
-$headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"" . "\r\n";
+$headers .= "Content-Type: multipart/mixed; charset=UTF-8" . "\r\n";
 $headers .= "From: $email" . "\r\n";
  
 // send email

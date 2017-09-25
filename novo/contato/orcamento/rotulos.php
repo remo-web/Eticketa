@@ -81,7 +81,7 @@ $Body .= "\n";
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
-$headers .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n";
+$headers .= "Content-Type: multipart/mixed" . "\r\n";
 $headers .= "From: $email" . "\r\n";
 
         //attachments

@@ -20,7 +20,7 @@ $mensagem = $_POST["o_rotulos-mensagem"];
 
 $attachments = $_FILES['file_attach'];
 $file_count = count($attachments['name']);
-$boundary = md5("sanwebe.com");
+$boundary = md5("eticketa.com.br");
  
 $To = "raphael.pais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Rótulos";

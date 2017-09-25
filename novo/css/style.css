@@ -54,7 +54,7 @@ input[type='file'] {display: none}
 
 .mdl-dialog {width: 70%; height: auto; max-height: 90%}
 .mdl-dialog__content--scrollable{
-    max-height: 500px;
+    max-height: 65vh;
     overflow-y: scroll;
     overflow-x: hidden
 }
@@ -133,7 +133,13 @@ form > .mdl-cell{margin-bottom: 0px; margin-top: 0px}
 
 .font, h1, h2, h3, h4, h5, small{font-family: 'Yanone Kaffeesatz', sans-serif !important}
 .w200{font-weight: 200 !important} .w300{font-weight: 300 !important} .w400{font-weight: 400 !important} .w700{font-weight: 700 !important}
-.etka_home, .etka_prod, .etka_fazemos, .etka_preco, .etka_contato {height: 100%}
+.etka_home,
+.etka_prod,
+.etka_fazemos,
+.etka_preco,
+.etka_contato {
+    height: 100%
+}
 
 hr.etka_spacer__clear {
     border-top: 1pt solid rgba(0,0,0,.12);
@@ -160,24 +166,28 @@ hr.etka_spacer__clear {
 
 dialog .etka_btn-enviar{width: 100%}
 
-.etka_contato-enviado, .etka_contato-erro, .etka_subscribe-enviado, .etka_subscribe-erro, .etka_o-rotulos-enviado, .etka_o-rotulos-erro{display: none}
+.etka_contato-enviado, .etka_contato-erro,
+.etka_subscribe-enviado, .etka_subscribe-erro,
+.etka_o-rotulos-enviado, .etka_o-rotulos-erro{
+    display: none
+}
 
     /* home */
 
-    #myVideo{
+    #etka_home-video{
         position: absolute;
 		bottom: 0;
 		top:0;
 		right:0;
 		width: 100%;
-		height: 100%;
+        height: auto;
 		background-size: 100% 100%;
  		background-color: black; /* in case the video doesn't fit the whole page*/
-  		background-image: /* our video */;
+  		background-image: url(../mov/etka_site17-video_amarelo2.mp4);
   		background-position: center center;
-  		background-size: contain;
+  		background-size: cover;
    		object-fit: cover; /*cover video background */
-   		z-index:3;
+   		z-index: 0;
         overflow: hidden;
         opacity: 0.6;
     }
@@ -239,14 +249,11 @@ dialog .etka_btn-enviar{width: 100%}
     .etka_prod p{color: black; opacity: .87}
     .etka_prod .mdl-grid{margin-top: 64px}
     .etka_prod .mdl-cell--3-col{margin: 0 2% 0 4.5%}
-    .etka_prod-video{overflow: hidden}
+    .etka_prod-video{overflow: hidden; height: 81vh}
 
     .etka_prod-video video{
-        min-width: auto;
         width: auto;
-        max-width: 100%;
-        min-height: auto;
-        height: 81vh;
+        height: 100%;
         object-fit: cover !important;
     }
 
@@ -266,7 +273,7 @@ dialog .etka_btn-enviar{width: 100%}
     .etka_fazemos p{color: black; opacity: .87}
     .etka-card-wide.mdl-card {width: auto}
 
-    .etka-card-wide > .mdl-card__title {color: #fff; height: 0; padding-top: 30%}
+    .etka-card-wide > .mdl-card__title {color: #fff; height: 0; padding-top: 14vh}
         .etka-fazemos-flexo {
             background: url('../img/fazemos/etka_fazemos-flexo.jpg') center / cover;
         }

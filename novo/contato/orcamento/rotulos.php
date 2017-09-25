@@ -104,10 +104,12 @@ $headers .= "From: $email" . "\r\n";
 $headers .= "$boundary\n";
  
 // send email
-$success = mail($To, $Subject, $Body, $mens, $headers);
+mail($To, $Subject, $Body, $mens, $headers);
+    <script language="javascript">alert("Enviado com sucesso!");
+location ="rotulos.php";</script><?}
  
 // redirect to success page
-if ($success && $error == ""){
+/*if ($success && $error == ""){
     echo "success";
 } else {
     if($error == ""){
@@ -115,5 +117,5 @@ if ($success && $error == ""){
     } else {
         echo $error;
     }
-} 
+}*/ 
 ?>

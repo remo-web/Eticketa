@@ -86,16 +86,16 @@ $Body .= "Observações: ";
 $Body .= $mensagem;
 $Body .= "\n";
     
-$mens = "--$boundary" . $quebra_linha . ""; 
-$mens .= "Content-Transfer-Encoding: 8bits" . $quebra_linha . ""; 
-$mens .= "Content-Type: text/html; charset=\"ISO-8859-1\"" . $quebra_linha . "" . $quebra_linha . ""; //plain 
-$mens .= "$mensagem" . $quebra_linha . ""; 
-$mens .= "--$boundary" . $quebra_linha . ""; 
-$mens .= "Content-Type: ".$arquivo["type"]."" . $quebra_linha . ""; 
-$mens .= "Content-Disposition: attachment; filename=\"".$arquivo["name"]."\"" . $quebra_linha . ""; 
-$mens .= "Content-Transfer-Encoding: base64" . $quebra_linha . "" . $quebra_linha . ""; 
-$mens .= "$anexo" . $quebra_linha . ""; 
-$mens .= "--$boundary--" . $quebra_linha . "";
+$Body = "--$boundary" . $quebra_linha . ""; 
+$Body .= "Content-Transfer-Encoding: 8bits" . $quebra_linha . ""; 
+$Body .= "Content-Type: text/html; charset=\"ISO-8859-1\"" . $quebra_linha . "" . $quebra_linha . ""; //plain 
+$Body .= "$mensagem" . $quebra_linha . ""; 
+$Body .= "--$boundary" . $quebra_linha . ""; 
+$Body .= "Content-Type: ".$arquivo["type"]."" . $quebra_linha . ""; 
+$Body .= "Content-Disposition: attachment; filename=\"".$arquivo["name"]."\"" . $quebra_linha . ""; 
+$Body .= "Content-Transfer-Encoding: base64" . $quebra_linha . "" . $quebra_linha . ""; 
+$Body .= "$anexo" . $quebra_linha . ""; 
+$Body .= "--$boundary--" . $quebra_linha . "";
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";

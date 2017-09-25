@@ -79,7 +79,7 @@ $headers .= "From: $email" . "\r\n";
 
  
 // send email
-$success = mail($To, $Subject, $mens, $headers);
+$success = mail($To, $Subject, $Body, $headers);
  
 // redirect to success page
 if ($success && $error == ""){

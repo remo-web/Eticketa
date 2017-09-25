@@ -75,11 +75,11 @@ $Body .= "Observações: ";
 $Body .= $mensagem;
 $Body .= "\n";
 
-$arquivo = isset($_FILES["file_attach[]"]) ? $_FILES["file_attach[]"] : FALSE;
+$arquivo = isset($_FILES["o_rotulos-anexo"]) ? $_FILES["o_rotulos-anexo"] : FALSE;
 
 if(file_exists($arquivo["tmp_name"]) and !empty($arquivo)){
-   $fp = fopen($_FILES["file_attach[]"]["tmp_name"],"rb");        
-$anexo = fread($fp,filesize($_FILES["file_attach[]"]["tmp_name"]));                  
+   $fp = fopen($_FILES["o_rotulos-anexo"]["tmp_name"],"rb");        
+$anexo = fread($fp,filesize($_FILES["o_rotulos-anexo"]["tmp_name"]));                  
 $anexo = base64_encode($anexo);fclose($fp);       
 $anexo = chunk_split($anexo);$boundary = "XYZ-" . date("dmYis") . "-ZYX";        
 $mens = "--$boundary\n";        
@@ -97,9 +97,9 @@ $mens .= "--$boundary--\r\n";
 
 
 
-$headers .= "MIME-Version: 1.0" "\r\n";
+$headers = "MIME-Version: 1.0" "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" "\r\n";
-$headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\ ""\r\n";
+$headers .= "Content-Type: multipart/mixed; boundary=\"$boundary"\ "\r\n";
 $headers .= "From: $email" "\r\n";
  
 // send email

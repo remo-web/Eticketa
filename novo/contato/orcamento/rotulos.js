@@ -4,6 +4,10 @@ $("#etka_o-rotulos").submit(function(event){
 //    var anexo = document.forms["etka_o-rotulos"]["o_rotulos-anexo"].value;
 //    var rotulos_anexo = document.getElementById("o_rotulos-anexo");
     var att = document.createAttribute("required");
+    
+    var allowed_file_size = "1048576"; //allowed file size
+    var allowed_files = ['image/png', 'image/gif', 'image/jpeg', 'application/pdf'];
+    
     if (email == "") {
         rotulos_email.setAttributeNode(att);
         return false;
@@ -16,6 +20,24 @@ $("#etka_o-rotulos").submit(function(event){
 //        // handle the invalid form...
 //        rotulosError();
 //    } 
+    
+    if(window.File && window.FileReader && window.FileList && window.Blob){
+        var total_files_size = 0;
+        $(this.elements['file_attach[]'].files).each(function(i, ifile){
+            if(ifile.value !== ""){ //continue only if file(s) are selected
+                if(allowed_files.indexOf(ifile.type) === -1){ //check unsupported file
+                    alert( ifile.name + " is unsupported file type!");
+                    proceed = false;
+                }
+             total_files_size = total_files_size + ifile.size; //add file size to total size
+            }
+        }); 
+       if(total_files_size > allowed_file_size){ 
+            alert( "Make sure total file size is less than 1 MB!");
+            proceed = false;
+        }
+    }
+    
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
         rotulosError();
@@ -40,11 +62,16 @@ function submitRotulos(){
     var verso = $("#o_rotulos-verso").val();
     var finalidade = $("#o_rotulos-finalidade").val();
     var mensagem = $("#o_rotulos-mensagem").val();
+    var anexo = $("#o_rotulos-anexo").val();
  
     $.ajax({
         type: "POST",
         url: "./contato/orcamento/rotulos.php",
-        data: "o_rotulos-nome=" + nome + "&o_rotulos-email=" + email + "&o_rotulos-empresa=" + empresa + "&o_rotulos-telefone=" + telefone + "&o_rotulos-largura=" + largura + "&o_rotulos-altura=" + altura + "&o_rotulos-formato=" + formato + "&o_rotulos-quantidade=" + quantidade + "&o_rotulos-frente=" + frente + "&o_rotulos-verso=" + verso + "&o_rotulos-finalidade=" + finalidade + "&o_rotulos-mensagem=" + mensagem,
+        data: "o_rotulos-nome=" + nome + "&o_rotulos-email=" + email + "&o_rotulos-empresa=" + empresa + "&o_rotulos-telefone=" + telefone + "&o_rotulos-largura=" + largura + "&o_rotulos-altura=" + altura + "&o_rotulos-formato=" + formato + "&o_rotulos-quantidade=" + quantidade + "&o_rotulos-frente=" + frente + "&o_rotulos-verso=" + verso + "&o_rotulos-finalidade=" + finalidade + "&o_rotulos-mensagem=" + mensagem + "&o_rotulos-anexo=" + anexo,
+        dataType: "json",
+        contentType: false,
+        caache: false,
+        processData: false,
         success : function(text){
             if (text == "success"){
                 rotulosSuccess();

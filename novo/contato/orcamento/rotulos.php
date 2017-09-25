@@ -118,6 +118,7 @@ $headers .= "From: $email" . "\r\n";
                 $body .="X-Attachment-Id: ".rand(1000,99999)."\r\n\r\n"; 
                 $body .= $encoded_content; 
             }
+        }
  
 // send email
 $success = mail($To, $Subject, $Body, $headers);

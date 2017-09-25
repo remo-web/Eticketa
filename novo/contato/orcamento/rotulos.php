@@ -1,5 +1,5 @@
 <?php
-/*$error = "";
+$error = "";
 $nome = $_POST["o_rotulos-nome"];
 //email
 if (empty($_POST["o_rotulos-email"])) {
@@ -81,107 +81,6 @@ $headers .= "From: $email" . "\r\n";
  
 // send email
 $success = mail($To, $Subject, $Body, $headers);
- 
-// redirect to success page
-if ($success && $error == ""){
-    echo "success";
-} else {
-    if($error == ""){
-        echo "Algo deu errado... Mas deu errado num nível, que é melhor você nos ligar no telefone (21) 3490-9292, porque pelo site vai ser difícil.";
-    } else {
-        echo $error;
-    }
-}*/
-
-
-
-
-
-
-$error = "";
-$nome = $_POST["o_rotulos-nome"];
-//email
-if (empty($_POST["o_rotulos-email"])) {
-    $error .= "Email is required ";
-} else {
-    $email = $_POST["o_rotulos-email"];
-}
-$empresa = $_POST["o_rotulos-empresa"];
-$telefone = $_POST["o_rotulos-telefone"];
-$largura = $_POST["o_rotulos-largura"];
-$altura = $_POST["o_rotulos-altura"];
-$formato = $_POST["o_rotulos-formato"];
-$quantidade = $_POST["o_rotulos-quantidade"];
-$frente = $_POST["o_rotulos-frente"];
-$verso = $_POST["o_rotulos-verso"];
-$finalidade = $_POST["o_rotulos-finalidade"];
-$texto = $_POST["o_rotulos-mensagem"];
- 
-$To = "raphael.pais@eticketa.com.br";
-$uglySubject = "[Site | Orçamento] Rótulos";
-$Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
-
-
-// prepare email body text
-$mensagem .= "Nome: ";
-$mensagem .= $nome;
-$mensagem .= "\n";
- 
-$mensagem .= "E-mail: ";
-$mensagem .= $email;
-$mensagem .= "\n";
- 
-$mensagem .= "Cargo / Empresa: ";
-$mensagem .= $empresa;
-$mensagem .= "\n";
- 
-$mensagem .= "Telefone: ";
-$mensagem .= $telefone;
-$mensagem .= "\n";
- 
-$mensagem .= "Largura: ";
-$mensagem .= $largura;
-$mensagem .= " cm";
-$mensagem .= "\n";
- 
-$mensagem .= "Altura: ";
-$mensagem .= $altura;
-$mensagem .= " cm";
-$mensagem .= "\n";
- 
-$mensagem .= "Formato: ";
-$mensagem .= $formato;
-$mensagem .= "\n";
- 
-$mensagem .= "Quantidade: ";
-$mensagem .= $quantidade;
-$mensagem .= "\n";
- 
-$mensagem .= "Frente: ";
-$mensagem .= $frente;
-$mensagem .= " cores";
-$mensagem .= "\n";
- 
-$mensagem .= "Verso: ";
-$mensagem .= $verso;
-$mensagem .= " cores";
-$mensagem .= "\n";
- 
-$mensagem .= "Finalidade: ";
-$mensagem .= $finalidade;
-$mensagem .= "\n";
- 
-$mensagem .= "Observações: ";
-$mensagem .= $texto;
-$mensagem .= "\n";
-
-$headers  = "MIME-Version: 1.0\n";
-$headers .= "From: \"$nome\" <$email_>\r\n";
-$headers .= "Content-type: multipart/mixed; boundary=\"$boundary\"\r\n";
-$headers .= "$boundary\n";
-    
-// send email
-$success = mail($To, $Subject, $mensagem, $headers);
  
 // redirect to success page
 if ($success && $error == ""){

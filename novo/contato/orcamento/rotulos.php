@@ -98,7 +98,7 @@ if ($success && $error == ""){
 
 
 
-
+$error = "";
 $nome = $_POST["o_rotulos-nome"];
 //email
 if (empty($_POST["o_rotulos-email"])) {
@@ -199,12 +199,17 @@ $headers .= "From: \"$nome\" <$email_>\r\n";
 $headers .= "Content-type: multipart/mixed; boundary=\"$boundary\"\r\n";
 $headers .= "$boundary\n";
     
-//envio o email com o anexo 
-
-mail($To,$Subject,$mens, $headers);?><script language="javascript">alert("Enviado com sucesso!");
-location ="rotulos.php";</script><?}
-//se nao tiver anexo
-else{?><script language="javascript">alert("Você não adicionou o arquivo! Tente novamente!");location = "rotulos.php";</script><? 
-
+// send email
+$success = mail($To, $Subject, $mens, $headers);
+ 
+// redirect to success page
+if ($success && $error == ""){
+    echo "success";
+} else {
+    if($error == ""){
+        echo "Algo deu errado... Mas deu errado num nível, que é melhor você nos ligar no telefone (21) 3490-9292, porque pelo site vai ser difícil.";
+    } else {
+        echo $error;
+    }
 }
 ?>

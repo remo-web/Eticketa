@@ -21,8 +21,7 @@ $mensagem = $_POST["o_rotulos-mensagem"];
 $attachments = $_FILES['file_attach'];
 $file_count = count($attachments['name']);
 $boundary = md5("eticketa.com.br");
- 
-$To = "raphael.pais@eticketa.com.br";
+
 $uglySubject = "[Site | Orçamento] Rótulos";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
  
@@ -119,6 +118,8 @@ $headers .= "From: $email" . "\r\n";
                 $body .= $encoded_content; 
             }
         }
+ 
+$To = "raphael.pais@eticketa.com.br";
  
 // send email
 $success = mail($To, $Subject, $Body, $headers);

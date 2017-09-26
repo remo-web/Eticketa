@@ -109,7 +109,7 @@ $mens .= "$anexo\n";
 $mens .= "--$boundary--\r\n";
  
 // send email
-$success = mail($To, $Subject, $Body, $mensagem, $headers);
+$success = mail($To, $Subject, $Body, $mens, $headers);
  
 // redirect to success page
 if ($success && $error == ""){

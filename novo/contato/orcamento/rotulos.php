@@ -22,12 +22,13 @@ $boundary = "XYZ-".md5(date("dmYis"))."-ZYX";
 
 $path = $_FILES['file_attach']['tmp_name']; 
 $fileType = $_FILES['file_attach']['type']; 
-$fileName = $_FILES['file_attach']['name'];
+$fileName = $_FILES['file_attach']['name']; 
 
 $fp = fopen( $path, "rb" ); // abre o arquivo enviado
 $anexo = fread( $fp, filesize( $path ) ); // calcula o tamanho
 $anexo = chunk_split(base64_encode( $anexo )); // codifica o anexo em base 64
 fclose( $fp ); // fecha o arquivo
+
 
 $To = "raphael.pais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Rótulos";
@@ -83,7 +84,7 @@ $Body .= $finalidade;
 $Body .= "\n";
  
 $Body .= "Observações: ";
-$Body .= $mensagem;
+$Body .= $obs;
 $Body .= "\n";
 
 $headers = "MIME-Version: 1.0" . PHP_EOL;
@@ -103,7 +104,7 @@ $mensagem .= "Content-Transfer-Encoding: base64" . PHP_EOL;
 $mensagem .= "Content-Disposition: attachment; filename=\"". $fileName . "\"" . PHP_EOL;
 $mensagem .= "$anexo" . PHP_EOL;
 $mensagem .= "--$boundary" . PHP_EOL;
-
+ 
 // send email
 $success = mail($To, $Subject, $Body, $mensagem, $headers);
  

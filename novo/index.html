@@ -686,7 +686,7 @@
             <h4 class="mdl-dialog__title">Pedido de Orçamento <small><br/>Rótulos</small></h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
-                <form class="mdl-grid" id="etka_o-rotulos" name="etka_o-rotulos" action="./contato/orcamento/rotulos.php" method="post">
+                <form onsubmit="return submitRotulos(this)" class="mdl-grid" id="etka_o-rotulos" name="etka_o-rotulos" action="./contato/orcamento/rotulos.php" method="post" enctype="multipart/form-data">
                     <div class="mdl-cell mdl-cell--12-col">
                         <h4>Sobre você</h4>
                     </div>

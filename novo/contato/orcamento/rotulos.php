@@ -20,14 +20,17 @@ $obs = $_POST["o_rotulos-mensagem"];
 
 $boundary = "XYZ-".md5(date("dmYis"))."-ZYX";
 
-$path = $_FILES['file_attach']['tmp_name']; 
-$fileType = $_FILES['file_attach']['type']; 
-$fileName = $_FILES['file_attach']['name']; 
+$arquivo = isset($_FILES["file_attach"]) ? $_FILES["file_attach"] : FALSE;
 
-$fp = fopen( $path, "rb" ); // abre o arquivo enviado
-$anexo = fread( $fp, filesize( $path ) ); // calcula o tamanho
-$anexo = chunk_split(base64_encode( $anexo )); // codifica o anexo em base 64
-fclose( $fp ); // fecha o arquivo
+if(file_exists($arquivo["tmp_name"]) and !empty($arquivo)){
+
+$fp = fopen($_FILES["file_attach"]["tmp_name"],"rb");
+$anexo = fread($fp,filesize($_FILES["file_attach"]["tmp_name"]));
+$anexo = base64_encode($anexo);
+
+fclose($fp);
+
+$anexo = chunk_split($anexo);
 
 
 $To = "raphael.pais@eticketa.com.br";
@@ -87,23 +90,23 @@ $Body .= "Observações: ";
 $Body .= $obs;
 $Body .= "\n";
 
-$headers = "MIME-Version: 1.0" . PHP_EOL;
+$headers = "MIME-Version: 1.0\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
 $headers .= "Content-Type: multipart/mixed; charset=UTF-8" . "\r\n";
 $headers .= "From: $email" . "\r\n";
 $headers .= "boundary=" . $boundary . PHP_EOL;
 $headers .= "$boundary" . PHP_EOL;
 
-$mensagem  = "--$boundary" . PHP_EOL;
-$mensagem .= "Content-Type: text/html; charset='utf-8'" . PHP_EOL;
-$mensagem .= "Mensagem"; // Adicione aqui sua mensagem
-$mensagem .= "--$boundary" . PHP_EOL;
-
-$mensagem .= "Content-Type: ". $fileType ."; name=\"". $fileName . "\"" . PHP_EOL;
-$mensagem .= "Content-Transfer-Encoding: base64" . PHP_EOL;
-$mensagem .= "Content-Disposition: attachment; filename=\"". $fileName . "\"" . PHP_EOL;
-$mensagem .= "$anexo" . PHP_EOL;
-$mensagem .= "--$boundary" . PHP_EOL;
+$mens = "--$boundary\n";
+$mens .= "Content-Transfer-Encoding: 8bits\n";
+$mens .= "Content-Type: text/html; charset=\"ISO-8859-1\"\n\n"; //plain
+$mens .= "$obs\n";
+$mens .= "--$boundary\n";
+$mens .= "Content-Type: ".$arquivo["type"]."\n";
+$mens .= "Content-Disposition: attachment; filename=\"".$arquivo["name"]."\"\n";
+$mens .= "Content-Transfer-Encoding: base64\n\n";
+$mens .= "$anexo\n";
+$mens .= "--$boundary--\r\n";
  
 // send email
 $success = mail($To, $Subject, $Body, $mensagem, $headers);

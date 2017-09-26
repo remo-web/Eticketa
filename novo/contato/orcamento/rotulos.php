@@ -33,7 +33,7 @@ $To = "raphael.pais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Rótulos";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
  
-/* prepare email body text
+// prepare email body text
 $Body .= "Nome: ";
 $Body .= $nome;
 $Body .= "\n";
@@ -84,7 +84,7 @@ $Body .= "\n";
  
 $Body .= "Observações: ";
 $Body .= $mensagem;
-$Body .= "\n";*/
+$Body .= "\n";
 
 $headers = "MIME-Version: 1.0" . PHP_EOL;
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
@@ -105,7 +105,7 @@ $mensagem .= "$anexo" . PHP_EOL;
 $mensagem .= "--$boundary" . PHP_EOL;
 
 // send email
-$success = mail($To, $Subject, $mensagem, $Body, $headers);
+$success = mail($To, $Subject, $Body, $mensagem, $headers);
  
 // redirect to success page
 if ($success && $error == ""){

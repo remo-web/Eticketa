@@ -105,9 +105,9 @@ $mensagem .= "$anexo" . PHP_EOL;
 $mensagem .= "--$boundary" . PHP_EOL;
 
 // send email
-$success = mail($To, $Subject, $mensagem, $headers);
+mail($To, $Subject, $mensagem, $headers);
  
-// redirect to success page
+/* redirect to success page
 if ($success && $error == ""){
     echo "success";
 } else {
@@ -116,5 +116,5 @@ if ($success && $error == ""){
     } else {
         echo $error;
     }
-} 
+} */
 ?>

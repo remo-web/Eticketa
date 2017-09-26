@@ -1,5 +1,5 @@
 <?php
-    if(isset($_POST['submit']))
+    if(isset($_POST['o_rotulos-enviar']))
     {
         //The form has been submitted, prep a nice thank you message
         $output = '<h1>Thanks for your file and message!</h1>';

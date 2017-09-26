@@ -1,5 +1,24 @@
 <?php
-$error = "";
+//Pega os dados postados pelo formulário HTML e os coloca em variaveis
+if (eregi('tempsite.ws$|eticketa.com.br$|hospedagemdesites.ws$|websiteseguro.com$', $_SERVER[HTTP_HOST])) {
+//substitua na linha acima a aprte locaweb.com.br por seu domínio.
+$email_from='raphael.pais@eticketa.com.br';	// Substitua essa linha pelo seu e-mail@seudominio
+}else {
+$email_from = "email@" . $_SERVER[HTTP_HOST];         
+//    Na linha acima estamos forçando que o remetente seja 'webmaster@',
+// você pode alterar para que o remetente seja, por exemplo, 'contato@'.
+}
+ 
+ 
+if( PATH_SEPARATOR ==';'){ $quebra_linha="\r\n";
+ 
+} elseif (PATH_SEPARATOR==':'){ $quebra_linha="\n";
+ 
+} elseif ( PATH_SEPARATOR!=';' and PATH_SEPARATOR!=':' )  {echo ('Esse script não funcionará corretamente neste servidor, a função PATH_SEPARATOR não retornou o parâmetro esperado.');
+ 
+}
+ 
+//pego os dados enviados pelo formulário 
 $nome = $_POST["o_rotulos-nome"];
 //email
 if (empty($_POST["o_rotulos-email"])) {
@@ -18,6 +37,19 @@ $verso = $_POST["o_rotulos-verso"];
 $finalidade = $_POST["o_rotulos-finalidade"];
 $mensagem = $_POST["o_rotulos-mensagem"];
 
+$To = "raphael.pais@eticketa.com.br";
+$uglySubject = "[Site | Orçamento] Rótulos";
+$Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
+
+//valido os emails 
+if (!ereg("^([0-9,a-z,A-Z]+)([.,_]([0-9,a-z,A-Z]+))*[@]([0-9,a-z,A-Z]+)([.,_,-]([0-9,a-z,A-Z]+))*[.]([0-9,a-z,A-Z]){2}([0-9,a-z,A-Z])?$", $email)){ 
+ 
+echo"<center>Digite um email valido</center>"; 
+echo "<center><a href=\"javascript:history.go(-1)\">Voltar</center></a>"; 
+exit; 
+ 
+} 
+ 
 $arquivo = isset($_FILES["file_attach"]) ? $_FILES["file_attach"] : FALSE; 
  
 if(file_exists($arquivo["tmp_name"]) and !empty($arquivo)){ 
@@ -32,85 +64,7 @@ $anexo = chunk_split($anexo);
  
  
 $boundary = "XYZ-" . date("dmYis") . "-ZYX"; 
-
-$To = "raphael.pais@eticketa.com.br";
-$uglySubject = "[Site | Orçamento] Rótulos";
-$Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
  
-/* prepare email body text
-$Body .= "Nome: ";
-$Body .= $nome;
-$Body .= "\n";
- 
-$Body .= "E-mail: ";
-$Body .= $email;
-$Body .= "\n";
- 
-$Body .= "Cargo / Empresa: ";
-$Body .= $empresa;
-$Body .= "\n";
- 
-$Body .= "Telefone: ";
-$Body .= $telefone;
-$Body .= "\n";
- 
-$Body .= "Largura: ";
-$Body .= $largura;
-$Body .= " cm";
-$Body .= "\n";
- 
-$Body .= "Altura: ";
-$Body .= $altura;
-$Body .= " cm";
-$Body .= "\n";
- 
-$Body .= "Formato: ";
-$Body .= $formato;
-$Body .= "\n";
- 
-$Body .= "Quantidade: ";
-$Body .= $quantidade;
-$Body .= "\n";
- 
-$Body .= "Frente: ";
-$Body .= $frente;
-$Body .= " cores";
-$Body .= "\n";
- 
-$Body .= "Verso: ";
-$Body .= $verso;
-$Body .= " cores";
-$Body .= "\n";
- 
-$Body .= "Finalidade: ";
-$Body .= $finalidade;
-$Body .= "\n";
- 
-$Body .= "Observações: ";
-$Body .= $mensagem;
-$Body .= "\n";
-
-
-
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8" . "\r\n";
-$headers .= "From: $email" . "\r\n";
- 
-// send email
-$success = mail($To, $Subject, $Body, $headers);
- 
-// redirect to success page
-if ($success && $error == ""){
-    echo "success";
-} else {
-    if($error == ""){
-        echo "Algo deu errado... Mas deu errado num nível, que é melhor você nos ligar no telefone (21) 3490-9292, porque pelo site vai ser difícil.";
-    } else {
-        echo $error;
-    }
-} */
-
 $mens = "--$boundary" . $quebra_linha . ""; 
 $mens .= "Content-Transfer-Encoding: 8bits" . $quebra_linha . ""; 
 $mens .= "Content-Type: text/html; charset=\"ISO-8859-1\"" . $quebra_linha . "" . $quebra_linha . ""; //plain 
@@ -123,14 +77,14 @@ $mens .= "$anexo" . $quebra_linha . "";
 $mens .= "--$boundary--" . $quebra_linha . ""; 
  
 $headers = "MIME-Version: 1.0" . $quebra_linha . ""; 
-$headers .= "From: $email " . $quebra_linha . ""; 
-$headers .= "Return-Path: $email " . $quebra_linha . ""; 
+$headers .= "From: $email_from " . $quebra_linha . ""; 
+$headers .= "Return-Path: $email_from " . $quebra_linha . ""; 
 $headers .= "Content-type: multipart/mixed; boundary=\"$boundary\"" . $quebra_linha . ""; 
 $headers .= "$boundary" . $quebra_linha . ""; 
  
  
 //envio o email com o anexo 
-mail($To,$Subject,$mens,$headers, "-r".$email); 
+mail($email,$assunto,$mens,$headers, "-r".$email_from); 
  
 echo"Email enviado com Sucesso!"; 
  
@@ -141,11 +95,11 @@ else{
  
 $headers = "MIME-Version: 1.0" . $quebra_linha . ""; 
 $headers .= "Content-type: text/html; charset=iso-8859-1" . $quebra_linha . ""; 
-$headers .= "From: $email " . $quebra_linha . ""; 
-$headers .= "Return-Path: $email " . $quebra_linha . ""; 
+$headers .= "From: $email_from " . $quebra_linha . ""; 
+$headers .= "Return-Path: $email_from " . $quebra_linha . ""; 
  
 //envia o email sem anexo 
-mail($To,$Subject,$mensagem, $headers, "-r".$email); 
+mail($email,$assunto,$mensagem, $headers, "-r".$email_from); 
  
  
 echo"Email enviado com Sucesso!"; 

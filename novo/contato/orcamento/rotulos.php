@@ -33,7 +33,7 @@ $To = "raphael.pais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Rótulos";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
  
-/* prepare email body text
+// prepare email body text
 $Body .= "Nome: ";
 $Body .= $nome;
 $Body .= "\n";
@@ -84,7 +84,7 @@ $Body .= "\n";
  
 $Body .= "Observações: ";
 $Body .= $mensagem;
-$Body .= "\n";*/
+$Body .= "\n";
 
 $headers = "MIME-Version: 1.0" . PHP_EOL;
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
@@ -93,19 +93,16 @@ $headers .= "From: $email" . "\r\n";
 $headers .= "boundary=" . $boundary . PHP_EOL;
 $headers .= "$boundary" . PHP_EOL;
 
-$mensagem  = "--$boundary" . PHP_EOL;
 $mensagem .= "Content-Type: text/html; charset='utf-8'" . PHP_EOL;
-$mensagem .= "Mensagem"; // Adicione aqui sua mensagem
-$mensagem .= "--$boundary" . PHP_EOL;
 
-$mensagem .= "Content-Type: ". $fileType ."; name=\"". $fileName . "\"" . PHP_EOL;
-$mensagem .= "Content-Transfer-Encoding: base64" . PHP_EOL;
-$mensagem .= "Content-Disposition: attachment; filename=\"". $fileName . "\"" . PHP_EOL;
-$mensagem .= "$anexo" . PHP_EOL;
-$mensagem .= "--$boundary" . PHP_EOL;
+$headers .= "Content-Type: ". $fileType ."; name=\"". $fileName . "\"" . PHP_EOL;
+$headers .= "Content-Transfer-Encoding: base64" . PHP_EOL;
+$headers .= "Content-Disposition: attachment; filename=\"". $fileName . "\"" . PHP_EOL;
+$headers .= "$anexo" . PHP_EOL;
+$headers .= "--$boundary" . PHP_EOL;
 
 // send email
-mail($To, $Subject, $mensagem, $headers);
+mail($To, $Subject, $Body, $mensagem $headers);
  
 /* redirect to success page
 if ($success && $error == ""){

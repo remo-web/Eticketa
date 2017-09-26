@@ -16,16 +16,7 @@ $quantidade = $_POST["o_rotulos-quantidade"];
 $frente = $_POST["o_rotulos-frente"];
 $verso = $_POST["o_rotulos-verso"];
 $finalidade = $_POST["o_rotulos-finalidade"];
-$obs = $_POST["o_rotulos-mensagem"];
-
-$boundary = "XYZ-".md5(date("dmYis"))."-ZYX";
-
-$anexado = $_FILES['attach_file']['name'];
-	 $extensao = strtolower(end(explode('.', $anexado)));
-	 $extensoes = array ('txt', 'jpg', 'docx'); // AKI VC PODE COLOCAR AS EXTENÇÕES QUE VC AEITARA NO UPLOAD
- $size = $_FILES['file_attach']['size'];
- $maxsize = 1024 * 1024 * 2; // AKI VC ESPECIFICA O TAMANHO DE ARQUIVOS ACEITOS, LEMBRANDO QUE A CONFIGURAÇÃO É LIVE
-
+$mensagem = $_POST["o_rotulos-mensagem"];
 
 $To = "raphael.pais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Rótulos";
@@ -81,55 +72,16 @@ $Body .= $finalidade;
 $Body .= "\n";
  
 $Body .= "Observações: ";
-$Body .= $obs;
+$Body .= $mensagem;
 $Body .= "\n";
 
-$arquivo = isset($_FILES["file_attach"]) ? $_FILES["file_attach"] : FALSE;
- 
-if(file_exists($arquivo["tmp_name"]) and !empty($arquivo)){
- 
- $fp = fopen($_FILES["file_attach"]["tmp_name"],"rb");
-	 $anexo = fread($fp,filesize($_FILES["file_attach"]["tmp_name"]));
-	 $anexo = base64_encode($anexo);
- 
-fclose($fp);
-	 
-$anexo = chunk_split($anexo);
-    
-$mens = "--$boundaryn";
-$mens .= "Content-Transfer-Encoding: 8bitsn";
-$mens .= "Content-Type: text/html; charset="UTF-8"nn";
-$mens .= "$configuracao_da_mensagem_originaln";
-$mens .= "--$boundaryn";
-$mens .= "Content-Type: ".$arquivo["type"]."n";
-$mens .= "Content-Disposition: attachment; filename="".$arquivo["name"].""n";
-$mens .= "Content-Transfer-Encoding: base64nn";
-$mens .= "$anexo";
-$mens .= "--$boundary--rn";
-    
-     
-	$headers  = "MIME-Version: 1.0n";
-	$headers .= "Content-type: multipart/mixed; boundary="$boundary"rn";
-	$headers .= "$boundaryn";
-	}else{
-	 
-	$headers  = "MIME-Version: 1.0n";
-	$headers .= "Content-Type: text/html; charset="UTF-8"nn";
-
-	
-
-
-/*$headers = "MIME-Version: 1.0\n";
+$headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
-$headers .= "Content-Type: multipart/mixed; charset=UTF-8" . "\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8" . "\r\n";
 $headers .= "From: $email" . "\r\n";
-$headers .= "boundary=" . $boundary . PHP_EOL;
-$headers .= "$boundary" . PHP_EOL;
-*/
-
  
 // send email
-$success = mail($To, $Subject, $Body, $mens, $headers);
+$success = mail($To, $Subject, $Body, $headers);
  
 // redirect to success page
 if ($success && $error == ""){

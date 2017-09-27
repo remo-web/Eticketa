@@ -6,8 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 require './PHPMailer/src/Exception.php';
 require './PHPMailer/src/PHPMailer.php';
 require './PHPMailer/src/SMTP.php';
-
-$mail->setLanguage('pt-br', '/PHPMailer/language/');
+require '../vendor/autoload.php';
 
 //Create a new PHPMailer instance
 $mail = new PHPMailer;

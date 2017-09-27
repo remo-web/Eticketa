@@ -10,7 +10,7 @@ use PHPMailer\PHPMailer\Exception;
 require './PHPMailer/src/Exception.php';
 require './PHPMailer/src/PHPMailer.php';
 require './PHPMailer/src/SMTP.php';
-require '../vendor/autoload.php';
+require './PHPMailer/compose.json';
 if (array_key_exists('to', $_POST)) {
     $err = false;
     $msg = '';

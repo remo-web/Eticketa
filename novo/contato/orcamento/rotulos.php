@@ -84,17 +84,11 @@ $headers .= "From: $email" . "\r\n";
 // send email
 $success = mail($To, $Subject, $Body, $headers);
 
-if(isset($_POST['o_rotulos-enviar'])){
-    
-    var_dump($_FILES['o_rotulos-anexo']);
-    move_uploaded_file($_FILES['o_rotulos-anexo']['tmp_name'], 'orcamento/'.$_FILES['o_rotulos-anexo']['name']);
-    
-    
-    
-}
  
 // redirect to success page
 if ($success && $error == ""){
+    var_dump($_FILES['o_rotulos-anexo']);
+    move_uploaded_file($_FILES['o_rotulos-anexo']['tmp_name'], 'orcamento/'.$_FILES['o_rotulos-anexo']['name']);
     echo "success";
 } else {
     if($error == ""){

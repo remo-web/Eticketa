@@ -1,5 +1,5 @@
 <?php
-$error = "";
+//$error = "";
 $nome = $_POST["o_rotulos-nome"];
 //email
 if (empty($_POST["o_rotulos-email"])) {
@@ -17,15 +17,29 @@ $frente = $_POST["o_rotulos-frente"];
 $verso = $_POST["o_rotulos-verso"];
 $finalidade = $_POST["o_rotulos-finalidade"];
 $mensagem = $_POST["o_rotulos-mensagem"];
-for ($ct = 0; $ct < count($_FILES['file_attach']['tmp_name']); $ct++) {
-        $uploadfile = tempnam(sys_get_temp_dir(), hash('sha256', $_FILES['file_attach']['name'][$ct]));
-        $filename = $_FILES['file_attach']['name'][$ct];
-
 $To = "raphael.pais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Rótulos";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
+$Arquivo = $_FILES[ 'file_attach' ];
+               $DirUpload = $_SERVER[ 'DOCUMENT_ROOT' ].'/'.$Arquivo[ 'name' ];
+               $MimeType = $Arquivo[ 'type' ];
+               if( move_uploaded_file( $Arquivo[ 'tmp_name' ], $DirUpload ) ){
+                   $Base64 = base64_encode( file_get_contents( $DirUpload ) );
+                   $conteudo = '<html>';
+                     $conteudo .= '<body>';
+                       $conteudo = ' <img src="data:'.$MimeType.';base64,'.$Base64.'" />';
+                     $conteudo .= '</body>'; 
+                   $conteudo .= '</html>';
+                   unlink( $DirUpload ); // Remove o arquivo depois de pegar o base64 dele
+                   if( mail( $To, $Subject, nl2br( $conteudo ), $headers ) ){
+                       echo 'Enviado com sucesso...';
+                   }else{
+                       echo 'Falha no envio ..';
+                   }
+
+
  
-// prepare email body text
+/* prepare email body text
 $Body .= "Nome: ";
 $Body .= $nome;
 $Body .= "\n";
@@ -95,5 +109,5 @@ if ($success && $error == ""){
     } else {
         echo $error;
     }
-} 
+} */
 ?>

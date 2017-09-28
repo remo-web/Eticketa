@@ -17,6 +17,9 @@ $frente = $_POST["o_rotulos-frente"];
 $verso = $_POST["o_rotulos-verso"];
 $finalidade = $_POST["o_rotulos-finalidade"];
 $mensagem = $_POST["o_rotulos-mensagem"];
+for ($ct = 0; $ct < count($_FILES['file_attach']['tmp_name']); $ct++) {
+        $uploadfile = tempnam(sys_get_temp_dir(), hash('sha256', $_FILES['file_attach']['name'][$ct]));
+        $filename = $_FILES['file_attach']['name'][$ct];
 
 $To = "raphael.pais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Rótulos";
@@ -77,7 +80,7 @@ $Body .= "\n";
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8" . "\r\n";
+$headers .= "Content-Type: multipart/mixed; charset=UTF-8" . "\r\n";
 $headers .= "From: $email" . "\r\n";
  
 // send email

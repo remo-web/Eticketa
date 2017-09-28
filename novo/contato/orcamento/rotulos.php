@@ -22,8 +22,8 @@ $To = "raphael.pais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Rótulos";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 
-var_dump($_FILES['file_attach_r']);
-    move_uploaded_file($_FILES['file_attach_r']['tmp_name'], 'orcamento/'.$_FILES['file_attach_r']['name']);
+var_dump($_FILES['o_rotulos-anexo']);
+    move_uploaded_file($_FILES['o_rotulos-anexo']['tmp_name'], 'orcamento/'.$_FILES['o_rotulos-anexo']['name']);
     
     
  

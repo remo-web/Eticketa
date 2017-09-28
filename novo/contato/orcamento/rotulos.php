@@ -22,10 +22,6 @@ $To = "raphael.pais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Rótulos";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 
-var_dump($_FILES['o_rotulos-anexo']);
-    move_uploaded_file($_FILES['o_rotulos-anexo']['tmp_name'], 'novo/'.$_FILES['o_rotulos-anexo']['name']);
-    
-    
  
 // prepare email body text
 $Body .= "Nome: ";
@@ -87,6 +83,15 @@ $headers .= "From: $email" . "\r\n";
  
 // send email
 $success = mail($To, $Subject, $Body, $headers);
+
+if(isset($_POST['o_rotulos-enviar'])){
+    
+    var_dump($_FILES['o_rotulos-anexo']);
+    move_uploaded_file($_FILES['o_rotulos-anexo']['tmp_name'], 'images/'.$_FILES['o_rotulos-anexo']['name']);
+    
+    
+    
+}
  
 // redirect to success page
 if ($success && $error == ""){

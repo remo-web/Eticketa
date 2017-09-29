@@ -37,15 +37,12 @@ $success = mail($para, $assunto, $mensagem, $headers);
 // redirect to success page
 if ($success && $error == ""){
     echo "success";
- else {
+} else {
     if($error == ""){
         echo "Algo deu errado... Mas deu errado num nível, que é melhor você nos ligar no telefone (21) 3490-9292, porque pelo site vai ser difícil.";
-     else {
+    } else {
         echo $error;
     }
-    }
-     
-}
-}
+} 
 
 ?>

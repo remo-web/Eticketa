@@ -21,7 +21,7 @@ $mensagem = $_POST["o_rotulos-mensagem"];
 $nomeArquivo = $_FILES["o_rotulos-anexo"]["name"]; // Pega o nome do arquivo
 $nomeTemporario = $_FILES["o_rotulos-anexo"]["tmp_name"]; // Pega o nome temporario do arquivo
 $tamanhoArquivo = $_FILES["o_rotulos-anexo"]["size"]; // Pega o tamanho
-$caminho = 'upload/'; // define a pasta onde sera salvo o arquivo
+$caminho = 'subir/'; // define a pasta onde sera salvo o arquivo
 
 $arquivoArray = explode(".", $nomeArquivo); // Separa o nome do arquivo da extensão, por exemplo: imagem1.jpg -> ficara imagem1
     $extensao = end($arquivoArray); // Pega a extensao do arquivo (final da variavel $arquivoArray), por exemplo: imagem1.jpg -> ficara .jpg
@@ -31,8 +31,9 @@ $arquivoArray = explode(".", $nomeArquivo); // Separa o nome do arquivo da exten
         mkdir($caminho); // Caso não exista cria a pasta
         chmod($caminho, 777); // Caso não exista adiciona permissões de leitura e escrita na pasta
     }
-
+    var_dump($nomeTemporario, $arquivo);
     move_uploaded_file($nomeTemporario, $arquivo);
+
 
 
 

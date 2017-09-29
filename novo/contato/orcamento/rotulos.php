@@ -21,7 +21,7 @@ $mensagem = $_POST["o_rotulos-mensagem"];
 $nomeArquivo = $_FILES["o_rotulos-anexo"]["name"]; // Pega o nome do arquivo
 $nomeTemporario = $_FILES["o_rotulos-anexo"]["tmp_name"]; // Pega o nome temporario do arquivo
 $tamanhoArquivo = $_FILES["o_rotulos-anexo"]["size"]; // Pega o tamanho
-$caminho = 'uploads/'; // define a pasta onde sera salvo o arquivo
+$caminho = 'upload/'; // define a pasta onde sera salvo o arquivo
 
 $arquivoArray = explode(".", $nomeArquivo); // Separa o nome do arquivo da extensão, por exemplo: imagem1.jpg -> ficara imagem1
     $extensao = end($arquivoArray); // Pega a extensao do arquivo (final da variavel $arquivoArray), por exemplo: imagem1.jpg -> ficara .jpg

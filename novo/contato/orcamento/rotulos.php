@@ -97,21 +97,21 @@ $headers .= "From: $email" . "\r\n";
 
 // email
 
-$Body  = "--$boundary \r\n";
-$Body .= "Content-Type: text/plain; charset='utf-8' \r\n";
-$Body .= "Nome: $nome \r\n";
-$Body .= "--$boundary \r\n";
+$message  = "--$boundary \r\n";
+$message .= "Content-Type: text/plain; charset='utf-8' \r\n";
+$message .= "Nome: $nome \r\n";
+$message .= "--$boundary \r\n";
 
 // anexo 
-$Body .= "Content-Type: ".$arquivo["type"]."; name=\"".$arquivo['name']."\" \r\n"; 
-$Body .= "Content-Transfer-Encoding: base64 \r\n"; 
-$Body .= "Content-Disposition: attachment; filename=\"".$arquivo['name']."\" \r\n";
-$Body .= "$anexo \n"; 
-$Body .= "--$boundary \r\n"; 
+$message .= "Content-Type: ".$arquivo["type"]."; name=\"".$arquivo['name']."\" \r\n"; 
+$message .= "Content-Transfer-Encoding: base64 \r\n"; 
+$message .= "Content-Disposition: attachment; filename=\"".$arquivo['name']."\" \r\n";
+$message .= "$anexo \n"; 
+$message .= "--$boundary \r\n"; 
 
  
 // send email
-$success = mail($To, $Subject, $Body, $headers);
+$success = mail($To, $Subject, $Body, $message, $headers);
  
 // redirect to success page
 if ($success && $error == ""){

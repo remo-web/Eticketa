@@ -1,5 +1,22 @@
 <?php
 $error = "";
+if(isset($_POST['o_rotulos-enviar']) && $_POST['o_rotulos-enviar']=='etka_o-rotulos'):
+    $arquivo = $_FILES['o_rotulos-anexo'];
+    $nome = $arquivo['name'];
+    $tmp = $arquivo['tmp_name'];
+    
+    $extensao = explode('.',$nome);
+    $ext = end($extensao);
+   
+    $novonome = md5($nome).'.'.$ext;
+    
+    if(empty($arquivo)):
+        echo 'Selecione um arquivo para upload';
+    else:
+        move_uploaded_file($tmp, 'orcamento/'.$novonome);
+
+    endif;
+endif;
 $nome = $_POST["o_rotulos-nome"];
 //email
 if (empty($_POST["o_rotulos-email"])) {
@@ -84,12 +101,7 @@ $headers .= "From: $email" . "\r\n";
 // send email
 $success = mail($To, $Subject, $Body, $headers);
 //nao tá funcionando ainda:
-if(isset($_POST['o_rotulos-enviar'])){
-    
-    var_dump($_FILES['o_rotulos-anexo']);
-    move_uploaded_file($_FILES['o_rotulos-anexo']['tmp_name'], 'orcamento/'.$_FILES['o_rotulos-anexo']['name']);
-    
-}
+
  
 // redirect to success page
 if ($success && $error == ""){

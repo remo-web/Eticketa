@@ -16,6 +16,13 @@ $error = "";
         move_uploaded_file($tmp, 'upload/'.$novonome);
 
     endif;
+$boundary = "XYZ-".date("dmYis")."-ZYX";
+$fp = fopen($arquivo["tmp_name"], "rb"); // abre o arquivo enviado
+$anexo = fread($fp, filesize($arquivo["tmp_name"])); // calcula o tamanho
+$anexo = base64_encode($anexo); // codifica o anexo em base 64
+fclose($fp); // fecha o arquivo
+
+
 $nome = $_POST["o_rotulos-nome"];
 //email
 if (empty($_POST["o_rotulos-email"])) {
@@ -91,6 +98,8 @@ $Body .= "\n";
 $Body .= "Observações: ";
 $Body .= $mensagem;
 $Body .= "\n";
+
+$Body 
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";

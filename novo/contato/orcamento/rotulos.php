@@ -1,6 +1,6 @@
 <?php
 $error = "";
-if(isset($_POST['o_rotulos-enviar']) && $_POST['o_rotulos-enviar']=='etka_o-rotulos'):
+
     $arquivo = $_FILES['o_rotulos-anexo'];
     $nome = $arquivo['name'];
     $tmp = $arquivo['tmp_name'];
@@ -16,7 +16,6 @@ if(isset($_POST['o_rotulos-enviar']) && $_POST['o_rotulos-enviar']=='etka_o-rotu
         move_uploaded_file($tmp, 'upload/'.$novonome);
 
     endif;
-endif;
 $nome = $_POST["o_rotulos-nome"];
 //email
 if (empty($_POST["o_rotulos-email"])) {

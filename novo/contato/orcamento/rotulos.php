@@ -31,7 +31,7 @@ $arquivoArray = explode(".", $nomeArquivo); // Separa o nome do arquivo da exten
         mkdir($caminho); // Caso não exista cria a pasta
         chmod($caminho, 777); // Caso não exista adiciona permissões de leitura e escrita na pasta
     }
-    var_dump($nomeTemporario, $arquivo);
+
     move_uploaded_file($nomeTemporario, $arquivo);
 
 

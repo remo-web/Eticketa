@@ -32,9 +32,20 @@ if(isset($_POST['o_rotulos-enviar']) && $_POST['o_rotulos-enviar']=='etka_o-rotu
     $mensagem .= "--$boundary \n";
     
     // enviar o email
-    mail($para, $assunto, $mensagem, $headers);
-    echo"Email enviado com Sucesso!";
-    else:
-        echo 'Email não enviado!';
-    endif;
+$success = mail($para, $assunto, $mensagem, $headers);
+ 
+// redirect to success page
+if ($success && $error == ""){
+    echo "success";
+ else {
+    if($error == ""){
+        echo "Algo deu errado... Mas deu errado num nível, que é melhor você nos ligar no telefone (21) 3490-9292, porque pelo site vai ser difícil.";
+     else {
+        echo $error;
+    }
+    }
+     
+}
+}
+
 ?>

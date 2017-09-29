@@ -98,7 +98,7 @@ $headers .= "From: $email" . "\r\n";
 // email
 
 $Body  = "--$boundary \r\n";
-$Body .= "Content-Type: text/html; charset='utf-8' \r\n";
+$Body .= "Content-Type: text/plain; charset='utf-8' \r\n";
 $Body .= "Nome: $nome \r\n";
 $Body .= "--$boundary \r\n";
 

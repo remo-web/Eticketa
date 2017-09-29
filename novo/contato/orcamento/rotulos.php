@@ -92,7 +92,7 @@ $headers .= "From: $email" . "\r\n";
 $success = mail($To, $Subject, $Body, $headers);
 //nao tá funcionando ainda:
 
- 
+ endif;
 // redirect to success page
 if ($success && $error == ""){
     echo "success";
@@ -103,5 +103,5 @@ if ($success && $error == ""){
         echo $error;
     }
 } 
-endif;
+
 ?>

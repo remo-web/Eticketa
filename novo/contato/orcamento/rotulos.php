@@ -2,7 +2,7 @@
 
 if(isset($_POST['o_rotulos-enviar']) && $_POST['o_rotulos-enviar']=='etka_o-rotulos'):
     $arquivo = $_FILES['etka_o-anexo'];
-    $nome = $_POST['nome'];
+    $nome = $_POST['o_rotulos-nome'];
     
     $para = "raphael.pais@eticketa.com.br";
     

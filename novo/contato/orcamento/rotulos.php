@@ -106,7 +106,7 @@ $headers .= "From: $email" . "\r\n";
 $headers .= "boundary="$boundary"\r\n";
 $headers .= "$boundary\n";
 
-// email
+/* email
 $Body  = "--$boundary\n";
 $Body .= "Content-Type: text/html; charset='utf-8'\n";
 $Body .= "<strong>Nome: </strong> $nome \r\n";
@@ -115,11 +115,10 @@ $Body .= "--$boundary \n";
 $Body .= "Content-Type: ".$arquivo["type"]."; name="".$arquivo['name']."" \n";	$Body .= "Content-Transfer-Encoding: base64 \n";
 $Body .= "Content-Disposition: attachment; filename="".$arquivo['name']."" \r\n";
 $Body .= "$anexo \n";
-$Body .= "--$boundary \n";
+$Body .= "--$boundary \n";*/
  
 // send email
 $success = mail($To, $Subject, $Body, $headers);
-//nao tá funcionando ainda:
 
  
 // redirect to success page

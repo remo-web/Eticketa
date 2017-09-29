@@ -1,6 +1,6 @@
 <?php
 $error = "";
-
+if(isset($_POST['o_rotulos-enviar']) && $_POST['o_rotulos-enviar']=='etka_o-rotulos'):
     $arquivo = $_FILES['o_rotulos-anexo'];
     $nome = $arquivo['name'];
     $tmp = $arquivo['tmp_name'];
@@ -9,16 +9,10 @@ $error = "";
     $ext = end($extensao);
    
     $novonome = md5($nome).'.'.$ext;
-    
+
     move_uploaded_file($tmp, 'upload/'.$novonome);
 
-$boundary = "XYZ-".date("dmYis")."-ZYX";
-$fp = fopen($arquivo["tmp_name"], "rb"); // abre o arquivo enviado
-$anexo = fread($fp, filesize($arquivo["tmp_name"])); // calcula o tamanho
-$anexo = base64_encode($anexo); // codifica o anexo em base 64
-fclose($fp); // fecha o arquivo
-
-
+endif;
 $nome = $_POST["o_rotulos-nome"];
 //email
 if (empty($_POST["o_rotulos-email"])) {
@@ -97,24 +91,12 @@ $Body .= "\n";
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
-$headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8" . "\r\n";
 $headers .= "From: $email" . "\r\n";
-//$headers .= "boundary="$boundary"\r\n";
-//$headers .= "$boundary\n";
-
-/* email
-$Body  = "--$boundary\n";
-$Body .= "Content-Type: text/html; charset='utf-8'\n";
-$Body .= "<strong>Nome: </strong> $nome \r\n";
-$Body .= "--$boundary \n";
-// anexo
-$Body .= "Content-Type: ".$arquivo["type"]."; name="".$arquivo['name']."" \n";	$Body .= "Content-Transfer-Encoding: base64 \n";
-$Body .= "Content-Disposition: attachment; filename="".$arquivo['name']."" \r\n";
-$Body .= "$anexo \n";
-$Body .= "--$boundary \n";*/
  
 // send email
 $success = mail($To, $Subject, $Body, $headers);
+//nao tá funcionando ainda:
 
  
 // redirect to success page

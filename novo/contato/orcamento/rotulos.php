@@ -17,18 +17,22 @@ $frente = $_POST["o_rotulos-frente"];
 $verso = $_POST["o_rotulos-verso"];
 $finalidade = $_POST["o_rotulos-finalidade"];
 $mensagem = $_POST["o_rotulos-mensagem"];
-$arquivo = $_FILES["o_rotulos-anexo"];
 
-$boundary = "XYZ-".date("dmYis")."-ZYX";
+$nomeArquivo = $_FILES["o_rotulos-anexo"]["name"]; // Pega o nome do arquivo
+$nomeTemporario = $_FILES["o_rotulos-anexo"]["tmp_name"]; // Pega o nome temporario do arquivo
+$tamanhoArquivo = $_FILES["o_rotulos-anexo"]["size"]; // Pega o tamanho
+$caminho = 'uploads/'; // define a pasta onde sera salvo o arquivo
 
+$arquivoArray = explode(".", $nomeArquivo); // Separa o nome do arquivo da extensão, por exemplo: imagem1.jpg -> ficara imagem1
+    $extensao = end($arquivoArray); // Pega a extensao do arquivo (final da variavel $arquivoArray), por exemplo: imagem1.jpg -> ficara .jpg
+    $arquivo = $caminho.md5(time().rand(3212, 15452)).'.'.$extensao; // Junta o caminho e cria um nome complexo para o arquivo para evitar duplicidade, a variável conterá por exemplo -> uploads/987asd3a218w6qw21qeq651.jpg
 
-$fp = fopen($arquivo["tmp_name"], "rb"); // abre o arquivo enviado
+    if (!is_dir($caminho)) { // Verifica se a pasta para salvar o arquivo existe (uploads)
+        mkdir($caminho); // Caso não exista cria a pasta
+        chmod($caminho, 777); // Caso não exista adiciona permissões de leitura e escrita na pasta
+    }
 
-$anexo = fread($fp, filesize($arquivo["tmp_name"])); // calcula o tamanho
-
-$anexo = base64_encode($anexo);// codifica o anexo em base 64
-
-fclose($fp);// fecha o arquivo
+    move_uploaded_file($nomeTemporario, $arquivo);
 
 
 
@@ -89,29 +93,13 @@ $Body .= "Observações: ";
 $Body .= $mensagem;
 $Body .= "\n";
 
-$headers  = "MIME-Version: 1.0 \r\n";
-$headers .= "Content-Type: multipart/mixed \r\n";
-//$headers .= "boundary="$boundary" \r\n";
-$headers .= "$boundary \r\n";
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8" . "\r\n";
 $headers .= "From: $email" . "\r\n";
-
-// email
-
-$message  = "--$boundary \r\n";
-$message .= "Content-Type: text/plain; charset='utf-8' \r\n";
-$message .= "Nome: $nome \r\n";
-$message .= "--$boundary \r\n";
-
-// anexo 
-$message .= "Content-Type: ".$arquivo["type"]."; name=\"".$arquivo['name']."\" \r\n"; 
-$message .= "Content-Transfer-Encoding: base64 \r\n"; 
-$message .= "Content-Disposition: attachment; filename=\"".$arquivo['name']."\" \r\n";
-$message .= "$anexo \n"; 
-$message .= "--$boundary \r\n"; 
-
  
 // send email
-$success = mail($To, $Subject, $Body, $message, $headers);
+$success = mail($To, $Subject, $Body, $headers);
  
 // redirect to success page
 if ($success && $error == ""){

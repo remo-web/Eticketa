@@ -13,7 +13,7 @@ if(isset($_POST['o_rotulos-enviar']) && $_POST['o_rotulos-enviar']=='etka_o-rotu
     if(empty($arquivo)):
         echo 'Selecione um arquivo para upload';
     else:
-        move_uploaded_file($tmp, 'orcamento/'.$novonome);
+        move_uploaded_file($tmp, 'upload/'.$novonome);
 
     endif;
 endif;

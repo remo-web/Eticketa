@@ -1,11 +1,11 @@
 <?php
 $error = "";
-
+if(isset($_POST['o_rotulos-enviar']) && $_POST['o_rotulos-enviar']=='etka_o-rotulos'):
 $uploaddir = "upload";
 
 $uploadfile = $uploaddir.$_FILES['o_rotulos-anexo']['name'];
 
-move_uploaded_file($_FILES['o_rotulos-anexo']['tmp_name'],$uploadfile)
+move_uploaded_file($_FILES['o_rotulos-anexo']['tmp_name'],$uploadfile);
 
 $nome = $_POST["o_rotulos-nome"];
 //email
@@ -103,4 +103,5 @@ if ($success && $error == ""){
         echo $error;
     }
 } 
+endif;
 ?>

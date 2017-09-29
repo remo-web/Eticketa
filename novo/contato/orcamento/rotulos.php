@@ -10,12 +10,8 @@ $error = "";
    
     $novonome = md5($nome).'.'.$ext;
     
-    if(empty($arquivo)):
-        echo 'Selecione um arquivo para upload';
-    else:
-        move_uploaded_file($tmp, 'upload/'.$novonome);
+    move_uploaded_file($tmp, 'upload/'.$novonome);
 
-    endif;
 $boundary = "XYZ-".date("dmYis")."-ZYX";
 $fp = fopen($arquivo["tmp_name"], "rb"); // abre o arquivo enviado
 $anexo = fread($fp, filesize($arquivo["tmp_name"])); // calcula o tamanho
@@ -101,10 +97,10 @@ $Body .= "\n";
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit" . "\r\n";
-$headers .= "Content-Type: multipart/mixed; charset=UTF-8" . "\r\n";
+$headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n";
 $headers .= "From: $email" . "\r\n";
-$headers .= "boundary="$boundary"\r\n";
-$headers .= "$boundary\n";
+//$headers .= "boundary="$boundary"\r\n";
+//$headers .= "$boundary\n";
 
 /* email
 $Body  = "--$boundary\n";

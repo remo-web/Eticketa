@@ -172,6 +172,19 @@ dialog .etka_btn-enviar{width: 100%}
     display: none
 }
 
+.etka_orcamento-card__media{
+    background-color: white;
+    text-align: center;
+}
+.etka_orcamento-card__media-ok{
+    font-size: 3rem;
+    color: limegreen;
+}
+.etka_orcamento-card__media-notok{
+    font-size: 3rem;
+    color: darkred;
+}
+
     /* home */
 
     #etka_home-video{
@@ -261,6 +274,15 @@ dialog .etka_btn-enviar{width: 100%}
     #dialog-orcamento form p{margin: 0px; padding-top: 24px}
     #dialog-orcamento form .mdl-icon-toggle, #dialog-orcamento form .cores-help{padding-top: 20px}
     #dialog-orcamento .mdl-tooltip--large{font-size: 1rem; letter-spacing: 0.05rem}
+
+        /* prod | orçamento */
+
+        .etka_orcamento-card {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.1)
+        }
 
     /* como fazemos */
 
@@ -450,10 +472,5 @@ dialog .etka_btn-enviar{width: 100%}
                 transform: translateY(100%);
             }
         }
-    
-
-
-
-
 
 

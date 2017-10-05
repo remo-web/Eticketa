@@ -56,6 +56,13 @@ $(document).ready(function() {
 //DIALOGS	 
 
 //Orçamento
+
+$(document).ready(function() {
+    $(".etka_ocamento-card__close").click(function() {
+        $(".etka_orcamento-card").addClass("etka_o-rotulos-enviado");
+    });
+});
+
 //rótulos
 $(document).ready(function() {
     'use strict';

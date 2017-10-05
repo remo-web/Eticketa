@@ -34,7 +34,7 @@ function submitO_rotulos(){
     var telefone = $("#o_rotulos-telefone").val();
     var largura = $("#o_rotulos-largura").val();
     var altura = $("#o_rotulos-altura").val();
-    var formato = $("#o_rotulos-formato").val();
+    var formato = $("input[name=o_rotulos-formato]:checked").val();
     var quantidade = $("#o_rotulos-quantidade").val();
     var frente = $("#o_rotulos-frente").val();
     var verso = $("#o_rotulos-verso").val();

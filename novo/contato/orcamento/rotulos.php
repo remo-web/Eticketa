@@ -35,14 +35,14 @@ $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 $Body .= "
 <html>
 <body style='width: 690px; font-family: sans-serif'>
-<b>$nome</b><br>
+<b style='text-transform: uppercase'>$nome</b><br>
 <b>Cargo/Empresa:</b> $empresa<br>
 $email<br>
-<b>Telefone</b>$telefone<br>
-<b>Dimensões: </b>$largura (L) x $altura (A)<br>
-$formato<br>
+<b>Telefone: </b>$telefone<br>
+<b>Dimensões: </b>$largura (L) <b>x</b> $altura (A)<br>
+<b>Formato: </b>$formato<br>
 <b>Quantidade: </b>$quantidade<br>
-<b>Cores: </b>$frente x $verso<br>
+<b>Cores: </b>$frente <b>x</b> $verso<br>
 <b>Finalidade: </b>$finalidade<br>
 <b>Observações: </b>$mensagem
 </body></html>";

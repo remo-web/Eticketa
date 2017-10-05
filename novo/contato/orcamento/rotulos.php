@@ -32,19 +32,19 @@ $To = "raphael.pais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Rótulos para $finalidade";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 
-$Body .= "<html><body style='width: 690px'>
-$nome<br>
-$empresa<br>
+$Body .= "
+<html>
+<body style='width: 690px; font-family: sans-serif'>
+<b>$nome</b><br>
+<b>Cargo/Empresa:</b> $empresa<br>
 $email<br>
-$telefone<br>
-$largura<br>
-$altura<br>
+<b>Telefone</b>$telefone<br>
+<b>Dimensões: </b>$largura (L) x $altura (A)<br>
 $formato<br>
-$quantidade<br>
-$frente<br>
-$verso<br>
-$finalidade<br>
-$mensagem
+<b>Quantidade: </b>$quantidade<br>
+<b>Cores: </b>$frente x $verso<br>
+<b>Finalidade: </b>$finalidade<br>
+<b>Observações: </b>$mensagem
 </body></html>";
 
 $headers = "MIME-Version: 1.0" . "\r\n";

@@ -36,8 +36,8 @@ $Body .= "
 <html>
 <body style='width: 690px; font-family: sans-serif'>
 <b style='text-transform: uppercase'>$nome</b><br>
-<b>Cargo/Empresa:</b> $empresa<br>
-$email<br>
+<b>Cargo/Empresa: </b>$empresa<br>
+<b>E-mail: </b>$email<br>
 <b>Telefone: </b>$telefone<br>
 <b>Dimensões: </b>$largura (L) <b>x</b> $altura (A)<br>
 <b>Formato: </b>$formato<br>

@@ -1,4 +1,4 @@
-$("#etka_o-rotulo").submit(function(event){
+$("#etka_o-rotulos").submit(function(event){
     var email = document.forms["etka_o-rotulos"]["o_rotulos-email"].value;
     var o_rotulos_email = document.getElementById("o_rotulos-email");
     var mensagem = document.forms["etka_o-rotulos"]["o_rotulos-mensagem"].value;

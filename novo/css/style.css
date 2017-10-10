@@ -443,6 +443,7 @@ dialog .etka_btn-enviar{width: 100%}
     }
 
     #etka_contato-enviado,
+    #etka_contato-mobile-enviado,
     #etka_subscribe-enviado,
     #etka_o-rotulos-enviado{
         animation-name: fadeIn;}

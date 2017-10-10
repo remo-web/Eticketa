@@ -172,6 +172,7 @@ hr.etka_spacer__clear {
 dialog .etka_btn-enviar{width: 100%}
 
 .etka_contato-enviado, .etka_contato-erro,
+.etka_contato-mobile-enviado, .etka_contato-mobile-erro,
 .etka_subscribe-enviado, .etka_subscribe-erro,
 .etka_o-rotulos-enviado, .etka_o-rotulos-erro{
     display: none

@@ -79,43 +79,43 @@
                         <p class="etka_mob">Ou, preencha e envie o fomulário a seguir, para que um de nossos consultores entre em contato muito em breve.</p>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col-phone">
-                        <form class="mdl-grid" id="etka_contato" name="etka_contato" action="./contato/contato.php" method="post">
+                        <form class="mdl-grid" id="etka_contato-mobile" name="etka_contato" action="./contato/mobile/contato.php" method="post">
                             <div class="mdl-cell mdl-cell--6-col">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="contato-nome" name="contato-nome">
-                                    <label class="mdl-textfield__label" for="contato-nome">Nome</label>
+                                    <input class="mdl-textfield__input" type="text" id="m_contato-nome" name="m_contato-nome">
+                                    <label class="mdl-textfield__label" for="m_contato-nome">Nome</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="contato-email" name="contato-email">
-                                    <label class="mdl-textfield__label" for="contato-email">E-mail</label>
+                                    <input class="mdl-textfield__input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="m_contato-email" name="m_contato-email">
+                                    <label class="mdl-textfield__label" for="m_contato-email">E-mail</label>
                                     <span class="mdl-textfield__error">Insira um endereço de e-mail válido.</span>
                                 </div>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="contato-empresa" name="contato-empresa">
-                                    <label class="mdl-textfield__label" for="contato-empresa">Cargo / Empresa</label>
+                                    <input class="mdl-textfield__input" type="text" id="m_contato-empresa" name="m_contato-empresa">
+                                    <label class="mdl-textfield__label" for="m_contato-empresa">Cargo / Empresa</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" pattern="[(]?\d{2}[- )]?[\d{1}]?[- ]?\d{4}[- ]?\d{4}" id="contato-tel" name="contato-tel">
-                                    <label class="mdl-textfield__label" for="contato-tel">Telefone</label>
+                                    <input class="mdl-textfield__input" type="text" pattern="[(]?\d{2}[- )]?[\d{1}]?[- ]?\d{4}[- ]?\d{4}" id="m_contato-tel" name="m_contato-tel">
+                                    <label class="mdl-textfield__label" for="m_contato-tel">Telefone</label>
                                     <span class="mdl-textfield__error">Insira um número de telefone válido.</span>
                                 </div>
                             </div>
                             <div class="mdl-cell mdl-cell--12-col">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="contato-assunto" name="contato-assunto" >
-                                    <label class="mdl-textfield__label" for="contato-assunto">Assunto</label>
+                                    <input class="mdl-textfield__input" type="text" id="m_contato-assunto" name="m_contato-assunto" >
+                                    <label class="mdl-textfield__label" for="m_contato-assunto">Assunto</label>
                                 </div>
                             </div>
                             <div class="mdl-cell mdl-cell--12-col">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <textarea class="mdl-textfield__input" type="text" rows= "3" id="contato-mensagem" name="contato-mensagem"></textarea>
-                                    <label class="mdl-textfield__label" for="contato-mensagem">Mensagem</label>
+                                    <textarea class="mdl-textfield__input" type="text" rows= "3" id="m_contato-mensagem" name="m_contato-mensagem"></textarea>
+                                    <label class="mdl-textfield__label" for="m_contato-mensagem">Mensagem</label>
                                 </div>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col">
-                                <div class="etka_contato-enviado" id="etka_contato-enviado">
+                                <div class="etka_contato-mobile-enviado" id="etka_contato-mobile-enviado">
                                     <span class="mdl-chip mdl-chip--contact">
                                         <span class="mdl-chip__contact mdl-color--green mdl-color-text--white">
                                             <i class="material-icons" style="vertical-align: middle">done</i>
@@ -123,7 +123,7 @@
                                         <span class="mdl-chip__text">Mensagem enviada!</span>
                                     </span>
                                 </div>
-                                <div class="etka_contato-erro" id="etka_contato-erro">
+                                <div class="etka_contato-mobile-erro" id="etka_contato-mobile-erro">
                                     <span class="mdl-chip mdl-chip--contact">
                                         <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">
                                             <i class="material-icons" style="vertical-align: middle">clear</i>
@@ -133,7 +133,7 @@
                                 </div>
                             </div>
                             <div class="mdl-cell mdl-cell--8-col" style="text-align: right">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="contato-enviar" name="contato-enviar" type="submit" value="etka_contato">ENVIAR</button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="m_contato-enviar" name="m_contato-enviar" type="submit" value="etka_contato-mobile">ENVIAR</button>
                             </div>
                             <div class="mdl-layout-spacer">&nbsp;</div>
                         </form>
@@ -1948,6 +1948,7 @@
 		<script src="./js/scripts.js"></script>
             <!-- Forms -->
             <script src="./contato/contato.js"></script>
+            <script src="./contato/mobile/contato.js"></script>
             <script src="./contato/subscribe/subscribe.js"></script>
             <script src="./contato/orcamento/rotulos.js"></script>
 		<!-- Google Material -->

@@ -18,7 +18,12 @@ $verso = $_POST["o_rotulos-verso"];
 $finalidade = $_POST["o_rotulos-finalidade"];
 $mensagem = $_POST["o_rotulos-mensagem"];
 
-$nomeArquivo = $_FILES["o_rotulos-anexo"]["name"]; // Pega o nome do arquivo
+$uploaddir = '/upload/';
+$uploadfile = $uploaddir . basename($_FILES['o_rotulos-anexo']['name']);
+move_uploaded_file($_FILES['o_rotulos-anexo']['tmp_name'], $uploadfile);
+print_r($_FILES);
+
+/*$nomeArquivo = $_FILES["o_rotulos-anexo"]["name"]; // Pega o nome do arquivo
 $nomeTemporario = $_FILES["o_rotulos-anexo"]["tmp_name"]; // Pega o nome temporario do arquivo
 $tamanhoArquivo = $_FILES["o_rotulos-anexo"]["size"]; // Pega o tamanho
 $caminho = 'subir/'; // define a pasta onde sera salvo o arquivo
@@ -32,7 +37,7 @@ $arquivoArray = explode(".", $nomeArquivo); // Separa o nome do arquivo da exten
         chmod($caminho, 777); // Caso não exista adiciona permissões de leitura e escrita na pasta
     }
 
-    move_uploaded_file($nomeTemporario, $arquivo);
+    move_uploaded_file($nomeTemporario, $arquivo);*/
 
 
 

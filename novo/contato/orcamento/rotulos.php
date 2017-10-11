@@ -20,8 +20,7 @@ $mensagem = $_POST["o_rotulos-mensagem"];
 
 $uploaddir = 'upload/';
 $uploadfile = $uploaddir . basename($_FILES['o_rotulos-anexo']['name']);
-move_uploaded_file($_FILES['o_rotulos-anexo']['tmp_name'], $uploadfile);
-print_r($_FILES);
+
 
 /*$nomeArquivo = $_FILES["o_rotulos-anexo"]["name"]; // Pega o nome do arquivo
 $nomeTemporario = $_FILES["o_rotulos-anexo"]["tmp_name"]; // Pega o nome temporario do arquivo
@@ -108,7 +107,7 @@ $headers .= "From: $email" . "\r\n";
 $success = mail($To, $Subject, $Body, $headers);
  
 // redirect to success page
-if ($success && $error == ""){
+if ($success && $error == "" && (move_uploaded_file($_FILES['o_rotulos-anexo']['tmp_name'], $uploadfile))) {
     echo "success";
 } else {
     if($error == ""){

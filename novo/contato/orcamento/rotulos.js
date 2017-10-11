@@ -1,32 +1,32 @@
 $("#etka_o-rotulos").submit(function(event){
     var email = document.forms["etka_o-rotulos"]["o_rotulos-email"].value;
-    var rotulos_email = document.getElementById("o_rotulos-email");
-//    var anexo = document.forms["etka_o-rotulos"]["o_rotulos-anexo"].value;
-//    var rotulos_anexo = document.getElementById("o_rotulos-anexo");
+    var o_rotulos_email = document.getElementById("o_rotulos-email");
+    var mensagem = document.forms["etka_o-rotulos"]["o_rotulos-mensagem"].value;
+    var o_rotulos_msg = document.getElementById("o_rotulos-mensagem");
     var att = document.createAttribute("required");
     if (email == "") {
-        rotulos_email.setAttributeNode(att);
+        o_rotulos_email.setAttributeNode(att);
         return false;
         // handle the invalid form...
-        rotulosError();
+        o_rotulosError();
     }
-//    if (anexo == "") {
-//        rotulos_anexo.setAttributeNode(att);
-//        return false;
-//        // handle the invalid form...
-//        rotulosError();
-//    } 
+    if (mensagem == "") {
+        o_rotulos_msg.setAttributeNode(att);
+        return false;
+        // handle the invalid form...
+        o_rotulosError();
+    } 
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
-        rotulosError();
+        o_rotulosError();
     } else {
         // everything looks good!
         event.preventDefault();
-        submitRotulos();
+        submitO_rotulos();
     }
 });
 
-function submitRotulos(){
+function submitO_rotulos(){
     // Initiate Variables With Form Content
     var nome = $("#o_rotulos-nome").val();
     var email = $("#o_rotulos-email").val();
@@ -47,19 +47,20 @@ function submitRotulos(){
         data: "o_rotulos-nome=" + nome + "&o_rotulos-email=" + email + "&o_rotulos-empresa=" + empresa + "&o_rotulos-telefone=" + telefone + "&o_rotulos-largura=" + largura + "&o_rotulos-altura=" + altura + "&o_rotulos-formato=" + formato + "&o_rotulos-quantidade=" + quantidade + "&o_rotulos-frente=" + frente + "&o_rotulos-verso=" + verso + "&o_rotulos-finalidade=" + finalidade + "&o_rotulos-mensagem=" + mensagem,
         success : function(text){
             if (text == "success"){
-                rotulosSuccess();
+                o_rotulosSuccess();
             } else {
-                rotulosError();
+                o_rotulosError();
             }
         }
     });
 }
 
-function rotulosSuccess(){
+function o_rotulosSuccess(){
     $( "#etka_o-rotulos-enviado" ).removeClass( "etka_o-rotulos-enviado" );
     $( '#o_rotulos-nome, #o_rotulos-email, #o_rotulos-empresa, #o_rotulos-telefone, #o_rotulos-largura, #o_rotulos-altura, #o_rotulos-formato, #o_rotulos-quantidade, #o_rotulos-frente, #o_rotulos-verso, #o_rotulos-finalidade, #o_rotulos-mensagem' ).val('');
 }
 
-function rotulosError(){
+function o_rotulosError(){
     $( "#etka_o-rotulos-erro" ).removeClass( "etka_o-rotulos-erro" );
 }
+

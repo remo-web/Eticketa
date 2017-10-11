@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-
+    
         <!-- Google Tag Manager -->
         <script>
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NXKDCKW');
@@ -561,6 +561,8 @@
                 </section>-->
                 <!--CONTATO-->
 				<section data-anchor="contato" class="section etka_contato" id="etka_contato">
+                    
+                    <!-- Copyright -->
                     <div class="mdl-grid etka_copy">
                         <div class="mdl-cell mdl-cell--6-col etka_copy-l-txt">
                             <span style="margin-right: 16px">Todos os direitos reservados. ETICKETA - Rótulos e Soluções <span class="etka_copy-s">&#169;</span> 2017</span>
@@ -569,6 +571,8 @@
                             Uma obra-prima artesanal deste cara <a href="http://raphaelrpais.com" target="_blank">aqui</a>.
                         </div>
                     </div>
+                    <!-- Copyright -->
+                    
                     <div class="mdl-grid">
                         <div class="mdl-cell mdl-cell--middle mdl-cell--6-col etka_contato-l">
                             <div class="mdl-grid">
@@ -794,7 +798,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--1-col cores-help">
                         <i class="material-icons etka_form-label" id="cores-help">help</i>
-                        <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores combinadas, reproduzem <strong>todas</strong>.</div> 
+                        <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores CMYK combinadas, reproduzem <strong>todas</strong>.</div> 
                     </div>
                     <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
                         <p class="etka_form-label">Finalidade:</p>
@@ -805,7 +809,7 @@
                             <label class="mdl-textfield__label" for="o_rotulos-finalidade">como o material será utilizado?</label>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--2-col">
+                    <!--<div class="mdl-cell mdl-cell--2-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
                             <label class="mdl-button mdl-js-button mdl-button--icon" for="o_rotulos-anexo">
                                 <i class="material-icons" id="o_rotulos-anexo-help">attach_file</i>
@@ -818,7 +822,7 @@
                             </div>
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="o_rotulos-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até 5MB de anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="mdl-cell mdl-cell--12-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <textarea class="mdl-textfield__input" rows="1" type="text" id="o_rotulos-mensagem" ></textarea>
@@ -830,8 +834,49 @@
                     </div>
                 </form>
             </div>
-            <div class="mdl-dialog__actions">
+            <div class="mdl-dialog__actions mdl-card--border">
                 <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
+            </div>
+            <!-- Over-dialog Enviado/Erro -->
+            <div class="mdl-grid etka_orcamento-card etka_o-rotulos-enviado" id="etka_o-rotulos-enviado">
+                <div class="mdl-cell mdl-cell--4-offset mdl-cell--4-col mdl-cell--middle">
+                    <div class="mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                            Pedido de orçamento enviado com sucesso!
+                        </div>
+                        <div class="mdl-card__media etka_orcamento-card__media">
+                            <i class="material-icons etka_orcamento-card__media-ok">assignment_turned_in</i>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            Você receberá uma mensagem de confirmação dentro de algumas horas, nela estarão os próximos passos do seu atendimento.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <button type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect etka_ocamento-card__close">
+                                ok
+                            </button>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+            <div class="mdl-grid etka_orcamento-card etka_o-rotulos-erro" id="etka_o-rotulos-erro">
+                <div class="mdl-cell mdl-cell--4-offset mdl-cell--4-col mdl-cell--middle">
+                    <div class="mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                            Pedido de orçamento NÃO enviado!
+                        </div>
+                        <div class="mdl-card__media etka_orcamento-card__media">
+                            <i class="material-icons etka_orcamento-card__media-notok">warning</i>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            Ocorreu um erro na tentativa de envio do seu pedido de orçamento, tente novamente. Caso o erro persista, entre em contato através do e-mail <b>orçamento@eticketa.com.br</b>, para que um de nossos consultores de sequência ao seu atendimento.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <button type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect etka_ocamento-card__close">
+                                Tentar novamente
+                            </button>
+                        </div>
+                    </div>
+                </div>               
             </div>
         </dialog>
         
@@ -936,7 +981,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--1-col cores-help">
                         <i class="material-icons etka_form-label" id="cores-help">help</i>
-                        <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores combinadas, reproduzem <strong>todas</strong>.</div> 
+                        <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores CMYK combinadas, reproduzem <strong>todas</strong>.</div> 
                     </div>
                     <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
                         <p class="etka_form-label">Finalidade:</p>
@@ -1078,7 +1123,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--1-col cores-help">
                         <i class="material-icons etka_form-label" id="cores-help">help</i>
-                        <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores combinadas, reproduzem <strong>todas</strong>.</div> 
+                        <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores CMYK combinadas, reproduzem <strong>todas</strong>.</div> 
                     </div>
                     <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
                         <p class="etka_form-label">Finalidade:</p>
@@ -1220,7 +1265,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--1-col cores-help">
                         <i class="material-icons etka_form-label" id="cores-help">help</i>
-                        <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores combinadas, reproduzem <strong>todas</strong>.</div> 
+                        <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores CMYK combinadas, reproduzem <strong>todas</strong>.</div> 
                     </div>
                     <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
                         <p class="etka_form-label">Finalidade:</p>

@@ -1,5 +1,22 @@
 <?php
 $error = "";
+if(isset($_POST['o_rotulos-enviar']) && $_POST['o_rotulos-enviar']=='etka_o-rotulos'):
+    $arquivo = $_FILES['o_rotulos-anexo'];
+    $nome = $arquivo['name'];
+    $tmp = $arquivo['tmp_name'];
+    
+    $extensao = explode('.',$nome);
+    $ext = end($extensao);
+   
+    $novonome = md5($nome).'.'.$ext;
+    
+    if(empty($arquivo)):
+        echo 'Selecione um arquivo para upload';
+    else:
+        move_uploaded_file($tmp, 'upload/'.$novonome);
+
+    endif;
+endif;
 $nome = $_POST["o_rotulos-nome"];
 //email
 if (empty($_POST["o_rotulos-email"])) {
@@ -18,28 +35,10 @@ $verso = $_POST["o_rotulos-verso"];
 $finalidade = $_POST["o_rotulos-finalidade"];
 $mensagem = $_POST["o_rotulos-mensagem"];
 
-$nomeArquivo = $_FILES["o_rotulos-anexo"]["name"]; // Pega o nome do arquivo
-$nomeTemporario = $_FILES["o_rotulos-anexo"]["tmp_name"]; // Pega o nome temporario do arquivo
-$tamanhoArquivo = $_FILES["o_rotulos-anexo"]["size"]; // Pega o tamanho
-$caminho = 'subir/'; // define a pasta onde sera salvo o arquivo
-
-$arquivoArray = explode(".", $nomeArquivo); // Separa o nome do arquivo da extensão, por exemplo: imagem1.jpg -> ficara imagem1
-    $extensao = end($arquivoArray); // Pega a extensao do arquivo (final da variavel $arquivoArray), por exemplo: imagem1.jpg -> ficara .jpg
-    $arquivo = $caminho.md5(time().rand(3212, 15452)).'.'.$extensao; // Junta o caminho e cria um nome complexo para o arquivo para evitar duplicidade, a variável conterá por exemplo -> uploads/987asd3a218w6qw21qeq651.jpg
-
-    if (!is_dir($caminho)) { // Verifica se a pasta para salvar o arquivo existe (uploads)
-        mkdir($caminho); // Caso não exista cria a pasta
-        chmod($caminho, 777); // Caso não exista adiciona permissões de leitura e escrita na pasta
-    }
-
-    move_uploaded_file($nomeTemporario, $arquivo);
-
-
-
-
 $To = "raphael.pais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Rótulos";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
+
  
 // prepare email body text
 $Body .= "Nome: ";
@@ -101,6 +100,8 @@ $headers .= "From: $email" . "\r\n";
  
 // send email
 $success = mail($To, $Subject, $Body, $headers);
+//nao tá funcionando ainda:
+
  
 // redirect to success page
 if ($success && $error == ""){

@@ -18,7 +18,7 @@ $verso = $_POST["o_rotulos-verso"];
 $finalidade = $_POST["o_rotulos-finalidade"];
 $mensagem = $_POST["o_rotulos-mensagem"];
 
-$uploaddir = 'upload/';
+$uploaddir = './upload/';
 $uploadfile = $uploaddir . basename($_FILES['o_rotulos-anexo']['name']);
 
 

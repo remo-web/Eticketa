@@ -1618,33 +1618,33 @@
                     </div>
                     <div class="mdl-cell mdl-cell--middle mdl-cell--stretch mdl-cell--5-col etka_preco-faca" style="background-image: url('./img/precos/etka_preco-delivery.svg');"></div>
                 </div>
-                <form class="mdl-grid" action="#">
+                <form class="mdl-grid" id="etka_p-delivery" name="etka_p-delivery" action="./contato/precos/lacres.php" method="post" enctype="multipart/form-data">
                     <div class="mdl-cell mdl-cell--12-col">
                         <h4>Encomende agora:</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="name">
-                            <label class="mdl-textfield__label" for="name">Nome</label>
+                            <input class="mdl-textfield__input" type="text" id="p_lacres-nome">
+                            <label class="mdl-textfield__label" for="p_lacres-nome">Nome</label>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phone">
-                            <label class="mdl-textfield__label" for="phone">Telefone</label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="p_lacres-telefone">
+                            <label class="mdl-textfield__label" for="p_lacres-telefone">Telefone</label>
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="endereco">
-                            <label class="mdl-textfield__label" for="endereco">E-mail</label>
+                            <input class="mdl-textfield__input" type="text" id="p_lacres-email">
+                            <label class="mdl-textfield__label" for="p_lacres-email">E-mail</label>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--6-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="endereco">
-                            <label class="mdl-textfield__label" for="endereco">Endereço completo</label>
+                            <input class="mdl-textfield__input" type="text" id="p_lacres-endereco">
+                            <label class="mdl-textfield__label" for="p_lacres-endereco">Endereço completo</label>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col">
@@ -1654,6 +1654,7 @@
                         </p>
                         <p><input class="mdl-slider mdl-js-slider" type="range" min="0" max="100000"  step="1000" value="1000" tabindex="0" id="etka_preco-delivery_slider"></p>
                     </div>
+<!--
                     <div class="mdl-cell mdl-cell--2-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
                             <label class="mdl-button mdl-js-button mdl-button--icon" for="etka_delivery-anexo">
@@ -1668,8 +1669,9 @@
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="etka_delivery-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até 5MB de anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
                         </div>
                     </div>
+-->
                     <div class="mdl-cell mdl-cell--12-col">
-                        <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised etka_btn-enviar">ENCOMENDAR</button>
+                        <button type="submit" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised etka_btn-enviar" id="p_lacres-enviar" name="p_lacres-enviar" value="etka_p-lacres">ENCOMENDAR</button>
                     </div>
                 </form>
             </div>
@@ -2006,6 +2008,7 @@
             <script src="./contato/orcamento/rotulos.js"></script>
             <script src="./contato/orcamento/lacres.js"></script>
             <script src="./contato/orcamento/ingressos.js"></script>
+            <script src="./contato/precos/lacres.js"></script>
 		<!-- Google Material -->
         <script src="./mdl/material.min.js"></script>
             <!-- Polyfill -->

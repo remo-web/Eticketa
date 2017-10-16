@@ -37,7 +37,7 @@ function submitP_lacres(){
     $.ajax({
         type: "POST",
         url: "./contato/precos/lacres.php",
-        data: "p_lacres-nome=" + nome + "&p_lacres-email=" + email + "&p_lacres-telefone=" + telefone + "&p_lacres-quantidade=" + quantidade + "&p_lacres-endereco=" + mensagem,
+        data: "p_lacres-nome=" + nome + "&p_lacres-email=" + email + "&p_lacres-telefone=" + telefone + "&p_lacres-quantidade=" + quantidade + "&p_lacres-endereco=" + endereco,
         success : function(text){
             if (text == "success"){
                 p_lacresSuccess();

@@ -101,6 +101,8 @@ a.mdl-navigation__link.active{
 
 form > .mdl-cell{margin-bottom: 0px; margin-top: 0px}
 
+.mdl-tooltip--large{font-size: 1.1rem; line-height: 1.3rem; letter-spacing: 0.07rem}
+
 /* FULLPAGE.JS MODS */
 
     /* produtos */
@@ -260,7 +262,6 @@ dialog .etka_btn-enviar{width: 100%}
     #dialog-orcamento h4{margin: 0px}
     #dialog-orcamento form p{margin: 0px; padding-top: 24px}
     #dialog-orcamento form .mdl-icon-toggle, #dialog-orcamento form .cores-help{padding-top: 20px}
-    #dialog-orcamento .mdl-tooltip--large{font-size: 1rem; letter-spacing: 0.05rem}
 
     /* como fazemos */
 

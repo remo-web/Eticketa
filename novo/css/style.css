@@ -170,6 +170,7 @@ dialog .etka_btn-enviar{width: 100%}
 
 .etka_contato-enviado, .etka_contato-erro,
 .etka_subscribe-enviado, .etka_subscribe-erro,
+.etka_o-lacres-enviado, .etka_o-lacres-erro,
 .etka_o-rotulos-enviado, .etka_o-rotulos-erro{
     display: none
 }
@@ -461,6 +462,7 @@ dialog .etka_btn-enviar{width: 100%}
 
     #etka_contato-enviado,
     #etka_subscribe-enviado,
+    #etka_o-lacres-enviado,
     #etka_o-rotulos-enviado{
         animation-name: fadeIn;}
         @keyframes fadeIn { 
@@ -473,5 +475,6 @@ dialog .etka_btn-enviar{width: 100%}
                 transform: translateY(100%);
             }
         }
+
 
 

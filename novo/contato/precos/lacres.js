@@ -1,32 +1,32 @@
 $("#etka_p-lacres").submit(function(event){
     var email = document.forms["etka_p-lacres"]["p_lacres-email"].value;
-    var o_lacres_email = document.getElementById("p_lacres-email");
+    var p_lacres_email = document.getElementById("p_lacres-email");
     //var mensagem = document.forms["etka_p-lacres"]["p_lacres-mensagem"].value;
-    //var o_lacres_msg = document.getElementById("p_lacres-mensagem");
+    //var p_lacres_msg = document.getElementById("p_lacres-mensagem");
     var att = document.createAttribute("required");
     if (email == "") {
-        o_lacres_email.setAttributeNode(att);
+        p_lacres_email.setAttributeNode(att);
         return false;
         // handle the invalid form...
-        o_lacresError();
+        p_lacresError();
     }
     //if (mensagem == "") {
-      //  o_lacres_msg.setAttributeNode(att);
+      //  p_lacres_msg.setAttributeNode(att);
       //  return false;
         // handle the invalid form...
-      //  o_lacresError();
+      //  p_lacresError();
    // } 
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
-        o_lacresError();
+        p_lacresError();
     } else {
         // everything looks good!
         event.preventDefault();
-        submitO_lacres();
+        submitP_lacres();
     }
 });
 
-function submitO_lacres(){
+function submitP_lacres(){
     // Initiate Variables With Form Content
     var nome = $("#p_lacres-nome").val();
     var email = $("#p_lacres-email").val();
@@ -40,20 +40,20 @@ function submitO_lacres(){
         data: "p_lacres-nome=" + nome + "&p_lacres-email=" + email + "&p_lacres-telefone=" + telefone + "&p_lacres-quantidade=" + quantidade + "&p_lacres-endereco=" + mensagem,
         success : function(text){
             if (text == "success"){
-                o_lacresSuccess();
+                p_lacresSuccess();
             } else {
-                o_lacresError();
+                p_lacresError();
             }
         }
     });
 }
 
-function o_lacresSuccess(){
+function p_lacresSuccess(){
     $( "#etka_p-lacres-enviado" ).removeClass( "etka_p-lacres-enviado" );
     $( '#p_lacres-nome, #p_lacres-email, #p_lacres-telefone, #p_lacres-quantidade, #p_lacres-endereco' ).val('');
 }
 
-function o_lacresError(){
+function p_lacresError(){
     $( "#etka_p-lacres-erro" ).removeClass( "etka_p-lacres-erro" );
 }
 

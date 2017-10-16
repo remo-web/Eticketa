@@ -1067,28 +1067,28 @@
             <h4 class="mdl-dialog__title">Pedido de Orçamento <small><br/>Controle de Acesso</small></h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
-                <form class="mdl-grid" action="#">
+                <form class="mdl-grid" id="etka_o-rotulos" name="etka_o-ingressos" action="./contato/orcamento/ingressos.php" method="post" enctype="multipart/form-data">
                     <div class="mdl-cell mdl-cell--12-col">
                         <h4>Sobre você</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--6-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="name">
-                            <label class="mdl-textfield__label" for="name">Nome</label>
+                            <input class="mdl-textfield__input" type="text" id="o_ingressos-nome">
+                            <label class="mdl-textfield__label" for="o_ingressos-nome">Nome</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="empresa">
-                            <label class="mdl-textfield__label" for="empresa">Empresa</label>
+                            <input class="mdl-textfield__input" type="text" id="o_ingressos-empresa">
+                            <label class="mdl-textfield__label" for="o_ingressos-empresa">Empresa</label>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--6-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="email">
-                            <label class="mdl-textfield__label" for="email">E-mail</label>
+                            <input class="mdl-textfield__input" type="text" id="o_ingressos-email" name="o_ingressos-email" data-required="true">
+                            <label class="mdl-textfield__label" for="o_ingressos-email">E-mail</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phone">
-                            <label class="mdl-textfield__label" for="phone">Telefone</label>
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="o_ingressos-telefone">
+                            <label class="mdl-textfield__label" for="o_ingressos-telefone">Telefone</label>
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
                     </div>
@@ -1100,16 +1100,15 @@
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="number" id="largura">
-                            <label class="mdl-textfield__label" for="largura">largura</label>
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9]" id="o_ingressos-largura">
+                            <label class="mdl-textfield__label" for="o_ingressos-largura">largura</label>
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
                     </div>
-<!--                    <p style="margin-top: 8px">x</p>-->
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="number" id="altura">
-                            <label class="mdl-textfield__label" for="altura">altura</label>
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9]" id="o_ingressos-altura">
+                            <label class="mdl-textfield__label" for="o_ingressos-altura">altura</label>
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
                     </div>
@@ -1117,20 +1116,20 @@
                         <p class="etka_form-label">Formato:</p>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col etka_form-radio etka_form-label etka_form-label_formato">
-                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="retangular-tt" for="retangular">
-                            <input type="checkbox" id="retangular" name="options" class="mdl-icon-toggle__input" value="1" checked>
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="retangular-tt" for="o_ingressos-retangular">
+                            <input type="checkbox" id="o_ingressos-retangular" name="o_ingressos-formato" class="mdl-icon-toggle__input" value="retangular">
                             <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="retangular-tt">Retangular / Quadrado</div>
                         </label>
                         &nbsp;
-                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="circular-tt" for="circular">
-                            <input type="checkbox" id="circular" name="options" class="mdl-icon-toggle__input" value="2">
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="circular-tt" for="o_ingressos-circular">
+                            <input type="checkbox" id="o_ingressos-circular" name="o_ingressos-formato" class="mdl-icon-toggle__input" value="circular">
                             <i class="mdl-icon-toggle__label material-icons">panorama_fish_eye</i>
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="circular-tt">Circular / Oval</div>
                         </label>
                         &nbsp;
-                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="especial-tt" for="especial">
-                            <input type="checkbox" id="especial" name="options" class="mdl-icon-toggle__input" value="3">
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" id="especial-tt" for="o_ingressos-especial">
+                            <input type="checkbox" id="o_ingressos-especial" name="o_ingressos-formato" class="mdl-icon-toggle__input" value="especial">
                             <i class="icon mdl-icon-toggle__label material-icons">star_border</i>
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="especial-tt">CORTE ESPECIAL<br/>Facas personalizadas podem encarecer seu projeto.</div> 
                         </label>
@@ -1140,8 +1139,8 @@
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="quantidade">
-                            <label class="mdl-textfield__label" for="quantidade">>1.000 un.</label>
+                            <input class="mdl-textfield__input" type="text" id="o_ingressos-quantidade">
+                            <label class="mdl-textfield__label" for="o_ingressos-quantidade">>1.000 un.</label>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
@@ -1149,16 +1148,15 @@
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="frente">
-                            <label class="mdl-textfield__label" for="frente">frente</label>
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,4}" id="o_ingressos-frente">
+                            <label class="mdl-textfield__label" for="o_ingressos-frente">frente</label>
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
                     </div>
-<!--                    <p style="margin-top: 8px">x</p>-->
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="verso">
-                            <label class="mdl-textfield__label" for="verso">verso</label>
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,4}" id="o_ingressos-verso">
+                            <label class="mdl-textfield__label" for="o_ingressos-verso">verso</label>
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
                     </div>
@@ -1171,32 +1169,32 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="finalidade">
-                            <label class="mdl-textfield__label" for="finalidade">como o material será utilizado?</label>
+                            <textarea class="mdl-textfield__input" rows="1" type="text" id="o_ingressos-finalidade"></textarea>
+                            <label class="mdl-textfield__label" for="o_ingressos-finalidade">como o material será utilizado?</label>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--2-col">
+                    <!--<div class="mdl-cell mdl-cell--2-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-                            <label class="mdl-button mdl-js-button mdl-button--icon" for="etka_acesso-anexo">
-                                <i class="material-icons" id="etka_acesso-anexo-help">attach_file</i>
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="o_ingressos-anexo">
+                                <i class="material-icons" id="o_ingressos-anexo-help">attach_file</i>
                             </label>
                             <div class="mdl-textfield__expandable-holder" style="max-width: 100%">
-                                <input class="mdl-textfield__input" type="text" id="etka_acesso-texto" readonly>
+                                <input class="mdl-textfield__input" type="text" id="etka_rotulos-texto" readonly>
                             </div>
                             <div class="mdl-textfield__expandable-holder">
-                                <input class="mdl-textfield__input" type="file" id="etka_acesso-anexo" accept=".pdf,.cdr,.eps,.ai,.jpg,.png" multiple>
+                                <input class="mdl-textfield__input" type="file" id="o_ingressos-anexo" name="o_ingressos-anexo" accept=".pdf,.cdr,.eps,.ai,.jpg,.png" multiple />
                             </div>
-                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="etka_acesso-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até 5MB de anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
+                            <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="o_ingressos-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até 5MB de anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="mdl-cell mdl-cell--12-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <textarea class="mdl-textfield__input" type="text" id="mensagem" ></textarea>
-                            <label class="mdl-textfield__label" for="mensagem">Observações:</label>
+                            <textarea class="mdl-textfield__input" rows="1" type="text" id="o_ingressos-mensagem" ></textarea>
+                            <label class="mdl-textfield__label" for="o_ingressos-mensagem">Observações:</label>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--12-col">
-                        <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised etka_btn-enviar">ENCOMENDAR</button>
+                        <button type="submit" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised etka_btn-enviar" id="o_ingressos-enviar" name="o_ingressos-enviar" value="etka_o-ingressos">ENCOMENDAR</button>
                     </div>
                 </form>
             </div>

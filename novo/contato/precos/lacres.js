@@ -31,13 +31,13 @@ function submitP_lacres(){
     var nome = $("#p_lacres-nome").val();
     var email = $("#p_lacres-email").val();
     var telefone = $("#p_lacres-telefone").val();
-    var quantidade = $("#p_lacres-quantidade").val();
+    var quantidade = $("#etka_preco-delivery_slider-label_input").val();
     var endereco = $("#p_lacres-endereco").val();
  
     $.ajax({
         type: "POST",
         url: "./contato/precos/lacres.php",
-        data: "p_lacres-nome=" + nome + "&p_lacres-email=" + email + "&p_lacres-telefone=" + telefone + "&p_lacres-quantidade=" + quantidade + "&p_lacres-endereco=" + endereco,
+        data: "p_lacres-nome=" + nome + "&p_lacres-email=" + email + "&p_lacres-telefone=" + telefone + "&etka_preco-delivery_slider-label_input=" + quantidade + "&p_lacres-endereco=" + endereco,
         success : function(text){
             if (text == "success"){
                 p_lacresSuccess();
@@ -50,7 +50,7 @@ function submitP_lacres(){
 
 function p_lacresSuccess(){
     $( "#etka_p-lacres-enviado" ).removeClass( "etka_p-lacres-enviado" );
-    $( '#p_lacres-nome, #p_lacres-email, #p_lacres-telefone, #p_lacres-quantidade, #p_lacres-endereco' ).val('');
+    $( '#p_lacres-nome, #p_lacres-email, #p_lacres-telefone, #etka_preco-delivery_slider-label_input, #p_lacres-endereco' ).val('');
 }
 
 function p_lacresError(){

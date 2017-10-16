@@ -12,7 +12,7 @@ if (empty($_POST["p_lacres-email"])) {
 }
 
 $empresa = $_POST["p_lacres-empresa"];
-$quantidade = $_POST["p_lacres-quantidade"];
+$quantidade = $_POST["etka_preco-delivery_slider-label_input"];
 $endereco = $_POST["p_lacres-endereco"];
 
  

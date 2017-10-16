@@ -3,7 +3,7 @@ $("#etka_o-rotulos").submit(function(event){
     var o_rotulos_email = document.getElementById("o_rotulos-email");
     //var mensagem = document.forms["etka_o-rotulos"]["o_rotulos-mensagem"].value;
     //var o_rotulos_msg = document.getElementById("o_rotulos-mensagem");
-    //var att = document.createAttribute("required");
+    var att = document.createAttribute("required");
     if (email == "") {
         o_rotulos_email.setAttributeNode(att);
         return false;

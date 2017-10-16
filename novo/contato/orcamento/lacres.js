@@ -1,9 +1,9 @@
 $("#etka_o-lacres").submit(function(event){
-    var email = document.forms["etka_o_lacres"]["o_lacres-email"].value;
+    var email = document.forms["etka_o-lacres"]["o_lacres-email"].value;
     var o_lacres_email = document.getElementById("o_lacres-email");
     //var mensagem = document.forms["etka_o_lacres"]["o_lacres-mensagem"].value;
     //var o_lacres_msg = document.getElementById("o_lacres-mensagem");
-    //var att = document.createAttribute("required");
+    var att = document.createAttribute("required");
     if (email == "") {
         o_lacres_email.setAttributeNode(att);
         return false;

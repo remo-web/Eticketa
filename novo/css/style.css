@@ -6,7 +6,8 @@ h1{font-size: 3.2rem; line-height: 3.5rem}
 h2{font-size: 2.5rem; line-height: 2.8rem}
 h3{font-size: 2.3rem; line-height: 2.6rem}
 p {font-size: 1.25rem; line-height: 1.8rem; letter-spacing: 0.03rem; font-weight: 300}
-b {font-weight: 700}
+b {font-weight: 400}
+em {color: #7a2879; font-weight: 400; font-style: normal}
 a {text-decoration: none; color: #7a2879}
 
 ::-webkit-scrollbar {width: 0px;} 
@@ -151,6 +152,10 @@ hr.etka_spacer__clear {
 .etka-layout-transparent {height: auto}
 #top, #drawer{display: none;}
 
+    /* MOBILE 1.1 */
+    .etka_mob{text-align: center}
+    .etka_mob small{opacity: .5}
+
 .etka_title{
     color: white;
     text-decoration: none
@@ -169,6 +174,7 @@ hr.etka_spacer__clear {
 dialog .etka_btn-enviar{width: 100%}
 
 .etka_contato-enviado, .etka_contato-erro,
+.etka_contato-mobile-enviado, .etka_contato-mobile-erro,
 .etka_subscribe-enviado, .etka_subscribe-erro,
 .etka_o-rotulos-enviado, .etka_o-rotulos-erro,
 .etka_o-lacres-enviado, .etka_o-lacres-erro,
@@ -463,6 +469,7 @@ dialog .etka_btn-enviar{width: 100%}
     }
 
     #etka_contato-enviado,
+    #etka_contato-mobile-enviado,
     #etka_subscribe-enviado,
     #etka_o-rotulos-enviado,
     #etka_o-lacres-enviado,

@@ -71,7 +71,91 @@
         <!-- End Google Tag Manager (noscript) -->
         
 		<div class="font etka-layout-transparent mdl-layout mdl-js-layout">
-            <header class="mdl-layout__header" id="top">
+            
+            <!-- MOBILE 1.1 -->
+            <main class="mdl-layout__content mdl-layout--small-screen-only">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--1-offset-phone mdl-cell--2-col-phone">
+                        <h2><img src="img/home/eticketa-logo_cor.svg"></h2>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-phone etka_mob">
+                        <p class="etka_mob">A versão completa do nosso site estará disponível em breve também para dispositivos móveis.</p><p>Enquanto isso, fique a vontade para entrar em contato pelo <em>telefone</em>, <em>WhatsApp</em> ou <em>Telegram</em> atráves dos números:</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col-phone etka_mob" style="text-align: right">
+                        <a href="tel:+552134909292" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ><small>+55&nbsp;&nbsp;21</small> 3490 9292</a>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col-phone etka_mob" style="text-align: left">
+                        <a href="tel:+5521998688448" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ><small>+55&nbsp;&nbsp;21</small> 9 9868 8448</a>
+                    </div>
+                    <div class="mdl-layout-spacer">&nbsp;</div>
+                    <div class="mdl-cell mdl-cell--4-phone">
+                        <p class="etka_mob">Ou, preencha e envie o fomulário a seguir, para que um de nossos consultores entre em contato muito em breve.</p>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col-phone">
+                        <form class="mdl-grid" id="etka_contato-mobile" name="etka_contato" action="./contato/mobile/contato.php" method="post">
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="m_contato-nome" name="m_contato-nome">
+                                    <label class="mdl-textfield__label" for="m_contato-nome">Nome</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="m_contato-email" name="m_contato-email">
+                                    <label class="mdl-textfield__label" for="m_contato-email">E-mail</label>
+                                    <span class="mdl-textfield__error">Insira um endereço de e-mail válido.</span>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="m_contato-empresa" name="m_contato-empresa">
+                                    <label class="mdl-textfield__label" for="m_contato-empresa">Cargo / Empresa</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="[(]?\d{2}[- )]?[\d{1}]?[- ]?\d{4}[- ]?\d{4}" id="m_contato-tel" name="m_contato-tel">
+                                    <label class="mdl-textfield__label" for="m_contato-tel">Telefone</label>
+                                    <span class="mdl-textfield__error">Insira um número de telefone válido.</span>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="m_contato-assunto" name="m_contato-assunto" >
+                                    <label class="mdl-textfield__label" for="m_contato-assunto">Assunto</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <textarea class="mdl-textfield__input" type="text" rows= "3" id="m_contato-mensagem" name="m_contato-mensagem"></textarea>
+                                    <label class="mdl-textfield__label" for="m_contato-mensagem">Mensagem</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="etka_contato-mobile-enviado" id="etka_contato-mobile-enviado">
+                                    <span class="mdl-chip mdl-chip--contact">
+                                        <span class="mdl-chip__contact mdl-color--green mdl-color-text--white">
+                                            <i class="material-icons" style="vertical-align: middle">done</i>
+                                        </span>
+                                        <span class="mdl-chip__text">Mensagem enviada!</span>
+                                    </span>
+                                </div>
+                                <div class="etka_contato-mobile-erro" id="etka_contato-mobile-erro">
+                                    <span class="mdl-chip mdl-chip--contact">
+                                        <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">
+                                            <i class="material-icons" style="vertical-align: middle">clear</i>
+                                        </span>
+                                        <span class="mdl-chip__text">Ops! Algo deu errado... =(</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--8-col" style="text-align: right">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="m_contato-enviar" name="m_contato-enviar" type="submit" value="etka_contato-mobile">ENVIAR</button>
+                            </div>
+                            <div class="mdl-layout-spacer">&nbsp;</div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+            <!-- END - MOBILE 1.1 -->
+            
+            <header class="mdl-layout__header mdl-layout--large-screen-only" id="top">
 				<div class="mdl-layout__header-row">
 					<!-- Title -->
 					<a class="mdl-layout-title font w200 etka_title" id="etka_title" data-menuanchor="home" href="#home"><big><b>ETICKETA</b></big> <small>Rótulos e Soluções</small></a>
@@ -86,7 +170,7 @@
 					</nav> -->
 				</div>
 			</header>
-			<div class="mdl-layout__drawer">
+			<div class="mdl-layout__drawer mdl-layout--large-screen-only">
 				<!--<span class="mdl-layout-title">Title</span>-->
 				<nav class="mdl-navigation" id="menu">
 					<a class="mdl-navigation__link" data-menuanchor="home" href="#home">Página inicial</a>
@@ -101,14 +185,14 @@
 				</nav>
             </div>
 			
-			<main class="mdl-layout__content" id="fullpage">
+			<main class="mdl-layout__content mdl-layout--large-screen-only" id="fullpage">
                 <!--HOME-->
 				<section data-anchor="home" class="section etka_home" id="etka_home">
                     <button type="button" id="mute-video" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored etka_som">
                         <i class="material-icons etka_som-btn">volume_up</i>
                         <i class="material-icons etka_som-btn etka_unmute">volume_off</i>
                     </button>
-                    <video id="etka_home-video" loop data-autoplay>
+                    <video id="etka_home-video" loop>
                         <source data-src="./mov/etka_site17-video_amarelo2.webm" type="video/webm" />
                         <source data-src="./mov/etka_site17-video_amarelo2.mp4" type="video/mp4" />
                     </video>
@@ -2043,6 +2127,7 @@
 		<script src="./js/scripts.js"></script>
             <!-- Forms -->
             <script src="./contato/contato.js"></script>
+            <script src="./contato/mobile/contato.js"></script>
             <script src="./contato/subscribe/subscribe.js"></script>
             <script src="./contato/orcamento/rotulos.js"></script>
             <script src="./contato/orcamento/lacres.js"></script>

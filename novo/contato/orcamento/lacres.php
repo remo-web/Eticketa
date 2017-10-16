@@ -20,13 +20,8 @@ $quantidade = $_POST["o_lacres-quantidade"];
 $frente = $_POST["o_lacres-frente"];
 $verso = $_POST["o_lacres-verso"];
 $finalidade = $_POST["o_lacres-finalidade"];
+$mensagem = $_POST["o_lacres-mensagem"];
 
-//mensagem
-if (empty($_POST["o_lacres-mensagem"])) {
-    $error .= "Mensagem is required ";
-} else {
-    $mensagem = $_POST["o_lacres-mensagem"];
-}
  
 $To = "raphael.pais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Lacres para $finalidade";

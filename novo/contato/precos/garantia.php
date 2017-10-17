@@ -17,7 +17,7 @@ $endereco = $_POST["p_garantia-endereco"];
 
  
 $To = "raphael.pais@eticketa.com.br";
-$uglySubject = "[Site | Preços] garantia para Garantia";
+$uglySubject = "[Site | Preços] Lacres para Garantia";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 
 $Body .= "

@@ -89,8 +89,8 @@ $(document).ready(function() {
 //Orçamento
 
 $(document).ready(function() {
-    $(".etka_ocamento-card__close").click(function() {
-        $(".etka_orcamento-card").addClass("etka_o-rotulos-enviado");
+    $(".etka_orcamento-card__close").click(function() {
+        $(".etka_orcamento-card").addClass("etka_orcamento-enviado");
     });
 });
 
@@ -228,6 +228,13 @@ $(document).ready(function() {
 });
 
 //Preço
+
+$(document).ready(function() {
+    $(".etka_precos-card__close").click(function() {
+        $(".etka_precos-card").addClass("etka_precos-enviado");
+    });
+});
+
 //delivery
 $(document).ready(function() {
     'use strict';

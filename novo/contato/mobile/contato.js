@@ -1,4 +1,4 @@
-$("#etka_contato").submit(function(event){
+$("#etka_contato-mobile").submit(function(event){
     var email = document.forms["etka_contato-mobile"]["m_contato-email"].value;
     var contato_email = document.getElementById("m_contato-email");
     var mensagem = document.forms["etka_contato-mobile"]["m_contato-mensagem"].value;

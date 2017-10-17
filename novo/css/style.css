@@ -180,7 +180,10 @@ dialog .etka_btn-enviar{width: 100%}
 .etka_o-lacres-enviado, .etka_o-lacres-erro,
 .etka_o-ingressos-enviado, .etka_o-ingressos-erro,
 .etka_o-validade-enviado, .etka_o-validade-erro,
-.etka_p-lacres-enviado, .etka_p-lacres-erro{
+.etka_p-lacres-enviado, .etka_p-lacres-erro,
+.etka_p-garantia-enviado, .etka_p-garantia-erro,
+.etka_p-ingresso-enviado, .etka_p-ingresso-erro,
+.etka_p-validade-enviado, .etka_p-validade-erro{
     display: none
 }
 
@@ -476,7 +479,10 @@ dialog .etka_btn-enviar{width: 100%}
     #etka_o-lacres-enviado,
     #etka_o-ingressos-enviado,
     #etka_o-validade-enviado,
-    #etka_p-lacres-enviado{
+    #etka_p-lacres-enviado,
+    #etka_p-garantia-enviado,
+    #etka_p-ingresso-enviado,
+    #etka_p-validade-enviado{
         animation-name: fadeIn;}
         @keyframes fadeIn { 
             0% {

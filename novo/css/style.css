@@ -149,6 +149,15 @@ hr.etka_spacer__clear {
     margin: 0% 25%
 }
 
+    /* PRELOADER */
+    #etka_preloader {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: #fff;
+        z-index: 99;
+    }
+    #etka_preloader-status {position: absolute; left: 50%; top: 50%;}
+
 .etka-layout-transparent {height: auto}
 #top, #drawer{display: none;}
 

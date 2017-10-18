@@ -149,6 +149,9 @@ hr.etka_spacer__clear {
     margin: 0% 25%
 }
 
+.etka-layout-transparent {height: auto}
+#top, #drawer{display: none;}
+
     /* PRELOADER */
     #etka_preloader {
         position: fixed;
@@ -157,9 +160,6 @@ hr.etka_spacer__clear {
         z-index: 99;
     }
     #etka_preloader-status {position: absolute; left: 50%; top: 50%;}
-
-.etka-layout-transparent {height: auto}
-#top, #drawer{display: none;}
 
     /* MOBILE 1.1 */
     .etka_mob{text-align: center}

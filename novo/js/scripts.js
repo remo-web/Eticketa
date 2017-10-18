@@ -38,7 +38,7 @@ $(document).ready(function() {
 
 //PRELOADER
 $(window).on('load', function() { // makes sure the whole site is loaded 
-    $('#etka_preloader-status').delay(350).fadeOut(); // will first fade out the loading animation 
+    $('#etka_preloader-status').fadeOut(); // will first fade out the loading animation 
     $('#etka_preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
 });
 

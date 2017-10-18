@@ -308,6 +308,17 @@ dialog .etka_btn-enviar{width: 100%}
 
         /* prod | orçamento */
 
+        label > input[type="radio"], .mdl-radio__outer-circle, .mdl-radio__inner-circle{
+            visibility: hidden;
+            position: absolute
+        }
+        .mdl-radio.is-upgraded{padding-left: 0px}
+        .mdl-radio__ripple-container{
+            top: -5px; left: -5px
+        }
+        label > input[type="radio"] + i{cursor: pointer}
+        label > input[type="radio"]:checked + i{color: #57bf96}
+
         .etka_orcamento-card,
         .etka_precos-card{
             position: absolute;

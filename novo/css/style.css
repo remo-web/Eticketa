@@ -27,6 +27,9 @@ input[type='file'] {display: none}
 
 .mdl-grid{padding: 0px}
 
+.mdl-spinner:not(.is-upgraded).is-active:after {
+    content: ""; }
+
 .mdl-layout__drawer-button, .mdl-layout__drawer{
     left: initial;
     right: 0;

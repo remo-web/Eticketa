@@ -820,14 +820,14 @@
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="[0-9]" id="o_rotulos-largura">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9]{1,2}" id="o_rotulos-largura">
                             <label class="mdl-textfield__label" for="o_rotulos-largura">largura</label>
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="[0-9]" id="o_rotulos-altura">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9]{1,2}" id="o_rotulos-altura">
                             <label class="mdl-textfield__label" for="o_rotulos-altura">altura</label>
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
@@ -859,7 +859,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="o_rotulos-quantidade">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9].{3,}" id="o_rotulos-quantidade">
                             <label class="mdl-textfield__label" for="o_rotulos-quantidade">>1.000 un.</label>
                         </div>
                     </div>
@@ -868,16 +868,16 @@
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,4}" id="o_rotulos-frente">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-7]{0,1}" id="o_rotulos-frente">
                             <label class="mdl-textfield__label" for="o_rotulos-frente">frente</label>
-                            <span class="mdl-textfield__error">Somente números</span>
+                            <span class="mdl-textfield__error">Números de 0 a 7</span>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,4}" id="o_rotulos-verso">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-7]{0,1}" id="o_rotulos-verso">
                             <label class="mdl-textfield__label" for="o_rotulos-verso">verso</label>
-                            <span class="mdl-textfield__error">Somente números</span>
+                            <span class="mdl-textfield__error">Números de 0 a 7</span>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col cores-help">
@@ -1001,7 +1001,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="number" id="o_lacres-largura">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9]{1,2}" id="o_lacres-largura">
                             <label class="mdl-textfield__label" for="o_lacres-largura">largura</label>
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
@@ -1009,7 +1009,7 @@
 <!--                    <p style="margin-top: 8px">x</p>-->
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="number" id="o_lacres-altura">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9]{1,2}" id="o_lacres-altura">
                             <label class="mdl-textfield__label" for="o_lacres-altura">altura</label>
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
@@ -1041,7 +1041,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="o_lacres-quantidade">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9].{3,}" id="o_lacres-quantidade">
                             <label class="mdl-textfield__label" for="o_lacres-quantidade">>1.000 un.</label>
                         </div>
                     </div>
@@ -1050,17 +1050,17 @@
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="o_lacres-frente">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-7]{0,1}" id="o_lacres-frente">
                             <label class="mdl-textfield__label" for="o_lacres-frente">frente</label>
-                            <span class="mdl-textfield__error">Somente números</span>
+                            <span class="mdl-textfield__error">Números de 0 a 7</span>
                         </div>
                     </div>
 <!--                    <p style="margin-top: 8px">x</p>-->
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="o_lacres-verso">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-7]{0,1}" id="o_lacres-verso">
                             <label class="mdl-textfield__label" for="o_lacres-verso">verso</label>
-                            <span class="mdl-textfield__error">Somente números</span>
+                            <span class="mdl-textfield__error">Números de 0 a 7</span>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col cores-help">
@@ -1184,14 +1184,14 @@
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="[0-9]" id="o_ingressos-largura">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9]{1,2}" id="o_ingressos-largura">
                             <label class="mdl-textfield__label" for="o_ingressos-largura">largura</label>
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="[0-9]" id="o_ingressos-altura">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9]{1,2}" id="o_ingressos-altura">
                             <label class="mdl-textfield__label" for="o_ingressos-altura">altura</label>
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
@@ -1223,7 +1223,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="o_ingressos-quantidade">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9].{3,}" id="o_ingressos-quantidade">
                             <label class="mdl-textfield__label" for="o_ingressos-quantidade">>1.000 un.</label>
                         </div>
                     </div>
@@ -1232,16 +1232,16 @@
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,4}" id="o_ingressos-frente">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-7]{0,1}" id="o_ingressos-frente">
                             <label class="mdl-textfield__label" for="o_ingressos-frente">frente</label>
-                            <span class="mdl-textfield__error">Somente números</span>
+                            <span class="mdl-textfield__error">Números de 0 a 7</span>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,4}" id="o_ingressos-verso">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-7]{0,1}" id="o_ingressos-verso">
                             <label class="mdl-textfield__label" for="o_ingressos-verso">verso</label>
-                            <span class="mdl-textfield__error">Somente números</span>
+                            <span class="mdl-textfield__error">Números de 0 a 7</span>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col cores-help">
@@ -1365,7 +1365,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="number" id="o_validade-largura">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9]{1,2}" id="o_validade-largura">
                             <label class="mdl-textfield__label" for="o_validade-largura">largura</label>
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
@@ -1373,7 +1373,7 @@
 <!--                    <p style="margin-top: 8px">x</p>-->
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="number" id="o_validade-altura">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9]{1,2}" id="o_validade-altura">
                             <label class="mdl-textfield__label" for="o_validade-altura">altura</label>
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
@@ -1405,7 +1405,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="o_validade-quantidade">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9].{3,}" id="o_validade-quantidade">
                             <label class="mdl-textfield__label" for="o_validade-quantidade">>1.000 un.</label>
                         </div>
                     </div>
@@ -1414,17 +1414,17 @@
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="o_validade-frente">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-7]{0,1}" id="o_validade-frente">
                             <label class="mdl-textfield__label" for="o_validade-frente">frente</label>
-                            <span class="mdl-textfield__error">Somente números</span>
+                            <span class="mdl-textfield__error">Números de 0 a 7</span>
                         </div>
                     </div>
 <!--                    <p style="margin-top: 8px">x</p>-->
                     <div class="mdl-cell mdl-cell--1-col">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="o_validade-verso">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-7]{0,1}" id="o_validade-verso">
                             <label class="mdl-textfield__label" for="o_validade-verso">verso</label>
-                            <span class="mdl-textfield__error">Somente números</span>
+                            <span class="mdl-textfield__error">Números de 0 a 7</span>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col cores-help">

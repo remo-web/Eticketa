@@ -49,11 +49,11 @@ function submitP_garantia(){
 }
 
 function p_garantiaSuccess(){
-    $( "#etka_p-garantia-enviado" ).removeClass( "etka_p-garantia-enviado" );
+    $( "#etka_p-garantia-enviado" ).removeClass( "etka_precos-enviado" );
     $( '#p_garantia-nome, #p_garantia-email, #p_garantia-telefone, #etka_preco-garantia_slider-label_input, #p_garantia-endereco' ).val('');
 }
 
 function p_garantiaError(){
-    $( "#etka_p-garantia-erro" ).removeClass( "etka_p-garantia-erro" );
+    $( "#etka_p-garantia-erro" ).removeClass( "etka_precos-erro" );
 }
 

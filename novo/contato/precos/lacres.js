@@ -49,11 +49,11 @@ function submitP_lacres(){
 }
 
 function p_lacresSuccess(){
-    $( "#etka_p-lacres-enviado" ).removeClass( "etka_p-lacres-enviado" );
+    $( "#etka_p-lacres-enviado" ).removeClass( "etka_precos-enviado" );
     $( '#p_lacres-nome, #p_lacres-email, #p_lacres-telefone, #etka_preco-delivery_slider-label_input, #p_lacres-endereco' ).val('');
 }
 
 function p_lacresError(){
-    $( "#etka_p-lacres-erro" ).removeClass( "etka_p-lacres-erro" );
+    $( "#etka_p-lacres-erro" ).removeClass( "etka_precos-erro" );
 }
 

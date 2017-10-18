@@ -56,11 +56,11 @@ function submitO_lacres(){
 }
 
 function o_lacresSuccess(){
-    $( "#etka_o-lacres-enviado" ).removeClass( "etka_o-lacres-enviado" );
+    $( "#etka_o-lacres-enviado" ).removeClass( "etka_orcamento-enviado" );
     $( '#o_lacres-nome, #o_lacres-email, #o_lacres-empresa, #o_lacres-telefone, #o_lacres-largura, #o_lacres-altura, #o_lacres-formato, #o_lacres-quantidade, #o_lacres-frente, #o_lacres-verso, #o_lacres-finalidade, #o_lacres-mensagem' ).val('');
 }
 
 function o_lacresError(){
-    $( "#etka_o-lacres-erro" ).removeClass( "etka_o-lacres-erro" );
+    $( "#etka_o-lacres-erro" ).removeClass( "etka_orcamento-erro" );
 }
 

@@ -56,11 +56,11 @@ function submitO_validade(){
 }
 
 function o_validadeSuccess(){
-    $( "#etka_o-validade-enviado" ).removeClass( "etka_o-validade-enviado" );
+    $( "#etka_o-validade-enviado" ).removeClass( "etka_orcamento-enviado" );
     $( '#o_validade-nome, #o_validade-email, #o_validade-empresa, #o_validade-telefone, #o_validade-largura, #o_validade-altura, #o_validade-formato, #o_validade-quantidade, #o_validade-frente, #o_validade-verso, #o_validade-finalidade, #o_validade-mensagem' ).val('');
 }
 
 function o_validadeError(){
-    $( "#etka_o-validade-erro" ).removeClass( "etka_o-validade-erro" );
+    $( "#etka_o-validade-erro" ).removeClass( "etka_orcamento-erro" );
 }
 

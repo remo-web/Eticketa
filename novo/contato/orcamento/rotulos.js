@@ -56,11 +56,11 @@ function submitO_rotulos(){
 }
 
 function o_rotulosSuccess(){
-    $( "#etka_o-rotulos-enviado" ).removeClass( "etka_o-rotulos-enviado" );
+    $( "#etka_o-rotulos-enviado" ).removeClass( "etka_orcamento-enviado" );
     $( '#o_rotulos-nome, #o_rotulos-email, #o_rotulos-empresa, #o_rotulos-telefone, #o_rotulos-largura, #o_rotulos-altura, #o_rotulos-formato, #o_rotulos-quantidade, #o_rotulos-frente, #o_rotulos-verso, #o_rotulos-finalidade, #o_rotulos-mensagem' ).val('');
 }
 
 function o_rotulosError(){
-    $( "#etka_o-rotulos-erro" ).removeClass( "etka_o-rotulos-erro" );
+    $( "#etka_o-rotulos-erro" ).removeClass( "etka_orcamento-erro" );
 }
 

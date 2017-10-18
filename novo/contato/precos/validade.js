@@ -49,11 +49,11 @@ function submitP_validade(){
 }
 
 function p_validadeSuccess(){
-    $( "#etka_p-validade-enviado" ).removeClass( "etka_p-validade-enviado" );
+    $( "#etka_p-validade-enviado" ).removeClass( "etka_precos-enviado" );
     $( '#p_validade-nome, #p_validade-email, #p_validade-telefone, #etka_preco-validade_slider-label_input, #p_validade-endereco' ).val('');
 }
 
 function p_validadeError(){
-    $( "#etka_p-validade-erro" ).removeClass( "etka_p-validade-erro" );
+    $( "#etka_p-validade-erro" ).removeClass( "etka_precos-erro" );
 }
 

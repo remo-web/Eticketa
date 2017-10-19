@@ -16,7 +16,7 @@ $quantidade = $_POST["etka_preco-delivery_slider-label_input"];
 $endereco = $_POST["p_lacres-endereco"];
 
  
-$To = "raphael.pais@eticketa.com.br";
+$To = "colemais@eticketa.com.br";
 $uglySubject = "[Site | Preços] Lacres para Delivery";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 

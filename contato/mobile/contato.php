@@ -22,7 +22,7 @@ if (empty($_POST["m_contato-mensagem"])) {
     $mensagem = $_POST["m_contato-mensagem"];
 }
  
-$To = "raphael.pais@eticketa.com.br";
+$To = "colemais@eticketa.com.br";
 $uglySubject = "[Site | Contato] $assunto";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 

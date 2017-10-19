@@ -23,7 +23,7 @@ $finalidade = $_POST["o_lacres-finalidade"];
 $mensagem = $_POST["o_lacres-mensagem"];
 
  
-$To = "raphael.pais@eticketa.com.br";
+$To = "colemais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Lacres para $finalidade";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 

@@ -16,7 +16,7 @@ $quantidade = $_POST["etka_preco-garantia_slider-label_input"];
 $endereco = $_POST["p_garantia-endereco"];
 
  
-$To = "raphael.pais@eticketa.com.br";
+$To = "colemais@eticketa.com.br";
 $uglySubject = "[Site | Preços] Lacres para Garantia";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 

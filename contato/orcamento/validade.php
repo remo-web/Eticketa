@@ -23,7 +23,7 @@ $finalidade = $_POST["o_validade-finalidade"];
 $mensagem = $_POST["o_validade-mensagem"];
 
  
-$To = "raphael.pais@eticketa.com.br";
+$To = "colemais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Etiqueta de validade para $finalidade";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 

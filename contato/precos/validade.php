@@ -16,7 +16,7 @@ $quantidade = $_POST["etka_preco-validade_slider-label_input"];
 $endereco = $_POST["p_validade-endereco"];
 
  
-$To = "raphael.pais@eticketa.com.br";
+$To = "colemais@eticketa.com.br";
 $uglySubject = "[Site | Preços] Etiquetas de Validade";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 

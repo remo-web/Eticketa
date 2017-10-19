@@ -23,7 +23,7 @@ $finalidade = $_POST["o_rotulos-finalidade"];
 $mensagem = $_POST["o_rotulos-mensagem"];
 
  
-$To = "raphael.pais@eticketa.com.br";
+$To = "colemais@eticketa.com.br";
 $uglySubject = "[Site | Orçamento] Rótulos para $finalidade";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 

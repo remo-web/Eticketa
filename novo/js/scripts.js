@@ -1,5 +1,12 @@
 //FULLPAGE
-
+$(document).ready(function() {
+        if($(window).width() < 960) {
+            //mobile
+        }
+            else{
+                
+                
+                //QUANDO O MOBILE ESTIVE DIREITO É PARA TIRAR O QUE ESTÁ AQUI PRA CIMA E DEIXAR SÓ ATÉ...
 $(document).ready(function() {
 	$('#fullpage').fullpage({
         menu: '#menu',
@@ -20,8 +27,20 @@ $(document).ready(function() {
 //        parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 	});
 });
+                
+                //AQUI!
+                
+                
+            }
+        });
 
 //--------------------------------------//
+
+//PRELOADER
+$(window).on('load', function() { // makes sure the whole site is loaded 
+    //$('#etka_preloader-status').delay(350).fadeOut();  will first fade out the loading animation 
+    $('#etka_preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+});
 
 //THUMBS QUADRADAS - PORTFOLIO
 
@@ -33,6 +52,24 @@ $(document).ready(function() {
 //--------------------------------------//
 
 //CONTROLE DE SOM DA HOME
+
+//não toca no mobile
+$(document).ready(function() {
+    var vid = document.getElementById("etka_home-video");
+    var pause = document.createAttribute("paused");
+    var play = document.createAttribute("data-autoplay");
+    $("#etka_home-video").ready(function(){
+        if($(window).width() < 960) {
+            vid.setAttributeNode(pause);
+            return false;
+        } else {
+            vid.setAttributeNode(play);
+            return false;
+        }
+    })
+});
+
+//botão
 $(document).ready(function() {
     $("#mute-video").click( function (){
         if( $("video").prop('muted') ) {
@@ -56,6 +93,13 @@ $(document).ready(function() {
 //DIALOGS	 
 
 //Orçamento
+
+$(document).ready(function() {
+    $(".etka_orcamento-card__close").click(function() {
+        $(".etka_orcamento-card").addClass("etka_orcamento-enviado");
+    });
+});
+
 //rótulos
 $(document).ready(function() {
     'use strict';
@@ -190,6 +234,13 @@ $(document).ready(function() {
 });
 
 //Preço
+
+$(document).ready(function() {
+    $(".etka_precos-card__close").click(function() {
+        $(".etka_precos-card").addClass("etka_precos-enviado");
+    });
+});
+
 //delivery
 $(document).ready(function() {
     'use strict';

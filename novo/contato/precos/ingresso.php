@@ -2,44 +2,31 @@
 
 $error = "";
 
-$nome = $_POST["o_rotulos-nome"];
+$nome = $_POST["p_ingresso-nome"];
 
 //email
-if (empty($_POST["o_rotulos-email"])) {
+if (empty($_POST["p_ingresso-email"])) {
     $error .= "Email is required ";
 } else {
-    $email = $_POST["o_rotulos-email"];
+    $email = $_POST["p_ingresso-email"];
 }
 
-$empresa = $_POST["o_rotulos-empresa"];
-$telefone = $_POST["o_rotulos-telefone"];
-$largura = $_POST["o_rotulos-largura"];
-$altura = $_POST["o_rotulos-altura"];
-$formato = $_POST["o_rotulos-formato"];
-$quantidade = $_POST["o_rotulos-quantidade"];
-$frente = $_POST["o_rotulos-frente"];
-$verso = $_POST["o_rotulos-verso"];
-$finalidade = $_POST["o_rotulos-finalidade"];
-$mensagem = $_POST["o_rotulos-mensagem"];
+$empresa = $_POST["p_ingresso-empresa"];
+$quantidade = $_POST["etka_preco-ingresso_slider-label_input"];
+$endereco = $_POST["p_ingresso-endereco"];
 
  
 $To = "raphael.pais@eticketa.com.br";
-$uglySubject = "[Site | Orçamento] Rótulos para $finalidade";
+$uglySubject = "[Site | Preços] Tickets & Ingressos";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 
 $Body .= "
 <html>
 <body style='width: 690px; font-family: sans-serif'>
 <b style='text-transform: uppercase'>$nome</b><br>
-<b>Cargo/Empresa: </b>$empresa<br>
 <b>E-mail: </b>$email<br>
-<b>Telefone: </b>$telefone<br>
-<b>Dimensões: </b>$largura (L) <b>x</b> $altura (A)<br>
-<b>Formato: </b>$formato<br>
 <b>Quantidade: </b>$quantidade<br>
-<b>Cores: </b>$frente <b>x</b> $verso<br>
-<b>Finalidade: </b>$finalidade<br>
-<b>Observações: </b>$mensagem
+<b>Endereço: </b>$endereco
 </body></html>";
 
 $headers = "MIME-Version: 1.0" . "\r\n";

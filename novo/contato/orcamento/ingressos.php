@@ -2,29 +2,29 @@
 
 $error = "";
 
-$nome = $_POST["o_rotulos-nome"];
+$nome = $_POST["o_ingressos-nome"];
 
 //email
-if (empty($_POST["o_rotulos-email"])) {
+if (empty($_POST["o_ingressos-email"])) {
     $error .= "Email is required ";
 } else {
-    $email = $_POST["o_rotulos-email"];
+    $email = $_POST["o_ingressos-email"];
 }
 
-$empresa = $_POST["o_rotulos-empresa"];
-$telefone = $_POST["o_rotulos-telefone"];
-$largura = $_POST["o_rotulos-largura"];
-$altura = $_POST["o_rotulos-altura"];
-$formato = $_POST["o_rotulos-formato"];
-$quantidade = $_POST["o_rotulos-quantidade"];
-$frente = $_POST["o_rotulos-frente"];
-$verso = $_POST["o_rotulos-verso"];
-$finalidade = $_POST["o_rotulos-finalidade"];
-$mensagem = $_POST["o_rotulos-mensagem"];
+$empresa = $_POST["o_ingressos-empresa"];
+$telefone = $_POST["o_ingressos-telefone"];
+$largura = $_POST["o_ingressos-largura"];
+$altura = $_POST["o_ingressos-altura"];
+$formato = $_POST["o_ingressos-formato"];
+$quantidade = $_POST["o_ingressos-quantidade"];
+$frente = $_POST["o_ingressos-frente"];
+$verso = $_POST["o_ingressos-verso"];
+$finalidade = $_POST["o_ingressos-finalidade"];
+$mensagem = $_POST["o_ingressos-mensagem"];
 
  
 $To = "raphael.pais@eticketa.com.br";
-$uglySubject = "[Site | Orçamento] Rótulos para $finalidade";
+$uglySubject = "[Site | Orçamento] Ingressos para $finalidade";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 
 $Body .= "

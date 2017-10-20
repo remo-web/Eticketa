@@ -17,8 +17,8 @@
             <link rel="stylesheet" href="https://eticketa.com.br/plugins/Polyfill/dialog-polyfill.css">
 		
 		<!-- CUSTOM CSS -->
+		<link rel="stylesheet" type="text/css" href="./styles.css">
 		<link rel="stylesheet" type="text/css" href="https://eticketa.com.br/css/style.css">
-		<link rel="stylesheet" type="text/css" href="https://eticketa.com.br/campanhas/styles.css">
         
 		<!-- CUSTOM Google Font -->
 		<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700&amp;subset=latin-ext" rel="stylesheet">
@@ -26,15 +26,114 @@
 	</head>
 	<body>
 		<div class="font etka-layout-transparent mdl-layout mdl-js-layout etka_mkt">
-
             <main class="mdl-layout__content">
                 <div class="mdl-grid">
-                    <div class="mdl-cell mdl-cell--4-offset mdl-cell--4-col etka_mkt-form">
-                        asdada
+                    <div class="mdl-cell mdl-cell--4-offset mdl-cell--4-col mdl-cell--middle">
+                        <div class="etka_mkt-top">&nbsp;</div>
+                        <div class="etka_mkt-form">
+                            <h4>Obrigado pelo seu interesse em nossas <b>ETIQUETAS DE VALIDADES</b>!</h4>
+                            <p>Para darmos sequência ao seu pedido de <b>amostra grátis</b> precisamos de mais algumas informações.</p>
+                            <p>Por favor, preencha corretamente <b>todos os campos</b> do formulário a seguir e clique em <b>ENVIAR</b>.</p>
+                            <form class="mdl-grid" id="etka_validade-amostra" name="etka_validade-amostra" action="./validade-amostra.php" method="post">
+                                <div class="mdl-cell mdl-cell--6-col">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="validade_a-nome" name="validade_a-nome">
+                                        <label class="mdl-textfield__label" for="validade_a-nome">Nome completo</label>
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="[(]?\d{2}[- )]?[\d{1}]?[- ]?\d{4}[- ]?\d{4}" id="validade_a-tel" name="validade_a-tel">
+                                        <label class="mdl-textfield__label" for="validade_a-tel">Telefone</label>
+                                        <span class="mdl-textfield__error">Insira um número de telefone válido.</span>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$+\.[a-z]{2,3}$" id="validade_a-email" name="validade_a-email">
+                                        <label class="mdl-textfield__label" for="validade_a-email">E-mail</label>
+                                        <span class="mdl-textfield__error">Insira um endereço de e-mail válido.</span>
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="validade_a-empresa" name="validade_a-empresa">
+                                        <label class="mdl-textfield__label" for="validade_a-empresa">Cargo / Empresa</label>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--12-col">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="validade_a-endereco" name="validade_a-endereco" >
+                                        <label class="mdl-textfield__label" for="validade_a-endereco">Endereço para entrega</label>
+                                    </div>
+                                </div>
+<!--
+                                <div class="mdl-cell mdl-cell--12-col">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="[0-9].{3,}" id="o_rotulos- quantidade">
+                                        <label class="mdl-textfield__label" for="o_rotulos-quantidade">Quantidade</label>
+                                        <span class="mdl-textfield__error">Mínimo de 1.000 unidades</span>
+                                    </div>
+                                </div>
+-->
+                                <div class="mdl-cell mdl-cell--12-col">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="validade_a-mensagem" name="validade_a-mensagem"></textarea>
+                                        <label class="mdl-textfield__label" for="validade_a-mensagem">Dúvidas ou observações?</label>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--12-col">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="validade_a-enviar" name="validade_a-enviar" type="submit" value="etka_validade-amostra" style="width: 100%">ENVIAR</button>
+                                </div>
+                                <div class="mdl-layout-spacer">&nbsp;</div>
+                            </form>
+                            
+                            <!-- Over-dialog Enviado/Erro -->
+                            <div class="mdl-grid etka_popup-card etka_popup-enviado" id="etka_validade_a-enviado">
+                                <div class="mdl-cell mdl-cell--4-offset mdl-cell--4-col mdl-cell--middle">
+                                    <div class="mdl-card mdl-shadow--2dp">
+                                        <div class="mdl-card__title">
+                                            Pedido enviado com sucesso!
+                                        </div>
+                                        <div class="mdl-card__media etka_precos-card__media">
+                                            <i class="material-icons etka_precos-card__media-ok">assignment_turned_in</i>
+                                        </div>
+                                        <div class="mdl-card__supporting-text">
+                                            Você receberá uma mensagem de confirmação dentro de algumas horas, nela estarão os próximos passos do seu atendimento.
+                                        </div>
+                                        <div class="mdl-card__actions mdl-card--border">
+                                            <button type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect etka_card__close">
+                                                ok
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>               
+                            </div>
+                            <div class="mdl-grid etka_popup-card etka_popup-erro" id="etka_validade_a-erro">
+                                <div class="mdl-cell mdl-cell--4-offset mdl-cell--4-col mdl-cell--middle">
+                                    <div class="mdl-card mdl-shadow--2dp">
+                                        <div class="mdl-card__title">
+                                            Pedido NÃO enviado!
+                                        </div>
+                                        <div class="mdl-card__media etka_precos-card__media">
+                                            <i class="material-icons etka_precos-card__media-notok">warning</i>
+                                        </div>
+                                        <div class="mdl-card__supporting-text">
+                                            Ocorreu um erro na tentativa de envio do seu pedido, tente novamente. Caso o erro persista, entre em contato através do e-mail <b>colemais@eticketa.com.br</b>, para que um de nossos consultores dê sequência ao seu atendimento.
+                                        </div>
+                                        <div class="mdl-card__actions mdl-card--border">
+                                            <button type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect etka_card__close">
+                                                Tentar novamente
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h4 style="text-align: center">
+                                <img src="img/etka_logo-vazada.svg" width="40%">
+                            </h4>
+                        </div>
+                        <div class="etka_mkt-bottom">&nbsp;</div>
                     </div>
                 </div>
             </main>
-            
         </div>
         
 		<!-- jQuery -->

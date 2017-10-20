@@ -1,0 +1,24 @@
+
+.etka_mkt {
+    min-height: 100%;
+    background-image: url(./img/etka_email-bgV.jpg);
+}
+
+.etka_mkt-form {
+    background-color: white;
+    padding: 2rem 5rem
+}
+
+.etka_mkt-top {
+    background-image: url(img/etka_email-ingresso_top.png);
+    background-size: cover;
+    margin-top: 3rem 
+}
+
+.etka_mkt-bottom {
+    background-image: url(img/etka_email-ingresso_bottom.png);
+    background-size: cover;
+    margin-bottom: 3rem 
+}
+
+

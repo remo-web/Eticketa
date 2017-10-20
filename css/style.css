@@ -197,7 +197,8 @@ dialog .etka_btn-enviar{width: 100%}
 .etka_p-lacres-enviado, .etka_p-lacres-erro,
 .etka_p-garantia-enviado, .etka_p-garantia-erro,
 .etka_p-ingresso-enviado, .etka_p-ingresso-erro,
-.etka_p-validade-enviado, .etka_p-validade-erro{
+.etka_p-validade-enviado, .etka_p-validade-erro,
+.etka_popup-enviado, .etka_pop-erro{
     display: none
 }
 
@@ -320,7 +321,8 @@ dialog .etka_btn-enviar{width: 100%}
         label > input[type="radio"]:checked + i{color: #57bf96}
 
         .etka_orcamento-card,
-        .etka_precos-card{
+        .etka_precos-card,
+        .etka_popup-card{
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;

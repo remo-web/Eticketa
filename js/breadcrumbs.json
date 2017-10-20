@@ -1,0 +1,29 @@
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://eticketa.com.br",
+      "name": "Eticketa",
+      "image": "https://eticketa.com.br/img/fazemos/etka_fazemos-flexo.jpg"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://eticketa.com.br/#produtos",
+      "name": "Produtos",
+      "image": "https://eticketa.com.br/img/fazemos/etka_fazemos-flexo.jpg"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://eticketa.com.br/#produtos/rotulos",
+      "name": "Rótulos",
+      "image": "https://eticketa.com.br/img/fazemos/etka_fazemos-flexo.jpg"
+    }
+  }]
+}

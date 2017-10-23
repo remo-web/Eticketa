@@ -17,7 +17,7 @@
             <link rel="stylesheet" href="https://eticketa.com.br/plugins/Polyfill/dialog-polyfill.css">
 		
 		<!-- CUSTOM CSS -->
-		<link rel="stylesheet" type="text/css" href="./styles.css">
+		<link rel="stylesheet" type="text/css" href="./style.css">
 		<link rel="stylesheet" type="text/css" href="https://eticketa.com.br/css/style.css">
         
 		<!-- CUSTOM Google Font -->
@@ -28,13 +28,13 @@
 		<div class="font etka-layout-transparent mdl-layout mdl-js-layout etka_mkt">
             <main class="mdl-layout__content">
                 <div class="mdl-grid">
-                    <div class="mdl-cell mdl-cell--4-offset mdl-cell--4-col mdl-cell--middle">
-                        <div class="etka_mkt-top">&nbsp;</div>
-                        <div class="etka_mkt-form">
+                    <div class="mdl-cell mdl-cell--4-offset mdl-cell--4-col mdl-cell--middle etka_mkt-form">
+                        <div class="etka_mkt-form--top">&nbsp;</div>
+                        <div class="etka_mkt-form--content">
                             <h4>Obrigado pelo seu interesse em nossas <b>ETIQUETAS DE VALIDADES</b>!</h4>
                             <p>Para darmos sequência ao seu pedido de <b>amostra grátis</b> precisamos de mais algumas informações.</p>
                             <p>Por favor, preencha corretamente <b>todos os campos</b> do formulário a seguir e clique em <b>ENVIAR</b>.</p>
-                            <form class="mdl-grid" id="etka_validade-amostra" name="etka_validade-amostra" action="./validade-amostra.php" method="post">
+                            <form class="mdl-grid" id="etka_validade-amostra" name="etka_validade-amostra" action="./amostra.php" method="post">
                                 <div class="mdl-cell mdl-cell--6-col">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                         <input class="mdl-textfield__input" type="text" id="validade_a-nome" name="validade_a-nome">
@@ -83,13 +83,18 @@
                                 </div>
                                 <div class="mdl-layout-spacer">&nbsp;</div>
                             </form>
-                            
+                            <h4 style="text-align: center">
+                                <img src="img/etka_logo-vazada.svg" width="40%">
+                            </h4>
+                        </div>
+                        <div class="etka_mkt-form--bottom">&nbsp;</div>
+                        <div class="mdl-grid">
                             <!-- Over-dialog Enviado/Erro -->
                             <div class="mdl-grid etka_popup-card etka_popup-enviado" id="etka_validade_a-enviado">
-                                <div class="mdl-cell mdl-cell--4-offset mdl-cell--4-col mdl-cell--middle">
-                                    <div class="mdl-card mdl-shadow--2dp">
+                                <div class="mdl-cell mdl-cell--2-offset mdl-cell--8-col mdl-cell--middle">
+                                    <div class="mdl-card mdl-shadow--8dp">
                                         <div class="mdl-card__title">
-                                            Pedido enviado com sucesso!
+                                            Pedido de amostra enviado com sucesso!
                                         </div>
                                         <div class="mdl-card__media etka_precos-card__media">
                                             <i class="material-icons etka_precos-card__media-ok">assignment_turned_in</i>
@@ -106,16 +111,16 @@
                                 </div>               
                             </div>
                             <div class="mdl-grid etka_popup-card etka_popup-erro" id="etka_validade_a-erro">
-                                <div class="mdl-cell mdl-cell--4-offset mdl-cell--4-col mdl-cell--middle">
-                                    <div class="mdl-card mdl-shadow--2dp">
+                                <div class="mdl-cell mdl-cell--2-offset mdl-cell--8-col mdl-cell--middle">
+                                    <div class="mdl-card mdl-shadow--8dp">
                                         <div class="mdl-card__title">
-                                            Pedido NÃO enviado!
+                                            Pedido de amostra NÃO enviado!
                                         </div>
                                         <div class="mdl-card__media etka_precos-card__media">
                                             <i class="material-icons etka_precos-card__media-notok">warning</i>
                                         </div>
                                         <div class="mdl-card__supporting-text">
-                                            Ocorreu um erro na tentativa de envio do seu pedido, tente novamente. Caso o erro persista, entre em contato através do e-mail <b>colemais@eticketa.com.br</b>, para que um de nossos consultores dê sequência ao seu atendimento.
+                                            Ocorreu um erro na tentativa de envio do seu pedido, tente novamente. Caso o erro persista, entre em contato através do e-mail <a href="mailto:colemais@eticketa.com.br">colemais@eticketa.com.br</a>, para que um de nossos consultores dê sequência ao seu atendimento.
                                         </div>
                                         <div class="mdl-card__actions mdl-card--border">
                                             <button type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect etka_card__close">
@@ -125,19 +130,16 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            <h4 style="text-align: center">
-                                <img src="img/etka_logo-vazada.svg" width="40%">
-                            </h4>
                         </div>
-                        <div class="etka_mkt-bottom">&nbsp;</div>
-                    </div>
+                    </div>                            
                 </div>
             </main>
         </div>
         
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- CUSTOM -->
+        <script src="./amostra.js"></script>
 		<!-- Google Material -->
         <script src="https://eticketa.com.br/mdl/material.min.js"></script>
             <!-- Polyfill -->

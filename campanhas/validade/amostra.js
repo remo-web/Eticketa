@@ -50,11 +50,11 @@ function submitAValidade(){
 }
 
 function validadeASuccess(){
-    $( "#etka_validade-amostra-enviado" ).removeClass( "etka_validade-amostra-enviado" );
+    $( "#etka_validade_a-enviado" ).removeClass( "etka_popup-enviado" );
     $( '#validade_a-nome, #validade_a-email, #validade_a-empresa, #validade_a-tel, #validade_a-endereco, #validade_a-mensagem' ).val('');
 }
 
 function validadeAError(){
-    $( "#etka_validade-amostra-erro" ).removeClass( "etka_validade-amostra-erro" );
+    $( "#etka_validade_a-erro" ).removeClass( "etka_popup-erro" );
 }
 

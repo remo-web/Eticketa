@@ -37,7 +37,7 @@ function submitAValidade(){
  
     $.ajax({
         type: "POST",
-        url: "./campanhas/validade/amostra.php",
+        url: "./amostra.php",
         data: "validade_a-nome=" + nome + "&validade_a-email=" + email + "&validade_a-empresa=" + empresa + "&validade_a-tel=" + telefone + "&validade_a-endereco=" + endereco + "&validade_a-mensagem=" + mensagem,
         success : function(text){
             if (text == "success"){

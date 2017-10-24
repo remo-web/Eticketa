@@ -14,25 +14,25 @@ $("#etka_amostra").submit(function(event){
         contato_email.setAttributeNode(att);
         return false;
         // handle the invalid form...
-        validadeAError();
+        amostraError();
     }
     if (endereco == "") {
         contato_end.setAttributeNode(att);
         return false;
         // handle the invalid form...
-        validadeAError();
+        amostraError();
     } 
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
-        validadeAError();
+        amostraError();
     } else {
         // everything looks good!
         event.preventDefault();
-        submitAValidade();
+        submitAmostra();
     }
 });
 
-function submitAValidade(){
+function submitAmostra(){
     // Initiate Variables With Form Content
     var nome = $("#amostra-nome").val();
     var email = $("#amostra-email").val();
@@ -47,20 +47,20 @@ function submitAValidade(){
         data: "amostra-nome=" + nome + "&amostra-email=" + email + "&amostra-empresa=" + empresa + "&amostra-telefone=" + telefone + "&amostra-endereco=" + endereco + "&amostra-mensagem=" + mensagem,
         success : function(text){
             if (text == "success"){
-                validadeASuccess();
+                amostraSuccess();
             } else {
-                validadeAError();
+                amostraError();
             }
         }
     });
 }
 
-function validadeASuccess(){
+function amostraSuccess(){
     $( "#etka_amostra-enviado" ).removeClass( "etka_popup-enviado" );
     $( '#amostra-nome, #amostra-email, #amostra-empresa, #amostra-telefone, #amostra-endereco, #amostra-mensagem' ).val('');
 }
 
-function validadeAError(){
+function amostraError(){
     $( "#etka_amostra-erro" ).removeClass( "etka_popup-erro" );
 }
 

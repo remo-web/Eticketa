@@ -37,14 +37,14 @@ function submitAValidade(){
     var nome = $("#amostra-nome").val();
     var email = $("#amostra-email").val();
     var empresa = $("#amostra-empresa").val();
-    var telefone = $("#amostra-tel").val();
+    var telefone = $("#amostra-telefone").val();
     var endereco = $("#amostra-endereco").val();
     var mensagem = $("#amostra-mensagem").val();
  
     $.ajax({
         type: "POST",
-        url: "./amostra.php",
-        data: "amostra-nome=" + nome + "&amostra-email=" + email + "&amostra-empresa=" + empresa + "&amostra-tel=" + telefone + "&amostra-endereco=" + endereco + "&amostra-mensagem=" + mensagem,
+        url: "../_assets/amostra.php",
+        data: "amostra-nome=" + nome + "&amostra-email=" + email + "&amostra-empresa=" + empresa + "&amostra-telefone=" + telefone + "&amostra-endereco=" + endereco + "&amostra-mensagem=" + mensagem,
         success : function(text){
             if (text == "success"){
                 validadeASuccess();
@@ -57,7 +57,7 @@ function submitAValidade(){
 
 function validadeASuccess(){
     $( "#etka_amostra-enviado" ).removeClass( "etka_popup-enviado" );
-    $( '#amostra-nome, #amostra-email, #amostra-empresa, #amostra-tel, #amostra-endereco, #amostra-mensagem' ).val('');
+    $( '#amostra-nome, #amostra-email, #amostra-empresa, #amostra-telefone, #amostra-endereco, #amostra-mensagem' ).val('');
 }
 
 function validadeAError(){

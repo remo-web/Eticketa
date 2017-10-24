@@ -45,7 +45,7 @@ function submitAmostra(){
     $.ajax({
         type: "POST",
         url: "../_assets/amostra.php",
-        data: "amostra-assunto=" + assunto + "amostra-nome=" + nome + "&amostra-email=" + email + "&amostra-empresa=" + empresa + "&amostra-telefone=" + telefone + "&amostra-endereco=" + endereco + "&amostra-mensagem=" + mensagem,
+        data: "amostra-assunto=" + assunto + "&amostra-nome=" + nome + "&amostra-email=" + email + "&amostra-empresa=" + empresa + "&amostra-telefone=" + telefone + "&amostra-endereco=" + endereco + "&amostra-mensagem=" + mensagem,
         success : function(text){
             if (text == "success"){
                 amostraSuccess();

@@ -30,7 +30,7 @@ $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 $Body .= "
 <html>
     <body style='width: 690px'>
-        <b style='text-decoration: uppercase'>$nome</b><br/>
+        <b style='text-transform: uppercase;'>$nome</b><br/>
         <b>Cargo / Empresa:</b> $empresa<br/>
         <b>E-mail:</b> $email<br/>
         <b>Telefone:</b> $telefone<br/>

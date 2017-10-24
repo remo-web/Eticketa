@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+        
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        
+		<title>ETICKETA - Amostra Grátis</title>
+        
+        <!--FavIcon-->
+        <link rel="apple-touch-icon"    sizes="57x57"       href="https://eticketa.com.br/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon"    sizes="60x60"       href="https://eticketa.com.br/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon"    sizes="72x72"       href="https://eticketa.com.br/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon"    sizes="76x76"       href="https://eticketa.com.br/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon"    sizes="114x114"     href="https://eticketa.com.br/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon"    sizes="120x120"     href="https://eticketa.com.br/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon"    sizes="144x144"     href="https://eticketa.com.br/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon"    sizes="152x152"     href="https://eticketa.com.br/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon"    sizes="180x180"     href="https://eticketa.com.br/favicon/apple-icon-180x180.png">
+        <link rel="icon"                sizes="192x192"     href="https://eticketa.com.br/favicon/android-icon-192x192.png"   type="image/png">
+        <link rel="icon"                sizes="32x32"       href="https://eticketa.com.br/favicon/favicon-32x32.png"          type="image/png">
+        <link rel="icon"                sizes="96x96"       href="https://eticketa.com.br/favicon/favicon-96x96.png"          type="image/png">
+        <link rel="icon"                sizes="16x16"       href="https://eticketa.com.br/favicon/favicon-16x16.png"          type="image/png">
+<!--        <link rel="manifest" href="./favicon/manifest.json">-->
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        
+		<!-- Google Material -->
+<!--		<link rel="stylesheet" href="./mdl/material.min.css">-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.teal-deep_purple.min.css" />
+            <!-- Polyfill -->
+            <link rel="stylesheet" href="../../plugins/Polyfill/dialog-polyfill.css">
+		
+		<!-- CUSTOM CSS -->
+		<link rel="stylesheet" type="text/css" href="../_assets/style.css">
+		<link rel="stylesheet" type="text/css" href="../../css/style.css">
+        
+		<!-- CUSTOM Google Font -->
+		<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700&amp;subset=latin-ext" rel="stylesheet">
+     
+	</head>
+	<body>
+		<div class="font etka-layout-transparent mdl-layout mdl-js-layout etka_mkt">
+            <main class="mdl-layout__content">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--3-offset-desktop mdl-cell--6-col-desktop mdl-cell--4-col-phone mdl-cell--middle etka_mkt-form">
+                        <div class="etka_mkt-form--top">
+                            <img src="../_assets/img/etka_email-ingresso_top.png">
+                        </div>
+                        <div class="etka_mkt-form--content">
+                            <h4>Obrigado pelo seu interesse em nossos <strong>tickets e ingressos</strong>!</h4>
+                            <p>Para darmos sequência ao seu pedido de <b>amostra grátis</b> precisamos de mais algumas informações.</p>
+                            <p>Por favor, preencha corretamente <b>todos os campos</b> do formulário a seguir e clique em <b>ENVIAR</b>.</p>
+                            <form class="mdl-grid" id="etka_amostra" name="etka_amostra" action="../_assets/amostra.php" method="post">
+                                <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="amostra-nome" name="amostra-nome">
+                                        <label class="mdl-textfield__label" for="amostra-nome">Nome completo</label>
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="[(]?\d{2}[- )]?[\d{1}]?[- ]?\d{4}[- ]?\d{4}" id="amostra-telefone" name="amostra-telefone">
+                                        <label class="mdl-textfield__label" for="amostra-telefone">Telefone</label>
+                                        <span class="mdl-textfield__error">Insira um número de telefone válido.</span>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="email" id="amostra-email" name="amostra-email">
+                                        <label class="mdl-textfield__label" for="amostra-email">E-mail</label>
+                                        <span class="mdl-textfield__error">Insira um endereço de e-mail válido.</span>
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="amostra-empresa" name="amostra-empresa">
+                                        <label class="mdl-textfield__label" for="amostra-empresa">Cargo / Empresa</label>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="amostra-endereco" name="amostra-endereco" >
+                                        <label class="mdl-textfield__label" for="amostra-endereco">Endereço para entrega</label>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="amostra-mensagem" name="amostra-mensagem"></textarea>
+                                        <label class="mdl-textfield__label" for="amostra-mensagem">Dúvidas ou observações?</label>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="amostra-enviar" name="amostra-enviar" type="submit" value="etka_amostra" style="width: 100%">ENVIAR</button>
+                                </div>
+                                <div class="mdl-layout-spacer">&nbsp;</div>
+                            </form>
+                            <h4 style="text-align: center">
+                                <img src="../_assets/img/etka_logo-vazada.svg" width="30%">
+                            </h4>
+                        </div>
+                        <div class="etka_mkt-form--bottom">
+                            <img src="../_assets/img/etka_email-ingresso_bottom.png">
+                        </div>
+                        <div class="mdl-grid">
+                            <!-- Over-dialog Enviado/Erro -->
+                            <div class="mdl-grid etka_popup-card etka_popup-enviado" id="etka_amostra-enviado">
+                                <div class="mdl-cell mdl-cell--2-offset-desktop mdl-cell--8-col-desktop mdl-cell--4-col-phone mdl-cell--middle">
+                                    <div class="mdl-card mdl-shadow--8dp">
+                                        <div class="mdl-card__title">
+                                            Pedido de amostra enviado com sucesso!
+                                        </div>
+                                        <div class="mdl-card__media etka_precos-card__media">
+                                            <i class="material-icons etka_precos-card__media-ok">assignment_turned_in</i>
+                                        </div>
+                                        <div class="mdl-card__supporting-text">
+                                            Você receberá uma mensagem de confirmação dentro de algumas horas, nela estarão os próximos passos do seu atendimento.
+                                        </div>
+                                        <div class="mdl-card__actions mdl-card--border">
+                                            <button type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect etka_card__close">
+                                                ok
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>               
+                            </div>
+                            <div class="mdl-grid etka_popup-card etka_popup-erro" id="etka_amostra-erro">
+                                <div class="mdl-cell mdl-cell--2-offset-desktop mdl-cell--8-col-desktop mdl-cell--4-col-phone mdl-cell--middle">
+                                    <div class="mdl-card mdl-shadow--8dp">
+                                        <div class="mdl-card__title">
+                                            Pedido de amostra NÃO enviado!
+                                        </div>
+                                        <div class="mdl-card__media etka_precos-card__media">
+                                            <i class="material-icons etka_precos-card__media-notok">warning</i>
+                                        </div>
+                                        <div class="mdl-card__supporting-text">
+                                            Ocorreu um erro na tentativa de envio do seu pedido, tente novamente. Caso o erro persista, entre em contato através do e-mail <a href="mailto:colemais@eticketa.com.br">colemais@eticketa.com.br</a>, para que um de nossos consultores dê sequência ao seu atendimento.
+                                        </div>
+                                        <div class="mdl-card__actions mdl-card--border">
+                                            <button type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect etka_card__close">
+                                                Tentar novamente
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                            
+                </div>
+            </main>
+        </div>
+        
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- CUSTOM -->
+        <script src="../_assets/amostra.js"></script>
+		<!-- Google Material -->
+        <script src="../../mdl/material.min.js"></script>
+            <!-- Polyfill -->
+            <script src="../../plugins/Polyfill/dialog-polyfill.js"></script>
+    </body>
+</html>

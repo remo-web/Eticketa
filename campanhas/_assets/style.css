@@ -11,18 +11,14 @@
 
 .etka_mkt-form--content {
     background-color: white;
-    padding: 5% 10%
+    padding: 5%
 }
 
 .etka_mkt-form--top {
-    background-image: url(img/etka_email-ingresso_top.png);
-    background-size: cover;
     margin-top: 3rem 
 }
 
 .etka_mkt-form--bottom {
-    background-image: url(img/etka_email-ingresso_bottom.png);
-    background-size: cover;
     margin-bottom: 3rem 
 }
 

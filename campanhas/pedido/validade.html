@@ -53,45 +53,107 @@
                         </div>
                         <div class="etka_mkt-form--content">
                             <h4>Obrigado pelo seu interesse em nossas <strong>etiquetas de validade</strong>!</h4>
-                            <p>Para darmos sequência ao seu pedido de <b>amostra grátis</b> precisamos de mais algumas informações.</p>
+                            <p>Para darmos sequência ao seu <b>pedido</b> precisamos de mais algumas informações.</p>
                             <p>Por favor, preencha corretamente <b>todos os campos</b> do formulário a seguir e clique em <b>ENVIAR</b>.</p>
-                            <form class="mdl-grid" id="etka_amostra" name="etka_amostra" action="../_assets/amostra.php" method="post">
+                            <form class="mdl-grid" id="etka_amostra" name="etka_amostra" action="../_assets/pedido.php" method="post">
+                                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
+                                        <p>DADOS DE CONTATO E ENTREGA:</p>
+                                </div>
                                 <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
+                                    <input style="display: none" type="text" id="pedido-assunto" name="pedido-assunto" value="Validade">                        
+                                    
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="amostra-nome" name="amostra-nome">
-                                        <label class="mdl-textfield__label" for="amostra-nome">Nome completo</label>
+                                        <input class="mdl-textfield__input" type="text" id="pedido-nome" name="pedido-nome">
+                                        <label class="mdl-textfield__label" for="pedido-nome">Nome completo</label>
                                     </div>
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="[(]?\d{2}[- )]?[\d{1}]?[- ]?\d{4}[- ]?\d{4}" id="amostra-telefone" name="amostra-telefone">
-                                        <label class="mdl-textfield__label" for="amostra-telefone">Telefone</label>
+                                        <input class="mdl-textfield__input" type="text" pattern="[(]?\d{2}[- )]?[\d{1}]?[- ]?\d{4}[- ]?\d{4}" id="pedido-telefone" name="pedido-telefone">
+                                        <label class="mdl-textfield__label" for="pedido-telefone">Telefone</label>
                                         <span class="mdl-textfield__error">Insira um número de telefone válido.</span>
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="email" id="amostra-email" name="amostra-email">
-                                        <label class="mdl-textfield__label" for="amostra-email">E-mail</label>
+                                        <input class="mdl-textfield__input" type="email" id="pedido-email" name="pedido-email">
+                                        <label class="mdl-textfield__label" for="pedido-email">E-mail</label>
                                         <span class="mdl-textfield__error">Insira um endereço de e-mail válido.</span>
                                     </div>
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="amostra-empresa" name="amostra-empresa">
-                                        <label class="mdl-textfield__label" for="amostra-empresa">Cargo / Empresa</label>
+                                        <input class="mdl-textfield__input" type="text" id="pedido-empresa" name="pedido-empresa">
+                                        <label class="mdl-textfield__label" for="pedido-empresa">Cargo / Empresa</label>
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="amostra-endereco" name="amostra-endereco" >
-                                        <label class="mdl-textfield__label" for="amostra-endereco">Endereço para entrega</label>
+                                        <input class="mdl-textfield__input" type="text" id="pedido-endereco" name="pedido-endereco" >
+                                        <label class="mdl-textfield__label" for="pedido-endereco">Endereço para entrega</label>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-phone">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="[0-9].{3,}" id="pedido-quantidade">
+                                        <label class="mdl-textfield__label" for="pedido-quantidade">Quantidade</label>
+                                        <span class="mdl-textfield__error">Mínimo de 1.000 unidades</span>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--4-col-phone">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <textarea class="mdl-textfield__input" type="text" rows= "1" id="pedido-mensagem" name="pedido-mensagem"></textarea>
+                                        <label class="mdl-textfield__label" for="pedido-mensagem">Dúvidas ou observações?</label>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
+                                    <p>DADOS PARA EMISSÃO DE BOLETO E NOTA FISCAL:</p>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern ="((\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2})|(\d{3}\.\d{3}\.\d{3}\-\d{2}))" id="pedido-cnpj" name="pedido-cnpj" >
+                                        <label class="mdl-textfield__label" for="pedido-cnpj">CNPJ</label>
+                                        <span class="mdl-textfield__error">Obrigatório formato xx.xxx.xxx/xxxx-xx</span>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="pedido-razao" name="pedido-razao" >
+                                        <label class="mdl-textfield__label" for="pedido-razao">Razão Social</label>
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="amostra-mensagem" name="amostra-mensagem"></textarea>
-                                        <label class="mdl-textfield__label" for="amostra-mensagem">Dúvidas ou observações?</label>
+                                        <input class="mdl-textfield__input" type="text" id="pedido-endemp" name="pedido-endemp" >
+                                        <label class="mdl-textfield__label" for="pedido-endemp">Endereço completo</label>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,14}|ISENTO|PR[0-9]{4,8}" id="pedido-insest" name="pedido-insest" >
+                                        <label class="mdl-textfield__label" for="pedido-insest">Inscrição Estatual</label>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="pedido-simples" name="pedido-simples" >
+                                        <label class="mdl-textfield__label" for="pedido-simples">Optante do SIMPLES?</label>
+                                        <span class="mdl-textfield__error">Sim ou Não</span>
+                                    </div> 
+                                
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="email" id="pedido-emailemp" name="pedido-emailemp" >
+                                        <label class="mdl-textfield__label" for="pedido-emailemp">E-mail para envio da NF-e</label>
+                                        <span class="mdl-textfield__error">Insira um endereço de e-mail válido.</span>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="[(]?\d{2}[- )]?[\d{1}]?[- ]?\d{4}[- ]?\d{4}" id="pedido-telemp" name="pedido-telemp" >
+                                        <label class="mdl-textfield__label" for="pedido-telemp">Telefone Comercial</label>
+                                        <span class="mdl-textfield__error">Insira um número de telefone válido.</span>
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="amostra-enviar" name="amostra-enviar" type="submit" value="etka_amostra" style="width: 100%">ENVIAR</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="pedido-enviar" name="amostra-enviar" type="submit" value="etka_amostra" style="width: 100%">ENVIAR</button>
                                 </div>
                                 <div class="mdl-layout-spacer">&nbsp;</div>
                             </form>

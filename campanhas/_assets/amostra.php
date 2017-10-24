@@ -2,26 +2,26 @@
 
 $error = "";
 
-$nome = $_POST["validade_nome"];
+$nome = $_POST["amostra-nome"];
 
 //email
-if (empty($_POST["validade_email"])) {
+if (empty($_POST["amostra-email"])) {
     $error .= "Email is required ";
 } else {
-    $email = $_POST["validade_email"];
+    $email = $_POST["amostra-email"];
 }
 
-$empresa = $_POST["validade_empresa"];
-$telefone = $_POST["validade_tel"];
+$empresa = $_POST["amostra-empresa"];
+$telefone = $_POST["amostra-tel"];
 
 //endereço
-if (empty($_POST["validade_endereco"])) {
+if (empty($_POST["amostra-endereco"])) {
     $error .= "Endereço is required ";
 } else {
-    $endereco = $_POST["validade_endereco"];
+    $endereco = $_POST["amostra-endereco"];
 }
 
-$mensagem = $_POST["validade_mensagem"];
+$mensagem = $_POST["amostra-mensagem"];
  
 $To = "colemais@eticketa.com.br";
 $uglySubject = "[Campanha | Validade] Pedido de amostra";

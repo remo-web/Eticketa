@@ -4,11 +4,11 @@ $(document).ready(function() {
     });
 });
 
-$("#etka_validade-amostra").submit(function(event){
-    var email = document.forms["etka_validade-amostra"]["validade_email"].value;
-    var contato_email = document.getElementById("validade_email");
-    var endereco = document.forms["etka_validade-amostra"]["validade_endereco"].value;
-    var contato_end = document.getElementById("validade_endereco");
+$("#etka_amostra").submit(function(event){
+    var email = document.forms["etka_amostra"]["amostra-email"].value;
+    var contato_email = document.getElementById("amostra-email");
+    var endereco = document.forms["etka_amostra"]["amostra-endereco"].value;
+    var contato_end = document.getElementById("amostra-endereco");
     var att = document.createAttribute("required");
     if (email == "") {
         contato_email.setAttributeNode(att);
@@ -34,17 +34,17 @@ $("#etka_validade-amostra").submit(function(event){
 
 function submitAValidade(){
     // Initiate Variables With Form Content
-    var nome = $("#validade_nome").val();
-    var email = $("#validade_email").val();
-    var empresa = $("#validade_empresa").val();
-    var telefone = $("#validade_tel").val();
-    var endereco = $("#validade_endereco").val();
-    var mensagem = $("#validade_mensagem").val();
+    var nome = $("#amostra-nome").val();
+    var email = $("#amostra-email").val();
+    var empresa = $("#amostra-empresa").val();
+    var telefone = $("#amostra-tel").val();
+    var endereco = $("#amostra-endereco").val();
+    var mensagem = $("#amostra-mensagem").val();
  
     $.ajax({
         type: "POST",
         url: "./amostra.php",
-        data: "validade_nome=" + nome + "&validade_email=" + email + "&validade_empresa=" + empresa + "&validade_tel=" + telefone + "&validade_endereco=" + endereco + "&validade_mensagem=" + mensagem,
+        data: "amostra-nome=" + nome + "&amostra-email=" + email + "&amostra-empresa=" + empresa + "&amostra-tel=" + telefone + "&amostra-endereco=" + endereco + "&amostra-mensagem=" + mensagem,
         success : function(text){
             if (text == "success"){
                 validadeASuccess();
@@ -56,11 +56,11 @@ function submitAValidade(){
 }
 
 function validadeASuccess(){
-    $( "#etka_validade_enviado" ).removeClass( "etka_popup-enviado" );
-    $( '#validade_nome, #validade_email, #validade_empresa, #validade_tel, #validade_endereco, #validade_mensagem' ).val('');
+    $( "#etka_amostra-enviado" ).removeClass( "etka_popup-enviado" );
+    $( '#amostra-nome, #amostra-email, #amostra-empresa, #amostra-tel, #amostra-endereco, #amostra-mensagem' ).val('');
 }
 
 function validadeAError(){
-    $( "#etka_validade_erro" ).removeClass( "etka_popup-erro" );
+    $( "#etka_amostra-erro" ).removeClass( "etka_popup-erro" );
 }
 

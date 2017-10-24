@@ -2,6 +2,7 @@
 
 $error = "";
 
+$assunto = $_POST["amostra-assunto"];
 $nome = $_POST["amostra-nome"];
 
 //email
@@ -24,7 +25,7 @@ if (empty($_POST["amostra-endereco"])) {
 $mensagem = $_POST["amostra-mensagem"];
  
 $To = "colemais@eticketa.com.br";
-$uglySubject = "[Campanha | Validade] Pedido de amostra";
+$uglySubject = "[Campanha | $assunto] Pedido de amostra";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 
 $Body .= "

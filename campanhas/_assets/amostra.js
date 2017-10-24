@@ -34,6 +34,7 @@ $("#etka_amostra").submit(function(event){
 
 function submitAmostra(){
     // Initiate Variables With Form Content
+    var assunto = $("#amostra-assunto").val();
     var nome = $("#amostra-nome").val();
     var email = $("#amostra-email").val();
     var empresa = $("#amostra-empresa").val();
@@ -44,7 +45,7 @@ function submitAmostra(){
     $.ajax({
         type: "POST",
         url: "../_assets/amostra.php",
-        data: "amostra-nome=" + nome + "&amostra-email=" + email + "&amostra-empresa=" + empresa + "&amostra-telefone=" + telefone + "&amostra-endereco=" + endereco + "&amostra-mensagem=" + mensagem,
+        data: "amostra-assunto=" + assunto + "amostra-nome=" + nome + "&amostra-email=" + email + "&amostra-empresa=" + empresa + "&amostra-telefone=" + telefone + "&amostra-endereco=" + endereco + "&amostra-mensagem=" + mensagem,
         success : function(text){
             if (text == "success"){
                 amostraSuccess();
@@ -57,7 +58,7 @@ function submitAmostra(){
 
 function amostraSuccess(){
     $( "#etka_amostra-enviado" ).removeClass( "etka_popup-enviado" );
-    $( '#amostra-nome, #amostra-email, #amostra-empresa, #amostra-telefone, #amostra-endereco, #amostra-mensagem' ).val('');
+    $( '#amostra-assunto, #amostra-nome, #amostra-email, #amostra-empresa, #amostra-telefone, #amostra-endereco, #amostra-mensagem' ).val('');
 }
 
 function amostraError(){

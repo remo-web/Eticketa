@@ -56,30 +56,30 @@
                             <form class="mdl-grid" id="etka_validade-amostra" name="etka_validade-amostra" action="./amostra.php" method="post">
                                 <div class="mdl-cell mdl-cell--6-col">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="validade_a-nome" name="validade_a-nome">
-                                        <label class="mdl-textfield__label" for="validade_a-nome">Nome completo</label>
+                                        <input class="mdl-textfield__input" type="text" id="validade_nome" name="validade_nome">
+                                        <label class="mdl-textfield__label" for="validade_nome">Nome completo</label>
                                     </div>
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="[(]?\d{2}[- )]?[\d{1}]?[- ]?\d{4}[- ]?\d{4}" id="validade_a-tel" name="validade_a-tel">
-                                        <label class="mdl-textfield__label" for="validade_a-tel">Telefone</label>
+                                        <input class="mdl-textfield__input" type="text" pattern="[(]?\d{2}[- )]?[\d{1}]?[- ]?\d{4}[- ]?\d{4}" id="validade_tel" name="validade_tel">
+                                        <label class="mdl-textfield__label" for="validade_tel">Telefone</label>
                                         <span class="mdl-textfield__error">Insira um número de telefone válido.</span>
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="email" id="validade_a-email" name="validade_a-email">
-                                        <label class="mdl-textfield__label" for="validade_a-email">E-mail</label>
+                                        <input class="mdl-textfield__input" type="email" id="validade_email" name="validade_email">
+                                        <label class="mdl-textfield__label" for="validade_email">E-mail</label>
                                         <span class="mdl-textfield__error">Insira um endereço de e-mail válido.</span>
                                     </div>
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="validade_a-empresa" name="validade_a-empresa">
-                                        <label class="mdl-textfield__label" for="validade_a-empresa">Cargo / Empresa</label>
+                                        <input class="mdl-textfield__input" type="text" id="validade_empresa" name="validade_empresa">
+                                        <label class="mdl-textfield__label" for="validade_empresa">Cargo / Empresa</label>
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--12-col">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="validade_a-endereco" name="validade_a-endereco" >
-                                        <label class="mdl-textfield__label" for="validade_a-endereco">Endereço para entrega</label>
+                                        <input class="mdl-textfield__input" type="text" id="validade_endereco" name="validade_endereco" >
+                                        <label class="mdl-textfield__label" for="validade_endereco">Endereço para entrega</label>
                                     </div>
                                 </div>
 <!--
@@ -93,12 +93,12 @@
 -->
                                 <div class="mdl-cell mdl-cell--12-col">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="validade_a-mensagem" name="validade_a-mensagem"></textarea>
-                                        <label class="mdl-textfield__label" for="validade_a-mensagem">Dúvidas ou observações?</label>
+                                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="validade_mensagem" name="validade_mensagem"></textarea>
+                                        <label class="mdl-textfield__label" for="validade_mensagem">Dúvidas ou observações?</label>
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--12-col">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="validade_a-enviar" name="validade_a-enviar" type="submit" value="etka_validade-amostra" style="width: 100%">ENVIAR</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="validade_enviar" name="validade_enviar" type="submit" value="etka_validade-amostra" style="width: 100%">ENVIAR</button>
                                 </div>
                                 <div class="mdl-layout-spacer">&nbsp;</div>
                             </form>
@@ -109,7 +109,7 @@
                         <div class="etka_mkt-form--bottom">&nbsp;</div>
                         <div class="mdl-grid">
                             <!-- Over-dialog Enviado/Erro -->
-                            <div class="mdl-grid etka_popup-card etka_popup-enviado" id="etka_validade_a-enviado">
+                            <div class="mdl-grid etka_popup-card etka_popup-enviado" id="etka_validade_enviado">
                                 <div class="mdl-cell mdl-cell--2-offset mdl-cell--8-col mdl-cell--middle">
                                     <div class="mdl-card mdl-shadow--8dp">
                                         <div class="mdl-card__title">
@@ -129,7 +129,7 @@
                                     </div>
                                 </div>               
                             </div>
-                            <div class="mdl-grid etka_popup-card etka_popup-erro" id="etka_validade_a-erro">
+                            <div class="mdl-grid etka_popup-card etka_popup-erro" id="etka_validade_erro">
                                 <div class="mdl-cell mdl-cell--2-offset mdl-cell--8-col mdl-cell--middle">
                                     <div class="mdl-card mdl-shadow--8dp">
                                         <div class="mdl-card__title">

@@ -1,3 +1,9 @@
+$(document).ready(function() {
+    $(".etka_card__close").click(function() {
+        $(".etka_popup-card").addClass("etka_popup-enviado");
+    });
+});
+
 $("#etka_validade-amostra").submit(function(event){
     var email = document.forms["etka_validade-amostra"]["validade_a-email"].value;
     var contato_email = document.getElementById("validade_a-email");

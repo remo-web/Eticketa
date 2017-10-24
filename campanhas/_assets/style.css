@@ -18,8 +18,18 @@
     margin-top: 3rem 
 }
 
+.etka_mkt-form--top > img{
+    vertical-align: bottom;
+    width: 100%
+}
+
 .etka_mkt-form--bottom {
     margin-bottom: 3rem 
+}
+
+.etka_mkt-form--bottom > img{
+    vertical-align: top;
+    width: 100%
 }
 
 .etka_popup-enviado,

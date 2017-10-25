@@ -20,6 +20,8 @@ $("#etka_pedido").submit(function(event){
     var contato_emailemp = document.getElementById("pedido-emailemp");
     var endemp = document.forms["etka_pedido"]["pedido-endemp"].value;
     var contato_endemp = document.getElementById("pedido-endemp");
+    var simples = document.forms["etka_pedido"]["pedido-simples"].value;
+    var contato_simples = document.getElementById("pedido-simples"); 
     var att = document.createAttribute("required");
     if (email == "") {
         contato_email.setAttributeNode(att);
@@ -53,6 +55,10 @@ $("#etka_pedido").submit(function(event){
         event.preventDefault();
         submitpedido();
     }
+    if($(simples).is(':checked'))
+        $(simples).next().text("Sim");
+    else
+        $(simples).next().text("Não");
 });
 
 function submitpedido(){

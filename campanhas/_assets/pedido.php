@@ -46,11 +46,11 @@ if (empty($_POST["pedido-emailemp"])) {
 
 $telemp = $_POST["pedido-telemp"];
 
-
-if($_POST["pedido-simples"].is(':checked')){
-        $simples = $_POST["pedido-simples"].next().text("Sim");
+$simples = $_POST["pedido-simples"];
+if($simples.is(':checked')){
+        $simples = "Sim";
     else
-        $simples = $_POST["pedido-simples"].next().text("Não");
+        $simples = "Não";
 });
 
 

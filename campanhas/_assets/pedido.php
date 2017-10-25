@@ -46,7 +46,6 @@ if (empty($_POST["pedido-emailemp"])) {
 
 $telemp = $_POST["pedido-telemp"];
 $simples = $_POST["pedido-simples"];
-
  
 $To = "colemais@eticketa.com.br";
 $uglySubject = "[Campanha | $assunto] Pedido formal";

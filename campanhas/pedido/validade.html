@@ -91,7 +91,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-phone">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="number" pattern="[0-9].{3,}" id="pedido-quantidade">
+                                        <input class="mdl-textfield__input" type="text" pattern="[0-9].{3,}" id="pedido-quantidade">
                                         <label class="mdl-textfield__label" for="pedido-quantidade">Quantidade</label>
                                         <span class="mdl-textfield__error">Mínimo de 1.000 unidades</span>
                                     </div>
@@ -107,7 +107,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern ="((\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2})|(\d{3}\.\d{3}\.\d{3}\-\d{2}))" id="pedido-cnpj" name="pedido-cnpj" >
+                                        <input class="mdl-textfield__input" type="text" pattern ="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})" id="pedido-cnpj" name="pedido-cnpj" >
                                         <label class="mdl-textfield__label" for="pedido-cnpj">CNPJ</label>
                                         <span class="mdl-textfield__error">Obrigatório formato xx.xxx.xxx/xxxx-xx</span>
                                     </div>
@@ -126,14 +126,16 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="pedido-insest" name="pedido-insest" >
+                                        <input class="mdl-textfield__input" type="text" pattern="[0-9]+$" id="pedido-insest" name="pedido-insest" >
                                         <label class="mdl-textfield__label" for="pedido-insest">Inscrição Estatual</label>
+                                        <span class="mdl-textfield__error">Somente números</span>
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="pedido-simples" name="pedido-simples" >
+                                        <input class="mdl-textfield__input" type="text" pattern="[a-z\s]+$" id="pedido-simples" name="pedido-simples" >
                                         <label class="mdl-textfield__label" for="pedido-insest">Optante do SIMPLES?</label>
+                                        <span class="mdl-textfield__error">Sim ou Não</span>
                                     </div>
                                 </div>
                                 <!--<div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-phone">

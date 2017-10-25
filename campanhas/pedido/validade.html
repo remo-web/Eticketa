@@ -41,6 +41,9 @@
         
 		<!-- CUSTOM Google Font -->
 		<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700&amp;subset=latin-ext" rel="stylesheet">
+        
+        <!--FontAwesome-->
+        <script src="https://use.fontawesome.com/c3b46e0992.js"></script>
      
 	</head>
 	<body>
@@ -52,7 +55,7 @@
                             <img src="../_assets/img/etka_email-ingresso_top.png">
                         </div>
                         <div class="etka_mkt-form--content">
-                            <h4>Obrigado pelo seu interesse em nossas <strong>etiquetas de validade</strong>!</h4>
+                            <h2>Obrigado pelo seu interesse em nossas <strong>etiquetas de validade</strong>!</h2>
                             <p>Para darmos sequência ao seu <b>pedido</b> precisamos de mais algumas informações.</p>
                             <p>Por favor, preencha corretamente <b>todos os campos</b> do formulário a seguir e clique em <b>ENVIAR</b>.</p>
                             <form class="mdl-grid" id="etka_pedido" name="etka_pedido" action="../_assets/pedido.php" method="post">
@@ -134,7 +137,7 @@
                                 <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                         <input class="mdl-textfield__input" type="text" pattern="[a-z\s]+$" id="pedido-simples" name="pedido-simples" >
-                                        <label class="mdl-textfield__label" for="pedido-insest">Optante do SIMPLES?</label>
+                                        <label class="mdl-textfield__label" for="pedido-insest">Optante do SIMPLES?(Sim ou Não)</label>
                                         <span class="mdl-textfield__error">Sim ou Não</span>
                                     </div>
                                 </div>
@@ -167,8 +170,21 @@
                                 </div>
                                 <div class="mdl-layout-spacer">&nbsp;</div>
                             </form>
+                                                        
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--1-offset-desktop mdl-cell--10-col" style="text-align: center">
+                            <button role="link" href="tel:+5521998688448" class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary">
+                                <i class="material-icons">phone</i>
+                            </button>
+                            <button role="button" href="whatsapp://send?text=Hello World!&phone=+5521984016556" class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary" style="margin-right: 0px">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            </button>
+                            <button role="link" href="tel:+5521998688448" class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary">
+                                <i class="fa fa-telegram" aria-hidden="true"></i>
+                            </button>
+                            <a href="tel:+5521998688448"><h5 class="etka_contato-tel"><small>+55&nbsp;&nbsp;21</small> 9 9868 8448</h5></a>
+                            </div>
                             <h4 style="text-align: center">
-                                <img src="../_assets/img/etka_logo-vazada.svg" width="30%">
+                                <a href="https://eticketa.com.br/?utm_source=email&utm_medium=etiquetas%20padr%C3%A3o&utm_campaign=validade01_tijuca&utm_content=form" target="_blank"><img src="../_assets/img/etka_logo-vazada.svg" width="30%" /></a>
                             </h4>
                         </div>
                         <div class="etka_mkt-form--bottom">

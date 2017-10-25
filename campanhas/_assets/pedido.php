@@ -45,14 +45,7 @@ if (empty($_POST["pedido-emailemp"])) {
 }
 
 $telemp = $_POST["pedido-telemp"];
-
 $simples = $_POST["pedido-simples"];
-if($simples.is(':checked')){
-        $simples = "Sim";
-    else
-        $simples = "Não";
-});
-
 
  
 $To = "colemais@eticketa.com.br";

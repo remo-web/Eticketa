@@ -54,6 +54,7 @@ function submitpedido(){
     var empresa = $("#pedido-empresa").val();
     var telefone = $("#pedido-telefone").val();
     var endereco = $("#pedido-endereco").val();
+    var quantidade = $("#pedido-quantidade").val();
     var mensagem = $("#pedido-mensagem").val();
     var cnpj = $("#pedido-cnpj").val();
     var razao = $("#pedido-razao").val();
@@ -66,7 +67,7 @@ function submitpedido(){
     $.ajax({
         type: "POST",
         url: "../_assets/pedido.php",
-        data: "pedido-assunto=" + assunto + "&pedido-nome=" + nome + "&pedido-email=" + email + "&pedido-empresa=" + empresa + "&pedido-telefone=" + telefone + "&pedido-endereco=" + endereco + "&pedido-mensagem=" + mensagem+ "&pedido-cnpj=" + cnpj+ "&pedido-razao=" + razao + "&pedido-endemp=" + endemp + "&pedido-insest=" + insest + "&pedido-emailemp=" + emailemp + "&pedido-telemp=" + telemp + "&pedido-simples=" + simples,
+        data: "pedido-assunto=" + assunto + "&pedido-nome=" + nome + "&pedido-email=" + email + "&pedido-empresa=" + empresa + "&pedido-telefone=" + telefone + "&pedido-endereco=" + endereco + "&pedido-quantidade=" + quantidade + "&pedido-mensagem=" + mensagem+ "&pedido-cnpj=" + cnpj+ "&pedido-razao=" + razao + "&pedido-endemp=" + endemp + "&pedido-insest=" + insest + "&pedido-emailemp=" + emailemp + "&pedido-telemp=" + telemp + "&pedido-simples=" + simples,
         success : function(text){
             if (text == "success"){
                 pedidoSuccess();
@@ -79,7 +80,7 @@ function submitpedido(){
 
 function pedidoSuccess(){
     $( "#etka_pedido-enviado" ).removeClass( "etka_popup-enviado" );
-    $( '#pedido-assunto, #pedido-nome, #pedido-email, #pedido-empresa, #pedido-telefone, #pedido-endereco, #pedido-mensagem, #pedido-cnpj, #pedido-razao, #pedido-endemp, #pedido-insest, #pedido-emailemp, #pedido-telemp, #pedido-simples' ).val('');
+    $( '#pedido-assunto, #pedido-nome, #pedido-email, #pedido-empresa, #pedido-telefone, #pedido-endereco, #pedido-quantidade, #pedido-mensagem, #pedido-cnpj, #pedido-razao, #pedido-endemp, #pedido-insest, #pedido-emailemp, #pedido-telemp, #pedido-simples' ).val('');
 }
 
 function pedidoError(){

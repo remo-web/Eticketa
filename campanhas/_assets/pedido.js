@@ -4,7 +4,7 @@ $(document).ready(function() {
     });
 });
 
-$(function(){
+/*$(function(){
   //set status to true on load
   $('#pedido-simples-label')[0].MaterialSwitch.on();
   
@@ -15,7 +15,7 @@ $(function(){
   	else
     	$(this).next().text("Não");
   });
-});
+});*/
 
 
 $("#etka_pedido").submit(function(event){

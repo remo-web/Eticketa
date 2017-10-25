@@ -50,8 +50,9 @@ $telemp = $_POST["pedido-telemp"];
 if($_POST["pedido-simples"].is(':checked')){
         $simples = $_POST["pedido-simples"].next().text("Sim");
     else
-        $simples$_POST["pedido-simples"].next().text("Não");
+        $simples = $_POST["pedido-simples"].next().text("Não");
 });
+
 
  
 $To = "colemais@eticketa.com.br";

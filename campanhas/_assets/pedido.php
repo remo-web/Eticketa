@@ -45,7 +45,14 @@ if (empty($_POST["pedido-emailemp"])) {
 }
 
 $telemp = $_POST["pedido-telemp"];
+
 $simples = $_POST["pedido-simples"];
+    if($simples.is(':checked'))
+        $simples.next().text("Sim");
+    else
+        $simples.next().text("Não");
+});
+
  
 $To = "colemais@eticketa.com.br";
 $uglySubject = "[Campanha | $assunto] Pedido formal";

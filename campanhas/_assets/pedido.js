@@ -4,27 +4,11 @@ $(document).ready(function() {
     });
 });
 
-/*$(function(){
-  //set status to true on load
-  $('#pedido-simples-label')[0].MaterialSwitch.on();
-    $('#pedido-simples').change(function(){
-        if($(this).is(':checked'))
-            $(this).next().text("Sim");
-        else
-            $(this).next().text("Não");
-});*/
-
-
-
 $("#etka_pedido").submit(function(event){
     var email = document.forms["etka_pedido"]["pedido-email"].value;
     var contato_email = document.getElementById("pedido-email");
     var endereco = document.forms["etka_pedido"]["pedido-endereco"].value;
     var contato_end = document.getElementById("pedido-endereco");
-    var emailemp = document.forms["etka_pedido"]["pedido-emailemp"].value;
-    var contato_emailemp = document.getElementById("pedido-emailemp");
-    var endemp = document.forms["etka_pedido"]["pedido-endemp"].value;
-    var contato_endemp = document.getElementById("pedido-endemp"); 
     var att = document.createAttribute("required");
     if (email == "") {
         contato_email.setAttributeNode(att);
@@ -38,18 +22,6 @@ $("#etka_pedido").submit(function(event){
         // handle the invalid form...
         pedidoError();
     } 
-    if (emailemp == "") {
-        contato_emailemp.setAttributeNode(att);
-        return false;
-        // handle the invalid form...
-        pedidoError();
-    }
-    if (endemp == "") {
-        contato_endemp.setAttributeNode(att);
-        return false;
-        // handle the invalid form...
-        pedidoError();
-    } 
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
         pedidoError();
@@ -58,7 +30,6 @@ $("#etka_pedido").submit(function(event){
         event.preventDefault();
         submitpedido();
     }
-
 });
 
 function submitpedido(){
@@ -69,7 +40,6 @@ function submitpedido(){
     var empresa = $("#pedido-empresa").val();
     var telefone = $("#pedido-telefone").val();
     var endereco = $("#pedido-endereco").val();
-    var quantidade = $("#pedido-quantidade").val();
     var mensagem = $("#pedido-mensagem").val();
     var cnpj = $("#pedido-cnpj").val();
     var razao = $("#pedido-razao").val();
@@ -82,7 +52,7 @@ function submitpedido(){
     $.ajax({
         type: "POST",
         url: "../_assets/pedido.php",
-        data: "pedido-assunto=" + assunto + "&pedido-nome=" + nome + "&pedido-email=" + email + "&pedido-empresa=" + empresa + "&pedido-telefone=" + telefone + "&pedido-endereco=" + endereco + "&pedido-quantidade=" + quantidade + "&pedido-mensagem=" + mensagem + "&pedido-cnpj=" + cnpj + "&pedido-razao=" + razao + "&pedido-endemp=" + endemp + "&pedido-insest=" + insest + "&pedido-emailemp=" + emailemp + "&pedido-telemp=" + telemp + "&pedido-simples=" + simples,
+        data: "pedido-assunto=" + assunto + "&pedido-nome=" + nome + "&pedido-email=" + email + "&pedido-empresa=" + empresa + "&pedido-telefone=" + telefone + "&pedido-endereco=" + endereco + "&pedido-mensagem=" + mensagem+ "&pedido-cnpj=" + cnpj+ "&pedido-razao=" + razao + "&pedido-endemp=" + endemp + "&pedido-insest=" + insest + "&pedido-emailemp=" + emailemp + "&pedido-telemp=" + telemp + "&pedido-simples=" + simples,
         success : function(text){
             if (text == "success"){
                 pedidoSuccess();
@@ -95,7 +65,7 @@ function submitpedido(){
 
 function pedidoSuccess(){
     $( "#etka_pedido-enviado" ).removeClass( "etka_popup-enviado" );
-    $( '#pedido-assunto, #pedido-nome, #pedido-email, #pedido-empresa, #pedido-telefone, #pedido-endereco, #pedido-quantidade, #pedido-mensagem, #pedido-cnpj, #pedido-razao, #pedido-endemp, #pedido-insest, #pedido-emailemp, #pedido-telemp, #pedido-simples' ).val('');
+    $( '#pedido-assunto, #pedido-nome, #pedido-email, #pedido-empresa, #pedido-telefone, #pedido-endereco, #pedido-mensagem, #pedido-cnpj, #pedido-razao, #pedido-endemp, #pedido-insest, #pedido-emailemp, #pedido-telemp, #pedido-simples' ).val('');
 }
 
 function pedidoError(){

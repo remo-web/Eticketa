@@ -60,7 +60,7 @@ $Body .= "
         <b>E-mail:</b> $email<br/>
         <b>Telefone:</b> $telefone<br/>
         <b>Endereço para entrega:</b> $endereco<br/>
-        <b>Quantidade (mínimo de 1.000):</b> $quantidade <br/>
+        <b>Quantidade:</b> $quantidade <br/>
         <b>Observações / Dúvidas:</b> $mensagem<br/><br/>
         <b style='text-transform: uppercase;'>DADOS PARA EMISSÃO DE BOLETO E NOTA FISCAL</b><br/>
         <b>CNPJ:</b> $cnpj<br/>

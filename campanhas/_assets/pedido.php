@@ -32,7 +32,7 @@ $razao = $_POST["pedido-razao"];
 if (empty($_POST["pedido-endemp"])) {
     $error .= "Endereço is required ";
 } else {
-    $endereco = $_POST["pedido-endemp"];
+    $enderecoemp = $_POST["pedido-endemp"];
 }
 
 $insest = $_POST["pedido-insest"];
@@ -41,7 +41,7 @@ $insest = $_POST["pedido-insest"];
 if (empty($_POST["pedido-emailemp"])) {
     $error .= "Email is required ";
 } else {
-    $email = $_POST["pedido-emailemp"];
+    $emailemp = $_POST["pedido-emailemp"];
 }
 
 $telemp = $_POST["pedido-telemp"];

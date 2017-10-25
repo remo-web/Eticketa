@@ -4,7 +4,7 @@ $(document).ready(function() {
     });
 });
 
-$(function(){
+/*$(function(){
   //set status to true on load
   $('#pedido-simples-label')[0].MaterialSwitch.on();
     $('#pedido-simples').change(function(){
@@ -12,7 +12,7 @@ $(function(){
             $(this).next().text("Sim");
         else
             $(this).next().text("Não");
-});
+});*/
 
 
 

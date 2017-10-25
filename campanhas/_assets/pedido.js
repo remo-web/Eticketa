@@ -4,6 +4,13 @@ $(document).ready(function() {
     });
 });
 
+$('#pedido-simples').change(function(){
+    if($(this).is(':checked'))
+        $(this).next().text("Sim");
+    else
+        $(this).next().text("Não");
+});
+
 $("#etka_pedido").submit(function(event){
     var email = document.forms["etka_pedido"]["pedido-email"].value;
     var contato_email = document.getElementById("pedido-email");

@@ -57,7 +57,7 @@
                             <p>Por favor, preencha corretamente <b>todos os campos</b> do formulário a seguir e clique em <b>ENVIAR</b>.</p>
                             <form class="mdl-grid" id="etka_pedido" name="etka_pedido" action="../_assets/pedido.php" method="post">
                                 <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
-                                        <p>DADOS DE CONTATO E ENTREGA:</p>
+                                        <h5>DADOS DE CONTATO E ENTREGA:</h5>
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
                                     <input style="display: none" type="text" id="pedido-assunto" name="pedido-assunto" value="Validade">                        
@@ -103,7 +103,7 @@
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
-                                    <p>DADOS PARA EMISSÃO DE BOLETO E NOTA FISCAL:</p>
+                                    <h5>DADOS PARA EMISSÃO DE BOLETO E NOTA FISCAL:</h5>
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -130,18 +130,14 @@
                                         <label class="mdl-textfield__label" for="pedido-insest">Inscrição Estatual</label>
                                     </div>
                                 </div>
-                                <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
-                                    Optante do Simples?
-                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="pedido-simples">
+                                <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-phone">
+                                    <p class="mdl-textfield mdl-js-textfield" style="color: darkgray">Optante do Simples?</p>
+                                </div>
+                                <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-phone">
+                                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="pedido-simples" style="margin-top: 20px" >
                                         <input type="checkbox" id="pedido-simples" class="mdl-switch__input" checked>
                                         <span class="mdl-switch__label"></span>
-                                    </label>
-                                    <!--<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="pedido-simples" name="pedido-simples" >
-                                        <label class="mdl-textfield__label" for="pedido-simples">Optante do SIMPLES?</label>
-                                        <span class="mdl-textfield__error">Sim ou Não</span>
-                                    </div> -->
-                                
+                                    </label>                                
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -157,6 +153,7 @@
                                         <span class="mdl-textfield__error">Insira um número de telefone válido.</span>
                                     </div>
                                 </div>
+                                <div class="mdl-layout-spacer">&nbsp;</div>
                                 <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="pedido-enviar" name="pedido-enviar" type="submit" value="etka_pedido" style="width: 100%">ENVIAR</button>
                                 </div>

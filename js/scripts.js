@@ -1,12 +1,5 @@
 //FULLPAGE
-$(document).ready(function() {
-        if($(window).width() < 960) {
-            //mobile
-        }
-            else{
-                
-                
-                //QUANDO O MOBILE ESTIVE DIREITO É PARA TIRAR O QUE ESTÁ AQUI PRA CIMA E DEIXAR SÓ ATÉ...
+
 $(document).ready(function() {
 	$('#fullpage').fullpage({
         menu: '#menu',
@@ -27,12 +20,6 @@ $(document).ready(function() {
 //        parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 	});
 });
-                
-                //AQUI!
-                
-                
-            }
-        });
 
 //--------------------------------------//
 

@@ -25,6 +25,15 @@ input[type='file'] {display: none}
 
 /* GOOGLE MDL MODS */
 
+@media (max-width: 479px){
+    .etka_home .mdl-cell--middle{ 
+        -webkit-align-self: flex-start;
+        -ms-flex-item-align: flex-start;
+        -ms-grid-row-align: flex-start;
+        align-self: flex-start;
+    }
+}
+
 .mdl-grid{padding: 0px}
 
 .mdl-spinner:not(.is-upgraded).is-active:after {
@@ -220,22 +229,43 @@ dialog .etka_btn-enviar{width: 100%}
 
     /* home */
 
-    #etka_home-video{
-        position: absolute;
-		bottom: 0;
-		top:0;
-		right:0;
-		width: 100%;
-        height: auto;
-		background-size: 100% 100%;
- 		background-color: black; /* in case the video doesn't fit the whole page*/
-  		background-image: url(../mov/etka_site17-video_amarelo2.mp4);
-  		background-position: center center;
-  		background-size: cover;
-   		object-fit: cover; /*cover video background */
-   		z-index: 0;
-        overflow: hidden;
-        opacity: 0.6;
+    @media (min-width: 479px){
+        #etka_home-video{
+            position: absolute;
+            bottom: 0;
+            top:0;
+            right:0;
+            width: 100%;
+            height: auto;
+            background-size: 100% 100%;
+            background-color: black; /* in case the video doesn't fit the whole page*/
+            background-image: url(../mov/etka_site17-video_amarelo2.mp4);
+            background-position: center center;
+            background-size: cover;
+            object-fit: cover; /*cover video background */
+            z-index: 0;
+            overflow: hidden;
+            opacity: 0.6;
+        }
+    }
+    @media (max-width: 479px){
+        #etka_home-video{
+            position: absolute;
+            bottom: 0;
+            top:0;
+            right: -82%;
+            width: auto;
+            height: 100%;
+            background-size: 100% 100%;
+            background-color: black; /* in case the video doesn't fit the whole page*/
+            background-image: url(../mov/etka_site17-video_amarelo2.mp4);
+            background-position: center center;
+            background-size: cover;
+            object-fit: cover; /*cover video background */
+            z-index: 0;
+            overflow: hidden;
+            opacity: 0.6;
+        }
     }
 
     .layer{
@@ -256,6 +286,9 @@ dialog .etka_btn-enviar{width: 100%}
     .etka_home a{color: white !important}
     .etka_home p{color: white}
     .etka_home-logo{margin-right: 16px; padding-right: 8px;}
+    @media (max-width: 479px){
+        .etka_home-logo{margin: 7rem 5rem 0rem 5rem;}
+    }
 
     .etka_home-txt{
         padding: 16px 16.66666% 0 16px;
@@ -297,6 +330,12 @@ dialog .etka_btn-enviar{width: 100%}
     .etka_prod .mdl-cell--3-col{margin: 0 2% 0 4.5%}
     .etka_prod-video{overflow: hidden; height: 81vh}
 
+    @media (max-width: 479px){
+        .etka_prod .mdl-grid{margin-top: 0}
+        .etka_prod-video{overflow: hidden; height: 35vh; width: 100%; margin: 0}
+        .etka_prod-txt{margin-left: 50px; margin-right: 50px}
+    }
+
     .etka_prod-video video{
         width: auto;
         height: 100%;
@@ -330,6 +369,12 @@ dialog .etka_btn-enviar{width: 100%}
         }
 
     /* como fazemos */
+
+    @media (max-width: 479px){
+        .etka_fazemos .mdl-grid{
+            margin-top: 64px
+        }
+    }
 
     .etka_fazemos {
         background-color: #FAFAFA;

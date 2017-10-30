@@ -222,18 +222,18 @@ dialog .etka_btn-enviar{width: 100%}
 
     #etka_home-video{
         position: absolute;
-		bottom: 0;
-		top:0;
-		right:0;
-		width: 100%;
+        bottom: 0;
+        top:0;
+        right:0;
+        width: 100%;
         height: auto;
-		background-size: 100% 100%;
- 		background-color: black; /* in case the video doesn't fit the whole page*/
-  		background-image: url(../mov/etka_site17-video_amarelo2.mp4);
-  		background-position: center center;
-  		background-size: cover;
-   		object-fit: cover; /*cover video background */
-   		z-index: 0;
+        background-size: 100% 100%;
+        background-color: black; /* in case the video doesn't fit the whole page*/
+        background-image: url(../mov/etka_site17-video_amarelo2.mp4);
+        background-position: center center;
+        background-size: cover;
+        object-fit: cover; /*cover video background */
+        z-index: 0;
         overflow: hidden;
         opacity: 0.6;
     }
@@ -293,8 +293,7 @@ dialog .etka_btn-enviar{width: 100%}
 
     .etka_prod {background-color: white}
     .etka_prod p{color: black; opacity: .87}
-    .etka_prod .mdl-grid{margin-top: 64px}
-    .etka_prod .mdl-cell--3-col{margin: 0 2% 0 4.5%}
+    .etka_prod .mdl-cell--3-col-desktop{margin: 0 2% 0 4.5%}
     .etka_prod-video{overflow: hidden; height: 81vh}
 
     .etka_prod-video video{
@@ -458,7 +457,6 @@ dialog .etka_btn-enviar{width: 100%}
         height: 100%;
         margin: 0 16px 0 0;
         text-align: left;
-        padding-top: 64px
     }
 
     .etka_contato-l p{color: white;}

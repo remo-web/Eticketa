@@ -77,6 +77,7 @@
 		
 		<!-- CUSTOM CSS -->
 		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<link rel="stylesheet" type="text/css" href="./css/style_mobile.css">
         
 		<!-- fullPage -->
 		<link rel="stylesheet" type="text/css" href="./plugins/fullPage/jquery.fullPage.css">
@@ -117,90 +118,7 @@
         
 		<div class="font etka-layout-transparent mdl-layout mdl-js-layout">
             
-            <!-- MOBILE 1.1 -->
-            <main class="mdl-layout__content mdl-layout--small-screen-only">
-                <div class="mdl-grid">
-                    <div class="mdl-cell mdl-cell--1-offset-phone mdl-cell--2-col-phone">
-                        <h2><img src="img/home/eticketa-logo_cor.svg"></h2>
-                    </div>
-                    <div class="mdl-cell mdl-cell--4-phone etka_mob">
-                        <p class="etka_mob">A versão completa do nosso site estará disponível em breve também para dispositivos móveis.</p><p>Enquanto isso, fique a vontade para entrar em contato pelo <em>telefone</em>, <em>WhatsApp</em> ou <em>Telegram</em> atráves dos números:</p>
-                    </div>
-                    <div class="mdl-cell mdl-cell--2-col-phone etka_mob" style="text-align: right">
-                        <a href="tel:+552134909292" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ><small>+55&nbsp;&nbsp;21</small> 3490 9292</a>
-                    </div>
-                    <div class="mdl-cell mdl-cell--2-col-phone etka_mob" style="text-align: left">
-                        <a href="tel:+5521967301060" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ><small>+55&nbsp;&nbsp;21</small> 9 6730 1060</a>
-                    </div>
-                    <div class="mdl-layout-spacer">&nbsp;</div>
-                    <div class="mdl-cell mdl-cell--4-phone">
-                        <p class="etka_mob">Ou, preencha e envie o fomulário a seguir, para que um de nossos consultores entre em contato muito em breve.</p>
-                    </div>
-                    <div class="mdl-cell mdl-cell--4-col-phone">
-                        <form class="mdl-grid" id="etka_contato-mobile" name="etka_contato" action="./contato/mobile/contato.php" method="post">
-                            <div class="mdl-cell mdl-cell--6-col">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="m_contato-nome" name="m_contato-nome">
-                                    <label class="mdl-textfield__label" for="m_contato-nome">Nome</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$+\.[a-z]{2,3}$" id="m_contato-email" name="m_contato-email">
-                                    <label class="mdl-textfield__label" for="m_contato-email">E-mail</label>
-                                    <span class="mdl-textfield__error">Insira um endereço de e-mail válido.</span>
-                                </div>
-                            </div>
-                            <div class="mdl-cell mdl-cell--6-col">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="m_contato-empresa" name="m_contato-empresa">
-                                    <label class="mdl-textfield__label" for="m_contato-empresa">Cargo / Empresa</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" pattern="[(]?\d{2}[- )]?[\d{1}]?[- ]?\d{4}[- ]?\d{4}" id="m_contato-tel" name="m_contato-tel">
-                                    <label class="mdl-textfield__label" for="m_contato-tel">Telefone</label>
-                                    <span class="mdl-textfield__error">Insira um número de telefone válido.</span>
-                                </div>
-                            </div>
-                            <div class="mdl-cell mdl-cell--12-col">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="m_contato-assunto" name="m_contato-assunto" >
-                                    <label class="mdl-textfield__label" for="m_contato-assunto">Assunto</label>
-                                </div>
-                            </div>
-                            <div class="mdl-cell mdl-cell--12-col">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <textarea class="mdl-textfield__input" type="text" rows= "3" id="m_contato-mensagem" name="m_contato-mensagem"></textarea>
-                                    <label class="mdl-textfield__label" for="m_contato-mensagem">Mensagem</label>
-                                </div>
-                            </div>
-                            <div class="mdl-cell mdl-cell--4-col">
-                                <div class="etka_contato-mobile-enviado" id="etka_contato-mobile-enviado">
-                                    <span class="mdl-chip mdl-chip--contact">
-                                        <span class="mdl-chip__contact mdl-color--green mdl-color-text--white">
-                                            <i class="material-icons" style="vertical-align: middle">done</i>
-                                        </span>
-                                        <span class="mdl-chip__text">Mensagem enviada!</span>
-                                    </span>
-                                </div>
-                                <div class="etka_contato-mobile-erro" id="etka_contato-mobile-erro">
-                                    <span class="mdl-chip mdl-chip--contact">
-                                        <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">
-                                            <i class="material-icons" style="vertical-align: middle">clear</i>
-                                        </span>
-                                        <span class="mdl-chip__text">Ops! Algo deu errado... =(</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="mdl-cell mdl-cell--8-col" style="text-align: right">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="m_contato-enviar" name="m_contato-enviar" type="submit" value="etka_contato-mobile">ENVIAR</button>
-                            </div>
-                            <div class="mdl-layout-spacer">&nbsp;</div>
-                        </form>
-                    </div>
-                </div>
-            </main>
-            <!-- END - MOBILE 1.1 -->
-            
-            <header class="mdl-layout__header mdl-layout--large-screen-only" id="top">
+            <header class="mdl-layout__header" id="top">
 				<div class="mdl-layout__header-row">
 					<!-- Title -->
 					<a class="mdl-layout-title font w200 etka_title" id="etka_title" data-menuanchor="home" href="#home"><big><b>ETICKETA</b></big> <small>Rótulos e Soluções</small></a>
@@ -215,7 +133,7 @@
 					</nav> -->
 				</div>
 			</header>
-			<div class="mdl-layout__drawer mdl-layout--large-screen-only">
+			<div class="mdl-layout__drawer">
 				<!--<span class="mdl-layout-title">Title</span>-->
 				<nav class="mdl-navigation" id="menu">
 					<a class="mdl-navigation__link" data-menuanchor="home" href="#home">Página inicial</a>
@@ -230,7 +148,11 @@
 				</nav>
             </div>
 			
-			<main class="mdl-layout__content mdl-layout--large-screen-only" id="fullpage">
+			<main class="mdl-layout__content" id="fullpage">
+                <!--GO HOME
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+                    <i class="material-icons">keyboard_arrow_up</i>
+                </button>-->
                 <!--HOME-->
 				<section data-anchor="home" class="section etka_home" id="etka_home">
                     <button type="button" id="mute-video" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored etka_som">
@@ -242,45 +164,45 @@
                         <source data-src="./mov/etka_site17-video_amarelo2.mp4" type="video/mp4" />
                     </video>
                     <div class="mdl-grid layer">
-                        <div class="mdl-cell mdl-cell--middle mdl-cell--2-offset-desktop mdl-cell--3-col etka_home-logo">
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--2-offset-desktop mdl-cell--3-col-desktop mdl-cell--4-col-phone etka_home-logo">
                             <img src="img/home/eticketa-logo_cor.svg">
                         </div>
-                        <div class="mdl-cell mdl-cell--middle mdl-cell--2-offset-desktop mdl-cell--5-col etka_home-txt mdl-shadow--2dp">
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--2-offset-desktop mdl-cell--5-col-desktop mdl-cell--hide-phone etka_home-txt mdl-shadow--2dp">
                             <p>Três especialistas em materiais gráficos, cuja a experiência somada <b>ultrapassa os 100 anos</b>, com histórias escritas nas mais renomadas empresas fabricantes de rótulos e etiquetas do país decidem materializar seus conhecimentos na busca por um <b>sonho de excelência</b>, com o objetivo de sempre <b>superar as expectativas</b> dos clientes, valorizar a qualidade de vida dos funcionários e a proximidade de fornecedores parceiros, dentro dos preceitos de responsabilidade social e ambiental.</p>
                         </div>
-                        <div class="mdl-cell mdl-cell--12-col mdl-cell--middle etka_home-menu" id="menu">
+                        <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone  mdl-cell--middle etka_home-menu" id="menu">
                             <div class="mdl-grid">
-                                <div data-menuanchor="rotulos" class="mdl-cell mdl-cell--bottom mdl-cell--3-offset-desktop mdl-cell--1-col">
+                                <div data-menuanchor="rotulos" class="mdl-cell mdl-cell--bottom mdl-cell--3-offset-desktop mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                                     <a href="#produtos/rotulos"><img src="img/home/etka_home_rotulo.svg" height="50" alt="rotulo" style="margin: 20px"></a><br>
                                     <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#produtos/rotulos">
                                         Rótulos
                                     </a>
                                 </div>
-                                <div data-menuanchor="lacres" class="mdl-cell mdl-cell--bottom mdl-cell--1-col">
+                                <div data-menuanchor="lacres" class="mdl-cell mdl-cell--bottom mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                                     <a href="#produtos/lacres"><img src="img/home/etka_home_lacre.svg" height="50" alt="lacre" style="margin: 20px"></a><br>
                                     <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#produtos/lacres">
                                         Lacres
                                     </a>
                                 </div>
-                                <div data-menuanchor="ingressos" class="mdl-cell mdl-cell--bottom mdl-cell--1-col">
+                                <div data-menuanchor="ingressos" class="mdl-cell mdl-cell--bottom mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                                     <a href="#produtos/ingressos"><img src="img/home/etka_home_ingresso.svg" height="50" alt="ingressos" style="margin: 20px"></a><br>
                                     <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#produtos/ingressos">
                                         Ingressos
                                     </a>
                                 </div>
-                                <div data-menuanchor="validade" class="mdl-cell mdl-cell--bottom mdl-cell--1-col">
+                                <div data-menuanchor="validade" class="mdl-cell mdl-cell--bottom mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                                     <a href="#produtos/validade"><img src="img/home/etka_home_validade.svg" height="50" alt="validade" style="margin: 20px"></a><br>
                                     <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#produtos/validade">
                                         Validade
                                     </a>
                                 </div>
-                                <div data-menuanchor="fazemos" class="mdl-cell mdl-cell--bottom mdl-cell--1-col">
+                                <div data-menuanchor="fazemos" class="mdl-cell mdl-cell--bottom mdl-cell--1-col-desktop mdl-cell--1-offset-phone mdl-cell--1-col-phone">
                                     <a href="#fazemos"><img src="img/home/etka_home_como.svg" height="50" alt="como" style="margin: 20px"></a><br>
                                     <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#fazemos">
-                                        Como fazemos
+                                        Como<span class="mdl-cell--hide-desktop">?</span> fazemos
                                     </a>
                                 </div>
-                                <div data-menuanchor="contato" class="mdl-cell mdl-cell--bottom mdl-cell--1-col">
+                                <div data-menuanchor="contato" class="mdl-cell mdl-cell--bottom mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                                     <a href="#contato"><img src="img/home/etka_home_contato.svg" height="50" alt="contato" style="margin: 20px"></a><br>
                                     <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#contato">
                                         Contato
@@ -296,16 +218,16 @@
                     </div>
 				</section>
                 <!--PRODUTOS-->
-				<section data-anchor="produtos" class="section etka_prod" id="etka_prod">
+				<section data-anchor="produtos" class="section fp-auto-height-responsive etka_prod" id="etka_prod">
 					<div class="slide" data-anchor="rotulos" id="etka_rotulos">
                         <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col-desktop mdl-cell--4-cel-phone mdl-cell--order-2-phone etka_prod-txt">
                                 <h1>Rótulos</h1>
                                 <p>Suas embalagens devem refletir a imagem da sua marca de maneira firme, nítida e fiel à sua identidade. Conquistando a confiança do consumidor já à primeira vista.</p><p>Seja o produto congelado, resfriado ou de prateleira, seja a embalagem de vidro, metal, plástico, papel ou qualquer outro material, oferecemos soluções de rotulagem para todas as necessidades.</p>
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="show-dialog-orcamento-rotulos" type="button"
  data-toggle="modal" data-target="#dialog-orcamento-rotulos">PEÇA SEU ORÇAMENTO</button>
                             </div>
-                            <div class="mdl-cell mdl-cell--middle mdl-cell--8-col etka_prod-video">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--8-col-desktop mdl-cell--4-cel-phone mdl-cell--order-1-phone etka_prod-video">
                                 <video data-autoplay loop muted>
                                     <source data-src="./mov/etka_site17-video_esqueleto.webm" type="video/webm" />
                                     <source data-autoplay data-src="./mov/etka_site17-video_esqueleto.mp4" type="video/mp4" />
@@ -315,13 +237,13 @@
 					</div>
 					<div class="slide" data-anchor="lacres" id="etka_lacres">
                         <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col-desktop mdl-cell--4-cel-phone mdl-cell--order-2-phone etka_prod-txt">
                                 <h1>Lacres</h1>
                                 <p>Seja para <i>delivery</i> de alimentos, segurança de veículos rebocados ou em sinistro, caixas de medicamentos, ou para oferecer aos seus clientes uma garantia extra de qualidade, contra violação e adulteração do seu produto.</p><p>Oferecemos soluções em lacres adesivos para diversas finalidades, com várias opções de formatos e tipos de corte, fabricados no material mais adequado para cada utilização e opções de arte personalizada ou econômica.</p>
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="show-dialog-orcamento-lacres" type="button"
  data-toggle="modal" data-target="#dialog-orcamento-lacres">PEÇA SEU ORÇAMENTO</button>
                             </div>
-                            <div class="mdl-cell mdl-cell--middle mdl-cell--8-col etka_prod-video">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--8-col-desktop mdl-cell--4-cel-phone mdl-cell--order-1-phone  etka_prod-video">
                                 <video data-autoplay loop muted>
                                     <source data-src="./mov/etka_site17-video_SM.webm" type="video/webm" />
                                     <source data-src="./mov/etka_site17-video_SM.mp4" type="video/mp4" />
@@ -331,13 +253,13 @@
 					</div>
 					<div class="slide" data-anchor="ingressos" id="etka_ingressos">
                         <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col-desktop mdl-cell--4-cel-phone mdl-cell--order-2-phone etka_prod-txt">
                                 <h1>Controle de Acesso</h1>
                                 <p>Quem visita seu estabelecimento, empresa, parque industrial, hospital, festas, shows, precisa ter seu acesso e identificação garantidos. É uma questão de segurança para o seu negócio e seus clientes.</p><p>Converse com nossos consultores, e encontraremos a solução gráfica ideal para atender as demandas de identificação e acesso do seu negócio e quem sabe, solucionar outras que ainda nem foram mapeadas.</p>
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="show-dialog-orcamento-ingressos" type="button"
  data-toggle="modal" data-target="#dialog-orcamento-ingressos">PEÇA SEU ORÇAMENTO</button>
                             </div>
-                            <div class="mdl-cell mdl-cell--middle mdl-cell--8-col etka_prod-video">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--8-col-desktop mdl-cell--4-cel-phone mdl-cell--order-1-phone  etka_prod-video">
                                 <video data-autoplay loop muted>
                                     <source data-src="./mov/etka_site17-video_verniz.webm" type="video/webm" />
                                     <source data-autoplay data-src="./mov/etka_site17-video_verniz.mp4" type="video/mp4" />
@@ -347,13 +269,13 @@
 					</div>
 					<div class="slide" data-anchor="validade" id="etka_validade">
                         <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col-desktop mdl-cell--4-cel-phone mdl-cell--order-2-phone etka_prod-txt">
                                 <h1>Etiquetas de Validade</h1>
                                 <p>Este produto é dedicado a quem lida com alimentos e busca cumprir à risca os itens <a href="http://www.rio.rj.gov.br/dlstatic/10112/5125403/4132348/RESOLUcaORDCN216ANVISA.pdf" target="_blank" title="Regulamento Técnico de Boas Práticas para Serviços de Alimentação.">4.8.6 e 4.9.1 da Resolução - CDN nº 216 (ANVISA)</a>,  afim de evitar multas ou eventuais punições mais severas.</p><p>Conte com a Eticketa para que a identificação dos seus alimentos armazenados facilite, tanto o trabalho da sua equipe, quanto dos fiscais.</p><p>Resistentes a ambientes úmidos, resfriados e congelados, nossas etiquetas de validade, aceitam escritas de todo o tipo de canetas e podem ser personalizadas com a sua marca.</p>
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="show-dialog-orcamento-validade" type="button"
  data-toggle="modal" data-target="#dialog-orcamento-validade">PEÇA SEU ORÇAMENTO</button>
                             </div>
-                            <div class="mdl-cell mdl-cell--middle mdl-cell--8-col etka_prod-video">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--8-col-desktop mdl-cell--4-cel-phone mdl-cell--order-1-phone  etka_prod-video">
                                 <video data-autoplay loop muted>
                                     <source data-src="./mov/etka_site17-video_vermelho(1).webm" type="video/webm" />
                                     <source data-autoplay data-src="./mov/etka_site17-video_vermelho(1).mp4" type="video/mp4" />
@@ -368,7 +290,7 @@
                         <div class="mdl-cell mdl-cell--middle mdl-cell--2-offset-desktop mdl-cell--8-col">
                             <h1>Como Fazemos</h1>
                         </div>
-                        <div class="mdl-cell mdl-cell--middle mdl-cell--3-offset-desktop mdl-cell--3-col">
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--3-offset-desktop mdl-cell--3-col-desktop mdl-cell--4-col-phone">
                             <!-- flexo -->
                             <div class="etka-card-wide mdl-card mdl-shadow--2dp">
                                 <div class="mdl-card__title etka-fazemos-flexo">
@@ -399,7 +321,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--middle mdl-cell--3-col">
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--3-col-desktop mdl-cell--4-col-phone">
                             <!-- digital -->
                             <div class="etka-card-wide mdl-card mdl-shadow--2dp">
                                 <div class="mdl-card__title etka-fazemos-digital">
@@ -437,7 +359,7 @@
 					<div class="mdl-cell mdl-cell--middle mdl-cell--2-offset-desktop mdl-cell--8-col" style="text-align: center">
                         <h1>Preços</h1>
                         <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col" id="etka_preco-delivery">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col-desktop mdl-cell--2-col-phone" id="etka_preco-delivery">
                                 <div class="mdl-card mdl-shadow--2dp">
                                     <div class="mdl-card__title">
                                         <h2 class="mdl-card__title-text">LACRES PARA DELIVERY</h2>
@@ -479,7 +401,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col" id="etka_preco-garantia">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col-desktop mdl-cell--2-col-phone" id="etka_preco-garantia">
                                 <div class="mdl-card mdl-shadow--2dp">
                                     <div class="mdl-card__title">
                                         <h2 class="mdl-card__title-text">LACRES DE GARANTIA</h2>
@@ -521,7 +443,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col" id="etka_preco-ingresso">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col-desktop mdl-cell--2-col-phone" id="etka_preco-ingresso">
                                 <div class="mdl-card mdl-shadow--2dp">
                                     <div class="mdl-card__title">
                                         <h2 class="mdl-card__title-text">TICKETS E INGRESSOS</h2>
@@ -563,7 +485,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col" id="etka_preco-validade">
+                            <div class="mdl-cell mdl-cell--middle mdl-cell--3-col-desktop mdl-cell--2-col-phone" id="etka_preco-validade">
                                 <div class="mdl-card mdl-shadow--2dp">
                                     <div class="mdl-card__title">
                                         <h2 class="mdl-card__title-text">ETIQUETAS DE VALIDADE</h2>
@@ -692,21 +614,21 @@
 				<section data-anchor="contato" class="section etka_contato" id="etka_contato">
                     
                     <!-- Copyright -->
-                    <div class="mdl-grid etka_copy">
-                        <div class="mdl-cell mdl-cell--6-col etka_copy-l-txt">
+                    <div class="mdl-grid etka_copy mdl-cell--hide-phone">
+                        <div class="mdl-cell mdl-cell--6-col-desktop etka_copy-l-txt">
                             <span style="margin-right: 16px">Todos os direitos reservados. ETICKETA - Rótulos e Soluções <span class="etka_copy-s">&#169;</span> 2017</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col etka_copy-r-txt">
+                        <div class="mdl-cell mdl-cell--6-col-desktop etka_copy-r-txt">
                             Uma obra-prima artesanal deste cara <a href="http://raphaelrpais.com" target="_blank">aqui</a>.
                         </div>
                     </div>
-                    <!-- Copyright -->
+                    <!-- /Copyright -->
                     
                     <div class="mdl-grid">
-                        <div class="mdl-cell mdl-cell--middle mdl-cell--6-col etka_contato-l">
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--6-col-desktop mdl-cell--4-col-phone mdl-cell--order-2-phone etka_contato-l">
                             <div class="mdl-grid">
                                 <div class="mdl-cell mdl-cell--middle mdl-cell--3-offset-desktop mdl-cell--6-col etka_contato-subscribe">
-                                    <p>Estamos no <strong>Rio de Janeiro</strong>, mas alcançamos as suas demandas em qualquer lugar. Oferecemos diversos tipos de frete e pode até sair <strong>grátis</strong>!<br/><br/>Entre em contato pelo formulário ao lado para mais informações.<br/><br/>E caso não necessite dos nossos serviços imediatamente, <strong>inscreva-se</strong> e fique sempre por dentro das novidades do mercado gráfico e da Eticketa.</p>
+                                    <p>Estamos no <strong>Rio de Janeiro</strong>, mas alcançamos as suas demandas em qualquer lugar. Oferecemos diversos tipos de frete e pode até sair <strong>grátis</strong>!<br/><br/><span class="mdl-cell--hide-phone">Entre em contato pelo formulário ao lado para mais informações.<br/><br/></span>E caso não necessite dos nossos serviços imediatamente, <strong>inscreva-se</strong> e fique sempre por dentro das novidades do mercado gráfico e da Eticketa.</p>
                                     <form class="mdl-grid" id="etka_subscribe" name="etka_subscribe" action="./contato/subscribe/subscribe.php" method="post">
                                         <div class="mdl-cell mdl-cell--12-col">
                                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -743,23 +665,31 @@
                                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="subscribe-enviar" name="subscribe-enviar" type="submit" value="etka_subscribe">INSCREVER</button>
                                         </div>
                                     </form>
+                            <div class="mdl-grid etka_copy">
+                                <div class="mdl-cell mdl-cell--4-col-phone">
+                                    Todos os direitos reservados.<br/>
+                                    ETICKETA - Rótulos e Soluções <span class="etka_copy-s">&#169;</span> 2017<br/>
+                                    Uma obra-prima artesanal deste cara <a href="http://raphaelrpais.com" target="_blank">aqui</a>.
+                                </div>
+                            </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--middle mdl-cell--1-offset-desktop mdl-cell--4-col">
+                        <div class="mdl-cell mdl-cell--middle mdl-cell--1-offset-desktop mdl-cell--4-col-dektop mdl-cell--4-col-phone mdl-cell--order-1-phone">
                             <h1>Contato</h1>
                             <p>Para esclarecimentos mais profundos, conhecer mais do nosso trabalho, tirar dúvidas, pedidos de orçamento... Fique a vontade, entre em contato.</p>
                             <button role="link" href="tel:+5521967301060" class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary">
                                 <i class="material-icons">phone</i>
                             </button>
-                            <a href="tel:+552134909292"><h5 class="etka_contato-tel"><small>+55&nbsp;&nbsp;21</small> 3490 9292</h5></a>
+                            <a href="tel:+552134909292"><h5 class="etka_contato-tel"><b><small>+55&nbsp;&nbsp;21</small> 3490 9292</b></h5></a>
+                            <span class="mdl-cell--hide-desktop"><br/><br/></span>
                             <button role="button" href="whatsapp://send?text=Hello World!&phone=+5521984016556" class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary" style="margin-right: 0px">
                                 <i class="fa fa-whatsapp" aria-hidden="true"></i>
                             </button>
                             <button role="link" href="tel:+5521967301060" class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary">
                                 <i class="fa fa-telegram" aria-hidden="true"></i>
                             </button>
-                            <a href="tel:+5521967301060"><h5 class="etka_contato-tel"><small>+55&nbsp;&nbsp;21</small> 9 6730 1060</h5></a>
+                            <a href="tel:+5521967301060"><h5 class="etka_contato-tel"><b><small>+55&nbsp;&nbsp;21</small> 9 6730 1060</b></h5></a>
                             <h4>Mensagem</h4>
                             <form class="mdl-grid" id="etka_contato" name="etka_contato" action="./contato/contato.php" method="post">
                                 <div class="mdl-cell mdl-cell--6-col">
@@ -833,7 +763,7 @@
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
                 <form class="mdl-grid" id="etka_o-rotulos" name="etka_o-rotulos" action="./contato/orcamento/rotulos.php" method="post" enctype="multipart/form-data">
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <h4>Sobre você</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--6-col">
@@ -858,7 +788,7 @@
                             <span class="mdl-textfield__error">Insira um número de telefone válido com DDD.</span>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <h4>Sobre o serviço</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
@@ -878,10 +808,10 @@
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                         <p class="etka_form-label">Formato:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--2-col etka_form-radio etka_form-label etka_form-label_formato">
+                    <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--3-col-phone etka_form-radio etka_form-label etka_form-label_formato">
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" id="retangular-tt" for="o_rotulos-retangular">
                             <input type="radio" id="o_rotulos-retangular" name="o_rotulos-formato" class="mdl-radio__button" value="retangular">
                             <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
@@ -898,10 +828,10 @@
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="especial-tt">CORTE ESPECIAL<br/>No formato que o seu produto necessita.</div>
                         </label>
                     </div>
-                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                         <p class="etka_form-label">Volume:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--2-col">
+                    <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--3-col-phone">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" pattern="[0-9].{3,}" id="o_rotulos-quantidade">
                             <label class="mdl-textfield__label" for="o_rotulos-quantidade">>1.000 un.</label>
@@ -929,10 +859,10 @@
                         <i class="material-icons etka_form-label" id="cores-help">help</i>
                         <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores CMYK combinadas, reproduzem <strong>todas</strong>.</div> 
                     </div>
-                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                         <p class="etka_form-label">Finalidade:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--4-col">
+                    <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--3-col-phone">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <textarea class="mdl-textfield__input" rows="1" type="text" id="o_rotulos-finalidade"></textarea>
                             <label class="mdl-textfield__label" for="o_rotulos-finalidade">como o material será utilizado?</label>
@@ -952,13 +882,13 @@
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="o_rotulos-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até 5MB de anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
                         </div>
                     </div>-->
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <textarea class="mdl-textfield__input" rows="1" type="text" id="o_rotulos-mensagem" ></textarea>
                             <label class="mdl-textfield__label" for="o_rotulos-mensagem">Observações:</label>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <button type="submit" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised etka_btn-enviar" id="o_rotulos-enviar" name="o_rotulos-enviar" value="etka_o-rotulos">ENCOMENDAR</button>
                     </div>
                 </form>
@@ -1014,7 +944,7 @@
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
                 <form class="mdl-grid" id="etka_o-lacres" name="etka_o-lacres" action="./contato/orcamento/lacres.php" method="post" enctype="multipart/form-data">
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <h4>Sobre você</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--6-col">
@@ -1039,7 +969,7 @@
                             <span class="mdl-textfield__error">Insira um número de telefone válido com DDD.</span>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <h4>Sobre o serviço</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
@@ -1060,10 +990,10 @@
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                         <p class="etka_form-label">Formato:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--2-col etka_form-radio etka_form-label etka_form-label_formato">
+                    <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--3-col-phone etka_form-radio etka_form-label etka_form-label_formato">
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" id="retangular-tt" for="o_lacres-retangular">
                             <input type="radio" id="o_lacres-retangular" name="o_lacres-formato" class="mdl-radio__button" value="retangular">
                             <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
@@ -1080,10 +1010,10 @@
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="especial-tt">CORTE ESPECIAL<br/>No formato que o seu produto necessita.</div>
                         </label>
                     </div>
-                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                         <p class="etka_form-label">Volume:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--2-col">
+                    <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--3-col-phone">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" pattern="[0-9].{3,}" id="o_lacres-quantidade">
                             <label class="mdl-textfield__label" for="o_lacres-quantidade">>1.000 un.</label>
@@ -1112,10 +1042,10 @@
                         <i class="material-icons etka_form-label" id="cores-help">help</i>
                         <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores CMYK combinadas, reproduzem <strong>todas</strong>.</div> 
                     </div>
-                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                         <p class="etka_form-label">Finalidade:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--4-col">
+                    <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--3-col-phone">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" id="o_lacres-finalidade">
                             <label class="mdl-textfield__label" for="o_lacres-finalidade">como o material será utilizado?</label>
@@ -1135,13 +1065,13 @@
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="o_lacres-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até 5MB de anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
                         </div>
                     </div>-->
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <textarea class="mdl-textfield__input" type="text" id="o_lacres-mensagem" ></textarea>
                             <label class="mdl-textfield__label" for="o_lacres-mensagem">Observações:</label>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <button type="submit" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised etka_btn-enviar" id="o_lacres-enviar" name="o_lacres-enviar" value="etka_o-lacres">ENCOMENDAR</button>
                     </div>
                 </form>
@@ -1197,7 +1127,7 @@
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
                 <form class="mdl-grid" id="etka_o-ingressos" name="etka_o-ingressos" action="./contato/orcamento/ingressos.php" method="post" enctype="multipart/form-data">
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <h4>Sobre você</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--6-col">
@@ -1222,7 +1152,7 @@
                             <span class="mdl-textfield__error">Insira um número de telefone válido com DDD.</span>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <h4>Sobre o serviço</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
@@ -1242,10 +1172,10 @@
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                         <p class="etka_form-label">Formato:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--2-col etka_form-radio etka_form-label etka_form-label_formato">
+                    <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--3-col-phone etka_form-radio etka_form-label etka_form-label_formato">
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" id="retangular-tt" for="o_ingressos-retangular">
                             <input type="radio" id="o_ingressos-retangular" name="o_ingressos-formato" class="mdl-radio__button" value="retangular">
                             <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
@@ -1262,10 +1192,10 @@
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="especial-tt">CORTE ESPECIAL<br/>No formato que o seu produto necessita.</div>
                         </label>
                     </div>
-                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                         <p class="etka_form-label">Volume:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--2-col">
+                    <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--3-col-phone">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" pattern="[0-9].{3,}" id="o_ingressos-quantidade">
                             <label class="mdl-textfield__label" for="o_ingressos-quantidade">>1.000 un.</label>
@@ -1293,10 +1223,10 @@
                         <i class="material-icons etka_form-label" id="cores-help">help</i>
                         <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores CMYK combinadas, reproduzem <strong>todas</strong>.</div> 
                     </div>
-                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                         <p class="etka_form-label">Finalidade:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--4-col">
+                    <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--3-col-phone">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <textarea class="mdl-textfield__input" rows="1" type="text" id="o_ingressos-finalidade"></textarea>
                             <label class="mdl-textfield__label" for="o_ingressos-finalidade">como o material será utilizado?</label>
@@ -1316,13 +1246,13 @@
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="o_ingressos-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até 5MB de anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
                         </div>
                     </div>-->
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <textarea class="mdl-textfield__input" rows="1" type="text" id="o_ingressos-mensagem" ></textarea>
                             <label class="mdl-textfield__label" for="o_ingressos-mensagem">Observações:</label>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <button type="submit" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised etka_btn-enviar" id="o_ingressos-enviar" name="o_ingressos-enviar" value="etka_o-ingressos">ENCOMENDAR</button>
                     </div>
                 </form>
@@ -1378,7 +1308,7 @@
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
                 <form class="mdl-grid" id="etka_o-validade" name="etka_o-validade" action="./contato/orcamento/validade.php" method="post" enctype="multipart/form-data">
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <h4>Sobre você</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--6-col">
@@ -1403,7 +1333,7 @@
                             <span class="mdl-textfield__error">Insira um número de telefone válido com DDD.</span>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <h4>Sobre o serviço</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
@@ -1424,10 +1354,10 @@
                             <span class="mdl-textfield__error">Somente números</span>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                         <p class="etka_form-label">Formato:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--2-col etka_form-radio etka_form-label etka_form-label_formato">
+                    <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--3-col-phone etka_form-radio etka_form-label etka_form-label_formato">
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" id="retangular-tt" for="o_validade-retangular">
                             <input type="radio" id="o_validade-retangular" name="o_validade-formato" class="mdl-radio__button" value="retangular">
                             <i class="mdl-icon-toggle__label material-icons">crop_3_2</i>
@@ -1444,10 +1374,10 @@
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="especial-tt">CORTE ESPECIAL<br/>No formato que o seu produto necessita.</div>
                         </label>
                     </div>
-                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                         <p class="etka_form-label">Volume:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--2-col">
+                    <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--3-col-phone">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" pattern="[0-9].{3,}" id="o_validade-quantidade">
                             <label class="mdl-textfield__label" for="o_validade-quantidade">>1.000 un.</label>
@@ -1476,10 +1406,10 @@
                         <i class="material-icons etka_form-label" id="cores-help">help</i>
                         <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="cores-help">A <strong>soma das cores</strong> de frente e verso deverá ser no <strong>máximo 7</strong>, contando com verniz.<br/>LEMBRETE: 4 cores CMYK combinadas, reproduzem <strong>todas</strong>.</div> 
                     </div>
-                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col">
+                    <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col-desktop mdl-cell--1-col-phone">
                         <p class="etka_form-label">Finalidade:</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--4-col">
+                    <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--3-col-phone">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" id="o_validade-finalidade">
                             <label class="mdl-textfield__label" for="o_validade-finalidade">como o material será utilizado?</label>
@@ -1499,13 +1429,13 @@
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="etka_etiqueta-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até 5MB de anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
                         </div>
                     </div>-->
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <textarea class="mdl-textfield__input" type="text" id="o_validade-mensagem" ></textarea>
                             <label class="mdl-textfield__label" for="o_validade-mensagem">Observações:</label>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <button type="submit" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised etka_btn-enviar" id="o_validade-enviar" name="o_validade-enviar" value="etka_o-validade">ENCOMENDAR</button>
                     </div>
                 </form>
@@ -1789,7 +1719,7 @@
                     <div class="mdl-cell mdl-cell--middle mdl-cell--stretch mdl-cell--5-col etka_preco-faca" style="background-image: url('./img/precos/etka_preco-delivery.svg');"></div>
                 </div>
                 <form class="mdl-grid" id="etka_p-lacres" name="etka_p-lacres" action="./contato/precos/lacres.php" method="post" enctype="multipart/form-data">
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <h4>Encomende agora:</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col">
@@ -1841,7 +1771,7 @@
                         </div>
                     </div>
 -->
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <button type="submit" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised etka_btn-enviar" id="p_lacres-enviar" name="p_lacres-enviar" value="etka_p-lacres">ENCOMENDAR</button>
                     </div>
                 </form>
@@ -1936,7 +1866,7 @@
                     <div class="mdl-cell mdl-cell--middle mdl-cell--stretch mdl-cell--5-col etka_preco-faca" style="background-image: url('./img/precos/etka_preco-garantia.svg')"></div>
                 </div>
                 <form class="mdl-grid" id="etka_p-garantia" name="etka_p-garantia" action="./contato/precos/garantia.php" method="post" enctype="multipart/form-data">
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <h4>Encomende agora:</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col">
@@ -1987,7 +1917,7 @@
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="etka_garantia-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até 5MB de anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
                         </div>
                     </div>-->
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <button type="submit" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised etka_btn-enviar" id="p_lacres-enviar" name="p_garantia-enviar" value="etka_p-garantia">ENCOMENDAR</button>
                     </div>
                 </form>
@@ -2084,7 +2014,7 @@
                     <div class="mdl-cell mdl-cell--middle mdl-cell--stretch mdl-cell--5-col etka_preco-faca" style="background-image: url('./img/precos/etka_preco-ingresso.svg')"></div>
                 </div>
                 <form class="mdl-grid" id="etka_p-ingresso" name="etka_p-ingresso" action="./contato/precos/ingresso.php" method="post" enctype="multipart/form-data">
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <h4>Encomende agora:</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col">
@@ -2134,7 +2064,7 @@
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="etka_ingressos-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até 5MB de anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
                         </div>
                     </div>-->
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <button type="submit" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised etka_btn-enviar" id="p_ingresso-enviar" name="p_ingresso-enviar" value="etka_p-ingresso">ENCOMENDAR</button>
                     </div>
                 </form>
@@ -2230,7 +2160,7 @@
                     <div class="mdl-cell mdl-cell--middle mdl-cell--stretch mdl-cell--5-col etka_preco-faca" style="background-image: url('./img/precos/etka_preco-validade.svg')"></div>
                 </div>
                 <form class="mdl-grid" id="etka_p-validade" name="etka_p-validade" action="./contato/precos/validade.php" method="post" enctype="multipart/form-data">
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <h4>Encomende agora:</h4>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col">
@@ -2280,7 +2210,7 @@
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="etka_validade-anexo-help">Clique no ícone e utilize a tecla "shift" para selecionar até 5MB de anexos em <strong>PDF</strong> ou <strong>JPG</strong>, contendo a arte e/ou imagens do serviço.</div>
                         </div>
                     </div>-->
-                    <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <button type="submit" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect mdl-button--raised etka_btn-enviar" id="p_validade-enviar" name="p_validade-enviar" value="etka_p-validade">ENCOMENDAR</button>
                     </div>
                 </form>

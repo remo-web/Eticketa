@@ -13,8 +13,12 @@
     
     /* CUSTOM */
     
-    .etka_fazemos,
-    .etka_preco {
+    .etka_gohome{
+        display: block;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        z-index: 1;
     }
 
     /* home*/
@@ -68,6 +72,10 @@
         font-size: .9rem;
         letter-spacing: .08rem;
         color: rgba(255,255,255,0.38);
+    }
+    
+    .etka_copy-mobile{
+        display: block
     }
     
     /* dialogs */

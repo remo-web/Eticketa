@@ -1,0 +1,79 @@
+@media (max-width: 479px){
+    
+    /* NATIVE HTML/CSS */
+    
+    /* MDL */
+
+    .etka_home .mdl-cell--middle{ 
+        -webkit-align-self: flex-start;
+        -ms-flex-item-align: flex-start;
+        -ms-grid-row-align: flex-start;
+        align-self: flex-start;
+    }
+    
+    /* CUSTOM */
+    
+    .etka_fazemos,
+    .etka_preco {
+    }
+
+    /* home*/
+    #etka_home-video{
+        position: absolute;
+        bottom: 0;
+        top:0;
+        right: -82%;
+        width: auto;
+        height: 100%;
+        background-size: 100% 100%;
+        background-color: black; /* in case the video doesn't fit the whole page*/
+        background-image: url(../mov/etka_site17-video_amarelo2.mp4);
+        background-position: center center;
+        background-size: cover;
+        object-fit: cover; /*cover video background */
+        z-index: 0;
+        overflow: hidden;
+        opacity: 0.6;
+    }
+    
+    .etka_home-logo{margin: 12rem 5rem 0rem 5rem;}
+    
+    /* produtos */
+    .etka_prod .mdl-grid{margin-top: -32px}
+    
+    .etka_prod-video{overflow: hidden;
+        height: 35vh;
+        width: 100%;
+        margin: 0
+    }
+    
+    .etka_prod .etka_prod-txt{
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 50px
+    }
+    
+    /* contato */ 
+    .etka_contato-l{margin: 0 0 -16px 0}
+    
+    #contato-enviar{margin-bottom: 30px}
+    
+    .etka_copy{
+        margin-top: 45px; margin-bottom: 15px;
+        width: 100%;
+        height: auto !important;
+        position: relative;
+        bottom: 0px;
+        text-align: center;
+        font-size: .9rem;
+        letter-spacing: .08rem;
+        color: rgba(255,255,255,0.38);
+    }
+    
+    /* dialogs */
+    
+    .mdl-dialog{
+        width: 90%
+    }
+
+}

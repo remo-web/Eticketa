@@ -15,7 +15,9 @@ $(document).ready(function() {
             }
         },
         scrollOverflow: true,
-        normalScrollElements: 'dialog'
+        normalScrollElements: 'dialog',
+        paddingTop: '56px',
+        fixedElements: 'header',
 //        parallax: true,
 //        parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 	});

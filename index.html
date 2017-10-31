@@ -118,7 +118,7 @@
         
 		<div class="font etka-layout-transparent mdl-layout mdl-js-layout">
             
-            <header class="mdl-layout__header" id="top">
+            <header class="mdl-layout__header etka_scroll">
 				<div class="mdl-layout__header-row">
 					<!-- Title -->
 					<a class="mdl-layout-title font w200 etka_title" id="etka_title" data-menuanchor="home" href="#home"><big><b>ETICKETA</b></big> <small>Rótulos e Soluções</small></a>
@@ -132,6 +132,10 @@
 						<a class="mdl-navigation__link" href="">Link</a>
 					</nav> -->
 				</div>
+                <!--GO HOME-->
+                <a href="#home" role="button" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-cell--hide-desktop mdl-shadow--8dp etka_gohome">
+                    <i class="material-icons">keyboard_arrow_up</i>
+                </a>  
 			</header>
 			<div class="mdl-layout__drawer">
 				<!--<span class="mdl-layout-title">Title</span>-->
@@ -146,13 +150,9 @@
 <!--					<a class="mdl-navigation__link" data-menuanchor="portefolio" href="#portefolio">Portefólio</a>-->
 					<a class="mdl-navigation__link" data-menuanchor="contato" href="#contato">Contato</a>
 				</nav>
-            </div>
+            </div>      
 			
 			<main class="mdl-layout__content" id="fullpage">
-                <!--GO HOME
-                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored etka_gohome">
-                    <i class="material-icons">keyboard_arrow_up</i>
-                </button>-->
                 <!--HOME-->
 				<section data-anchor="home" class="section etka_home" id="etka_home">
                     <button type="button" id="mute-video" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored etka_som">
@@ -170,40 +170,40 @@
                         <div class="mdl-cell mdl-cell--middle mdl-cell--2-offset-desktop mdl-cell--5-col-desktop mdl-cell--hide-phone etka_home-txt mdl-shadow--2dp">
                             <p>Três especialistas em materiais gráficos, cuja a experiência somada <b>ultrapassa os 100 anos</b>, com histórias escritas nas mais renomadas empresas fabricantes de rótulos e etiquetas do país decidem materializar seus conhecimentos na busca por um <b>sonho de excelência</b>, com o objetivo de sempre <b>superar as expectativas</b> dos clientes, valorizar a qualidade de vida dos funcionários e a proximidade de fornecedores parceiros, dentro dos preceitos de responsabilidade social e ambiental.</p>
                         </div>
-                        <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone  mdl-cell--middle etka_home-menu" id="menu">
+                        <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone mdl-cell--middle etka_home-menu" id="menu">
                             <div class="mdl-grid">
                                 <div data-menuanchor="rotulos" class="mdl-cell mdl-cell--bottom mdl-cell--3-offset-desktop mdl-cell--1-col-desktop mdl-cell--1-col-phone">
-                                    <a href="#produtos/rotulos"><img src="img/home/etka_home_rotulo.svg" height="50" alt="rotulo" style="margin: 20px"></a><br>
+                                    <a href="#produtos/rotulos"><img src="img/home/etka_home_rotulo.svg" height="50" alt="rotulo" style="margin: 20px auto"></a><br>
                                     <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#produtos/rotulos">
                                         Rótulos
                                     </a>
                                 </div>
                                 <div data-menuanchor="lacres" class="mdl-cell mdl-cell--bottom mdl-cell--1-col-desktop mdl-cell--1-col-phone">
-                                    <a href="#produtos/lacres"><img src="img/home/etka_home_lacre.svg" height="50" alt="lacre" style="margin: 20px"></a><br>
+                                    <a href="#produtos/lacres"><img src="img/home/etka_home_lacre.svg" height="50" alt="lacre" style="margin: 20px auto"></a><br>
                                     <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#produtos/lacres">
                                         Lacres
                                     </a>
                                 </div>
                                 <div data-menuanchor="ingressos" class="mdl-cell mdl-cell--bottom mdl-cell--1-col-desktop mdl-cell--1-col-phone">
-                                    <a href="#produtos/ingressos"><img src="img/home/etka_home_ingresso.svg" height="50" alt="ingressos" style="margin: 20px"></a><br>
+                                    <a href="#produtos/ingressos"><img src="img/home/etka_home_ingresso.svg" height="50" alt="ingressos" style="margin: 20px auto"></a><br>
                                     <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#produtos/ingressos">
                                         Ingressos
                                     </a>
                                 </div>
                                 <div data-menuanchor="validade" class="mdl-cell mdl-cell--bottom mdl-cell--1-col-desktop mdl-cell--1-col-phone">
-                                    <a href="#produtos/validade"><img src="img/home/etka_home_validade.svg" height="50" alt="validade" style="margin: 20px"></a><br>
+                                    <a href="#produtos/validade"><img src="img/home/etka_home_validade.svg" height="50" alt="validade" style="margin: 20px auto"></a><br>
                                     <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#produtos/validade">
                                         Validade
                                     </a>
                                 </div>
                                 <div data-menuanchor="fazemos" class="mdl-cell mdl-cell--bottom mdl-cell--1-col-desktop mdl-cell--1-offset-phone mdl-cell--1-col-phone">
-                                    <a href="#fazemos"><img src="img/home/etka_home_como.svg" height="50" alt="como" style="margin: 20px"></a><br>
+                                    <a href="#fazemos"><img src="img/home/etka_home_como.svg" height="50" alt="como" style="margin: 20px auto"></a><br>
                                     <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#fazemos">
                                         Como<span class="mdl-cell--hide-desktop">?</span> fazemos
                                     </a>
                                 </div>
                                 <div data-menuanchor="contato" class="mdl-cell mdl-cell--bottom mdl-cell--1-col-desktop mdl-cell--1-col-phone">
-                                    <a href="#contato"><img src="img/home/etka_home_contato.svg" height="50" alt="contato" style="margin: 20px"></a><br>
+                                    <a href="#contato"><img src="img/home/etka_home_contato.svg" height="50" alt="contato" style="margin: 20px auto"></a><br>
                                     <a role="button" class="mdl-button mdl-js-button mdl-js-ripple-effect font w300" href="#contato">
                                         Contato
                                     </a>
@@ -219,7 +219,7 @@
 				</section>
                 <!--PRODUTOS-->
 				<section data-anchor="produtos" class="section fp-auto-height-responsive etka_prod" id="etka_prod">
-					<div class="slide" data-anchor="rotulos" id="etka_rotulos">
+					<div class="slide" data-anchor="rotulos" id="etka_rotulos">                            
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--middle mdl-cell--3-col-desktop mdl-cell--4-cel-phone mdl-cell--order-2-phone etka_prod-txt">
                                 <h1>Rótulos</h1>
@@ -665,7 +665,7 @@
                                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="subscribe-enviar" name="subscribe-enviar" type="submit" value="etka_subscribe">INSCREVER</button>
                                         </div>
                                     </form>
-                            <div class="mdl-grid etka_copy etka_copy-mobile">
+                            <div class="mdl-grid etka_copy mdl-cell--hide-desktop">
                                 <div class="mdl-cell mdl-cell--4-col-phone">
                                     Todos os direitos reservados.<br/>
                                     ETICKETA - Rótulos e Soluções <span class="etka_copy-s">&#169;</span> 2017<br/>

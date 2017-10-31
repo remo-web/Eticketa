@@ -7,11 +7,11 @@ $(document).ready(function() {
             var leavingSection = $(this);
 
             if(index == 2 && direction =='up'){
-                $('#top').fadeOut('slow');
+                $('.etka_scroll').fadeOut('slow');
             }	
 
             else if(direction == 'down'){
-                $('#top').fadeIn('slow');
+                $('.etka_scroll').fadeIn('slow');
             }
         },
         scrollOverflow: true,
@@ -43,20 +43,20 @@ $(document).ready(function() {
 //CONTROLE DE SOM DA HOME
 
 //não toca no mobile
-$(document).ready(function() {
-    var vid = document.getElementById("etka_home-video");
-    var pause = document.createAttribute("paused");
-    var play = document.createAttribute("data-autoplay");
-    $("#etka_home-video").ready(function(){
-        if($(window).width() < 960) {
-            vid.setAttributeNode(pause);
-            return false;
-        } else {
-            vid.setAttributeNode(play);
-            return false;
-        }
-    })
-});
+//$(document).ready(function() {
+//    var vid = document.getElementById("etka_home-video");
+//    var pause = document.createAttribute("paused");
+//    var play = document.createAttribute("data-autoplay");
+//    $("#etka_home-video").ready(function(){
+//        if($(window).width() < 960) {
+//            vid.setAttributeNode(pause);
+//            return false;
+//        } else {
+//            vid.setAttributeNode(play);
+//            return false;
+//        }
+//    })
+//});
 
 //botão
 $(document).ready(function() {

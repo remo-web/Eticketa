@@ -164,8 +164,6 @@ hr.etka_spacer__clear {
     }
     #etka_preloader-status {position: absolute; left: 50%; top: 50%;}
 
-.etka_gohome{display: none}
-
 .etka_title{
     color: white;
     text-decoration: none
@@ -497,10 +495,6 @@ dialog .etka_btn-enviar{width: 100%}
         color: black;
         opacity: .5;
         margin-left: -8px;
-    }
-
-    .etka_copy-mobile{
-        display: none
     }
 
     #etka_contato-enviado,

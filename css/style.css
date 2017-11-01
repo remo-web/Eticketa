@@ -153,7 +153,7 @@ hr.etka_spacer__clear {
 }
 
 .etka-layout-transparent {height: auto}
-#top, #drawer{display: none;}
+.etka_scroll, #drawer{display: none;}
 
     /* PRELOADER */
     #etka_preloader {

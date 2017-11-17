@@ -112,9 +112,11 @@
         </noscript>
         End Google Tag Manager (noscript) -->
         
+<!--
         <div id="etka_preloader">
             <div id="etka_preloader-status" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
         </div>
+-->
         
 		<div class="font etka-layout-transparent mdl-layout mdl-js-layout">
             
@@ -159,7 +161,7 @@
                         <i class="material-icons etka_som-btn">volume_up</i>
                         <i class="material-icons etka_som-btn etka_unmute">volume_off</i>
                     </button>
-                    <video id="etka_home-video" loop>
+                    <video id="etka_home-video" preload="auto" autoplay loop>
                         <source data-src="./mov/etka_site17-video_amarelo2.webm" type="video/webm" />
                         <source data-src="./mov/etka_site17-video_amarelo2.mp4" type="video/mp4" />
                     </video>

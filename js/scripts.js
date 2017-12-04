@@ -172,7 +172,7 @@ $(document).ready(function() {
                 $("#o_validade-verso").val("0");
                 $("#o_validade-verso_label").text("");
                 $("#o_validade-finalidade").prop('disabled', true);
-                $("#o_validade-finalidade").val("Identificação de alimentos manipulados");
+                $("#o_validade-finalidade").val("identificação de alimentos manipulados (formato padrão)");
                 $("#o_validade-finalidade_label").text("");
                 $("#o_validade-retangular").prop('disabled', true);
                 $("#o_validade-retangular").prop('checked', true);

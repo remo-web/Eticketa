@@ -39,6 +39,7 @@ $Body .= "
 <html>
 <body style='width: 690px; font-family: sans-serif'>
 <b style='text-transform: uppercase'>$nome</b><br>
+<b style='text-transform: uppercase; color: firebrick'>$custom</b><br>
 <b>Cargo/Empresa: </b>$empresa<br>
 <b>E-mail: </b>$email<br>
 <b>Telefone: </b>$telefone<br>

@@ -40,7 +40,7 @@ function submitO_validade(){
     var email = $("#o_validade-email").val();
     var empresa = $("#o_validade-empresa").val();
     var telefone = $("#o_validade-telefone").val();
-    var custom = $("#o_validade-custom").prop("checked");
+    var custom = $("#name=o_validade-custom:checked").val();
     var largura = $("#o_validade-largura").val();
     var altura = $("#o_validade-altura").val();
     var formato = $("input[name=o_validade-formato]:checked").val();

@@ -40,6 +40,7 @@ function submitO_validade(){
     var email = $("#o_validade-email").val();
     var empresa = $("#o_validade-empresa").val();
     var telefone = $("#o_validade-telefone").val();
+    var largura = $("input[name=o_validade-custom]:checked").val();
     var largura = $("#o_validade-largura").val();
     var altura = $("#o_validade-altura").val();
     var formato = $("input[name=o_validade-formato]:checked").val();
@@ -52,7 +53,7 @@ function submitO_validade(){
     $.ajax({
         type: "POST",
         url: "./contato/orcamento/validade.php",
-        data: "o_validade-nome=" + nome + "&o_validade-email=" + email + "&o_validade-empresa=" + empresa + "&o_validade-telefone=" + telefone + "&o_validade-largura=" + largura + "&o_validade-altura=" + altura + "&o_validade-formato=" + formato + "&o_validade-quantidade=" + quantidade + "&o_validade-frente=" + frente + "&o_validade-verso=" + verso + "&o_validade-finalidade=" + finalidade + "&o_validade-mensagem=" + mensagem,
+        data: "o_validade-nome=" + nome + "&o_validade-email=" + email + "&o_validade-empresa=" + empresa + "&o_validade-telefone=" + telefone + "&o_validade-custom=" + custom + "&o_validade-largura=" + largura + "&o_validade-altura=" + altura + "&o_validade-formato=" + formato + "&o_validade-quantidade=" + quantidade + "&o_validade-frente=" + frente + "&o_validade-verso=" + verso + "&o_validade-finalidade=" + finalidade + "&o_validade-mensagem=" + mensagem,
         success : function(text){
             if (text == "success"){
                 o_validadeSuccess();
@@ -65,7 +66,7 @@ function submitO_validade(){
 
 function o_validadeSuccess(){
     $( "#etka_o-validade-enviado" ).removeClass( "etka_orcamento-enviado" );
-    $( '#o_validade-nome, #o_validade-email, #o_validade-empresa, #o_validade-telefone, #o_validade-largura, #o_validade-altura, #o_validade-formato, #o_validade-quantidade, #o_validade-frente, #o_validade-verso, #o_validade-finalidade, #o_validade-mensagem' ).val('');
+    $( '#o_validade-nome, #o_validade-email, #o_validade-empresa, #o_validade-telefone, #o_validade-custom, #o_validade-largura, #o_validade-altura, #o_validade-formato, #o_validade-quantidade, #o_validade-frente, #o_validade-verso, #o_validade-finalidade, #o_validade-mensagem' ).val('');
 }
 
 function o_validadeError(){

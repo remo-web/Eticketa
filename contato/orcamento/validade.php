@@ -13,6 +13,7 @@ if (empty($_POST["o_validade-email"])) {
 
 $empresa = $_POST["o_validade-empresa"];
 $telefone = $_POST["o_validade-telefone"];
+$custom = $_POST["o_validade-custom"];
 $largura = $_POST["o_validade-largura"];
 $altura = $_POST["o_validade-altura"];
 $formato = $_POST["o_validade-formato"];
@@ -31,7 +32,7 @@ $mensagem = $_POST["o_validade-mensagem"];
 
  
 $To = "colemais@eticketa.com.br";
-$uglySubject = "[Site | Orçamento] Etiqueta de validade para $finalidade";
+$uglySubject = "[Site | Orçamento] Etiqueta de validade$custom para $finalidade";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 
 $Body .= "

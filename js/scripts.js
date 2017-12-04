@@ -42,23 +42,6 @@ $(document).ready(function() {
 
 //CONTROLE DE SOM DA HOME
 
-//não toca no mobile
-//$(document).ready(function() {
-//    var vid = document.getElementById("etka_home-video");
-//    var pause = document.createAttribute("paused");
-//    var play = document.createAttribute("data-autoplay");
-//    $("#etka_home-video").ready(function(){
-//        if($(window).width() < 960) {
-//            vid.setAttributeNode(pause);
-//            return false;
-//        } else {
-//            vid.setAttributeNode(play);
-//            return false;
-//        }
-//    })
-//});
-
-//botão
 $(document).ready(function() {
     $("#mute-video").click( function (){
         if( $("video").prop('muted') ) {
@@ -148,6 +131,56 @@ $(document).ready(function() {
         dialog.close();
     });
 });
+    //comportamento do checkbox "Formato Padrão"
+    $(document).ready(function() {        
+        $("#o_validade-padrao").click(function() {
+            if ($("#o_validade-padrao_label").hasClass("is-checked")){
+                $("#o_validade-custom").prop('disabled', true);
+                $("#o_validade-custom_label").addClass('is-disabled');
+                $("#o_validade-largura").prop('disabled', false);
+                $("#o_validade-largura").val("");
+                $("#o_validade-largura_label").text("largura");
+                $("#o_validade-altura").prop('disabled', false);
+                $("#o_validade-altura").val("");
+                $("#o_validade-altura_label").text("altura");
+                $("#o_validade-frente").prop('disabled', false);
+                $("#o_validade-frente").val("");
+                $("#o_validade-frente_label").text("frente");
+                $("#o_validade-verso").prop('disabled', true);
+                $("#o_validade-verso").val("");
+                $("#o_validade-verso_label").text("verso");
+                $("#o_validade-finalidade").prop('disabled', false);
+                $("#o_validade-finalidade").val("");
+                $("#o_validade-finalidade_label").text("como o material será utilizado?");
+                $("#o_validade-retangular").prop('disabled', false);
+                $("#o_validade-retangular").prop('checked', false);
+                $("#o_validade-circular").prop('disabled', false);
+                $("#o_validade-especial").prop('disabled', false);
+            } else {
+                $("#o_validade-custom").prop('disabled', false);
+                $("#o_validade-custom_label").removeClass('is-disabled');
+                $("#o_validade-largura").prop('disabled', true);
+                $("#o_validade-largura").val("78");
+                $("#o_validade-largura_label").text("");
+                $("#o_validade-altura").prop('disabled', true);
+                $("#o_validade-altura").val("38");
+                $("#o_validade-altura_label").text("");
+                $("#o_validade-frente").prop('disabled', true);
+                $("#o_validade-frente").val("1");
+                $("#o_validade-frente_label").text("");
+                $("#o_validade-verso").prop('disabled', true);
+                $("#o_validade-verso").val("0");
+                $("#o_validade-verso_label").text("");
+                $("#o_validade-finalidade").prop('disabled', true);
+                $("#o_validade-finalidade").val("Identificação de alimentos manipulados");
+                $("#o_validade-finalidade_label").text("");
+                $("#o_validade-retangular").prop('disabled', true);
+                $("#o_validade-retangular").prop('checked', true);
+                $("#o_validade-circular").prop('disabled', true);
+                $("#o_validade-especial").prop('disabled', true);
+            }
+        })
+    });
 
 //Fazemos
 //flexo

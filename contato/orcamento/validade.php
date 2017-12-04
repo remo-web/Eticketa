@@ -16,7 +16,14 @@ $telefone = $_POST["o_validade-telefone"];
 $largura = $_POST["o_validade-largura"];
 $altura = $_POST["o_validade-altura"];
 $formato = $_POST["o_validade-formato"];
-$quantidade = $_POST["o_validade-quantidade"];
+
+//quantidade
+if (empty($_POST["o_validade-quantidade"])) {
+    $error .= "Quantidade is required ";
+} else {
+    $quantidade = $_POST["o_validade-quantidade"];
+}
+
 $frente = $_POST["o_validade-frente"];
 $verso = $_POST["o_validade-verso"];
 $finalidade = $_POST["o_validade-finalidade"];

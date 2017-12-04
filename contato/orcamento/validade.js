@@ -1,11 +1,19 @@
 $("#etka_o-validade").submit(function(event){
     var email = document.forms["etka_o-validade"]["o_validade-email"].value;
     var o_validade_email = document.getElementById("o_validade-email");
+    var quantidade = document.forms["etka_o-validade"]["o_validade-quantidade"].value;
+    var o_validade_quantidade = document.getElementById("o_validade-quantidade");
     //var mensagem = document.forms["etka_o-validade"]["o_validade-mensagem"].value;
     //var o_validade_msg = document.getElementById("o_validade-mensagem");
     var att = document.createAttribute("required");
     if (email == "") {
         o_validade_email.setAttributeNode(att);
+        return false;
+        // handle the invalid form...
+        o_validadeError();
+    }
+    if (quantidade == "") {
+        o_validade_quantidade.setAttributeNode(att);
         return false;
         // handle the invalid form...
         o_validadeError();

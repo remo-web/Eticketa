@@ -56,7 +56,7 @@ input[type='file'] {display: none}
 
 .mdl-button--primary.mdl-button--primary{color: #7a2879}
 
-.mdl-dialog {width: 70%; height: auto; max-height: 90vh}
+.mdl-dialog {width: 70%; height: auto; max-height: 80vh}
 .mdl-dialog__content--scrollable{
     max-height: 65vh;
     overflow-y: scroll;

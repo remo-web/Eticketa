@@ -761,6 +761,9 @@
         <!-- Orçamento -->
         
         <dialog class="mdl-dialog font" id="dialog-orcamento-rotulos">
+            <div class="etka_dialog-close mdl-cell--hide-desktop">
+                <i class="material-icons">clear</i>
+            </div>
             <h4 class="mdl-dialog__title">Pedido de Orçamento <small><br/>Rótulos</small></h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
@@ -895,7 +898,7 @@
                     </div>
                 </form>
             </div>
-            <div class="mdl-dialog__actions mdl-card--border">
+            <div class="mdl-dialog__actions mdl-card--border mdl-cell--hide-phone">
                 <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
             </div>
             <!-- Over-dialog Enviado/Erro -->
@@ -942,6 +945,9 @@
         </dialog>
         
         <dialog class="mdl-dialog font" id="dialog-orcamento-lacres">
+            <div class="etka_dialog-close mdl-cell--hide-desktop">
+                <i class="material-icons">clear</i>
+            </div>
             <h4 class="mdl-dialog__title">Pedido de Orçamento <small><br/>Lacres</small></h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
@@ -1078,7 +1084,7 @@
                     </div>
                 </form>
             </div>
-            <div class="mdl-dialog__actions">
+            <div class="mdl-dialog__actions mdl-card--border mdl-cell--hide-phone">
                 <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
             </div>
             <!-- Over-dialog Enviado/Erro -->
@@ -1125,6 +1131,9 @@
         </dialog>
         
         <dialog class="mdl-dialog font" id="dialog-orcamento-ingressos">
+            <div class="etka_dialog-close mdl-cell--hide-desktop">
+                <i class="material-icons">clear</i>
+            </div>
             <h4 class="mdl-dialog__title">Pedido de Orçamento <small><br/>Controle de Acesso</small></h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
@@ -1259,7 +1268,7 @@
                     </div>
                 </form>
             </div>
-            <div class="mdl-dialog__actions">
+            <div class="mdl-dialog__actions mdl-card--border mdl-cell--hide-phone">
                 <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
             </div>
             <!-- Over-dialog Enviado/Erro -->
@@ -1306,8 +1315,32 @@
         </dialog>
         
         <dialog class="mdl-dialog font" id="dialog-orcamento-validade">
+            <div class="etka_dialog-close mdl-cell--hide-desktop">
+                <i class="material-icons">clear</i>
+            </div>
             <h4 class="mdl-dialog__title">Pedido de Orçamento <small><br/>Etiquetas de Validade</small></h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
+                <div class="mdl-data-table etka_table-fake mdl-shadow--2dp">
+                    <div class="mdl-grid mdl-grid--no-spacing">
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-1-phone"><strong>Material</strong></div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-3-phone"><strong>Acabamento</strong></div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-5-phone"><strong>Arte</strong></div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-7-phone"><strong>Entrega</strong></div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-9-phone"><strong>Prazo</strong></div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-11-phone"><strong>Preço (a partir de)</strong></div>
+                        <!-- thead end -->
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-2-phone">BOPP</div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-4-phone">verniz UV fosco</div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-6-phone"><span id="arte_padrao-tt" class="etka_hypertext">padrão</span> ou personalizada</div>
+                        <div class="mdl-tooltip mdl-tooltip--large etka_tooltip-img" data-mdl-for="arte_padrao-tt">
+                            <img src="img/orcamento/etka_orcamento-validade.jpg" height="150">
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-8-phone">rolo com 1.000 unidades</div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-10-phone">10 dias + frete</div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-12-phone">R$ 75 / rolo</div>
+                    </div>
+                </div>
+                <br/>
                 <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
                 <form class="mdl-grid" id="etka_o-validade" name="etka_o-validade" action="./contato/orcamento/validade.php" method="post" enctype="multipart/form-data">
                     <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
@@ -1349,11 +1382,8 @@
                         </label>
                         <div class="icon material-icons etka_validade-padrao-help" id="o_validade-padrao-help">help</div>
                         <div class="mdl-tooltip mdl-tooltip--large etka_validade-padrao-help_tt" data-mdl-for="o_validade-padrao-help">
-                            <strong>Dimensões:</strong> 78x38mm<br/>
-                            <strong>Campos:</strong> produto, fabricação, validade, responsável e tipo de conservação<br/>
-                            <strong>Cores de impressão:</strong> preto<br/>
-                            <strong>Mínimo:</strong> de 1.000 unidades.<br/>
-                            A opção de arte personalizada é gratuita para pedidos a partir de 10.000 unidades.<br/>
+                            A opção de arte personalizada é <strong>gratuita</strong> para pedidos a partir de 10.000 unidades, mantidas as medidas, material e acabamento da etiqueta padrão.<br/><br/>
+                            O envio da arte personalizada se dará em resposta a nossa mensagem de confirmação do orçamento.
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
@@ -1460,7 +1490,7 @@
                     </div>
                 </form>
             </div>
-            <div class="mdl-dialog__actions">
+            <div class="mdl-dialog__actions mdl-card--border mdl-cell--hide-phone">
                 <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
             </div>
             <!-- Over-dialog Enviado/Erro -->
@@ -1509,6 +1539,9 @@
         <!-- Como fazemos -->
         
         <dialog class="mdl-dialog etka_fazemos-dialog font" id="dialog-flexo">
+            <div class="etka_dialog-close mdl-cell--hide-desktop">
+                <i class="material-icons">clear</i>
+            </div>
             <h4 class="mdl-dialog__title">Flexografia</h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <p>Nossa <b>especialidade</b>. Com maquinário moderno, operado por profissionais capacitados e experientes, obter <b>altíssima definição</b> em <span id="cromias-tt" class="etka_hypertext">cromias</span> e <b>fidelidade</b> nas cores <span id="pantones-tt" class="etka_hypertext">Pantone</span>, tornam-se pré-requisitos.</p>
@@ -1563,12 +1596,15 @@
                 <p>Converse com um de nossos consultores.</p>
                 <a role="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent close" data-menuanchor="contato" href="#contato">Saiba como</a>
             </div>
-            <div class="mdl-dialog__actions">
+            <div class="mdl-dialog__actions mdl-card--border mdl-cell--hide-phone">
                 <button type="button" class="mdl-button mdl-button--colored close">Fechar</button>
             </div>
         </dialog>
         
         <dialog class="mdl-dialog etka_fazemos-dialog font" id="dialog-digital">
+            <div class="etka_dialog-close mdl-cell--hide-desktop">
+                <i class="material-icons">clear</i>
+            </div>
             <h4 class="mdl-dialog__title">Impressão Gráfica Digital</h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <p>Rápida e (praticamente) sem limites. A escolha mais veloz para transformar projetos gráficos em realidade, nas dimensões necessárias, na quantidade desejada por menor que seja, feitos sob <b>qualquer superficíe plana</b> e dependendo do tipo de serviço, também cuidamos da aplicação.</p>
@@ -1621,12 +1657,15 @@
                 <p>Converse com um de nossos consultores.</p>
                 <a role="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent close" data-menuanchor="contato" href="#contato">Saiba como</a>
             </div>
-            <div class="mdl-dialog__actions">
+            <div class="mdl-dialog__actions mdl-card--border mdl-cell--hide-phone">
                 <button type="button" class="mdl-button mdl-button--colored close">Fechar</button>
             </div>
         </dialog>
         
         <dialog class="mdl-dialog etka_fazemos-dialog font" id="dialog-offset">
+            <div class="etka_dialog-close mdl-cell--hide-desktop">
+                <i class="material-icons">clear</i>
+            </div>
             <h4 class="mdl-dialog__title">Offset</h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <p>Sistema a ser escolhido com a Eticketa quando, médias e grandes tiragens, também encontram a necessidade de altíssima definição, porém em materiais não adesivos e com folhas soltas.</p>
@@ -1675,12 +1714,15 @@
                 <p>Converse com um de nossos consultores.</p>
                 <a role="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent close" data-menuanchor="contato" href="#contato">Saiba como</a>
             </div>
-            <div class="mdl-dialog__actions">
+            <div class="mdl-dialog__actions mdl-card--border mdl-cell--hide-phone">
                 <button type="button" class="mdl-button mdl-button--colored close">Fechar</button>
             </div>
         </dialog>
         
         <dialog class="mdl-dialog etka_fazemos-dialog font" id="dialog-consultoria">
+            <div class="etka_dialog-close mdl-cell--hide-desktop">
+                <i class="material-icons">clear</i>
+            </div>
             <h4 class="mdl-dialog__title">Consultoria</h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <p>Se um negócio precisa contratar um serviço de material gráfico, não há razão para ter na equipe <b>arte-finalistas</b> e <b><i>designers</i></b> gabaritados, muito menos um especialista em <b>produção gráfica</b>.</p>
@@ -1690,7 +1732,7 @@
                 <p>Converse com um de nossos <b>consultores</b>. Saiba mais sobre como trabalhamos juntos na resolução de suas questões gráficas.</p>
                 <a role="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent close" data-menuanchor="contato" href="#contato">Clique aqui</a>
             </div>
-            <div class="mdl-dialog__actions">
+            <div class="mdl-dialog__actions mdl-card--border mdl-cell--hide-phone">
                 <button type="button" class="mdl-button mdl-button--colored close">Fechar</button>
             </div>
         </dialog>
@@ -1698,6 +1740,9 @@
         <!-- Preços -->
         
         <dialog class="mdl-dialog font" id="dialog-preco-delivery">
+            <div class="etka_dialog-close mdl-cell--hide-desktop">
+                <i class="material-icons">clear</i>
+            </div>
             <h4 class="mdl-dialog__title">Lacres para Delivery</h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <div class="mdl-grid">
@@ -1796,7 +1841,7 @@
                     </div>
                 </form>
             </div>
-            <div class="mdl-dialog__actions">
+            <div class="mdl-dialog__actions mdl-card--border mdl-cell--hide-phone">
                 <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
             </div>
             <!-- Over-dialog Enviado/Erro -->
@@ -1843,6 +1888,9 @@
         </dialog>
         
         <dialog class="mdl-dialog font" id="dialog-preco-garantia">
+            <div class="etka_dialog-close mdl-cell--hide-desktop">
+                <i class="material-icons">clear</i>
+            </div>
             <h4 class="mdl-dialog__title">Lacres de Garantia</h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <div class="mdl-grid">
@@ -1942,7 +1990,7 @@
                     </div>
                 </form>
             </div>
-            <div class="mdl-dialog__actions">
+            <div class="mdl-dialog__actions mdl-card--border mdl-cell--hide-phone">
                 <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
             </div>
             <!-- Over-dialog Enviado/Erro -->
@@ -1989,6 +2037,9 @@
         </dialog>
         
         <dialog class="mdl-dialog font" id="dialog-preco-ingresso">
+            <div class="etka_dialog-close mdl-cell--hide-desktop">
+                <i class="material-icons">clear</i>
+            </div>
             <h4 class="mdl-dialog__title">Tickets e Ingressos</h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <div class="mdl-grid">
@@ -2089,7 +2140,7 @@
                     </div>
                 </form>
             </div>
-            <div class="mdl-dialog__actions">
+            <div class="mdl-dialog__actions mdl-card--border mdl-cell--hide-phone">
                 <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
             </div>
             <!-- Over-dialog Enviado/Erro -->
@@ -2136,6 +2187,9 @@
         </dialog>
         
         <dialog class="mdl-dialog font" id="dialog-preco-validade">
+            <div class="etka_dialog-close mdl-cell--hide-desktop">
+                <i class="material-icons">clear</i>
+            </div>
             <h4 class="mdl-dialog__title">Etiquetas de Validade</h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
                 <div class="mdl-grid">
@@ -2154,7 +2208,7 @@
                             <li class="mdl-list__item mdl-list__item--two-line font">
                                 <span class="mdl-list__item-primary-content">
                                     <span>Arte</span>
-                                    <span class="mdl-list__item-sub-title">Padronizada (a partir de <b>5 rolos</b>, arte personalizada <b>sem custo</b>).</span>
+                                    <span class="mdl-list__item-sub-title">Padronizada (a partir de <b>10 rolos</b>, arte personalizada <b>sem custo</b>).</span>
                                 </span>
                             </li>
                             <li class="mdl-list__item mdl-list__item--two-line font">
@@ -2166,7 +2220,7 @@
                             <li class="mdl-list__item mdl-list__item--two-line font">
                                 <span class="mdl-list__item-primary-content">
                                     <span>Prazo</span>
-                                    <span class="mdl-list__item-sub-title">Uma semana da confirmação + frete</span>
+                                    <span class="mdl-list__item-sub-title">10 dias da aprovação + frete</span>
                                 </span>
                             </li>
                             <li class="mdl-list__item mdl-list__item--two-line font">
@@ -2235,7 +2289,7 @@
                     </div>
                 </form>
             </div>
-            <div class="mdl-dialog__actions">
+            <div class="mdl-dialog__actions mdl-card--border mdl-cell--hide-phone">
                 <button type="button" class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect close">Fechar</button>
             </div>
             <!-- Over-dialog Enviado/Erro -->

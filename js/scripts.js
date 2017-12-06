@@ -85,6 +85,9 @@ $(document).ready(function() {
     dialog.querySelector('.close').addEventListener('click', function () {
         dialog.close();
     });
+    dialog.querySelector('.etka_dialog-close').addEventListener('click', function () {
+        dialog.close();
+    });
 });
 
 //lacres
@@ -98,6 +101,9 @@ $(document).ready(function() {
     dialog.showModal();
     });
     dialog.querySelector('.close').addEventListener('click', function () {
+        dialog.close();
+    });
+    dialog.querySelector('.etka_dialog-close').addEventListener('click', function () {
         dialog.close();
     });
 });
@@ -115,6 +121,9 @@ $(document).ready(function() {
     dialog.querySelector('.close').addEventListener('click', function () {
         dialog.close();
     });
+    dialog.querySelector('.etka_dialog-close').addEventListener('click', function () {
+        dialog.close();
+    });
 });
 
 //validade
@@ -128,6 +137,9 @@ $(document).ready(function() {
     dialog.showModal();
     });
     dialog.querySelector('.close').addEventListener('click', function () {
+        dialog.close();
+    });
+    dialog.querySelector('.etka_dialog-close').addEventListener('click', function () {
         dialog.close();
     });
 });
@@ -199,6 +211,9 @@ $(document).ready(function() {
     dialog.querySelector('button.close').addEventListener('click', function () {
         dialog.close();
     });
+    dialog.querySelector('.etka_dialog-close').addEventListener('click', function () {
+        dialog.close();
+    });
 });
 
 //digital
@@ -215,6 +230,9 @@ $(document).ready(function() {
         dialog.close();
     });
     dialog.querySelector('button.close').addEventListener('click', function () {
+        dialog.close();
+    });
+    dialog.querySelector('.etka_dialog-close').addEventListener('click', function () {
         dialog.close();
     });
 });
@@ -235,6 +253,9 @@ $(document).ready(function() {
     dialog.querySelector('button.close').addEventListener('click', function () {
         dialog.close();
     });
+    dialog.querySelector('.etka_dialog-close').addEventListener('click', function () {
+        dialog.close();
+    });
 });
 
 //consultoria
@@ -251,6 +272,9 @@ $(document).ready(function() {
         dialog.close();
     });
     dialog.querySelector('button.close').addEventListener('click', function () {
+        dialog.close();
+    });
+    dialog.querySelector('.etka_dialog-close').addEventListener('click', function () {
         dialog.close();
     });
 });
@@ -276,6 +300,9 @@ $(document).ready(function() {
     dialog.querySelector('.close').addEventListener('click', function () {
         dialog.close();
     });
+    dialog.querySelector('.etka_dialog-close').addEventListener('click', function () {
+        dialog.close();
+    });
 });
 
 //garantia
@@ -289,6 +316,9 @@ $(document).ready(function() {
     dialog.showModal();
     });
     dialog.querySelector('.close').addEventListener('click', function () {
+        dialog.close();
+    });
+    dialog.querySelector('.etka_dialog-close').addEventListener('click', function () {
         dialog.close();
     });
 });
@@ -306,6 +336,9 @@ $(document).ready(function() {
     dialog.querySelector('.close').addEventListener('click', function () {
         dialog.close();
     });
+    dialog.querySelector('.etka_dialog-close').addEventListener('click', function () {
+        dialog.close();
+    });
 });
 
 //validade
@@ -319,6 +352,9 @@ $(document).ready(function() {
         dialog.showModal();
     });
     dialog.querySelector('.close').addEventListener('click', function () {
+        dialog.close();
+    });
+    dialog.querySelector('.etka_dialog-close').addEventListener('click', function () {
         dialog.close();
     });
 });

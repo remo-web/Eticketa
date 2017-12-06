@@ -214,6 +214,25 @@ dialog .etka_btn-enviar{width: 100%}
     color: darkred;
 }
 
+.etka_table-fake .mdl-cell:first-of-type, .etka_table-fake .mdl-cell:nth-of-type(7){
+    padding-left: 24px;
+}
+
+.etka_table-fake .mdl-cell:last-of-type, .etka_table-fake .mdl-cell:nth-of-type(6){
+    padding-right: 24px;
+}
+
+.etka_table-fake .mdl-cell{
+    padding: 12px 18px;
+    white-space: pre-line;
+    border-top: 1px solid rgba(0,0,0,.12)
+}
+
+.etka_tooltip-img{
+    width: auto;
+    max-width: 100%
+}
+
     /* home */
 
     #etka_home-video{
@@ -298,12 +317,18 @@ dialog .etka_btn-enviar{width: 100%}
         object-fit: cover !important;
     }
 
-    #dialog-orcamento h4{margin: 0px}
-    #dialog-orcamento form p{margin: 0px; padding-top: 24px}
-    #dialog-orcamento form .mdl-icon-toggle, #dialog-orcamento form .cores-help{padding-top: 20px}
-    #dialog-orcamento-validade form .etka_checkbox-padrao{width: auto; margin-right: 20px}
-
         /* prod | orçamento */
+
+        #dialog-orcamento h4{margin: 0px}
+        #dialog-orcamento form p{margin: 0px; padding-top: 24px}
+        #dialog-orcamento form .mdl-icon-toggle, #dialog-orcamento form .cores-help{padding-top: 20px}
+        #dialog-orcamento-validade form .etka_checkbox-padrao{width: auto; margin-right: 20px}
+
+        .etka_dialog-close{
+            position: absolute;
+            top: 7px; right: 7px;
+            opacity: .4
+        }
 
         label > input[type="radio"], .mdl-radio__outer-circle, .mdl-radio__inner-circle{
             visibility: hidden;

@@ -63,6 +63,10 @@
         margin-bottom: 50px
     }
     
+    .etka_table-fake .mdl-cell:first-of-type, .etka_table-fake .mdl-cell:nth-of-type(7){padding-left: 18px;}
+
+    .etka_table-fake .mdl-cell:last-of-type, .etka_table-fake .mdl-cell:nth-of-type(6){padding-right: 18px;}
+    
     /* contato */ 
     .etka_contato-l{margin: 8px}
     

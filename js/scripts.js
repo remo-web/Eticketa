@@ -127,35 +127,35 @@ $(document).ready(function() {
 });
     //comportamento do checkbox "picote de segurança"
     $(document).ready(function() {        
-        $("#o_balanca-60x40mm_label").click(function() {
+        $("#o_balanca-60x40mm").click(function() {
             if ($("#o_balanca-60x40mm_label").hasClass("is-checked")){
             } else {
-                $("#o_ingresso-picote").prop('disabled', false);
-                $("#o_ingresso-picote_label").removeClass('is-disabled');
+                $("#o_balanca-picote").prop('disabled', false);
+                $("#o_balanca-picote_label").removeClass('is-disabled');
             } 
         })        
-        $("#o_balanca-60x30mm_label").click(function() {
+        $("#o_balanca-60x30mm").click(function() {
             if ($("#o_balanca-60x30mm_label").hasClass("is-checked")){
             } else {
-                $("#o_ingresso-picote").prop('disabled', true);
-                $("#o_ingresso-picote_label").addClass('is-disabled');
-                $("#o_ingresso-picote_label").removeClass('is-checked');
+                $("#o_balanca-picote").prop('disabled', true);
+                $("#o_balanca-picote_label").addClass('is-disabled');
+                $("#o_balanca-picote_label").removeClass('is-checked');
             } 
         })        
-        $("#o_balanca-60x70mm_label").click(function() {
+        $("#o_balanca-60x70mm").click(function() {
             if ($("#o_balanca-60x70mm_label").hasClass("is-checked")){
             } else {
-                $("#o_ingresso-picote").prop('disabled', true);
-                $("#o_ingresso-picote_label").addClass('is-disabled');
-                $("#o_ingresso-picote_label").removeClass('is-checked');
+                $("#o_balanca-picote").prop('disabled', true);
+                $("#o_balanca-picote_label").addClass('is-disabled');
+                $("#o_balanca-picote_label").removeClass('is-checked');
             } 
         })        
-        $("#o_balanca-60x81mm_label").click(function() {
+        $("#o_balanca-60x81mm").click(function() {
             if ($("#o_balanca-60x81mm_label").hasClass("is-checked")){
             } else {
-                $("#o_ingresso-picote").prop('disabled', true);
-                $("#o_ingresso-picote_label").addClass('is-disabled');
-                $("#o_ingresso-picote_label").removeClass('is-checked');
+                $("#o_balanca-picote").prop('disabled', true);
+                $("#o_balanca-picote_label").addClass('is-disabled');
+                $("#o_balanca-picote_label").removeClass('is-checked');
             } 
         })
     });

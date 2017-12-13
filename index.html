@@ -265,8 +265,8 @@
 					<div class="slide" data-anchor="balanca" id="etka_balanca">
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--middle mdl-cell--3-col-desktop mdl-cell--4-cel-phone mdl-cell--order-2-phone etka_prod-txt">
-                                <h1>Controle de Acesso</h1>
-                                <p>Quem visita seu estabelecimento, empresa, parque industrial, hospital, festas, shows, precisa ter seu acesso e identificação garantidos. É uma questão de segurança para o seu negócio e seus clientes.</p><p>Converse com nossos consultores, e encontraremos a solução gráfica ideal para atender as demandas de identificação e acesso do seu negócio e quem sabe, solucionar outras que ainda nem foram mapeadas.</p>
+                                <h1>Etiquetas de balança</h1>
+                                <p>Identificação e precificação para seus produtos de maneira eficaz e com material de excelente qualidade. Ideal para restaurantes <i>self-service</i>, padarias, bandeja de frios, hortifruti e itens de açougue.</p><p>Converse com nossos consultores, encontraremos a solução gráfica ideal para atender as demandas de identificação e precificação dos seus produtos e quem sabe, solucionar outras que ainda nem foram mapeadas.</p>
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="show-dialog-orcamento-ingressos" type="button"
  data-toggle="modal" data-target="#dialog-orcamento-ingressos">PEÇA SEU ORÇAMENTO</button>
                             </div>
@@ -1143,8 +1143,30 @@
             <div class="etka_dialog-close mdl-cell--hide-desktop">
                 <i class="material-icons">clear</i>
             </div>
-            <h4 class="mdl-dialog__title">Pedido de Orçamento <small><br/>Controle de Acesso</small></h4>
+            <h4 class="mdl-dialog__title">Pedido de Orçamento <small><br/>Etiquetas de Balança</small></h4>
             <div class="mdl-dialog__content mdl-dialog__content--scrollable">
+                <div class="mdl-data-table etka_table-fake mdl-shadow--2dp">
+                    <div class="mdl-grid mdl-grid--no-spacing">
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-1-phone"><strong>Material</strong></div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-3-phone"><strong>Acabamento</strong></div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-5-phone"><strong>Arte</strong></div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-7-phone"><strong>Entrega</strong></div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-9-phone"><strong>Prazo</strong></div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-11-phone"><strong>Preço (a partir de)</strong></div>
+                        <!-- thead end -->
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-2-phone">Papel térmico</div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-4-phone"><span id="picote-tt" class="etka_hypertext">picote de segunraça</span></div>
+                        <div class="mdl-tooltip mdl-tooltip--large etka_tooltip-img" data-mdl-for="picote-tt">
+                            <img src="img/orcamento/etka_orcamento-balanca.svg" height="150">
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-6-phone"><span id="arte_balanca-tt" class="etka_hypertext">personalizada</span></div>
+                        <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="arte_balanca-tt" style="white-space: normal">Elegível para pedidos a partir de 3 caixas, 192 rolos.<br/><br/>Para pedidos menores a etiqueta será totalmente branca.</div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-8-phone">rolo de 20m</div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-10-phone">10 dias + frete</div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-phone mdl-cell--order-12-phone">R$ 5,30 / rolo</div>
+                    </div>
+                </div>
+                <br/>
                 <p>Para podermos dar sequência ao seu pedido de orçamento precisamos de mais algumas informações:</p>
                 <form class="mdl-grid" id="etka_o-ingressos" name="etka_o-ingressos" action="./contato/orcamento/ingressos.php" method="post" enctype="multipart/form-data">
                     <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
@@ -1175,10 +1197,40 @@
                     <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-phone">
                         <h4>Sobre o serviço</h4>
                     </div>
-                    <div class="mdl-cell mdl-cell--2-col">
+                    <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--4-col-phone">
                         <p class="etka_form-label">Dimensões (mm):</p>
                     </div>
-                    <div class="mdl-cell mdl-cell--1-col">
+                    <div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--2-col-phone etka_form-radio etka_form-label etka_form-label_formato" id="o_balanca-60x30mm">
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" id="o_balanca-60x30mm_label" for="60x30mm">
+                            <input type="radio" id="60x30mm" class="mdl-radio__button" name="o_balanca-formato" value="60x30mm" checked>
+                            <span class="mdl-radio__label">60x30</span>
+                        </label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--2-col-phone etka_form-radio etka_form-label etka_form-label_formato" id="o_balanca-60x40mm">
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" id="o_balanca-60x40mm_label" for="60x40mm">
+                            <input type="radio" id="60x40mm" class="mdl-radio__button" name="o_balanca-formato" value="60x40mm">
+                            <span class="mdl-radio__label">60x40</span>
+                        </label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--4-col-phone etka_form-label etka_form-label_formato">
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" id="o_balanca-picote_label" for="o_balanca-picote">
+                            <input type="checkbox" id="o_balanca-picote" name="o_balanca-picote" class="mdl-checkbox__input" value="com picote de segurança" disabled>
+                            <span class="mdl-checkbox__label">Picote de segurança</span>
+                        </label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--2-col-phone etka_form-radio etka_form-label etka_form-label_formato" id="o_balanca-60x70mm">
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" id="o_balanca-60x70mm_label" for="60x70mm">
+                            <input type="radio" id="60x70mm" class="mdl-radio__button" name="o_balanca-formato" value="60x70mm">
+                            <span class="mdl-radio__label">60x70</span>
+                        </label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--2-col-phone etka_form-radio etka_form-label etka_form-label_formato" id="o_balanca-60x81mm">
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" id="o_balanca-60x81mm_label" for="60x81mm">
+                            <input type="radio" id="60x81mm" class="mdl-radio__button" name="o_balanca-formato" value="60x81mm">
+                            <span class="mdl-radio__label">60x81</span>
+                        </label>
+                    </div>
+<!--
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" pattern="[0-9]{1,3}" id="o_ingressos-largura">
                             <label class="mdl-textfield__label" for="o_ingressos-largura">largura</label>
@@ -1212,14 +1264,15 @@
                             <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="o_ingressos-especial-tt">CORTE ESPECIAL<br/>No formato que o seu produto necessita.</div>
                         </label>
                     </div>
+-->
                     <div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--1-col-desktop mdl-cell--1-col-phone">
-                        <p class="etka_form-label">Volume:</p>
+                        <p class="etka_form-label">Quantidade:</p>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--3-col-phone">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="[0-9].{3,}" id="o_ingressos-quantidade">
-                            <label class="mdl-textfield__label" for="o_ingressos-quantidade">>1.000 un.</label>
-                            <span class="mdl-textfield__error">Mínimo de 1.000 unidades</span>
+                            <input class="mdl-textfield__input" type="text" id="o_ingressos-quantidade">
+                            <label class="mdl-textfield__label" for="o_ingressos-quantidade">>1 caixa com 64 rolos</label>
+                            <span class="mdl-textfield__error">Mínimo de 1 caixa</span>
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col">

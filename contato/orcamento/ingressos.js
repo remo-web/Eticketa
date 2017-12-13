@@ -35,7 +35,7 @@ function submitO_ingressos(){
 //    var largura = $("#o_ingressos-largura").val();
 //    var altura = $("#o_ingressos-altura").val();
     var formato = $("input[name=o_balanca-formato]:checked").val();
-    var picote = $("#o_balanca-picote:checked").serialize();
+    var picote = $("#o_balanca-picote").serialize();
     var quantidade = $("#o_ingressos-quantidade").val();
     var frente = $("#o_ingressos-frente").val();
     var verso = $("#o_ingressos-verso").val();

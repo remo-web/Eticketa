@@ -54,7 +54,7 @@ function submitO_validade(){
     $.ajax({
         type: "POST",
         url: "./contato/orcamento/validade.php",
-        data: "o_validade-nome=" + nome + "&o_validade-email=" + email + "&o_validade-empresa=" + empresa + "&o_validade-telefone=" + telefone + "&o_validade-custom=" + custom + "&o_validade-largura=" + largura + "&o_validade-altura=" + altura + "&o_validade-formato=" + formato + "&o_validade-quantidade=" + quantidade + "&o_validade-frente=" + frente + "&o_validade-verso=" + verso + "&o_validade-finalidade=" + finalidade + "&o_validade-mensagem=" + mensagem,
+        data: "o_validade-nome=" + nome + "&o_validade-email=" + email + "&o_validade-empresa=" + empresa + "&o_validade-telefone=" + telefone + "&o_validade-custom=" + custom_certo + "&o_validade-largura=" + largura + "&o_validade-altura=" + altura + "&o_validade-formato=" + formato + "&o_validade-quantidade=" + quantidade + "&o_validade-frente=" + frente + "&o_validade-verso=" + verso + "&o_validade-finalidade=" + finalidade + "&o_validade-mensagem=" + mensagem,
         success : function(text){
             if (text == "success"){
                 o_validadeSuccess();

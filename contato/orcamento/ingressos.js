@@ -36,7 +36,7 @@ function submitO_ingressos(){
 //    var altura = $("#o_ingressos-altura").val();
     var formato = $("input[name=o_balanca-formato]:checked").val();
     var picote = $("#o_balanca-picote").serialize();
-    var picote2 = picote.replace("o_balanca-picote=", "");
+    var picote_certo = picote.replace("o_balanca-picote=", "");
     var quantidade = $("#o_ingressos-quantidade").val();
     var frente = $("#o_ingressos-frente").val();
     var verso = $("#o_ingressos-verso").val();
@@ -46,7 +46,7 @@ function submitO_ingressos(){
     $.ajax({
         type: "POST",
         url: "./contato/orcamento/ingressos.php",
-        data: "o_ingressos-nome=" + nome + "&o_ingressos-email=" + email + "&o_ingressos-empresa=" + empresa + "&o_ingressos-telefone=" + telefone + "&o_balanca-formato=" + formato + "&o_balanca-picote=" + picote2 + "&o_ingressos-quantidade=" + quantidade + "&o_ingressos-frente=" + frente + "&o_ingressos-verso=" + verso + "&o_ingressos-finalidade=" + finalidade + "&o_ingressos-mensagem=" + mensagem,
+        data: "o_ingressos-nome=" + nome + "&o_ingressos-email=" + email + "&o_ingressos-empresa=" + empresa + "&o_ingressos-telefone=" + telefone + "&o_balanca-formato=" + formato + "&o_balanca-picote=" + picote_certo + "&o_ingressos-quantidade=" + quantidade + "&o_ingressos-frente=" + frente + "&o_ingressos-verso=" + verso + "&o_ingressos-finalidade=" + finalidade + "&o_ingressos-mensagem=" + mensagem,
         success : function(text){
             if (text == "success"){
                 o_ingressosSuccess();

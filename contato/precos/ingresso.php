@@ -17,7 +17,7 @@ $endereco = $_POST["p_ingresso-endereco"];
 
  
 $To = "colemais@eticketa.com.br";
-$uglySubject = "[Site | Preços] Tickets & Ingressos";
+$uglySubject = "[Site | Preços] Etiquetas para Balança";
 $Subject='=?UTF-8?B?'.base64_encode($uglySubject).'?=';
 
 $Body .= "

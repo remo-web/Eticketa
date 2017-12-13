@@ -45,7 +45,7 @@ function submitO_ingressos(){
     $.ajax({
         type: "POST",
         url: "./contato/orcamento/ingressos.php",
-        data: "o_ingressos-nome=" + nome + "&o_ingressos-email=" + email + "&o_ingressos-empresa=" + empresa + "&o_ingressos-telefone=" + telefone + "&o_balanca-formato=" + formato + "&o_balanca-picote=" + picote + "&o_ingressos-quantidade=" + quantidade + "&o_ingressos-frente=" + frente + "&o_ingressos-verso=" + verso + "&o_ingressos-finalidade=" + finalidade + "&o_ingressos-mensagem=" + mensagem,
+        data: "o_ingressos-nome=" + nome + "&o_ingressos-email=" + email + "&o_ingressos-empresa=" + empresa + "&o_ingressos-telefone=" + telefone + "&o_balanca-formato=" + formato + picote + "&o_ingressos-quantidade=" + quantidade + "&o_ingressos-frente=" + frente + "&o_ingressos-verso=" + verso + "&o_ingressos-finalidade=" + finalidade + "&o_ingressos-mensagem=" + mensagem,
         success : function(text){
             if (text == "success"){
                 o_ingressosSuccess();

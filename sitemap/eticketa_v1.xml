@@ -3,25 +3,46 @@
   <title>eticketa</title>
   <version>1.0</version>
   <link>https://eticketa.slickplan.com/qercwpd82u</link>
-  <pubDate>Wed, 17 Jan 2018 11:46:23 -0500</pubDate>
+  <pubDate>Wed, 17 Jan 2018 12:08:59 -0500</pubDate>
   <logo type="image">86148</logo>
   <section id="svgmainsection">
     <options>
       <template>horizontal</template>
-      <color_scheme>default</color_scheme>
-      <id>svgmainsection</id>
       <design>flat</design>
+      <color_scheme>default</color_scheme>
       <text_shadow>false</text_shadow>
+      <id>svgmainsection</id>
       <section>svgmainsection</section>
     </options>
     <cells>
       <cell id="svgk53uyqob11oerndx">
+        <urls>
+          <url type="external">https://eticketa.com.br/</url>
+        </urls>
         <level>home</level>
         <text>Home</text>
         <order>1000</order>
-        <urls>
-          <url type="external">https://eticketa.com.br/#home</url>
-        </urls>
+        <archetype>_portal</archetype>
+        <contents>
+          <body>
+            <image>
+              <id>blecey1remyrf3dq</id>
+              <content>
+                <type>url</type>
+                <url>http://eticketa.com.br/img/precos/etka_preco-bg_3840.jpg</url>
+              </content>
+            </image>
+            <video>
+              <id>c5v7hipuuuqeeq0u</id>
+              <content>
+                <type>url</type>
+                <url>http://eticketa.com.br/mov/etka_site17-video_amarelo2.mp4</url>
+              </content>
+            </video>
+          </body>
+          <meta_description>Especialistas na produção de rótulos, lacres adesivos e etiquetas de validade. Com a Eticketa suas demandas serão compreendidas e atendidas de maneira clara e cuidadosa. Sabemos como a entrega do material gráfico gera espectativa e trabalhamos para superá-las. Sempre.</meta_description>
+          <meta_focus_keyword>Rótulos</meta_focus_keyword>
+        </contents>
       </cell>
       <cell id="svgxfl23v3ye1gw9nnr">
         <level>1</level>
@@ -29,45 +50,36 @@
         <order>1000</order>
       </cell>
       <cell id="svgptlphkgavl4nfyui">
-        <level>1</level>
-        <text>Como Fazemos</text>
-        <order>2000</order>
         <urls>
           <url type="external">https://eticketa.com.br/#fazemos</url>
         </urls>
+        <level>1</level>
+        <text>Como Fazemos</text>
+        <order>2000</order>
       </cell>
       <cell id="svgn3m6jsnpgjgamrjy">
-        <level>1</level>
-        <text>Preços</text>
-        <order>3000</order>
         <urls>
           <url type="external">https://eticketa.com.br/#preco</url>
         </urls>
+        <level>1</level>
+        <text>Preços</text>
+        <order>3000</order>
       </cell>
       <cell id="svgzrnef6z7lgs1ued4">
         <level>1</level>
         <text>Contato</text>
         <order>4000</order>
       </cell>
-      <cell id="svgtmp92z45w983o06e">
-        <parent>svgxfl23v3ye1gw9nnr</parent>
+      <cell id="svgcssk5qurs92hs6sa">
+        <parent>svgn3m6jsnpgjgamrjy</parent>
         <level>2</level>
-        <text>Rótulos</text>
+        <text>Lacres de Delivery</text>
         <order>1000</order>
-        <urls>
-          <url type="external">https://eticketa.com.br/#produtos/rotulos</url>
-        </urls>
       </cell>
       <cell id="svghokm05ddiqaajvc2">
         <parent>svgptlphkgavl4nfyui</parent>
         <level>2</level>
         <text>Flexografia</text>
-        <order>1000</order>
-      </cell>
-      <cell id="svgcssk5qurs92hs6sa">
-        <parent>svgn3m6jsnpgjgamrjy</parent>
-        <level>2</level>
-        <text>Lacres de Delivery</text>
         <order>1000</order>
       </cell>
       <cell id="svgjzwaislvdbkevb7e">
@@ -76,16 +88,22 @@
         <text>Telegram</text>
         <order>1000</order>
       </cell>
-      <cell id="svgfv5c4dt0s5ymjma5">
-        <parent>svgn3m6jsnpgjgamrjy</parent>
+      <cell id="svgtmp92z45w983o06e">
+        <parent>svgxfl23v3ye1gw9nnr</parent>
+        <urls>
+          <url type="external">https://eticketa.com.br/#produtos/rotulos</url>
+        </urls>
         <level>2</level>
-        <text>Lacres de Garantia</text>
-        <order>2000</order>
+        <text>Rótulos</text>
+        <order>1000</order>
       </cell>
-      <cell id="svgny2w1nw95qwaah5c">
-        <parent>svgzrnef6z7lgs1ued4</parent>
+      <cell id="svgpe7ls3c4pw3yh11x">
+        <parent>svgxfl23v3ye1gw9nnr</parent>
+        <urls>
+          <url type="external">https://eticketa.com.br/#produtos/lacres</url>
+        </urls>
         <level>2</level>
-        <text>WhatsApp</text>
+        <text>Lacres</text>
         <order>2000</order>
       </cell>
       <cell id="svgcurxou64x79htray">
@@ -94,29 +112,17 @@
         <text>Digital</text>
         <order>2000</order>
       </cell>
-      <cell id="svgpe7ls3c4pw3yh11x">
-        <parent>svgxfl23v3ye1gw9nnr</parent>
+      <cell id="svgny2w1nw95qwaah5c">
+        <parent>svgzrnef6z7lgs1ued4</parent>
         <level>2</level>
-        <text>Lacres</text>
+        <text>WhatsApp</text>
         <order>2000</order>
-        <urls>
-          <url type="external">https://eticketa.com.br/#produtos/lacres</url>
-        </urls>
       </cell>
-      <cell id="svgu48psp22pfyru4g7">
-        <parent>svgptlphkgavl4nfyui</parent>
+      <cell id="svgfv5c4dt0s5ymjma5">
+        <parent>svgn3m6jsnpgjgamrjy</parent>
         <level>2</level>
-        <text>Offset</text>
-        <order>3000</order>
-      </cell>
-      <cell id="svgbwq42uhbj4fkw8ax">
-        <parent>svgxfl23v3ye1gw9nnr</parent>
-        <level>2</level>
-        <text>Etiquetas de Balança</text>
-        <order>3000</order>
-        <urls>
-          <url type="external">https://eticketa.com.br/#produtos/balanca</url>
-        </urls>
+        <text>Lacres de Garantia</text>
+        <order>2000</order>
       </cell>
       <cell id="svggq8bvjxa585b0xi6">
         <parent>svgzrnef6z7lgs1ued4</parent>
@@ -130,19 +136,25 @@
         <text>Etiquetas de Balança</text>
         <order>3000</order>
       </cell>
-      <cell id="svgoriwf0ry5660xrkz">
-        <parent>svgxfl23v3ye1gw9nnr</parent>
-        <level>2</level>
-        <text>Etiquetas de Validade</text>
-        <order>4000</order>
-        <urls>
-          <url type="external">https://eticketa.com.br/#produtos/validade</url>
-        </urls>
-      </cell>
-      <cell id="svguw970vugnoganer6">
+      <cell id="svgu48psp22pfyru4g7">
         <parent>svgptlphkgavl4nfyui</parent>
         <level>2</level>
-        <text>Consultoria</text>
+        <text>Offset</text>
+        <order>3000</order>
+      </cell>
+      <cell id="svgbwq42uhbj4fkw8ax">
+        <parent>svgxfl23v3ye1gw9nnr</parent>
+        <urls>
+          <url type="external">https://eticketa.com.br/#produtos/balanca</url>
+        </urls>
+        <level>2</level>
+        <text>Etiquetas de Balança</text>
+        <order>3000</order>
+      </cell>
+      <cell id="svgluvz3dj0olbno6ej">
+        <parent>svgzrnef6z7lgs1ued4</parent>
+        <level>2</level>
+        <text>Mensagem</text>
         <order>4000</order>
       </cell>
       <cell id="svgbcfsywf0a9pn0mnq">
@@ -151,10 +163,19 @@
         <text>Etiquetas de Validade</text>
         <order>4000</order>
       </cell>
-      <cell id="svgluvz3dj0olbno6ej">
-        <parent>svgzrnef6z7lgs1ued4</parent>
+      <cell id="svgoriwf0ry5660xrkz">
+        <parent>svgxfl23v3ye1gw9nnr</parent>
+        <urls>
+          <url type="external">https://eticketa.com.br/#produtos/validade</url>
+        </urls>
         <level>2</level>
-        <text>Mensagem</text>
+        <text>Etiquetas de Validade</text>
+        <order>4000</order>
+      </cell>
+      <cell id="svguw970vugnoganer6">
+        <parent>svgptlphkgavl4nfyui</parent>
+        <level>2</level>
+        <text>Consultoria</text>
         <order>4000</order>
       </cell>
       <cell id="svgirny77cq1ix89kaq">
@@ -163,8 +184,8 @@
         <text>Subscribe</text>
         <order>5000</order>
       </cell>
-      <cell id="svgwvt33g7bmngor3yi">
-        <parent>svgu48psp22pfyru4g7</parent>
+      <cell id="svgvmv7vh36ydje3tif">
+        <parent>svgcurxou64x79htray</parent>
         <level>3</level>
         <text>Saiba mais</text>
         <order>1000</order>
@@ -181,6 +202,18 @@
         <text>Orçamento</text>
         <order>1000</order>
       </cell>
+      <cell id="svgwvt33g7bmngor3yi">
+        <parent>svgu48psp22pfyru4g7</parent>
+        <level>3</level>
+        <text>Saiba mais</text>
+        <order>1000</order>
+      </cell>
+      <cell id="svgavvczsim6sgd8r15">
+        <parent>svgpe7ls3c4pw3yh11x</parent>
+        <level>3</level>
+        <text>Orçamento</text>
+        <order>1000</order>
+      </cell>
       <cell id="svgekwkr5l972hegdm5">
         <parent>svguw970vugnoganer6</parent>
         <level>3</level>
@@ -193,20 +226,8 @@
         <text>Orçamento</text>
         <order>1000</order>
       </cell>
-      <cell id="svgvmv7vh36ydje3tif">
-        <parent>svgcurxou64x79htray</parent>
-        <level>3</level>
-        <text>Saiba mais</text>
-        <order>1000</order>
-      </cell>
       <cell id="svgthj26lrh3c162er2">
         <parent>svgbwq42uhbj4fkw8ax</parent>
-        <level>3</level>
-        <text>Orçamento</text>
-        <order>1000</order>
-      </cell>
-      <cell id="svgavvczsim6sgd8r15">
-        <parent>svgpe7ls3c4pw3yh11x</parent>
         <level>3</level>
         <text>Orçamento</text>
         <order>1000</order>

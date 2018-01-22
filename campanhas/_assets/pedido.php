@@ -23,6 +23,8 @@ if (empty($_POST["pedido-endereco"])) {
 }
 
 $quantidade = $_POST["pedido-quantidade"];
+$formato = $_POST["o_balanca-formato"];
+$picote = $_POST["o_balanca-picote"];
 $mensagem = $_POST["pedido-mensagem"];
 
 $cnpj = $_POST["pedido-cnpj"];
@@ -60,6 +62,7 @@ $Body .= "
         <b>E-mail:</b> $email<br/>
         <b>Telefone:</b> $telefone<br/>
         <b>Endereço para entrega:</b> $endereco<br/>
+        <b>Formato: </b>$formato $picote<br>
         <b>Quantidade:</b> $quantidade <br/>
         <b>Observações / Dúvidas:</b> $mensagem<br/><br/>
         <b style='text-transform: uppercase;'>DADOS PARA EMISSÃO DE BOLETO E NOTA FISCAL</b><br/>

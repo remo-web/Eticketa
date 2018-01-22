@@ -40,3 +40,9 @@
 .etka_mkt .etka_popup-card {
     background-color: transparent
 }
+
+label > input[type="radio"], .mdl-radio__outer-circle, .mdl-radio__inner-circle{visibility: initial; position: absolute}
+.mdl-radio.is-upgraded{padding-left: 24px}
+.mdl-radio__ripple-container{top: -9px; left: -13px}
+label > input[type="radio"] + i{cursor: pointer}
+label > input[type="radio"]:checked + i{color: #57bf96}

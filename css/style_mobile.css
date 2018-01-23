@@ -16,8 +16,8 @@
     .etka_gohome{
         background-color: #57bf96 !important;
         position: fixed;
-        right: 15px;
-        bottom: 15px;
+        right: 50px;
+        bottom: 100px;
         z-index: 100;
     }
     .etka_gohome:hover, .etka_gohome:active{background-color: #57bf96 !important;}

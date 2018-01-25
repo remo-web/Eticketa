@@ -1,0 +1,25 @@
+# Rule 1
+User-agent: Googlebot
+Disallow: /comofazemos.html
+
+# Rule 2
+User-agent: Googlebot
+Disallow: /oquefazemos.html
+
+# Rule 3
+User-agent: Googlebot
+Disallow: /contato.html
+
+# Rule 4
+User-agent: Googlebot
+Disallow: /quemsomos.html
+
+# Rule 5
+User-agent: Googlebot
+Disallow: /formatos.html
+
+# Rule 6
+User-agent: Googlebot
+Disallow: /parceiros.html
+
+Sitemap: https://eticketa.com.br/sitemap/eticketa_v2.txt

@@ -428,6 +428,13 @@ dialog .etka_btn-enviar{width: 100%}
         background-position: center; 
     }
 
+    a.etka_preco-mapa{
+        border: 1px solid #7A2879;
+        border-radius: 3px;
+        padding: .3%;
+        color: #7A2879
+    }
+
     /* portefólio */
     
     .etka_port h1{text-align: center}

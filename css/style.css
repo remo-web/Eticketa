@@ -485,7 +485,7 @@ dialog .etka_btn-enviar{width: 100%}
 
     .etka_contato-l{
         background: url('../img/ETKA-contato_bg-roxo.jpg') right / cover;
-        height: 100%;
+        height: 100vh;
         margin: 0 16px 0 0;
         text-align: left;
     }

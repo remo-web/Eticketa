@@ -359,6 +359,7 @@ dialog .etka_btn-enviar{width: 100%}
         background-image: url(../img/fazemos/etka-fazemos_bg.jpg);
         background-repeat: repeat;
     }
+    .etka_fazemos .mdl-grid{padding: 5rem 0;}
     .etka_fazemos h1{text-align: center}
     .etka_fazemos p{color: black; opacity: .87}
     .etka-card-wide.mdl-card {width: auto}
@@ -397,6 +398,7 @@ dialog .etka_btn-enviar{width: 100%}
         background-color: #424242;
         font-family: 'Yanone Kaffeesatz', sans-serif !important
     }
+    .etka_preco .mdl-cell--8-col{padding: 5rem 0;}
     .etka_preco h1 {text-align: center; color: white}
     .etka_preco p {color: black; opacity: .87}
     .etka_preco ul {margin: 0;}

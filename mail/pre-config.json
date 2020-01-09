@@ -1,0 +1,76 @@
+{
+	"system": {
+	},
+	"modules": {
+		"Core": {
+			"ProductName": "Afterlogic WebMail Lite PHP"
+		},
+		"CoreWebclient": {
+			"HeaderModulesOrder": ["mail", "contacts"],
+			"DefaultAnonymScreenHash": "login",
+			"DefaultUserScreenHash": "mail",
+			"ThemeList": ["Default", "DeepForest", "Funny", "Sand"]
+		},
+		"Dropbox": {
+			"Disabled": true
+		},
+		"DropboxAuthWebclient": {
+			"Scopes": "auth"
+		},
+		"Mail": {
+			"MessagesSortBy": {
+				"Allow": true,
+				"List": [],
+				"DefaultSortBy": "arrival",
+				"DefaultSortOrder": "desc"
+			},
+			"AllowDefaultAccountForUser": true,
+			"AutocreateMailAccountOnNewUserFirstLogin": true
+		},
+		"OAuthIntegratorWebclient": {
+			"AllowNewUsersRegister": false
+		},
+		"ChangePasswordWebclient": {
+			"Disabled": true
+		},
+		"MailChangePasswordPoppassdPlugin": {
+			"Disabled": true
+		},
+		"MailSaveMessageAsPdfPlugin": {
+			"Disabled": true
+		},
+		"MailTnefWebclientPlugin": {
+			"Disabled": true
+		},
+		"MailAuthCpanel": {
+			"Disabled": true
+		},
+		"CpanelIntegrator": {
+			"Disabled": true
+		},
+		"StandardLoginFormWebclient": {
+			"UseDropdownLanguagesView": true,
+			"BottomInfoHtmlText": "Powered by <a href=\"https:\/\/afterlogic.org\/webmail-lite\" target=\"_blank\">Afterlogic WebMail Lite</a>"
+		},
+		"RecaptchaWebclientPlugin": {
+			"Disabled": true
+		},
+		"MailMasterPassword": {
+			"Disabled": true
+		},
+		"MailNotesPlugin": {
+			"Disabled": true
+		},
+		"MailLoginFormWebclient": {
+			"Disabled": true,
+			"UseDropdownLanguagesView": true,
+			"BottomInfoHtmlText": "Powered by <a href=\"https:\/\/afterlogic.com\/webmail-lite\" target=\"_blank\">Afterlogic WebMail Lite</a>"
+		},
+		"OverrideUserSettings": {
+			"Disabled": true
+		},
+		"Contacts": {
+			"ImportContactsLink": "https://afterlogic.com/docs/webmail-lite-8/frequently-asked-questions/importing-contacts"
+		}
+	}
+}

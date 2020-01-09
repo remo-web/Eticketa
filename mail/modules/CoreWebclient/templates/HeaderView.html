@@ -1,0 +1,26 @@
+<div class="tabsbar">
+	<div class="content">
+		<!-- ko if: sLogoUrl === '' -->
+			<a href="#" class="item logo"></a>
+		<!-- /ko -->
+		<!-- ko if: sLogoUrl !== '' -->
+			<a href="#" class="item specified-logo">
+				<img class="img_logo" data-bind="attr: {'src': sLogoUrl}"/>
+			</a>
+		<!-- /ko -->
+
+		<!-- ko foreach: tabs -->
+			<!-- ko template: {name: ViewTemplate, data: $data, if: $data.visible} --><!-- /ko -->
+		<!-- /ko -->
+
+		<div class="spacer"></div>
+
+		<span class="item mobile" data-bind="visible: bShowMobileSwitcher, click: switchToMobileVersion">
+			<span class="link" data-bind="i18n: {'key': '%MODULENAME%/ACTION_SHOW_MOBILE_VERSION'}"></span>
+		</span>
+
+		<span class="item logout" data-bind="visible: showLogout">
+			<span class="link" data-bind="i18n: {'key': '%MODULENAME%/ACTION_LOGOUT'}, click: logout"></span>
+		</span>
+	</div>
+</div>

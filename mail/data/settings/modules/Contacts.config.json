@@ -1,0 +1,14 @@
+{
+    "Disabled": [
+        false,
+        "bool"
+    ],
+    "ContactsPerPage": [
+        20,
+        "int"
+    ],
+    "ImportContactsLink": [
+        "https:\/\/afterlogic.com\/docs\/webmail-lite-8\/frequently-asked-questions\/importing-contacts",
+        "string"
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "Disabled": [
+        false,
+        "bool"
+    ],
+    "CpanelHost": [
+        "127.0.0.1",
+        "string"
+    ],
+    "CpanelPort": [
+        "2083",
+        "string"
+    ],
+    "CpanelUser": [
+        "root",
+        "string"
+    ],
+    "CpanelPassword": [
+        "GA-remo#5",
+        "string"
+    ],
+    "UserDefaultQuotaMB": [
+        1,
+        "int"
+    ],
+    "SupportedServers": [
+        [
+            "*"
+        ],
+        "array"
+    ],
+    "AllowCreateDeleteAccountOnCpanel": [
+        false,
+        "bool"
+    ],
+    "AllowAliases": [
+        false,
+        "bool"
+    ]
+}

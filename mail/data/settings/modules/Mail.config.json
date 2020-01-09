@@ -1,0 +1,171 @@
+{
+    "Disabled": [
+        false,
+        "bool"
+    ],
+    "AllowAddAccounts": [
+        true,
+        "bool"
+    ],
+    "AllowAutosaveInDrafts": [
+        true,
+        "bool"
+    ],
+    "AllowChangeMailQuotaOnMailServer": [
+        false,
+        "bool"
+    ],
+    "AllowDefaultAccountForUser": [
+        true,
+        "bool"
+    ],
+    "AllowIdentities": [
+        true,
+        "bool"
+    ],
+    "OnlyUserEmailsInIdentities": [
+        false,
+        "bool"
+    ],
+    "AllowFilters": [
+        true,
+        "bool"
+    ],
+    "AllowForward": [
+        true,
+        "bool"
+    ],
+    "AllowAutoresponder": [
+        true,
+        "bool"
+    ],
+    "AllowInsertImage": [
+        true,
+        "bool"
+    ],
+    "AlwaysShowImagesInMessage": [
+        false,
+        "bool"
+    ],
+    "AutoSaveIntervalSeconds": [
+        60,
+        "int"
+    ],
+    "AllowTemplateFolders": [
+        false,
+        "bool"
+    ],
+    "AllowAlwaysRefreshFolders": [
+        false,
+        "bool"
+    ],
+    "DisplayInlineCss": [
+        false,
+        "bool"
+    ],
+    "CleanupOutputBeforeDownload": [
+        false,
+        "bool"
+    ],
+    "IgnoreImapSubscription": [
+        false,
+        "bool"
+    ],
+    "ImageUploadSizeLimit": [
+        0,
+        "int"
+    ],
+    "SaveRepliesToCurrFolder": [
+        false,
+        "bool"
+    ],
+    "SieveGeneralPassword": [
+        "",
+        "string"
+    ],
+    "SieveFileName": [
+        "sieve",
+        "string"
+    ],
+    "SieveFiltersFolderCharset": [
+        "utf-8",
+        "string"
+    ],
+    "OverriddenSieveHost": [
+        "",
+        "string"
+    ],
+    "SievePort": [
+        4190,
+        "int"
+    ],
+    "UseBodyStructuresForHasAttachmentsSearch": [
+        false,
+        "bool"
+    ],
+    "UseDateFromHeaders": [
+        false,
+        "bool"
+    ],
+    "XMailerValue": [
+        "Afterlogic webmail client",
+        "string"
+    ],
+    "ForwardedFlagName": [
+        "$Forwarded",
+        "string"
+    ],
+    "PreferStarttls": [
+        true,
+        "bool"
+    ],
+    "ExternalHostNameOfLocalImap": [
+        "",
+        "string"
+    ],
+    "ExternalHostNameOfLocalSmtp": [
+        "",
+        "string"
+    ],
+    "AutocreateMailAccountOnNewUserFirstLogin": [
+        true,
+        "bool"
+    ],
+    "SieveUseStarttls": [
+        false,
+        "bool"
+    ],
+    "DisableStarttlsForLocalhost": [
+        true,
+        "bool"
+    ],
+    "XOriginatingIP": [
+        false,
+        "bool"
+    ],
+    "DoImapLoginOnAccountCreate": [
+        true,
+        "bool"
+    ],
+    "MessagesSortBy": [
+        {
+            "Allow": true,
+            "List": [],
+            "DefaultSortBy": "arrival",
+            "DefaultSortOrder": "desc"
+        },
+        "array"
+    ],
+    "CreateHtmlLinksFromTextLinksInDOM": [
+        false,
+        "bool"
+    ],
+    "SieveCheckScript": [
+        false,
+        "bool"
+    ],
+    "MessagesInfoChunkSize": [
+        1000,
+        "int"
+    ]
+}

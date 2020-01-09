@@ -1,0 +1,46 @@
+{
+    "Disabled": [
+        true,
+        "bool"
+    ],
+    "ServerModuleName": [
+        "MailLoginFormWebclient",
+        "string"
+    ],
+    "HashModuleName": [
+        "mail",
+        "string"
+    ],
+    "CustomLoginUrl": [
+        "",
+        "string"
+    ],
+    "DemoLogin": [
+        "",
+        "string"
+    ],
+    "DemoPassword": [
+        "",
+        "string"
+    ],
+    "InfoText": [
+        "",
+        "string"
+    ],
+    "BottomInfoHtmlText": [
+        "\u003Ca href=\"https:\/\/remo.marketing\" target=\"_blank\"\u003ERemoMail\u003C\/a\u003E \u2709 Powered by \u003Ca href=\"https:\/\/afterlogic.com\" target=\"_blank\"\u003EAfterlogic\u003C\/a\u003E",
+        "string"
+    ],
+    "LoginSignMeType": [
+        0,
+        "int"
+    ],
+    "AllowChangeLanguage": [
+        true,
+        "bool"
+    ],
+    "UseDropdownLanguagesView": [
+        true,
+        "bool"
+    ]
+}

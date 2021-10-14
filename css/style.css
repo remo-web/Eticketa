@@ -443,7 +443,21 @@ dialog .etka_btn-enviar{width: 100%}
         color: #7A2879
     }
 
-    /* portefólio */
+        /* preco | delivery */
+
+        #etka_preco .mdl-card .mdl-card{
+            margin: 16px 0 0 0;
+        }
+        
+        .etka_preco--img__delivery{
+            background: url(../img/precos/etka_preco-delivery.jpg) center / cover;
+        }
+        
+        .etka_preco--img__validade{
+            background: url(../img/precos/etka_preco-validade.jpg) center / cover;
+        }
+
+    /* portifólio */
     
     .etka_port h1{text-align: center}
     .etka_port .etka-card-image{cursor: pointer}

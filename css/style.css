@@ -328,7 +328,8 @@ dialog .etka_btn-enviar{width: 100%}
         .etka_dialog-close{
             position: absolute;
             top: 7px; right: 7px;
-            opacity: .4
+            opacity: .4;
+            cursor: pointer
         }
 
         label > input[type="radio"], .mdl-radio__outer-circle, .mdl-radio__inner-circle{visibility: hidden; position: absolute}

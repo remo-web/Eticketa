@@ -1539,7 +1539,7 @@ ko.utils = (function () {
 
     // Represent the known event types in a compact way, then at runtime transform it into a hash with event name as key (for fast lookup)
     var knownEvents = {}, knownEventTypesByEventName = {};
-    var keyEventTypeName = (navigator && /Firefox\/2/i.test(navigator.userAgentData)) ? 'KeyboardEvent' : 'UIEvents';
+    var keyEventTypeName = (navigator && /Firefox\/2/i.test(navigator.userAgent)) ? 'KeyboardEvent' : 'UIEvents';
     knownEvents[keyEventTypeName] = ['keyup', 'keydown', 'keypress'];
     knownEvents['MouseEvents'] = ['click', 'dblclick', 'mousedown', 'mouseup', 'mousemove', 'mouseover', 'mouseout', 'mouseenter', 'mouseleave'];
     objectForEach(knownEvents, function(eventType, knownEventsForType) {
@@ -6135,7 +6135,7 @@ if (window && window.navigator) {
 
     // Detect various browser versions because some old versions don't fully support the 'input' event
     var operaVersion = window.opera && window.opera.version && parseInt(window.opera.version()),
-        userAgent = window.navigator.userAgentData,
+        userAgent = window.navigator.userAgent,
         safariVersion = parseVersion(userAgent.match(/^(?:(?!chrome).)*version\/([^ ]*) safari/i)),
         firefoxVersion = parseVersion(userAgent.match(/Firefox\/([^ ]*)/));
 }
@@ -35864,31 +35864,31 @@ var Types = __webpack_require__(/*! modules/CoreWebclient/js/utils/Types.js */ "
  */
 function CBrowser()
 {
-	this.ie11 = !!navigator.userAgentData.match(/Trident.*rv[ :]*11\./);
-	this.ie = (/msie/.test(navigator.userAgentData.toLowerCase()) && !window.opera) || this.ie11;
+	this.ie11 = !!navigator.userAgent.match(/Trident.*rv[ :]*11\./);
+	this.ie = (/msie/.test(navigator.userAgent.toLowerCase()) && !window.opera) || this.ie11;
 	this.ieVersion = this.getIeVersion();
 	this.ie8AndBelow = this.ie && this.ieVersion <= 8;
 	this.ie9AndBelow = this.ie && this.ieVersion <= 9;
 	this.ie10AndAbove = this.ie && this.ieVersion >= 10;
-	this.opera = !!window.opera || /opr/.test(navigator.userAgentData.toLowerCase());
-	this.firefox = /firefox/.test(navigator.userAgentData.toLowerCase());
-	this.edge = /edge/.test(navigator.userAgentData.toLowerCase());
-	this.chrome = /chrome/.test(navigator.userAgentData.toLowerCase()) && !/opr/.test(navigator.userAgentData.toLowerCase()) && !this.edge;
-	this.chromeIos = /crios/.test(navigator.userAgentData.toLowerCase());
-	this.safari = /safari/.test(navigator.userAgentData.toLowerCase()) && !this.chromeIos && !this.edge;
+	this.opera = !!window.opera || /opr/.test(navigator.userAgent.toLowerCase());
+	this.firefox = /firefox/.test(navigator.userAgent.toLowerCase());
+	this.edge = /edge/.test(navigator.userAgent.toLowerCase());
+	this.chrome = /chrome/.test(navigator.userAgent.toLowerCase()) && !/opr/.test(navigator.userAgent.toLowerCase()) && !this.edge;
+	this.chromeIos = /crios/.test(navigator.userAgent.toLowerCase());
+	this.safari = /safari/.test(navigator.userAgent.toLowerCase()) && !this.chromeIos && !this.edge;
 	
-	this.windowsPhone = -1 < navigator.userAgentData.indexOf('Windows Phone');
-	this.iosDevice = !this.windowsPhone && (-1 < navigator.userAgentData.indexOf('iPhone') ||
-		-1 < navigator.userAgentData.indexOf('iPod') ||
-		-1 < navigator.userAgentData.indexOf('iPad'));
-	this.androidDevice = !this.windowsPhone && (-1 < navigator.userAgentData.toLowerCase().indexOf('android')),
+	this.windowsPhone = -1 < navigator.userAgent.indexOf('Windows Phone');
+	this.iosDevice = !this.windowsPhone && (-1 < navigator.userAgent.indexOf('iPhone') ||
+		-1 < navigator.userAgent.indexOf('iPod') ||
+		-1 < navigator.userAgent.indexOf('iPad'));
+	this.androidDevice = !this.windowsPhone && (-1 < navigator.userAgent.toLowerCase().indexOf('android')),
 	this.mobileDevice = this.windowsPhone || this.iosDevice || this.androidDevice;
 }
 
 CBrowser.prototype.getIeVersion = function ()
 {
 	var
-		sUa = navigator.userAgentData.toLowerCase(),
+		sUa = navigator.userAgent.toLowerCase(),
 		iVersion = Types.pInt(sUa.slice(sUa.indexOf('msie') + 4, sUa.indexOf(';', sUa.indexOf('msie') + 4)))
 	;
 	
@@ -36547,7 +36547,7 @@ function InitModernizr()
 		if (navigator)
 		{
 			modernizr.addTest('native-android-browser', function() {
-				var ua = navigator.userAgentData;
+				var ua = navigator.userAgent;
 				return (ua.indexOf('Mozilla/5.0') > -1 && ua.indexOf('Android ') > -1 && ua.indexOf('534') > -1 && ua.indexOf('AppleWebKit') > -1);
 			});
 		}
@@ -41185,7 +41185,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 } ( function( $ ) {
 
 // This file is deprecated
-return $.ui.ie = !!/msie [\w.]+/.exec( navigator.userAgentData.toLowerCase() );
+return $.ui.ie = !!/msie [\w.]+/.exec( navigator.userAgent.toLowerCase() );
 } ) );
 
 
@@ -57749,7 +57749,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
 		_browser = {};
 		_browser.ff = typeof InstallTrigger != 'undefined';
 		_browser.chrome = !!window.chrome;
-		_browser.opera = !!window.opera || navigator.userAgentData.indexOf('Opera') >= 0;
+		_browser.opera = !!window.opera || navigator.userAgent.indexOf('Opera') >= 0;
 		_browser.ie = /*@cc_on!@*/false;
 		_browser.safari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 		_browser.supported = (_browser.chrome || _browser.ff || _browser.opera);

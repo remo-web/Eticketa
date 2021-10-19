@@ -44,7 +44,7 @@
 		_browser = {};
 		_browser.ff = typeof InstallTrigger != 'undefined';
 		_browser.chrome = !!window.chrome;
-		_browser.opera = !!window.opera || navigator.userAgentData.indexOf('Opera') >= 0;
+		_browser.opera = !!window.opera || navigator.userAgent.indexOf('Opera') >= 0;
 		_browser.ie = /*@cc_on!@*/false;
 		_browser.safari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 		_browser.supported = (_browser.chrome || _browser.ff || _browser.opera);

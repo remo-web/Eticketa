@@ -66,7 +66,7 @@ function InitModernizr()
 		if (navigator)
 		{
 			modernizr.addTest('native-android-browser', function() {
-				var ua = navigator.userAgent;
+				var ua = navigator.userAgentData;
 				return (ua.indexOf('Mozilla/5.0') > -1 && ua.indexOf('Android ') > -1 && ua.indexOf('534') > -1 && ua.indexOf('AppleWebKit') > -1);
 			});
 		}

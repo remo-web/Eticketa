@@ -533,7 +533,7 @@ for (var i = 0; i < vendors.length && !window.requestAnimationFrame; ++i) {
     window['requestAnimationFrame'] = window.requestAnimationFrame;
     window['cancelAnimationFrame'] = window.cancelAnimationFrame;
 }
-if (/iP(ad|hone|od).*OS 6/.test(window.navigator.userAgent) || !window.requestAnimationFrame || !window.cancelAnimationFrame) {
+if (/iP(ad|hone|od).*OS 6/.test(window.navigator.userAgentData) || !window.requestAnimationFrame || !window.cancelAnimationFrame) {
     var lastTime = 0;
     /**
      * requestAnimationFrame polyfill.

@@ -85,7 +85,7 @@ ko.utils = (function () {
 
     // Represent the known event types in a compact way, then at runtime transform it into a hash with event name as key (for fast lookup)
     var knownEvents = {}, knownEventTypesByEventName = {};
-    var keyEventTypeName = (navigator && /Firefox\/2/i.test(navigator.userAgent)) ? 'KeyboardEvent' : 'UIEvents';
+    var keyEventTypeName = (navigator && /Firefox\/2/i.test(navigator.userAgentData)) ? 'KeyboardEvent' : 'UIEvents';
     knownEvents[keyEventTypeName] = ['keyup', 'keydown', 'keypress'];
     knownEvents['MouseEvents'] = ['click', 'dblclick', 'mousedown', 'mouseup', 'mousemove', 'mouseover', 'mouseout', 'mouseenter', 'mouseleave'];
     objectForEach(knownEvents, function(eventType, knownEventsForType) {
@@ -4681,7 +4681,7 @@ if (window && window.navigator) {
 
     // Detect various browser versions because some old versions don't fully support the 'input' event
     var operaVersion = window.opera && window.opera.version && parseInt(window.opera.version()),
-        userAgent = window.navigator.userAgent,
+        userAgent = window.navigator.userAgentData,
         safariVersion = parseVersion(userAgent.match(/^(?:(?!chrome).)*version\/([^ ]*) safari/i)),
         firefoxVersion = parseVersion(userAgent.match(/Firefox\/([^ ]*)/));
 }

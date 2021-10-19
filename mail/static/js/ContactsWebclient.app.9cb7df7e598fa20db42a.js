@@ -5137,7 +5137,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/* FileSaver.js
 var saveAs = saveAs || (function(view) {
 	"use strict";
 	// IE <10 is explicitly unsupported
-	if (typeof view === "undefined" || typeof navigator !== "undefined" && /MSIE [1-9]\./.test(navigator.userAgent)) {
+	if (typeof view === "undefined" || typeof navigator !== "undefined" && /MSIE [1-9]\./.test(navigator.userAgentData)) {
 		return;
 	}
 	var
@@ -5153,7 +5153,7 @@ var saveAs = saveAs || (function(view) {
 			node.dispatchEvent(event);
 		}
 		, is_safari = /constructor/i.test(view.HTMLElement) || view.safari
-		, is_chrome_ios =/CriOS\/[\d]+/.test(navigator.userAgent)
+		, is_chrome_ios =/CriOS\/[\d]+/.test(navigator.userAgentData)
 		, throw_outside = function(ex) {
 			(view.setImmediate || view.setTimeout)(function() {
 				throw ex;

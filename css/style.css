@@ -245,6 +245,7 @@ dialog .etka_btn-enviar{width: 100%}
         height: auto;
         background-size: 100% 100%;
         background-color: black; /* in case the video doesn't fit the whole page*/
+        background-image: url(../mov/etka_site17-video_amarelo2.mp4);
         background-position: center center;
         background-size: cover;
         object-fit: cover; /*cover video background */
